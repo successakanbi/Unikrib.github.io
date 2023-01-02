@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This defines the environment e.g Ekosodin, Bdpa ..."""
 
-from models.base_models import BaseModel
+from models.base_model import BaseModel
 
 
 class Environment(BaseModel):

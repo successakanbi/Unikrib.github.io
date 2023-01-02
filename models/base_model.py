@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This defines the base class which other classes inherit from"""
 
+from models import storage
 from datetime import datetime
 import uuid
 
@@ -11,6 +12,8 @@ class BaseModel:
         """class initialization"""
         if kwargs:
             for k, v in kwargs.items():
+                if k == '__class__':
+                    continue
                 if k not in ('created_at', 'updated_at', 'id'):
                     setattr(self, k, v)
             if 'id' not in self.__dict__:
@@ -38,3 +41,13 @@ class BaseModel:
         """Called when print function is used"""
         return "[{}] ({}) {}".format(self.__class__.__name__,
                                      self.id, self.to_dict())
+
+    def save(self):
+        """This save the object to storage"""
+        storage.new(self)
+        storage.save()
+
+    def delete(self):
+        """This removes an object from storage"""
+        storage.delete(self)
+

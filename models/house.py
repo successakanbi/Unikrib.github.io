@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This defines the apartment class"""
 
-from models import BaseModel
+from models.base_model import BaseModel
 
 
 class House(BaseModel):
