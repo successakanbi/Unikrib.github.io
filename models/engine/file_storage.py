@@ -62,4 +62,7 @@ class FileStorage:
         for key, obj in self.__objects.items():
             if search_key == key:
                 del self.__objects[key]
+                return
 
+    def close(self):
+        self.reload()

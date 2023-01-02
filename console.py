@@ -75,13 +75,45 @@ class Unikrib(cmd.Cmd):
             print("* Please enter a class id *")
             return False
         key_search = line_args[0] + '.' + line_args[1]
-        for key, obj in storage.all(line_args[0]).items():
-            if key == key_search:
-                obj.delete()
-                storage.save()
-                return {}
-        print("* You entered an invalid instance *")
-        return False
+        if key_search in storage.all(line_args[0]):
+            obj = storage.all(line_args[0])[key_search]
+            obj.delete()
+            storage.save()
+            return
+        else:
+            print("* You entered an invalid instance *")
+            return False
+
+    def do_update(self, args):
+        """This updates an object in storage
+        Usage: update <class name> <class id> <key> <value>"""
+        if not args:
+            print("* Please enter a class name *")
+            return False
+        line_args = args.split()
+        if line_args[0] not in classes:
+            print("* You entered an invalid class, please try again *")
+            return False
+        if len(line_args) < 2:
+            print("* Please enter an id *")
+            return False
+        elif len(line_args) < 3:
+            print("* Please enter a key *")
+            return False
+        elif len(line_args) < 4:
+            print("* Please enter a value *")
+            return False
+        search_key = line_args[0] + '.' + line_args[1]
+        k = line_args[2]
+        v = line_args[3]
+        if search_key in storage.all(line_args[0]):
+            obj = storage.all()[search_key]
+            setattr(obj, k, v)
+            obj.save()
+        else:
+            print("* No instance found *")
+            return False
+
 
 
 if __name__ == '__main__':
