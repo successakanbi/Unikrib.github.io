@@ -34,6 +34,8 @@ def create_user():
     if "password" not in request.json:
         abort(400, "Request must include password")
     user_dict = request.get_json()
+    if user_dict['email'][-4:] != '.com':
+        abort(400, "Please enter a valid email")
     model = User(**user_dict)
     model.save()
     return jsonify(model.to_dict()), 200
@@ -49,8 +51,37 @@ def user_login():
         abort(400, "Request must include password")
 
     user_dict = request.get_json()
+    
     for key, obj in storage.all(User).items():
         if obj.email == user_dict['email']:
             if obj.password == user_dict['password']:
                 return jsonify(obj.to_dict())
     abort(404, "User not found")
+
+@app_views.route('/users/<user_id>', strict_slashes=False, methods=['PUT'])
+def update_user(user_id):
+    """This updates the attributes of a user"""
+    if not request.json:
+        abort(400, "Not a valid Json")
+    new_dict = request.get_json()
+    search_key = 'User.' + user_id
+    obj = storage.all(User)[search_key]
+    if obj is None:
+        abort(404, "No user found")
+    for key, val in new_dict.items():
+        if key not in ('id', 'created_at', 'updated_at'):
+            setattr(obj, key, val)
+            storage.save()
+    return jsonify(obj.to_dict())
+
+
+@app_views.route('/users/<user_id>', strict_slashes=False, methods=['DELETE'])
+def delete_user(user_id):
+    """This deletes a user from storage"""
+    search_key = 'User.' + user_id
+    obj = storage.all(User)[search_key]
+    if obj is None:
+        abort(404, "User not found")
+    obj.delete()
+    storage.save()
+    return {}

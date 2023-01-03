@@ -22,3 +22,42 @@ def get_house(house_id):
         if key == search_key:
             return jsonify(obj.to_dict())
     abort(404, "House not found")
+
+@app_views.route('/houses', strict_slashes=False, methods=['POST'])
+def create_house():
+    """This creates a new houe in storage"""
+    if not request.json:
+        abort(400, "Not a valid json")
+    if "owner_id" not in request.json:
+        abort(400, "House must have an owner_id")
+    if "street_id" not in request.json:
+        abort(400, "Request must contain a street_id")
+    house_dict = request.get_json()
+    model = House(**house_dict)
+    storage.new(model)
+    storage.save()
+    return jsonify(model.to_dict()), 200
+
+@app_views.route('/houses/<house_id>', strict_slashes=False, methods=['PUT'])
+def update_house(house_id):
+    """This updates the attributes of a house based on id"""
+    if not request.json:
+        abort(400, "Not a valid json")
+    house_dict = request.get_json()
+    obj = storage.all(House)[house_dict]
+    if obj is None:
+        abort(404, "House not found")
+    for key, val in house_dict.items():
+        setattr(obj, key, val)
+        storage.save()
+    return jsonify(obj.to_dict())
+
+@app_views.route('/houses/<house_dict>', strict_slashes=False, methods=['DELETE'])
+def delete_house(house_id):
+    """This remove the house instance from storage"""
+    if not request.json:
+        abort(400, "Not a valid json")
+    search_key = 'House.' + house.id
+    obj = storage.all(House)[search_key]
+    obj.delete()
+    return {}
