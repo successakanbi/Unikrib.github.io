@@ -3,6 +3,7 @@
 from api.blueprint import app_views
 from models.house import House
 from flask import abort, jsonify, request
+from models import storage
 
 @app_views.route('/houses', strict_slashes=False)
 def get_all_houses():
@@ -15,7 +16,7 @@ def get_all_houses():
 
 @app_views.route('/houses/<house_id>', strict_slashes=False)
 def get_house(house_id):
-    """This return a house of id"""
+    """This return a house based on an id"""
     search_key = 'House.' + house_id
     for key, obj in storage.all(House).items():
         if key == search_key:

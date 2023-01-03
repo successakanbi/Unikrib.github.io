@@ -47,6 +47,7 @@ class BaseModel:
 
     def save(self):
         """This save the object to storage"""
+        self.updated_at = datetime.utcnow()
         storage.new(self)
         storage.save()
 
