@@ -1,3 +1,4 @@
+/*styles external  form container for desktop view*/
 #ext-form-cont{
     width: 30%;
     margin-left: 35%;
@@ -5,6 +6,7 @@
     display: block;
 
 }
+/*styles form and its contents for desktop view*/
 #login-form{
     width: 100%;
     padding-top: 25px;
@@ -42,6 +44,8 @@ input[type=email],input[type=text], input[type=password]{
     font-size: 14px;
     transition: 300ms;
  }
+
+ /*makes eye icon invisible until password input field is focused on*/
  #eye-icon{
     margin-left:15%;
     display: none;
@@ -92,6 +96,7 @@ a {
 }
 
 @media screen and (max-width: 1000px){
+    /*styles external  form container for tab view*/
     #ext-form-cont{
         width: 50%;
         margin-left: 25%;
@@ -102,6 +107,7 @@ a {
 }
 
 @media screen and (max-width: 600px){
+    /*styles external  form container for phone view*/
     #ext-form-cont{
         width: 90%;
         margin-left: 5%;
@@ -109,6 +115,7 @@ a {
     
     }
 
+    /*styles form and its contents for phone view*/
     #login-form{
         width: 100%;
         padding-top: 25px;

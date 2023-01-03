@@ -9,7 +9,7 @@ body{
 p {
     font-size: 17px;
 }
-
+/* styles the navigation bar icon links display on desktop */
 .top-nav {
     overflow: hidden;
     background-color: #070707;
@@ -60,6 +60,7 @@ p {
     margin-top:-7px;
 }
 
+/* styles the dropdownmenu bars icon and its transformation animation to the close button*/
 .bar1, .bar2, .bar3 {
     width: 40px;
     height: 7px;
@@ -74,6 +75,8 @@ p {
 .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
 }
+
+/*styles the Image slide show and its various texts (head, sub and startlink)*/
 .mySlides {
     display: none;
     
@@ -122,6 +125,7 @@ position: relative;
     font-weight: 600;
 }
 
+/*styles the about container, its sub containers and contents for desktop*/
 #about-cont{
     width:100%;
     text-align: center;
@@ -140,6 +144,7 @@ position: relative;
     padding: 1.5px;
 
 }
+/*styles the service container, its sub containers and their contents for desktop*/
 #service-cont {
     background-color: #cccaca;
     margin-top: 50px;
@@ -172,6 +177,8 @@ position: relative;
     font-size: 70px;
     margin-top: 20px;
 }
+
+/*styles the vendor container, its sub containers and their contents for desktop*/
 #vendor-cont{
     width:60%;
     margin-left: 20%;
@@ -195,6 +202,8 @@ position: relative;
 #img-sub-cont img{
     width: 100%;
 }
+
+/*styles the statistics container, its sub containers and their contents for desktop*/
 #stat-cont {
     width: 100%;
     background-color: #4b4949;
@@ -215,6 +224,7 @@ position: relative;
 .groups {
     font-size: 20px;
 }
+/*styles the footer container it sub containers and their contents for desktop*/
 #footer-cont {
     width:100%;
     background-color: #042d69;
@@ -266,6 +276,7 @@ position: relative;
 
 
 @media screen and (max-width: 1000px) {
+    /* styles the navigation bar icon links display for tab view */
     .top-nav a img {
         height: 25px;
         width: 125px;
@@ -302,6 +313,7 @@ position: relative;
         text-align: left;
           
     }
+    /*styles tab view of the about sub containers and contents*/
     #about-sub-cont{
         width:70%;
         margin-left:15%;
@@ -313,6 +325,7 @@ position: relative;
         height:250px;
     }
 
+    /*styles tab view of the vendor container, its sub containers and their contents*/
     #vendor-cont{
         width:80%;
         margin-left: 10%;
@@ -330,11 +343,13 @@ position: relative;
         float: left;
         text-align: left;
     }
+
     .values {
         font-size: 30px;
         margin-bottom: 20px;
     
     }
+    /*styles tab view of the footer container it sub containers and their contents*/
     #footer-cont {
         width:100%;
         background-color: #042d69;
@@ -372,6 +387,7 @@ position: relative;
     
 }
 @media screen and (max-width: 700px) {
+    /*styles phone view of heading, subheading and startlink texts*/
     p {
         font-size: 15px;
     }
@@ -396,12 +412,15 @@ position: relative;
         font-size: 17px;
         font-weight: 600;
     }
+
+    /*styles phone view of the about sub container and contents*/
     #about-sub-cont{
         width:80%;
         margin-left:10%;
         color:#1f1d1d;
     }
-
+     
+     /*styles phone view of the service container sub containers and their contents*/
     .service-sub-cont {
         float: left;
         width:60%;
@@ -409,6 +428,8 @@ position: relative;
         height:250px;
         
     }
+    
+    /*styles phone view of the vendor container, its sub containers and their contents*/
     #vendor-cont{
         width:80%;
         margin-left: 10%;
@@ -426,6 +447,8 @@ position: relative;
         float: left;
         text-align: left;
     }
+
+    /*styles phone view of the statistics sub containers and their contents*/
     #stat-sub-cont {
         width:99%;
         float: left;
@@ -437,12 +460,16 @@ position: relative;
         margin-bottom: 20px;
     
     }
+
+
     #footer-cont {
         width:100%;
         background-color: #042d69;
         display: inline-block;
         color: #ffff;
     }
+
+    /*styles phone view of the footer sub containers and their contents*/
     .footer-sub-cont-a{
         float:none;
         width:96%;

@@ -1,3 +1,4 @@
+//navigation bar responsive drop menu javascript 
 function dropMenu() {
     var x = document.getElementById("my-Top-nav");
     if (x.className === "top-nav") {
@@ -7,9 +8,12 @@ function dropMenu() {
     }
 }
 
+//changes the bars drop menu button to the close button
 function changeIcon(x) {
     x.classList.toggle("change");
 }
+
+//changes the slideimages when window is less than 701px
 function imageChange() {
     let slideImage1 = document.getElementById("handyman");
     let slideImage2 = document.getElementById("pexels");
@@ -26,6 +30,7 @@ function imageChange() {
     
     
 }
+//toggles password between visible text and hidden text
 function showPassword(){
     var x = document.getElementById("input-pass");
     if(x.type === "password") {
@@ -35,11 +40,13 @@ function showPassword(){
     }
 }
 
+//toggles eye icon between visible and invisible
 function showToggle () {
     var icon = document.getElementById("eye-icon")
     icon.style.display="block";
 }
 
+//toggles the eye icon between open and closed
 let icon = document.getElementById("eye-icon");
 icon.addEventListener("click", iconChange)
 

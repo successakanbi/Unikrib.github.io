@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
+
+     <!-- responsive top navigator bar containing organisation logo, drop down menu icon and links-->
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
@@ -27,6 +29,8 @@
             </div>
          </a>
     </div>
+
+    <!--main external container containing form container contains account creation information for agents/vendors/service providers-->
     <div id="main-container">
         <div id="form-container">
             <form action ="" id="reg-form">
@@ -50,9 +54,12 @@
                 <label for="psw">Password</label><br>
                 <input type="password" name="psw" value="" placeholder="Enter Password" 
                 id="input-pass" onfocus="showToggle()" required><br>
-
+                 
+                <!--eye icon toggles betwween visible password and hidden password-->
                 <icon class="fa fa-eye" onclick="showPassword()" id="eye-icon"></icon>
+                 
 
+                <!--specifies account type whether Agent, service provider or vendor-->
                 <label for="account">Account type</label><br>
                 <select id="account-type" name="account">
                     <option value="Agent">Agent</option>
@@ -64,7 +71,8 @@
                   <button type="submit">Create account</button>
                 </div>
                 
-                  <div id="google">
+                <!--sign up with google div provides the sign up with google option-->
+                <div id="google">
                     <a href="">
                       <p><img  src="images/download.png" style="height: 20px;"> sign in with google</p>
                     </a>
@@ -78,6 +86,7 @@
     </div>
 
 
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
     <div id="footer-cont">
         <div class="footer-sub-cont-a">
           <p ><a href="" class="foot-links">apartments</a></p>
@@ -118,7 +127,8 @@
           </div>
         </div> 
       </div>
-
+      
+      <!-- link to external javascript file main.js-->
       <script src = "main.js"></script>
 </body>
 </html>

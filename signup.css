@@ -1,3 +1,4 @@
+/*styles main external container for desktop view*/
 #main-container{
     padding-top: 90px;
     width: 28%;
@@ -6,6 +7,7 @@
     
 
 }
+/*styles form container and its contents for desktop view*/
 #form-container{
     width: 100%;
     padding-top: 30px;
@@ -69,7 +71,7 @@ input[type=text], input[type=email], input[type=password],
     transition: 300ms;
  }
  
-
+ /*makes eye icon invisible until password input field is focused on*/
  #eye-icon {
     margin-left:15%;
     display: none;
@@ -118,6 +120,7 @@ input[type=text], input[type=email], input[type=password],
 
  @media screen and (max-width: 1000px) {
 
+    /*styles main external container for tab view*/
     #main-container{
         padding-top: 90px;
         width: 50%;
@@ -126,6 +129,7 @@ input[type=text], input[type=email], input[type=password],
         
     
     }
+    /*styles form container and its contents for tab view*/
     #form-container{
         width: 100%;
         padding-top: 30px;
@@ -149,12 +153,14 @@ input[type=text], input[type=email], input[type=password],
 
  }
 @media screen and (max-width: 600px) {
+    /*styles main external container for phone view*/
     #main-container{
         padding-top: 80px;
         width: 100%;
         margin-left: 0;
         display: inline-block;
     }
+    /*styles form container for phone view*/
     #form-container{
         width: 90%;
         margin-left: 5%;
