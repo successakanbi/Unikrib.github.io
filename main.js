@@ -10,7 +10,6 @@ function dropMenu() {
 function changeIcon(x) {
     x.classList.toggle("change");
 }
-imageChange();
 function imageChange() {
     let slideImage1 = document.getElementById("handyman");
     let slideImage2 = document.getElementById("pexels");
@@ -26,4 +25,29 @@ function imageChange() {
     };
     
     
+}
+function showPassword(){
+    var x = document.getElementById("input-pass");
+    if(x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+function showToggle () {
+    var icon = document.getElementById("eye-icon")
+    icon.style.display="block";
+}
+
+let icon = document.getElementById("eye-icon");
+icon.addEventListener("click", iconChange)
+
+function iconChange () {
+    let x = document.getElementById("eye-icon");
+    if (icon.className == "fa fa-eye") {
+        icon.className = "fa fa-eye-slash";
+    } else {
+        icon.className = "fa fa-eye";
+    }
 }
