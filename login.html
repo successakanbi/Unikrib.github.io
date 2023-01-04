@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+
+  <!-- responsive top navigator bar containing organisation logo, drop down menu icon and links-->
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
@@ -27,6 +29,8 @@
             </div>
          </a>
     </div>
+
+    <!--External form container containing sign in form for all users regular,  agents etc-->
     <div id="ext-form-cont">
         <form action="" method="post" id="login-form">
             <div id="logo-container">
@@ -40,6 +44,7 @@
                 <input type="password" name="psw" value="" placeholder="Enter Password" 
                 id="input-pass" onfocus="showToggle()" required></br>
 
+                <!--eye icon toggles betwween visible password and hidden password-->
                 <icon class="fa fa-eye" onclick="showPassword()" id="eye-icon"></icon>
 
               <div>
@@ -47,16 +52,22 @@
               </div>
             
                 <p id="sign-up"><a href=""id="forgot">Forgot password?</a></p>
+
+                <!--sign up with google div provides the sign up with google option-->
                 <div id="signin-with"><a href="/auth"role="button">
                     <p><img src="images/download.png" style="height: 20px;"> sign up with google</p>
                 </a>
                 </div>
+
+
                 <p id="sign-up">Don't have an account sign up <a href="signup.html"><span>here</span></a></p>
     
             </div>
         </form>
     </div>
+    
 
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
     <div id="footer-cont">
         <div class="footer-sub-cont-a">
           <p ><a href="" class="foot-links">apartments</a></p>

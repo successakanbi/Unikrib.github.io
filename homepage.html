@@ -8,9 +8,9 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-    <script src = "main.js"></script>
 </head>
 <body>
+    <!-- responsive top navigator bar containing organisation logo link drop down menu icon and links-->
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html"class="active">Home</a>
@@ -27,7 +27,8 @@
             </div>
          </a>
     </div>
-
+     
+    <!--slide show container and sub container (myslide fades)Image slide show with header and sub header text-->
     <div class="slideshow-container">
         <div class="mySlides fade">
           <img src="images/pexels-ekaterina-bolovtsova-6976561.jpg" id="pexels" style="width:100%">
@@ -55,6 +56,7 @@
         </div>
       </div>
 
+      <!--About container and sub container information with heading and read more button-->
       <div id = "about-cont">
         <div id = "about-sub-cont">
           <h1> About us</h1>
@@ -66,7 +68,8 @@
         </p>
         </div>
       </div>
-
+      
+      <!--Service container with sub containers containing icon and services text-->
       <div id="service-cont">
         <h1>Our services</h1>
         <a href="">
@@ -99,7 +102,8 @@
       </div>
 
       </div>
-
+       
+      <!--Vendor container and sub containers(text and image) containing agent/vendor text and images -->
       <div id="vendor-cont">
         <h1>Become a unikrib vendor or agent</h1>
         <div id="text-sub-cont">
@@ -110,13 +114,14 @@
             with us to advertise your services to as many as 5000 students
             for less than N1000 a month!</p>
             <a href="" id="redmre">register now</a>
-
         </div>
         <div id="img-sub-cont">
           <img src="images/lady-working.jpg">
         </div>
       </div>
 
+
+      <!--statistics container and sub containers, displays the number of listed apartments, registered agents, vendors and service providers-->
       <div id="stat-cont">
           <div id="stat-sub-cont">
               <p class="values" id="stat1">0</p>
@@ -136,7 +141,8 @@
           </div>
       </div>
 
-
+        
+       <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
           <div id="footer-cont">
             <div class="footer-sub-cont-a">
               <p ><a href="" class="foot-links">apartments</a></p>
@@ -177,8 +183,11 @@
               </div>
             </div> 
           </div>
+          <!--main javascript file link-->
+          <script src = "main.js"></script>
 
     <script>
+      //Image slideshow javascript
        let slideIndex = 0;
         showSlides();
 
@@ -195,7 +204,8 @@
             }
             slides[slideIndex-1].style.display = "block";
             setTimeout(showSlides, 3000);
-
+            
+            //calls the image change function from main.js
             imageChange()
 }
 

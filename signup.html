@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
+     
+     <!-- responsive top navigator bar containing organisation logo link drop down menu icon and links-->
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
@@ -27,6 +29,8 @@
             </div>
          </a>
     </div>
+
+    <!--main external container containing form container contains account creation information for regular users-->
     <div id="main-container">
         <div id="form-container">
             <form action ="" id="reg-form">
@@ -50,13 +54,15 @@
               <label for="psw">Password</label><br>
               <input type="password" name="psw" value="" placeholder="Enter Password" 
               id="input-pass" onfocus="showToggle()" required></br>
-
+               
+              <!--eye icon toggles betwween visible password and hidden password-->
               <icon class="fa fa-eye" onclick="showPassword()" id="eye-icon"></icon>
 
               <div>
                 <button type="submit">Create account</button>
               </div>
-             
+                
+              <!--sign up with google div provides the sign up with google option-->
                 <div id="google">
                   <a href="">
                     <p><img  src="images/download.png" style="height: 20px;"> sign up with google</p> 
@@ -71,6 +77,7 @@
     </div>
 
 
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
     <div id="footer-cont">
         <div class="footer-sub-cont-a">
           <p ><a href="" class="foot-links">apartments</a></p>
@@ -111,6 +118,8 @@
           </div>
         </div> 
       </div>
+
+      <!-- link to external javascript file main.js-->
       <script src = "main.js"></script>
 
     
