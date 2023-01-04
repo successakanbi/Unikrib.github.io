@@ -66,3 +66,7 @@ class FileStorage:
 
     def close(self):
         self.reload()
+
+    def count(self, cls=None):
+        """This returns a count of all the objects in storage"""
+        return len(storage.all(cls))

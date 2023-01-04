@@ -58,6 +58,8 @@ def delete_house(house_id):
     if not request.json:
         abort(400, "Not a valid json")
     search_key = 'House.' + house.id
+    if search_key not in storage.all(House):
+        abort(404, "House instance not found")
     obj = storage.all(House)[search_key]
     obj.delete()
     return {}

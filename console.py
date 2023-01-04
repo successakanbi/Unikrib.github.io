@@ -114,6 +114,18 @@ class Unikrib(cmd.Cmd):
             print("* No instance found *")
             return False
 
+    def do_count(self, args):
+        """This prints the count of the available objects"""
+        if args:
+            line_args = args.split()
+            if line_args[0] not in classes:
+                print("* Please enter a valid class *")
+                return False
+            count = storage.count(line_args[0])
+            print(count)
+        else:
+            print(storage.count())
+
 
 
 if __name__ == '__main__':
