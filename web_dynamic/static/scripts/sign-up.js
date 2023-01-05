@@ -18,7 +18,7 @@ $(function() {
         }
         $.ajax({
             type: 'POST',
-            url: 'http://127.0.0.1:8000/unikrib/users',  // to be editted later
+            url: 'http://100.25.165.74:8000/unikrib/users',  // to be editted later
             data: JSON.stringify(user_dict),
             contentType: 'application/json',
             dataType: 'json',

@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') + '?' + cache_id }}">
-    <script src = "{{ url_for('static', filename='scripts/main.js') + '?' + cache_id }}"></script>
+    <script src = "{{ url_for('static', filename='scripts/home.js') + '?' + cache_id }}"></script>
 </head>
 <body>
     <div class="top-nav" id="my-Top-nav">
@@ -201,5 +201,7 @@
 
 
     </script>
+    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+    <script src = "{{ url_for('static', filename='scripts/homepage.js') + '?' + cache_id }}"></script>
 </body>
 </html>

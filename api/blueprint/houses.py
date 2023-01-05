@@ -23,6 +23,11 @@ def get_house(house_id):
             return jsonify(obj.to_dict())
     abort(404, "House not found")
 
+@app_views.route('/houses/stats', strict_slashes=False)
+def get_stat():
+    """This returns the number of all the houses in storage"""
+    return jsonify(storage.count(House))
+
 @app_views.route('/houses', strict_slashes=False, methods=['POST'])
 def create_house():
     """This creates a new houe in storage"""

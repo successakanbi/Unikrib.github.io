@@ -40,14 +40,3 @@ function showToggle () {
     icon.style.display="block";
 }
 
-let icon = document.getElementById("eye-icon");
-icon.addEventListener("click", iconChange)
-
-function iconChange () {
-    let x = document.getElementById("eye-icon");
-    if (icon.className == "fa fa-eye") {
-        icon.className = "fa fa-eye-slash";
-    } else {
-        icon.className = "fa fa-eye";
-    }
-}
