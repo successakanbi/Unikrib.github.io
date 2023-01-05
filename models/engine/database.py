@@ -6,8 +6,8 @@ Database engine
 from os import getenv
 from sqlalchemy import create_engine, MetaData, and_
 from sqlalchemy.orm import sessionmaker, scoped_session
-from application.models.base_model import Base
-from models.user import user
+from models.base_model import Base
+from models.user import User
 from models.service import Service
 from models.house import House
 from models.environment import Environment
@@ -33,7 +33,7 @@ class Storage:
         initialize the engine
         """
         self.__engine = create_engine(
-            'mysql+pymysql://{}:{}@{}/{}'.format(
+            'mysql+mysqldb://{}:{}@{}/{}'.format(
                 getenv('UNIKRIB_USER'),
                 getenv('UNIKRIB_PWD'),
                 getenv('UNIKRIB_HOST'),
