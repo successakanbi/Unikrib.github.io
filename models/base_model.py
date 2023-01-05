@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """This defines the base class which other classes inherit from"""
 
-from models import storage
+import models
 from datetime import datetime
 import uuid
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, Float, DateTi
 
 time = "%Y-%m-%dT%H:%M:%S.%f"
 
@@ -37,6 +39,7 @@ class BaseModel:
             dictionary['created_at'] = self.created_at.isoformat()
         if 'updated_at' in dictionary:
             dictionary['updated_at'] = self.updated_at.isoformat()
+        dictionary.pop('_sa_instance_state', None)
         dictionary['__class__'] = self.__class__.__name__
         return dictionary
 
@@ -48,11 +51,11 @@ class BaseModel:
     def save(self):
         """This save the object to storage"""
         self.updated_at = datetime.utcnow()
-        storage.new(self)
-        storage.save()
+        models.storage.new(self)
+        models.storage.save()
 
     def delete(self):
         """This removes an object from storage"""
-        storage.delete(self)
-        storage.save()
+        models.storage.delete(self)
+        models.storage.save()
 
