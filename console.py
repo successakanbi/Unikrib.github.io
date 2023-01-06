@@ -146,7 +146,10 @@ class Unikrib(cmd.Cmd):
             return False
         search_key = line_args[0] + '.' + line_args[1]
         k = line_args[2]
-        v = line_args[3].replace('_', ' ')
+        if k != 'password':
+            v = line_args[3].replace('_', ' ')
+        else:
+            v = line_args[3]
         if search_key in storage.all(line_args[0]):
             obj = storage.all()[search_key]
             setattr(obj, k, v)
