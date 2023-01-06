@@ -24,35 +24,19 @@ def get_user(user_id):
             return jsonify(obj.to_dict())
     abort(404, "No User Found")
 
-@app_views.route('/stats/agents', strict_slashes=False)
-def agent_count():
-    """This returns the count of all agents in storage"""
+@app_views.route('/stats/users', strict_slashes=False)
+def type_count():
+    """This returns the count of all user-types in storage"""
     objs = storage.all(User)
-    count = 0
-    for key, obj in objs.items():
-        if obj.user_type == 'agent':
-            count += 1
-    return jsonify(count)
-
-@app_views.route('/stats/vendors', strict_slashes=False)
-def vendor_count():
-    """This returns the count of all vendors in storage"""
-    objs = storage.all(User)
-    count = 0
+    stats = {"agent": 0, "vendor": 0, "sp": 0}
     for key, obj in objs.items():
         if obj.user_type == 'vendor':
-            count += 1
-    return jsonify(count)
-
-@app_views.route('/stats/sp', strict_slashes=False)
-def sp_count():
-    """This returns the count of all service providers in storage"""
-    objs = storage.all(User)
-    count = 0
-    for key, obj in objs.items():
-        if obj.user_type == 'sp':
-            count += 1
-    return jsonify(count)
+            stats['vendor'] += 1
+        elif obj.user_type == 'agent':
+            stats['agent'] += 1
+        elif obj.user_type == 'sp':
+            stats['sp'] += 1
+    return jsonify(stats)
 
 @app_views.route('/users', strict_slashes=False, methods=['POST'])
 def create_user():

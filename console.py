@@ -36,7 +36,7 @@ class Unikrib(cmd.Cmd):
                 print("* Class not valid *")
                 return False
             else:
-                obj_dict = storage.all(args)
+                obj_dict = storage.all(line_arg[0])
         for key, val in obj_dict.items():
             obj_list.append(val.to_dict())
         print(obj_list)
@@ -55,8 +55,49 @@ class Unikrib(cmd.Cmd):
         for item in line_args[1:]:
             if '=' in item:
                 key = item.split('=')[0]
-                val = item.split('=')[1]
+                val = item.split('=')[1].replace('_', ' ')
                 class_dict[key] = val
+        if line_args[0] == 'House':
+            if 'price' not in class_dict:
+                print("* Please include a price *")
+                return False
+            if 'apartment' not in class_dict:
+                print("* Please include an apartment type *")
+                return False
+            if 'owner_id' not in class_dict:
+                print("* Please include an owner_id *")
+                return False
+        if line_args[0] == 'User':
+            if 'first_name' not in class_dict:
+                print("* Please include user first_name *")
+                return False
+            if 'user_type' not in class_dict:
+                print("* Please include user_type *")
+                return False
+            if "email" not in class_dict:
+                print("* Please include email *")
+                return False
+            if "password" not in class_dict:
+                print("* Please include password *")
+                return False
+        if line_args[0] == 'Environment':
+            if "name" not in class_dict:
+                print("* Please include environment name *")
+                return False
+        if line_args[0] == "Street":
+            if "name" not in class_dict:
+                print("* Please include street name *")
+                return False
+            if "env_id" not in class_dict:
+                print("* Please include env_id *")
+                return False
+        if line_args[0] == 'Service':
+            if "name" not in class_dict:
+                print("* Please include service name *")
+                return False
+            if "owner_id" not in class_dict:
+                print("* Please include owner_id *")
+                return False
         model = classes[line_args[0]](**class_dict)
         print(model.id)
         model.save()
@@ -105,7 +146,7 @@ class Unikrib(cmd.Cmd):
             return False
         search_key = line_args[0] + '.' + line_args[1]
         k = line_args[2]
-        v = line_args[3]
+        v = line_args[3].replace('_', ' ')
         if search_key in storage.all(line_args[0]):
             obj = storage.all()[search_key]
             setattr(obj, k, v)
@@ -125,6 +166,25 @@ class Unikrib(cmd.Cmd):
             print(count)
         else:
             print(storage.count())
+
+    def do_show(self, args):
+        """This prints a specific object based on cls and id
+        usage: show <class name> <object id>"""
+        if not args:
+            print("* Please include a class name *")
+            return False
+        line_args = args.split()
+        if line_args[0] not in classes:
+            print("* Please enter a valid class name *")
+            return False
+        cls = line_args[0]
+        cls_id = line_args[1]
+        obj = storage.get(cls, cls_id)
+        if obj is None:
+            print("* No instance found *")
+            return False
+        else:
+            print(obj.to_dict())
 
 
 

@@ -13,17 +13,14 @@ from models.house import House
 from models.environment import Environment
 from models.street import Street
 
+  
+
 class Storage:
     """
     storage of class instances
     """
-    CLASS_DICT = {
-        'User': User,
-        'Service': Service,
-        'House': House,
-        'Environment': Environment,
-        'Street': Street,
-    }
+    classes = {"User": User, "Service": Service, "House": House,
+            "Environment": Environment, "Street": Street}
 
     __engine = None
     __session = None
@@ -45,12 +42,16 @@ class Storage:
         """
         obj_dict = {}
         if cls is not None:
-            a_query = self.__session.query(Storage.CLASS_DICT[cls])
+            try:
+                a_query = self.__session.query(cls).all()
+            except:
+                cs = self.classes[cls]
+                a_query = self.__session.query(cs).all()
             for obj in a_query:
-                obj_ref = '{}.{}'.format(type(obj).__name__, obj.id)
-                obj_dict[obj_ref] = obj
+                search_key = '{}.{}'.format(obj.__class__.__name__, obj.id)
+                obj_dict[search_key] = obj
         else:
-            for cls in Storage.CLASS_DICT.values():
+            for key, cls in self.classes.items():
                 a_query = self.__session.query(cls)
                 for obj in a_query:
                     obj_ref = '{}.{}'.format(type(obj).__name__, obj.id)

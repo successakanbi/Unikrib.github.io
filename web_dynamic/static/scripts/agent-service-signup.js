@@ -6,17 +6,16 @@ $(function (){
 	var $email = $("#email");
 	var $phone_no = $("#phone_no");
 	var $password = $("#input-pass");
-	var $user_type = $("#account-type-input").text();
 
 	$("#submit").on('click', function() {
-		alert($user_type.value)
+		var user_type = $("#account-type-input :selected").val()
 		user_dict = {
 			"first_name": $first_name.val(),
 			"last_name": $last_name.val(),
 			"email": $email.val(),
 			"phone_no": $phone_no.val(),
 			"password": $password.val(),
-			"user_type": $user_type,
+			"user_type": user_type
 		};
 
 		$.ajax({

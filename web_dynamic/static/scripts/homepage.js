@@ -17,19 +17,21 @@ $(function(){
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://100.25.165.74:8000/unikrib/stats/agents',
+		url: 'http://100.25.165.74:8000/unikrib/stats/users',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
 		success: function (count) {
-			$("#stat2").text(count);
+			$("#stat2").text(count['agent']);
+			$("#stat3").text(count['vendor']);
+			$('#stat4').text(count['sp']);
 		},
 		error: function () {
 			$("#stat2").text('0');
 		},
 	});
 
-	$.ajax({
+	/*$.ajax({
 		type: 'GET',
 		url: 'http://100.25.165.74:8000/unikrib/stats/vendors',
 		data: {},
@@ -55,5 +57,5 @@ $(function(){
 		error: function () {
 			$("#stat4").text('0');
 		},
-	});
+	});*/
 });

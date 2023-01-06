@@ -8,7 +8,7 @@ from sqlalchemy.orm import relationship
 class User(BaseModel, Base):
     """This defines the user class"""
     __tablename__ = 'users'
-    first_name = Column(String(128), nullable=False)
+    first_name = Column(String(128), nullable=True)
     last_name = Column(String(128), nullable=True)
     email = Column(String(128), nullable=False)
     password = Column(String(60), nullable=False)

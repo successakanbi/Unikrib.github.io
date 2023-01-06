@@ -5,5 +5,5 @@ This is a platform that enables university students househunt, buy products and 
 The entire project was written in Python as the primary backend language. HTML and CSS were used to design the beautiful Frontend and Javascript was used to make the web page dynamic. The database was set up using mySQL.
 
 ## AUTHORS
-Success Akanbi (Front-end)
+Success Akanbi (Front-end)</br>
 Akinwonjowo Dennis (Back-end)
