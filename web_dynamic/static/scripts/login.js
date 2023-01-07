@@ -16,10 +16,10 @@ $(function () {
             contentType: 'application/json',
             dataType: 'json',
             success: function(user_dict) {
-                alert(user_dict.first_name + " has successfully logged in");
+                alert("Welcome back " + user_dict.first_name);
             },
             error: function() {
-                alert("User not found");
+                alert("You have entered incorrect details, Please try again.");
             },
         })
     })

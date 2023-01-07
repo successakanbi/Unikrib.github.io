@@ -25,8 +25,16 @@ $(function() {
             success: function (new_user){
                 alert("User successfully created.");
             },
-            error: function(){
-                alert("An error occurred and user could not be created.")
+            error: function(xhr, status, message){
+		    if (xhr.status === 401){
+			    alert("Please include an email");
+		    }else if (xhr.status === 405){
+			    alert("Please include a password");
+		    } else if (xhr.status === 403){
+			    alert("That is an invalid email, please use a correct one");
+		    } else if (xhr.status === 404) {
+			    alert("Email has already been registered, please use another one");
+		    }
             },
         })
     })

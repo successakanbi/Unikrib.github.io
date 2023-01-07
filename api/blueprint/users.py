@@ -44,12 +44,19 @@ def create_user():
     if not request.json:
         abort(400, "Not a valid Json")
     if "email" not in request.json:
-        abort(400, "Request must include email")
+        abort(401, "Request must include email")
     if "password" not in request.json:
-        abort(400, "Request must include password")
+        abort(405, "Request must include password")
     user_dict = request.get_json()
     if user_dict['email'][-4:] != '.com':
-        abort(400, "Please enter a valid email")
+        abort(403, "Please enter a valid email")
+    if len(user_dict['password']) < 4:
+        abort(405, "Include a password please")
+    if len(user_dict['email']) < 5:
+        abort(401, "Include an email please")
+    for key, obj in storage.all(User).items():
+        if user_dict['email'] == obj.email:
+            abort(404, "Email already exists")
     model = User(**user_dict)
     model.save()
     return jsonify(model.to_dict()), 200
@@ -67,9 +74,9 @@ def user_login():
     user_dict = request.get_json()
     
     for key, obj in storage.all(User).items():
-        if obj.email == user_dict['email']:
+        if obj.email.lower() == user_dict['email'].lower():
             if obj.password == user_dict['password']:
-                return jsonify(obj.to_dict())
+                return jsonify(obj.to_dict(1))
     abort(404, "User not found")
 
 @app_views.route('/users/<user_id>', strict_slashes=False, methods=['PUT'])

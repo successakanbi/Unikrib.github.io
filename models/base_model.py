@@ -38,7 +38,7 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = self.created_at
 
-    def to_dict(self):
+    def to_dict(self, api=None):
         """This returns a dict representation of the object"""
         dictionary = self.__dict__.copy()
         if 'created_at' in dictionary:
@@ -46,6 +46,8 @@ class BaseModel:
         if 'updated_at' in dictionary:
             dictionary['updated_at'] = self.updated_at.isoformat()
         dictionary.pop('_sa_instance_state', None)
+        if api != None:
+            dictionary.pop('password', None)
         dictionary['__class__'] = self.__class__.__name__
         return dictionary
 
