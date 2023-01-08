@@ -54,14 +54,15 @@
                 <label for="psw">Password</label><br>
                 <input type="password" name="psw" value="" placeholder="Enter Password" 
                 id="input-pass" onfocus="showToggle()" required><br>
-                 
+              
+                
                 <!--eye icon toggles betwween visible password and hidden password-->
                 <icon class="fa fa-eye" onclick="showPassword()" id="eye-icon"></icon>
                  
 
                 <!--specifies account type whether Agent, service provider or vendor-->
                 <label for="account">Account type</label><br>
-                <select id="account-type" name="account">
+                <select id="account-type" name="account" multiple>
                     <option value="Agent">Agent</option>
                     <option value="Service">Service provider</option>
                     <option value="Vendor">Vendor</option>
@@ -130,5 +131,25 @@
       
       <!-- link to external javascript file main.js-->
       <script src = "main.js"></script>
+      <script>
+        //toggles eye icon between visible and invisible
+        function showToggle () {
+        var icon = document.getElementById("eye-icon")
+        icon.style.display="block";
+        }
+
+        //toggles the eye icon between open and closed
+        let icon = document.getElementById("eye-icon");
+        icon.addEventListener("click", iconChange)
+
+         function iconChange () {
+         let x = document.getElementById("eye-icon");
+           if (icon.className == "fa fa-eye") {
+               icon.className = "fa fa-eye-slash";
+            } else {
+               icon.className = "fa fa-eye";
+            }
+         }
+      </script>
 </body>
 </html>

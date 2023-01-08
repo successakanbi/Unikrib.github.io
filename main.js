@@ -40,21 +40,3 @@ function showPassword(){
     }
 }
 
-//toggles eye icon between visible and invisible
-function showToggle () {
-    var icon = document.getElementById("eye-icon")
-    icon.style.display="block";
-}
-
-//toggles the eye icon between open and closed
-let icon = document.getElementById("eye-icon");
-icon.addEventListener("click", iconChange)
-
-function iconChange () {
-    let x = document.getElementById("eye-icon");
-    if (icon.className == "fa fa-eye") {
-        icon.className = "fa fa-eye-slash";
-    } else {
-        icon.className = "fa fa-eye";
-    }
-}

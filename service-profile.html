@@ -27,7 +27,7 @@
             </div>
          </a>
     </div>
-    <!-- main external container containing form and its input fields-->
+    <!-- main external container containing form its input fields and select boxes-->
     <div id="main-ext-cont">
 
         <form action="" id="profile-form-cont">
@@ -37,23 +37,47 @@
 
          <h3>Complete your profile</h3>
          
-         <!--Select id for community where user lives-->
-         <label for="select community">Community of Residence</label>
+         <!--Select box for vendors or service providers trade or service-->
+         <label for="service">What's your trade</label>
+         <select id="service-select" name="select service">
+            <option value="Ac installer">Ac installer</option>
+            <option value="Carpenter">Carpenter</option>
+            <option value="Caterer">Caterer</option>
+            <option value="Clothes vendor">Clothes vendor</option>
+            <option value="Dstv installer">Dstv installer</option>
+            <option value="Electrician">Electrician</option>
+            <option value="Fashion designer">Fashion designer</option>
+            <option value="Food vendor">Food vendor</option>
+            <option value="Gadget vendor">adget vendor</option>
+            <option value="Gas vendor">Gas vendor</option>
+            <option value="Generator repairman">Generator repairman</option>
+            <option value="Hair stylist">Hair stylist</option>
+            <option value="jewelry vendor">jewelry vendor</option>
+            <option value="laundryman">laundryman</option>
+            <option value="Makeup artist">Makeup artist</option>
+            <option value="Painter">Painter</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Refrigerator repairman">Refrigerator repairman</option>
+         </select>
+          
+          
+         <!--Select id for community where agent/vendor/service can offer services-->
+         <label for="select state">Preferred service Communities</label>
          <select id="community-select" name="select community">
-          <option value=""></option>
-          <option value="Adolor">Adolor</option>
-          <option value="Ebvoumore">Ebvoumore</option>
-          <option value="EDPA">EDPA</option>
-          <option value="Ekosodin">Ekosodin</option>
-          <option value="Evidence">Evidence</option>
-          <option value="Osasoghie">Osasoghie</option>
-          <option value="Isiohor">Isiohor</option>
-          <option value="Osasoghie">Osasoghie</option>
-          <option value="Oluku">Oluku</option>
-          <option value="Uselu">Uselu</option>
+            <option value=""></option>
+            <option value="Adolor">Adolor</option>
+            <option value="Ebvoumore">Ebvoumore</option>
+            <option value="EDPA">EDPA</option>
+            <option value="Ekosodin">Ekosodin</option>
+            <option value="Evidence">Evidence</option>
+            <option value="Osasoghie">Osasoghie</option>
+            <option value="Isiohor">Isiohor</option>
+            <option value="Osasoghie">Osasoghie</option>
+            <option value="Oluku">Oluku</option>
+            <option value="Uselu">Uselu</option>
+            
          </select><br/>
-         
-         <!--contains image input field-->
+
          <div id="profile-pic-cont">
             <label for="profile_photo" id="upload">upload a profile photo
                 <input type="file" name="profile_photo" id="profile-photo" class="file"/>
@@ -69,7 +93,7 @@
     </div>
 
      <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
-    <div id="footer-cont">
+     <div id="footer-cont">
         <div class="footer-sub-cont-a">
           <p ><a href="" class="foot-links">apartments</a></p>
           <p><a href="" class="foot-links">products and services</a></p>
@@ -113,7 +137,7 @@
 
    
     <script>
-        //displays name and size of uploaded image file
+         //displays name and size of uploaded image file
         const file = document.getElementById("profile-photo")
         file.addEventListener("change", (e) => {
             const [file] = e.target.files;
@@ -123,27 +147,6 @@
             document.querySelector('#file-name').textContent = 
             fileNameAndSize;
         })
-
-
-        //toggles eye icon between visible and invisible
-        function showToggle () {
-        var icon = document.getElementById("eye-icon")
-        icon.style.display="block";
-        }
-
-        //toggles the eye icon between open and closed
-        let icon = document.getElementById("eye-icon");
-        icon.addEventListener("click", iconChange)
-
-         function iconChange () {
-         let x = document.getElementById("eye-icon");
-           if (icon.className == "fa fa-eye") {
-               icon.className = "fa fa-eye-slash";
-            } else {
-               icon.className = "fa fa-eye";
-            }
-         }
-
     </script>
      <script src = "main.js"></script>
 </body>

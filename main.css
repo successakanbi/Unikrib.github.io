@@ -248,7 +248,7 @@ position: relative;
 .foot-links{
     text-decoration: none;
     color: #ffff;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 500;
 }
 #small1, #small2, #small3{
@@ -373,7 +373,7 @@ position: relative;
     .foot-links{
         text-decoration: none;
         color: #ffff;
-        font-size: 1.4em;
+        font-size: 1em;
     }
     #icon-cont{
         width:40%;
@@ -448,7 +448,7 @@ position: relative;
         text-align: left;
     }
 
-    /*styles phone view of the statistics sub containers and their contents*/
+    /*styles phone view of the statistics sub container and its contents*/
     #stat-sub-cont {
         width:99%;
         float: left;
@@ -489,7 +489,7 @@ position: relative;
     .foot-links{
         text-decoration: none;
         color: #ffff;
-        font-size: 1.2em;
+        font-size: 1em;
     }
     #icon-cont{
         width:60%;
