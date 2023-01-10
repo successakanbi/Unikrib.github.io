@@ -24,6 +24,10 @@
     width: 100%;
     opacity: 0.3;
 }
+h2{
+    text-align: center;
+    color: #3554b9;
+}
 label {
     font-size: 15px;
     font-weight: 700;
@@ -89,6 +93,12 @@ a {
     font-size: 15px;
     font-weight: 700;
     color: #1a3897;
+}
+
+#reset-info{
+    margin-left: 5%;
+    font-weight: 500;
+    color: #217707;
 }
 
 @media screen and (max-width: 1000px){

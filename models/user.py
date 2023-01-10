@@ -14,6 +14,7 @@ class User(BaseModel, Base):
     password = Column(String(60), nullable=False)
     phone_no = Column(String(60), nullable=True)
     user_type = Column(String(60), nullable=False)
+    com_res = Column(String(60), nullable=True)
     services = relationship("Service", backref="service", cascade="all, delete, delete-orphan")
 
     def __init__(self, *args, **kwargs):
