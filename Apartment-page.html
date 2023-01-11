@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Apartment-page.css">
+</head>
+<body>
+    <!-- responsive top navigator bar -->
+    <div class="top-nav" id="my-Top-nav">
+        <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+        <a href="homepage.html">Home</a>
+        <a href=""class="active">Apartments</a>
+        <a href="">products & services </a>
+        <a href="">contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+            <div class="icon-cont" onclick="changeIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+         </a>
+    </div>
+
+    <div id="main-ext-cont"> 
+        <div id="logo-container">
+            <img src="images/Black logo on white.png">
+        </div>
+        <h1>Lets find you an apartment</h1>
+        <!--Apartment container containing filter select options-->
+        <div id="Apartment-container">
+
+
+            <div id="search-filters-cont">
+                <!--location container containing location filter select box-->
+                <div id="location-cont" class="filter-containers">
+                    <label for="location search">Location</label><br>
+                    <select id="location-search" name="location search">
+                         <option value="Adolor">Adolor</option>
+                         <option value="Ebvoumore">Ebvoumore</option>
+                         <option value="EDPA">EDPA</option>
+                         <option value="Ekosodin">Ekosodin</option>
+                         <option value="Evidence">Evidence</option>
+                         <option value="Osasoghie">Osasoghie</option>
+                         <option value="Isiohor">Isiohor</option>
+                         <option value="Osasoghie">Osasoghie</option>
+                         <option value="Oluku">Oluku</option>
+                        <option value="Uselu">Uselu</option>       
+                   </select>
+                </div>
+                
+                <!--Apartment container containing Apartment filter select box-->
+                <div id="Apartment-cont" class="filter-containers">
+                    <label for="Apartment type">Apartment type</label><br>
+                    <select id="Apartment-type" name="Apartment type">
+                         <option value="Single-Room">Single Room</option>
+                         <option value="Self-contain">Self-contain</option>
+                         <option value="One-bedroom">One bedroom flat</option>
+                         <option value="Two-bedroom">Two bedrooom flat</option>
+                        <option value="Three-bedroom">Three bedrooom flat</option>
+                    </select>
+                </div>
+
+                 <!--minimum container containing minimum price filter select box-->
+                <div id="minimum-cont" class="filter-containers">
+                    <label for="Minimum price">Min Price</label><br>
+                    <select id="minimum-price" name="Minimum price">
+                         <option value="50000">30,000</option>
+                         <option value="60000">60,000</option>
+                         <option value="110000">110,000</option>
+                         <option value="160000">160,000</option>
+                         <option value="210000">210,000</option>
+                         <option value="260000">260,000</option>
+                         <option value="310000">310,000</option>
+                         <option value="360000">360,000</option>
+                   </select>  
+                </div>
+
+                <!--maximum container containing maximum price filter select box-->
+                <div id="maximum-cont" class="filter-containers">
+                    <label for="Maximum price">Max Price</label><br>
+                    <select id="maximum-price" name="Maximum price">
+                         <option value="70000">50,000</option>
+                         <option value="100000">100,000</option>
+                         <option value="150000">150,000</option>
+                         <option value="200000">200,000</option>
+                         <option value="250000">250,000</option>
+                         <option value="300000">300,000</option>
+                         <option value="350000">350,000</option>
+                         <option value="400000">400,000</option>
+                   </select>     
+                </div>
+
+                <!--button container containing search button-->
+                <div id="button-cont" class="filter-containers">
+                    <button type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <!--output container containing all apartment output containers-->
+    <div id="output-ext-cont">
+        <h2 id="search-filter"><span id=""></span></h2>
+
+        <div id="figures">
+          <p id="show">showing results <span id="num-results">1- 9</span> out of
+            <span id="">50</span></p>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="">
+            <div id="image-cont">
+              <img src="images/student-dorm.jpg" id="img1">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
+              <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span></p>
+              <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="">
+            <div id="image-cont">
+              <img src="images/Photo2016,205120PM.jpg" id="img2">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class ="type">Self-contain</span> in <span class ="hostel" id="hostel2">peace hostel </span>for rent
+              <span class ="street" id="street2">19th street,</span><span class ="community" id="community2"> EDPA</span></p>
+              <p class="price-results"><span class ="price" id="price2">N120,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="" class ="value-links">
+            <div id="image-cont">
+              <img src="images/campus_housing-220520-0109.jpg" id="img3">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class="hostel" id="hostel3">whitegate hostel </span>for rent
+              <span class ="street" id="street3">Image street</span><span class ="community" id="community3"> Osasoghie</span></p>
+              <p class="price-results"><span class ="price" id="price3">N350,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+
+        <div id="output-cont" class="output-containers">
+          <a href="" class ="value-links">
+            <div id="image-cont">
+              <img src="images/student-dorm.jpg" id="img4">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class ="type">Self-contain</span> in <span class ="hostel" id="hostel4"> imaguen hostel </span>for rent
+              <span class ="street" id="street4">Newton street</span><span class ="community" id="community4"> Ekosodin</span></p>
+              <p class="price-results"><span class ="price" id="price4">N135,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+
+        <div id="output-cont" class="output-containers">
+          <a href="" class ="value-links">
+            <div id="image-cont">
+              <img src="images/Photo2016,205120PM.jpg" id="img5">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class ="type">two-bedroom flat</span> in <span class ="hostel" id="hostel5">lifehouse hostel </span>for rent
+              <span class ="street" id="street5">22nd street</span><span class ="community"  id="community5">EDPA</span></p>
+              <p class="price-results"><span class ="price" id="price5">N450,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="" class ="value-links">
+            <div id="image-cont">
+              <img src="images/campus_housing-220520-0109.jpg" id="img6">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel6">whitegate hostel </span>for rent
+              <span class ="street" id="street6">Image street</span><span class ="community"  id="community6"> Osasoghie</span></p>
+              <p class="price-results"><span class ="price" id="price6">N200,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="" class ="value-links">
+            <div id="image-cont">
+              <img src="images/Photo2016,205120PM.jpg" id="img7">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class="type">One-bedroom flat</span> in <span class="hostel" id="hostel7">whitegate hostel </span>for rent
+              <span class ="street" id="street7">Image street</span><span class ="community" id="community7"> Osasoghie</span></p>
+              <p class="price-results"><span class ="price" id="price7">N200,000 </span>per year</p>
+              <div class="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="" class ="value-links">
+            <div id="image-cont">
+              <img src="images/student-dorm.jpg" id="img8">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel8">whitegate hostel </span>for rent
+              <span class ="street" id="street8">Image street</span><span class ="community"  id="community8"> Osasoghie</span></p>
+              <p class="price-results"><span class ="price" id="price8">N200,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="" class ="value-links">
+            <div id="image-cont">
+              <img src="images/Photo2016,205120PM.jpg" id="img9">
+          </div>
+          <div id="text-cont">
+              <p class="address-results"><span class="type">One-bedroom flat</span> in <span class ="hostel" id="hostel9">whitegate hostel </span>for rent
+              <span class ="street" id="street9">Image street</span><span class ="community"  id="community9"> Osasoghie</span></p>
+              <p class="price-results"><span class ="price" id="price9">N200,000 </span>per year</p>
+              <div class ="icons-cont">
+                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+              </div>
+          </div>
+          </a>
+        </div>
+
+        <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
+        <div id="view-more-button" onclick="viewMore()">
+          <p id="button-text">See more results</p>
+        </div>
+
+        <!--view more container containing all hidden apartment output containers-->
+        <div id="view-more-cont">
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/campus_housing-220520-0109.jpg" id="img10">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel10">whitegate hostel </span>for rent
+                <span class ="street" id="street10">Image street</span><span class ="community"  id="community10"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price10">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+  
+  
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/Photo2016,205120PM.jpg" id="img11">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel11">whitegate hostel </span>for rent
+                <span class ="street" id="street11">Image street</span><span class ="community"  id="community11"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price11">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+          
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/student-dorm.jpg" id="img12">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel12">whitegate hostel </span>for rent
+                <span class ="street" id="street12">Image street</span><span class="community"  id="community12"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price12">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/campus_housing-220520-0109.jpg" id="img13">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel13">whitegate hostel </span>for rent
+                <span class ="street" id="street13">Image street</span><span class="community"  id="community13"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price13">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/student-dorm.jpg" id="img14">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel14">whitegate hostel </span>for rent
+                <span class ="street" id="street14">Image street</span><span class="community"  id="community12"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price14">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/Photo2016,205120PM.jpg" id="img15">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel15">whitegate hostel </span>for rent
+                <span class ="street" id="street15">Image street</span><span class="community"  id="community15"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price15">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/campus_housing-220520-0109.jpg" id="img16">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel16">whitegate hostel </span>for rent
+                <span class ="street" id="street16">Image street</span><span class="community"  id="community16"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price16">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/Photo2016,205120PM.jpg" id="img17">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel17">whitegate hostel </span>for rent
+                <span class ="street" id="street17">Image street</span><span class="community"  id="community17"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price17">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/student-dorm.jpg" id="img18">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel18">whitegate hostel </span>for rent
+                <span class ="street" id="street18">Image street</span><span class="community"  id="community18"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price18">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/student-dorm.jpg" id="img19">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel19">whitegate hostel </span>for rent
+                <span class ="street" id="street19">Image street</span><span class="community"  id="community19"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price19">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="" class ="value-links">
+              <div id="image-cont">
+                <img src="images/student-dorm.jpg" id="img19">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel19">whitegate hostel </span>for rent
+                <span class ="street" id="street19">Image street</span><span class="community"  id="community19"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price19">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                </div>
+            </div>
+            </a>
+          </div>
+        </div>
+    </div>
+
+    
+     
+    <!-- Service link container containing service search page link, image and text-->
+    <div id="service-link-cont">
+      <a href="">
+        <div id="img-right-cont">
+          <image src="images/Woman texting - 2560x1707.jpg"></image>
+      </div>
+      <div id="text-left-cont">
+        <p id="redir">Do you need a service or want to buy a product
+           but can't seem to find the right service provider or vendor?<a href="" id="redirect-link">
+          Click here
+        </a></p>
+      </div>
+
+      </a>
+        
+    </div>
+    
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="" class="foot-links">apartments</a></p>
+          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href=""class="foot-links">The team</a></p>
+          <p><a href=""class="foot-links">contact</a></p>
+          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <p style="font-size:18px; font-weight:500;">For feedback and inquiries contact us on</p>
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+      </div>
+
+      <div id="footer-base-cont">
+        <div id="icon-cont">
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/facebook-logo.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/124021.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/2048px-Instagram_icon.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/official-linkedin-icon-png-16.jpg">
+            </a>
+          </div>
+        </div> 
+      </div>
+      
+    <script src = "main.js"></script>
+    <script src = "Apartment-page.js"></script>
+</body>
+</html>

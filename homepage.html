@@ -14,7 +14,7 @@
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html"class="active">Home</a>
-        <a href="">apartments</a>
+        <a href="">Apartments</a>
         <a href="">products & services </a>
         <a href="">contact</a>
         <a href="login.html">Login</a>
@@ -33,7 +33,7 @@
         <div class="mySlides fade">
           <img src="images/pexels-ekaterina-bolovtsova-6976561.jpg" id="pexels" style="width:100%">
           <div class="slide-text">
-            <h1 id ="headtext">Unikrib.ng</h1>
+            <h1 id ="headtext">Unikrib</h1>
             <p id="sub-headtext">Househunt online</p>
             <p><a href="#about" class="startlink">find your krib today</a></p>
           </div>
@@ -41,7 +41,7 @@
         <div class="mySlides fade">
           <img src="images/Photo by quatro via Iwaria.jpg" id="quatro" style="width:100%">
           <div class="slide-text">
-            <h1 id ="headtext">Unikrib.ng</h1>
+            <h1 id ="headtext">Unikrib</h1>
             <p id="sub-headtext">buy products</p>
             <p><a href="#about" class="startlink">get started</a></p>
           </div>
@@ -49,7 +49,7 @@
         <div class="mySlides fade">
           <img src="images/handyman.jpg" id="handyman"style="width:100%">
           <div class="slide-text">
-            <h1 id ="headtext">Unikrib.ng</h1>
+            <h1 id ="headtext">Unikrib</h1>
             <p id="sub-headtext">access domestic services</p>
             <p  ><a href="#about" class="startlink">Order now</a></p>
           </div>
@@ -207,8 +207,23 @@
             
             //calls the image change function from main.js
             imageChange()
-}
 
+            //changes the slideimages when window is less than 701px
+             function imageChange() {
+                  let slideImage1 = document.getElementById("handyman");
+                  let slideImage2 = document.getElementById("pexels");
+                  let slideImage3 = document.getElementById("quatro");
+                  if(window.innerWidth < 701) {
+                    slideImage1.src="images/pexels-emmanuel-ikwuegbu-7861963.jpg";
+                    slideImage2.src="images/pexels-diva-plavalaguna-6937732.jpg";
+                    slideImage3.src="images/pexels-andrea-piacquadio-3960547.jpg";
+                  } else{
+                      slideImage1.src="images/handyman.jpg";
+                      slideImage2.src="images/pexels-ekaterina-bolovtsova-6976561.jpg";
+                      slideImage3.src= "images/Photo by quatro via Iwaria.jpg"
+                    };
+                  }
+              }
 
     </script>
 </body>
