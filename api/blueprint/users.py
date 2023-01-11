@@ -4,6 +4,7 @@ from models import storage
 from api.blueprint import app_views
 from flask import abort, request, jsonify
 from models.user import User
+from werkzeug.utils import secure_filename
 
 
 @app_views.route('/users', strict_slashes=False)
@@ -37,6 +38,35 @@ def type_count():
         elif obj.user_type == 'sp':
             stats['sp'] += 1
     return jsonify(stats)
+
+@app_views.route('upload-profile-img', strict_slashes=False, methods=['POST'])
+def add_dp():
+    """This adds a profile image for a user"""
+    allowed_extensions = set(['png', 'jpg', 'jpeg'])
+
+    def allow_file(filename):
+        """This checks if the file extension is allowed"""
+        if '.' in filename and filename.split('.')[-1].lower() in allowed_extensions:
+            return True
+        else:
+            return False
+
+    if 'files[]' not in request.files:
+        resp = jsonify({'message': "No file path in the request"})
+        resp.status_code = 400
+        return resp
+
+    files = request.files.getlist('files[]')[0]
+    if files and allow_file(files.filename):
+        filename = secure_filename(files.filename)
+        files.save(os.path.join(app_config['UPLOAD_FOLDER'], filename))
+        resp = jsonify({"message": "Images successfully uploaded"})
+        resp.status_code = 200
+        return resp
+    else:
+        resp = jsonify({"message": "Not a valid file"})
+        resp.status_code = 400
+        return resp
 
 @app_views.route('/users', strict_slashes=False, methods=['POST'])
 def create_user():

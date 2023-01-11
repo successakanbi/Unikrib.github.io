@@ -16,7 +16,7 @@
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
-        <a href="">apartments</a>
+        <a href="">Apartments</a>
         <a href="">products & services </a>
         <a href="">contact</a>
         <a href="login.html">Login</a>
@@ -56,7 +56,7 @@
                 id="input-pass" onfocus="showToggle()" required><br>
               
                 
-                <!--eye icon toggles betwween visible password and hidden password-->
+                <!--eye icon toggles between visible password and hidden password-->
                 <icon class="fa fa-eye" onclick="showPassword()" id="eye-icon"></icon>
                  
 
@@ -150,6 +150,16 @@
                icon.className = "fa fa-eye";
             }
          }
+
+         //toggles password between visible text and hidden text
+         function showPassword(){
+              var x = document.getElementById("input-pass");
+                if(x.type === "password") {
+                     x.type = "text";
+                } else {
+                   x.type = "password";
+                  }
+          }
       </script>
 </body>
 </html>
