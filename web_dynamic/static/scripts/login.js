@@ -24,3 +24,9 @@ $(function () {
         })
     })
 })
+
+$(function () {
+	$("#sign-up").on('click', function() {
+		window.location.href = "reset-password.html";
+	});
+});

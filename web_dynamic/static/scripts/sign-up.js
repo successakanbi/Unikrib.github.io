@@ -23,18 +23,12 @@ $(function() {
             contentType: 'application/json',
             dataType: 'json',
             success: function (new_user){
-                alert("User successfully created.");
+		    alert("User successfully created.");
+		    window.localStorage.setItem('newId', new_user.id);
+		    window.location.href = "user-profile.html"
             },
-            error: function(xhr, status, message){
-		    if (xhr.status === 401){
-			    alert("Please include an email");
-		    }else if (xhr.status === 405){
-			    alert("Please include a password");
-		    } else if (xhr.status === 403){
-			    alert("That is an invalid email, please use a correct one");
-		    } else if (xhr.status === 404) {
-			    alert("Email has already been registered, please use another one");
-		    }
+            error: function(response){
+		    alert(response.text);
             },
         })
     })
