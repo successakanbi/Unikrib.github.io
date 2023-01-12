@@ -11,7 +11,7 @@ $(function () {
         };
         $.ajax({
             type: 'POST',
-            url: 'http://100.25.165.74:8000/unikrib/users/login',
+            url: 'http://54.173.52.4:8000/unikrib/users/login',
             data: JSON.stringify(login_dict),
             contentType: 'application/json',
             dataType: 'json',

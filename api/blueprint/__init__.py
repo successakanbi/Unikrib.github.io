@@ -6,3 +6,5 @@ app_views = Blueprint('app_views', __name__, url_prefix='/unikrib')
 
 from api.blueprint.users import *
 from api.blueprint.houses import *
+from api.blueprint.environments import *
+from api.blueprint.streets import *
