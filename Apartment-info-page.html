@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment info page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Apartment-info-page.css">
+</head>
+<body>
+        <!-- responsive top navigator bar -->
+        <div class="top-nav" id="my-Top-nav">
+            <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+            <a href="homepage.html">Home</a>
+            <a href=""class="active">Apartments</a>
+            <a href="">products & services </a>
+            <a href="">contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+                <div class="icon-cont" onclick="changeIcon(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+             </a>
+        </div>
+        <!--External container containing Apartment image slide show container-->
+        <div id="Ext-info-cont">
+            <div id="Ext-info-sub-cont">
+              <!--container containing apartment slide images,prev&next buttons and  dot container -->
+                <div class ="Apartment-slide-cont">
+                    <div class ="currentImage change">
+                        <div class="numb-text">1 / 3</div>
+                        <img src="images/student-dorm.jpg" style="width:100%;" id="Apart-zge1">
+                    </div>
+
+                    <div class ="currentImage change">
+                        <div class="numb-text">2 / 3</div>
+                        <img src="images/campus_housing-220520-0109.jpg" style="width:100%;" id="Apart-image1">
+                    </div>
+
+                    <div class ="currentImage change">
+                        <div class="numb-text">3 / 3</div>
+                        <img src="images/Photo2016,205120PM.jpg" style="width:100%;" id="Apart-image1">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></a>
+                    <a class="next" onclick="plusSlides(1)"><i class="fa fa-angle-right"></i></a>
+                </div>
+                <!--contains dots that show current image-->
+                <div id="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--Text info container containing apartment details, uploader, feature, security and disclaimer containers-->
+        <div id="Text-info-container">
+          <!--contains apartment details such as type, hostel, community & price-->
+          <div id="apartment-details">
+            <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
+               <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span>
+            </p>
+          <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
+          </div>
+
+          <!--contains uploader name, uploader phone and whatsapp containers and contact details-->
+            <div id="uploader-cont">
+                <p id="uploader">Uploaded by<span class ="Agent"> Igueben Charles</span></p>
+                    <div id="uploader-phone">
+                      <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
+                    </div>
+                    <div id="uploader-whatsapp">
+                      <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784" class="contact-links"> 09057758784</a></icon></p>
+                    </div>
+            </div>
+
+            <!--Contains apartment features and icons-->
+            <div id="feature-cont">
+              <h4>Apartment Features</h4>
+              <p class="feature"><icon class="fa fa-tint"></icon> Running water available</p>
+              <p class="feature"><icon class="fa fa-trash"></icon> waste disposal available</p>
+              <p class="feature"><icon class="fa fa-bolt"></icon> 6h of power daily</p>
+              <p class="feature"><icon class="fa fa-clock-o"></icon> 25min walk from school</p>
+            </div>
+
+            <!--contains security tips-->
+            <div id="security">
+              <h4>Security Tips</h4>
+              <p class="tip">Don't make any payments to the agent without confirmation from the landlord</p>
+              <p class="tip">Schedule a date to view the apartment and let atleast one other person know where your'e going</p>
+              <P class="tip">For your first meeting with the agent make sure you meet in an open place</P>
+            </div>
+
+            <!--contains disclaimer text-->
+            <div id="disclaimer">
+              <h4>Disclaimer<icon class="fa fa-warning"></icon></h4>
+              <p id="message">Please note that we do not endorse or guarantee the services or
+                properties provided by agents and service providers listed on our website. 
+                It is the responsibility od the student to confirm apartments, products and services 
+                before making payments. we will not be held liable for issues that may arise from payments
+                made before due diligence is done.
+
+              </p>
+            </div>
+        </div>
+
+
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="" class="foot-links">apartments</a></p>
+          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href=""class="foot-links">The team</a></p>
+          <p><a href=""class="foot-links">contact</a></p>
+          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <p style="font-size:18px; font-weight:500;">For feedback and inquiries contact us on</p>
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+      </div>
+
+      <div id="footer-base-cont">
+        <div id="icon-cont">
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/facebook-logo.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/124021.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/2048px-Instagram_icon.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/official-linkedin-icon-png-16.jpg">
+            </a>
+          </div>
+        </div> 
+      </div>
+    
+
+
+
+
+
+
+        <script src = "main.js"></script>
+        <script>
+          //changes Apartment slide images when next or previous buttons are clicked
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("currentImage");
+
+                let dots = document.getElementsByClassName("dot");
+
+                if (n > slides.length) {slideIndex = 1}
+                if(n < 1) {slideIndex = slides.length}
+                for(i = 0; i < slides.length; i++){
+                    slides[i].style.display = "none"
+                }
+                for(i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+</body>
+</html>
