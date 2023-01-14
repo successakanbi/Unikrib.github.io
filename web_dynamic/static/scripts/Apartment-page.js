@@ -19,11 +19,3 @@ function viewMore() {
     self.style.display = "none";
     result.innerHTML = "1 - 20";
 }
-//changes the search button colour from green to purple
-var button = document.getElementById("apartment-search");
-button.addEventListener("click", changeColor)
-
-function changeColor() {
-
-    button.style.backgroundColor = "purple"
-}

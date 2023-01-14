@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apartment search page</title>
+    <title>Apartment page</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="Apartment-page.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/Apartment-page.css">
 </head>
 <body>
     <!-- responsive top navigator bar -->
@@ -41,7 +41,7 @@
                 <div id="location-cont" class="filter-containers">
                     <label for="location search">Location</label><br>
                     <select id="location-search" name="location search">
-                         <option value="Adolor">Adolor</option>
+                         <!--<option value="Adolor">Adolor</option>
                          <option value="Ebvoumore">Ebvoumore</option>
                          <option value="EDPA">EDPA</option>
                          <option value="Ekosodin">Ekosodin</option>
@@ -50,7 +50,7 @@
                          <option value="Isiohor">Isiohor</option>
                          <option value="Osasoghie">Osasoghie</option>
                          <option value="Oluku">Oluku</option>
-                        <option value="Uselu">Uselu</option>       
+			 <option value="Uselu">Uselu</option>-->
                    </select>
                 </div>
                 
@@ -70,7 +70,7 @@
                 <div id="minimum-cont" class="filter-containers">
                     <label for="Minimum price">Min Price</label><br>
                     <select id="minimum-price" name="Minimum price">
-                         <option value="50000">30,000</option>
+                         <option value="30000">30,000</option>
                          <option value="60000">60,000</option>
                          <option value="110000">110,000</option>
                          <option value="160000">160,000</option>
@@ -85,7 +85,7 @@
                 <div id="maximum-cont" class="filter-containers">
                     <label for="Maximum price">Max Price</label><br>
                     <select id="maximum-price" name="Maximum price">
-                         <option value="70000">50,000</option>
+                         <option value="50000">50,000</option>
                          <option value="100000">100,000</option>
                          <option value="150000">150,000</option>
                          <option value="200000">200,000</option>
@@ -98,7 +98,7 @@
 
                 <!--button container containing search button-->
                 <div id="button-cont" class="filter-containers">
-                    <button id="apartment-search"type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                    <button type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
                 </div>
             </div>
         </div>
@@ -109,12 +109,12 @@
         <h2 id="search-filter"><span id=""></span></h2>
 
         <div id="figures">
-          <p id="show">showing results <span id="num-results">1- 9</span> out of
-            <span id="">50</span></p>
+          <p id="show">showing results <span id="num-results">1 - 9</span> out of
+            <span id="stats">50</span></p>
         </div>
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html">
+          <a href="">
             <div id="image-cont">
               <img src="images/student-dorm.jpg" id="img1">
           </div>
@@ -130,7 +130,7 @@
         </div>
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html">
+          <a href="">
             <div id="image-cont">
               <img src="images/Photo2016,205120PM.jpg" id="img2">
           </div>
@@ -146,7 +146,7 @@
         </div>
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html" class ="value-links">
+          <a href="" class ="value-links">
             <div id="image-cont">
               <img src="images/campus_housing-220520-0109.jpg" id="img3">
           </div>
@@ -163,7 +163,7 @@
 
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html" class ="value-links">
+          <a href="" class ="value-links">
             <div id="image-cont">
               <img src="images/student-dorm.jpg" id="img4">
           </div>
@@ -180,7 +180,7 @@
 
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html" class ="value-links">
+          <a href="" class ="value-links">
             <div id="image-cont">
               <img src="images/Photo2016,205120PM.jpg" id="img5">
           </div>
@@ -196,7 +196,7 @@
         </div>
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html" class ="value-links">
+          <a href="" class ="value-links">
             <div id="image-cont">
               <img src="images/campus_housing-220520-0109.jpg" id="img6">
           </div>
@@ -212,7 +212,7 @@
         </div>
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html" class ="value-links">
+          <a href="" class ="value-links">
             <div id="image-cont">
               <img src="images/Photo2016,205120PM.jpg" id="img7">
           </div>
@@ -228,7 +228,7 @@
         </div>
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html" class ="value-links">
+          <a href="" class ="value-links">
             <div id="image-cont">
               <img src="images/student-dorm.jpg" id="img8">
           </div>
@@ -244,7 +244,7 @@
         </div>
 
         <div id="output-cont" class="output-containers">
-          <a href="Apartment-info-page.html" class ="value-links">
+          <a href="" class ="value-links">
             <div id="image-cont">
               <img src="images/Photo2016,205120PM.jpg" id="img9">
           </div>
@@ -267,7 +267,7 @@
         <!--view more container containing all hidden apartment output containers-->
         <div id="view-more-cont">
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/campus_housing-220520-0109.jpg" id="img10">
             </div>
@@ -284,7 +284,7 @@
   
   
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/Photo2016,205120PM.jpg" id="img11">
             </div>
@@ -300,7 +300,7 @@
           </div>
           
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/student-dorm.jpg" id="img12">
             </div>
@@ -316,7 +316,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/campus_housing-220520-0109.jpg" id="img13">
             </div>
@@ -332,7 +332,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/student-dorm.jpg" id="img14">
             </div>
@@ -348,7 +348,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/Photo2016,205120PM.jpg" id="img15">
             </div>
@@ -364,7 +364,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/campus_housing-220520-0109.jpg" id="img16">
             </div>
@@ -380,7 +380,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/Photo2016,205120PM.jpg" id="img17">
             </div>
@@ -396,7 +396,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/student-dorm.jpg" id="img18">
             </div>
@@ -412,7 +412,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/student-dorm.jpg" id="img19">
             </div>
@@ -428,7 +428,7 @@
           </div>
 
           <div id="output-cont" class="output-containers">
-            <a href="Apartment-info-page.html" class ="value-links">
+            <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/student-dorm.jpg" id="img19">
             </div>
@@ -506,7 +506,9 @@
         </div> 
       </div>
       
-    <script src = "main.js"></script>
-    <script src = "Apartment-page.js"></script>
+    <script src = "scripts/main2.js"></script>
+    <script src = "scripts/Apartment-page.js"></script>
+      <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+      <script src="scripts/apartment.js"></script>"
 </body>
 </html>
