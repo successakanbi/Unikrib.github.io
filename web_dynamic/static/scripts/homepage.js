@@ -3,7 +3,7 @@
 $(function(){
 	$.ajax({
 		type: 'GET',
-		url: 'http://100.25.165.74:8000/unikrib/houses/stats',
+		url: 'http://54.173.52.4:8000/unikrib/houses/stats',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -17,7 +17,7 @@ $(function(){
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://100.25.165.74:8000/unikrib/stats/users',
+		url: 'http://54.173.52.4:8000/unikrib/stats/users',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -31,31 +31,4 @@ $(function(){
 		},
 	});
 
-	/*$.ajax({
-		type: 'GET',
-		url: 'http://100.25.165.74:8000/unikrib/stats/vendors',
-		data: {},
-		contentType: 'application/json',
-		dataType: 'json',
-		success: function (count) {
-			$("#stat3").text(count);
-		},
-		error: function (){
-			$("#stat3").text('0');
-		},
-	});
-
-	$.ajax({
-		type: 'GET',
-		url: 'http://100.25.165.74:8000/unikrib/stats/sp',
-		data: {},
-		contentType: 'application/json',
-		dataType: 'json',
-		success: function (count) {
-			$("#stat4").text(count);
-		},
-		error: function () {
-			$("#stat4").text('0');
-		},
-	});*/
 });

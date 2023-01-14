@@ -8,7 +8,7 @@ $(function (){
 		};
 		$.ajax({
 			type: 'PUT',
-			url: 'http://100.25.165.74:8000/users/' + userId,
+			url: 'http://54.173.52.4:8000/unikrib/users/' + userId,
 			data: JSON.stringify(userDict),
 			contentType: 'application/json',
 			dataType: 'json',
@@ -29,9 +29,9 @@ $(function (){
 		}
 		form_data.append("file", $("#profile-photo")[0].files);
 
-		$.ajax({
+		/*$.ajax({
 			type: 'POST',
-			url: 'http://100.25.165.74:8000/upload-profile-img',
+			url: 'http://54.173.52.4:8000/unikrib/upload-profile-img',
 			cache: false,
 			contentType: false,
 			data: form_data,
@@ -41,7 +41,7 @@ $(function (){
 			error: function(response) {
 				alert(response.message);
 			},
-		});
+		});*/
 	});
 });
 

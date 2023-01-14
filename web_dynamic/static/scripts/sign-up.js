@@ -18,7 +18,7 @@ $(function() {
         }
         $.ajax({
             type: 'POST',
-            url: 'http://100.25.165.74:8000/unikrib/users',  // to be editted later
+            url: 'http://54.173.52.4:8000/unikrib/users',  // to be editted later
             data: JSON.stringify(user_dict),
             contentType: 'application/json',
             dataType: 'json',
@@ -28,7 +28,7 @@ $(function() {
 		    window.location.href = "user-profile.html"
             },
             error: function(response){
-		    alert(response.text);
+		    alert("User could not be created");
             },
         })
     })
