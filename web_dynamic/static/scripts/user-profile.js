@@ -19,7 +19,11 @@ $(function (){
 				alert("Community of residence was unable to update, please try again later");
 			},
 		});
+	});
+});
 
+$(function (){
+	$("#submit").on('click', function() {
 		var form_data = new FormData();
 		var ins = $("#profile-photo")[0].files.length;
 
@@ -29,7 +33,7 @@ $(function (){
 		}
 		form_data.append("file", $("#profile-photo")[0].files);
 
-		/*$.ajax({
+		$.ajax({
 			type: 'POST',
 			url: 'http://54.173.52.4:8000/unikrib/upload-profile-img',
 			cache: false,
@@ -41,7 +45,7 @@ $(function (){
 			error: function(response) {
 				alert(response.message);
 			},
-		});*/
+		});
 	});
 });
 

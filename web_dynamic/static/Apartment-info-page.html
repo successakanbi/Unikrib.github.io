@@ -7,15 +7,15 @@
     <title>Apartment info page</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="Apartment-info-page.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/Apartment-info-page.css">
 </head>
 <body>
         <!-- responsive top navigator bar -->
         <div class="top-nav" id="my-Top-nav">
             <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
             <a href="homepage.html">Home</a>
-            <a href=""class="active">Apartments</a>
+            <a href="Apartment-page.html" class="active">Apartments</a>
             <a href="">products & services </a>
             <a href="">contact</a>
             <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
@@ -62,21 +62,21 @@
         <div id="Text-info-container">
           <!--contains apartment details such as type, hostel, community & price-->
           <div id="apartment-details">
-            <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
+            <!--<p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
                <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span>
             </p>
-          <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
-          </div>
+	    <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>-->
+	  </div>
 
           <!--contains uploader name, uploader phone and whatsapp containers and contact details-->
             <div id="uploader-cont">
-                <p id="uploader">Uploaded by<span class ="Agent"> Igueben Charles</span></p>
+                <!--<p id="uploader">Uploaded by<span class ="Agent"> Igueben Charles</span></p>
                     <div id="uploader-phone">
                       <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
                     </div>
                     <div id="uploader-whatsapp">
                       <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784" class="contact-links"> 09057758784</a></icon></p>
-                    </div>
+		    </div>-->
             </div>
 
             <!--Contains apartment features and icons-->
@@ -92,7 +92,7 @@
             <div id="security">
               <h4>Security Tips</h4>
               <p class="tip">Don't make any payments to the agent without confirmation from the landlord</p>
-              <p class="tip">Schedule a date to view the apartment and let atleast one other person know where your'e going</p>
+              <p class="tip">Schedule a date to view the apartment and let atleast one other person know where you're going</p>
               <P class="tip">For your first meeting with the agent make sure you meet in an open place</P>
             </div>
 
@@ -158,7 +158,7 @@
 
 
 
-        <script src = "main.js"></script>
+        <script src = "scripts/main2.js"></script>
         <script>
           //changes Apartment slide images when next or previous buttons are clicked
             let slideIndex = 1;
@@ -190,5 +190,7 @@
                 dots[slideIndex-1].className += " active";
             }
         </script>
+      <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+      <script src="scripts/apartment-info.js"></script>"
 </body>
 </html>

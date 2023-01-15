@@ -39,7 +39,8 @@ class Unikrib(cmd.Cmd):
                 obj_dict = storage.all(line_arg[0])
         for key, val in obj_dict.items():
             obj_list.append(val.to_dict())
-        print(obj_list)
+        for item in obj_list:
+            print(item)
 
     def do_create(self, args):
         """This create a new object and stores it in storage
