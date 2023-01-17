@@ -25,7 +25,7 @@ $(function (){
 						dataType: 'json',
 						success: function (env){
 							$("#apartment-details").html(` <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + ` </span>for rent
-					               <span class ="street" id="street1">` + street.name + ` street,</span><span class ="community" id="community1">` + env.name + ` </span>
+					               <span class ="street" id="street1">` + street.name + ` street,</span><span class ="community" id="community1"> ` + env.name + ` </span>
 						            </p>
 						          <p class="price-results"><span class="price" id="price1">N` + house.price + ` </span>per year</p>`)
 						},

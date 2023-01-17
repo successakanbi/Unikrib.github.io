@@ -28,7 +28,7 @@ $(function() {
 		    window.location.href = "user-profile.html"
             },
             error: function(response){
-		    alert("User could not be created");
+		    alert(response.message);
             },
         })
     })

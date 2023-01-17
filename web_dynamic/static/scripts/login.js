@@ -17,9 +17,10 @@ $(function () {
             dataType: 'json',
             success: function(user_dict) {
                 alert("Welcome back " + user_dict.first_name);
+		    window.location.href = 'Apartment-page.html';
             },
-            error: function() {
-                alert("You have entered incorrect details, Please try again.");
+            error: function(response) {
+                alert(JSON.stringify(response.responseJSON.message));
             },
         })
     })

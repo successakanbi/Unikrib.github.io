@@ -1,5 +1,25 @@
 #!/usr/bin/node
 
+// load the communities
+$(function (){
+	$.ajax({
+		type: 'GET',
+		url: 'http://54.173.52.4:8000/unikrib/environments',
+		data: {},
+		contentType: 'application/json',
+		dataType: 'json',
+		success: function (envs){
+			$.each(envs, function(index, env){
+				$("#community-select").append('<option value="' + env.name + '">' + env.name + '</option>')
+			});
+		},
+		error: function (){
+			alert("Could not load environments now, please try later");
+		},
+	});
+});
+
+// upload user community
 $(function (){
 	userId = window.localStorage.getItem('newId');
 	$("#submit").on('click', function() {
@@ -22,25 +42,49 @@ $(function (){
 	});
 });
 
+// upload profile image
 $(function (){
 	$("#submit").on('click', function() {
-		var form_data = new FormData();
+
+		var formData = new FormData();
 		var ins = $("#profile-photo")[0].files.length;
 
 		if(ins == 0) {
 			alert("Select an image please");
 			return;
 		}
-		form_data.append("file", $("#profile-photo")[0].files);
+		var file = $("#profile-photo")
+		userId = window.localStorage.getItem('newId');
+
+		formData.append("file", file[0].files);
+		formData.append("fileName", userId + '.jpeg');
+		formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
 
 		$.ajax({
-			type: 'POST',
-			url: 'http://54.173.52.4:8000/unikrib/upload-profile-img',
-			cache: false,
-			contentType: false,
-			data: form_data,
-			success: function(response) {
-				alert(response.message);
+			type: 'GET',
+			url: 'http://54.173.52.4:8003/unikrib/auth-url',
+			dataType: 'json',
+			success: function(body) {
+				formData.append("signature", body.signature);
+				formData.append("expire", body.expire);
+				formData.append("token", body.token);
+
+				$.ajax({
+					url: 'https://upload.imagekit.io/api/v1/files/upload',
+					type: 'POST',
+					mimeType: "multipart/form-data",
+					dataType: 'json',
+					data: formData,
+					processData: false,
+					contentType: false,
+					success: function(body) {
+						console.log(body);
+						window.location.href = 'Apartment-page.html';
+					},
+					error: function (jqxhr, text, error) {
+						console.log(error);
+					}
+				});
 			},
 			error: function(response) {
 				alert(response.message);
@@ -48,5 +92,4 @@ $(function (){
 		});
 	});
 });
-
 
