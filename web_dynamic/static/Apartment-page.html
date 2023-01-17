@@ -58,7 +58,7 @@
                 <div id="Apartment-cont" class="filter-containers">
                     <label for="Apartment type">Apartment type</label><br>
                     <select id="Apartment-type" name="Apartment type">
-                         <option value="Single-Room">Single Room</option>
+                         <option value="Single-room">Single Room</option>
                          <option value="Self-contain">Self-contain</option>
                          <option value="One-bedroom">One bedroom flat</option>
                          <option value="Two-bedroom">Two bedrooom flat</option>
@@ -98,7 +98,7 @@
 
                 <!--button container containing search button-->
                 <div id="button-cont" class="filter-containers">
-                    <button type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                    <button id='apartment-search' type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
                 </div>
             </div>
         </div>
@@ -113,7 +113,8 @@
             <span id="stats">50</span></p>
         </div>
 
-        <div id="output-cont" class="output-containers">
+	<div id="all-apartments">
+        <!--<div id="output-cont" class="output-containers">
           <a href="">
             <div id="image-cont">
               <img src="images/student-dorm.jpg" id="img1">
@@ -257,7 +258,8 @@
               </div>
           </div>
           </a>
-        </div>
+	</div>-->
+	</div>
 
         <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
         <div id="view-more-button" onclick="viewMore()">
@@ -266,7 +268,7 @@
 
         <!--view more container containing all hidden apartment output containers-->
         <div id="view-more-cont">
-          <div id="output-cont" class="output-containers">
+          <!--<div id="output-cont" class="output-containers">
             <a href="" class ="value-links">
               <div id="image-cont">
                 <img src="images/campus_housing-220520-0109.jpg" id="img10">
@@ -442,7 +444,7 @@
             </div>
             </a>
           </div>
-        </div>
+	</div>-->
     </div>
 
     

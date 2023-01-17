@@ -7,6 +7,7 @@ from models.service import Service
 from models.environment import Environment
 from models.street import Street
 from models.user import User
+from models.review import Review
 
 
 classes = {
@@ -14,7 +15,8 @@ classes = {
         "Service": Service,
         "Environment": Environment,
         "Street": Street,
-        "User": User}
+        "User": User,
+        "Review": Review}
 
 class Unikrib(cmd.Cmd):
     """This is to enable me manipulate the objects"""
@@ -39,7 +41,8 @@ class Unikrib(cmd.Cmd):
                 obj_dict = storage.all(line_arg[0])
         for key, val in obj_dict.items():
             obj_list.append(val.to_dict())
-        print(obj_list)
+        for item in obj_list:
+            print(item)
 
     def do_create(self, args):
         """This create a new object and stores it in storage
@@ -66,6 +69,9 @@ class Unikrib(cmd.Cmd):
                 return False
             if 'owner_id' not in class_dict:
                 print("* Please include an owner_id *")
+                return False
+            if 'street_id' not in class_dict:
+                print("* Please include a street_id *")
                 return False
         if line_args[0] == 'User':
             if 'first_name' not in class_dict:
@@ -97,6 +103,16 @@ class Unikrib(cmd.Cmd):
                 return False
             if "owner_id" not in class_dict:
                 print("* Please include owner_id *")
+                return False
+        if line_args[0] == 'Review':
+            if 'text' not in class_dict:
+                print("* Please include a text review *")
+                return False
+            if 'reviewer' not in class_dict:
+                print("* Please include a reviewer *")
+                return False
+            if 'reviewee' not in class_dict:
+                print("* Please include a reviewee *")
                 return False
         model = classes[line_args[0]](**class_dict)
         print(model.id)

@@ -74,19 +74,31 @@ def create_user():
     if not request.json:
         abort(400, "Not a valid Json")
     if "email" not in request.json:
-        abort(401, "Request must include email")
+        resp = jsonify({"message": "Request must include email"})
+        resp.status_code = 400;
+        return resp
     if "password" not in request.json:
-        abort(405, "Request must include password")
+        resp = jsonify({"message": "Request must include password"})
+        resp.status_code = 400
+        return resp
     user_dict = request.get_json()
     if user_dict['email'][-4:] != '.com':
-        abort(403, "Please enter a valid email")
+        resp = jsonify({"message": "Please enter a valid email"})
+        resp.status_code = 400
+        return resp
     if len(user_dict['password']) < 4:
-        abort(405, "Include a password please")
+        resp = jsonify({"message": "Please include a password"})
+        resp.status_code = 400
+        return resp
     if len(user_dict['email']) < 5:
-        abort(401, "Include an email please")
+        resp = jsonify({"message": "Please include an email"})
+        resp.status_code = 400
+        return resp
     for key, obj in storage.all(User).items():
         if user_dict['email'] == obj.email:
-            abort(404, "Email already exists")
+            resp = jsonify({"message": "Email already exists"})
+            resp.status_code = 400
+            return resp
     model = User(**user_dict)
     model.save()
     return jsonify(model.to_dict()), 200
@@ -95,11 +107,17 @@ def create_user():
 def user_login():
     """This return the user id based on their email and password"""
     if not request.json:
-        abort(400, "Not a valid Json")
+        resp = jsonify({"message": "Not a valid json"})
+        resp.status_code = 400
+        return resp
     if "email" not in request.json:
-        abort(400, "Request must include email")
+        resp = jsonify({"message": "Include an email please"})
+        resp.status_code = 400
+        return resp
     if "password" not in request.json:
-        abort(400, "Request must include password")
+        resp = jsonify({"message": "Include a password please"});
+        resp.status_code = 400
+        return resp
 
     user_dict = request.get_json()
     
@@ -107,7 +125,14 @@ def user_login():
         if obj.email.lower() == user_dict['email'].lower():
             if obj.password == user_dict['password']:
                 return jsonify(obj.to_dict(1))
-    abort(404, "User not found")
+            else:
+                resp = jsonify({"message": "Incorrect password"})
+                resp.status_code = 400
+                return resp
+
+    resp = jsonify({"message": "No user with this email found"})
+    resp.status_code = 404
+    return resp
 
 @app_views.route('/users/<user_id>', strict_slashes=False, methods=['PUT'])
 def update_user(user_id):
