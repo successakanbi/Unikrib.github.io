@@ -1,0 +1,271 @@
+#Ext-info-cont{
+    width:40%;
+    margin-left: 30%;
+    padding: 100px 0 0 0;
+}
+#Ext-info-sub-cont{
+    width: 100%;
+}
+.currentImage{
+    display: none; 
+}
+.Apartment-slide-cont{
+    display: block;
+    max-width:1000px;
+    position: relative;
+    margin: 0 0 30px 0;
+
+}
+img{
+    vertical-align: middle;
+}
+
+.prev, .next{
+    position: absolute;
+    width:auto;
+    padding: 3px;
+    color: #181818;
+    font-weight: 900;
+    top:25%;
+    transition: 0.6s ease;
+    font-size: 100px;
+    font-weight: 900;
+    color: #f3f3f5;
+    user-select: none;
+}
+.next{
+    right:0;
+    border-radius: 2px 0 0 2px;
+}
+
+.prev:hover,.next:hover{
+    background-color: #a8a6a69c;
+}
+
+.numb-text {
+    color: #ffffff;
+    font-size: 1.4vw;
+    font-weight: 700;
+    padding: 5% 5%;
+    position: absolute;
+    top:0;
+}
+#dot-container{
+    width: 30%;
+    display: block;
+    margin-left: 40%;
+    
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #e0dbdb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #888787;
+
+}
+.change{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes change {
+    from {opacity: .4}
+    to {opacity: 1}
+    
+}
+#Text-info-container{
+    display: block;
+    width: 100%;
+}
+#apartment-details{
+    background-color: #d1d1cc79;
+    padding: 10px 0 2px 10px;
+}
+.address-results{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+.price-results{
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+.type, .hostel, .street, .community{
+    font-size:1.5vw;
+    font-weight: 600;
+    color: #172074;
+}
+.price{
+    font-size: 1.5vw;
+    font-weight: 700;
+    color:#326805;
+}
+#uploader-cont{
+    padding: 10px 0 2px 10px;
+}
+#uploader{
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+.Agent{
+    color: #0e7272;
+    font-weight: 700;
+}
+
+#uploader-phone{
+    display: inline-block;
+    margin-right: 2%;
+    background-color: #092980;
+    padding: 0px 5px 0 5px;
+    
+}
+#uploader-whatsapp{
+    display: inline-block;
+    background-color: #0b880b;
+    padding: 0px 5px 0 5px;
+}
+.contact{
+    font-size: 1.3vw;
+}
+.contact .fa {
+    color: #ffffff;
+}
+.contact-links{
+    text-decoration: none;
+    color: #ffffffff;
+
+}
+h4{
+    font-size: 1.4vw;
+}
+#feature-cont{
+    padding: 10px 0 2px 10px;
+    color: #061b57;
+}
+.feature{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+#security{
+    background-color: #172074b0;
+    color: #faf7f7;
+    padding: 10px 0 2px 10px;
+    margin-bottom: 50px;
+}
+.tip{
+    font-size: 1.3vw;
+}
+#disclaimer{
+    padding: 10px 0 2px 10px;
+    color: #cc2b0e;
+    background-color: #f8debb;
+    margin-bottom: 50px;
+}
+#message{
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+    #Ext-info-cont{
+        width:60%;
+        margin-left: 20%;
+        padding: 100px 0 0 0;
+    }
+    .numb-text {
+        font-size: 2.7vw;
+    }
+    .address-results{
+        font-size: 2.3vw;
+        font-weight: 500;
+    }
+    .price-results{
+        font-size: 2.3vw;
+        font-weight: 500;
+    }
+    .type, .hostel, .street, .community{
+        font-size:2.5vw;
+        font-weight: 600;
+        color: #172074;
+    }
+    .price{
+        font-size: 2.5vw;
+        font-weight: 700;
+        color:#326805;
+    }
+    #uploader{
+        font-size: 2.3vw;
+        font-weight: 500;
+    }
+    .contact{
+        font-size: 2.3vw;
+    }
+    h4{
+        font-size: 2.4vw;
+    }
+    .feature{
+        font-size: 2.3vw;
+        font-weight: 500;
+    }
+    .tip{
+        font-size: 2.1vw;
+    }
+    #message{
+        font-size: 2.1vw;
+    }
+
+}
+@media screen and (max-width: 590px){
+    #Ext-info-cont{
+        width:90%;
+        margin-left: 5%;
+        padding: 100px 0 0 0;
+    }
+    .numb-text {
+        font-size: 3.7vw;
+    }
+    .address-results{
+        font-size: 3.3vw;
+        font-weight: 500;
+    }
+    .price-results{
+        font-size: 3.3vw;
+        font-weight: 500;
+    }
+    .type, .hostel, .street, .community{
+        font-size:3.5vw;
+        font-weight: 600;
+        color: #172074;
+    }
+    .price{
+        font-size: 3.5vw;
+        font-weight: 700;
+        color:#326805;
+    }
+    #uploader{
+        font-size: 3.3vw;
+        font-weight: 500;
+    }
+    .contact{
+        font-size: 3.3vw;
+    }
+    h4{
+        font-size: 3.4vw;
+    }
+    .feature{
+        font-size: 3.3vw;
+        font-weight: 500;
+    }
+    .tip{
+        font-size: 3.3vw;
+    }
+    #message{
+        font-size: 3.2vw;
+    }
+
+}

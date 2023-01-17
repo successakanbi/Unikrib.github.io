@@ -12,7 +12,7 @@ from models.service import Service
 from models.house import House
 from models.environment import Environment
 from models.street import Street
-
+from models.review import Review
   
 
 class Storage:

@@ -81,6 +81,9 @@ button {
     margin-left: 0%;
     margin-bottom: 20px;
 }
+.disappear{
+	display: none;
+}
 .output-containers{
     width:21%;
     margin-left: 8%;

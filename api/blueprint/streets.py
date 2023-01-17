@@ -24,3 +24,13 @@ def get_str(str_id):
         resp.status_code = 404
         return resp
     return jsonify(obj.to_dict())
+
+@app_views.route('/environments/<env_id>/streets', strict_slashes=False)
+def env_str(env_id):
+    """This returns a list of all the streets in an environment"""
+    env_str = []
+    for key, obj in storage.all(Street).items():
+        if obj.env_id == env_id:
+            env_str.append(obj.to_dict())
+    sorted_list = sorted(env_str, key=lambda d: d['name'])
+    return jsonify(sorted_list)

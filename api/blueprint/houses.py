@@ -68,3 +68,24 @@ def delete_house(house_id):
     obj = storage.all(House)[search_key]
     obj.delete()
     return {}
+
+@app_views.route('/houses/search', strict_slashes=False, methods=['POST'])
+def search_house():
+    """This receives a dict and returns houses that match the criteria"""
+    if not request.json:
+        abort(400, "Not a valid json")
+    search_dict = request.get_json()
+
+    streets = search_dict['streets']
+    apartment = search_dict['apartment']
+    min_price = int(search_dict['min_price'])
+    max_price = int(search_dict['max_price'])
+
+    result = []
+
+    for key, obj in storage.all(House).items():
+        for street in streets:
+            if obj.apartment == apartment and obj.street_id == street['id']:
+                if obj.price <= max_price and obj.price >= min_price:
+                    result.append(obj.to_dict())
+    return jsonify(result)
