@@ -8,3 +8,4 @@ from api.blueprint.users import *
 from api.blueprint.houses import *
 from api.blueprint.environments import *
 from api.blueprint.streets import *
+from api.blueprint.reviews import *
