@@ -23,6 +23,16 @@ def get_house(house_id):
             return jsonify(obj.to_dict())
     abort(404, "House not found")
 
+@app_views.route('/users/<user_id>/houses', strict_slashes=False)
+def get_agent_houses(user_id):
+    """This returns a list of all the houses registered under an agent"""
+    house_list = []
+    for key, obj in storage.all(House).items():
+        if obj.owner_id == user_id:
+            house_list.append(obj.to_dict())
+
+    return jsonify(house_list)
+
 @app_views.route('/houses/stats', strict_slashes=False)
 def get_stat():
     """This returns the number of all the houses in storage"""
@@ -30,7 +40,7 @@ def get_stat():
 
 @app_views.route('/houses', strict_slashes=False, methods=['POST'])
 def create_house():
-    """This creates a new houe in storage"""
+    """This creates a new house in storage"""
     if not request.json:
         abort(400, "Not a valid json")
     if "owner_id" not in request.json:
