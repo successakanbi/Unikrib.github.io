@@ -18,6 +18,7 @@
 }
 img{
     vertical-align: middle;
+    height: 25vw;
 }
 
 .prev, .next{
@@ -202,6 +203,10 @@ h4{
     .numb-text {
         font-size: 2.7vw;
     }
+    img{
+        vertical-align: middle;
+        height: 40vw;
+    }
     .address-results{
         font-size: 2.3vw;
         font-weight: 500;
@@ -262,6 +267,10 @@ h4{
     }
     .numb-text {
         font-size: 3.7vw;
+    }
+    img{
+        vertical-align: middle;
+        height: 60vw;
     }
     .address-results{
         font-size: 3.3vw;
