@@ -244,12 +244,18 @@ position: relative;
     height:220px;
     padding: 5px;
 }
+/*here*/
+#foot-para{
+    font-size: 1.2vw;
+    font-weight: 500;
+}
 .foot-links{
     text-decoration: none;
     color: #ffff;
-    font-size: 0.8em;
+    font-size: 1.1vw;
     font-weight: 500;
 }
+/*to here*/
 #small1, #small2, #small3{
     font-size: 20px;
 }
@@ -369,11 +375,14 @@ position: relative;
         padding: 5px;
         text-align: left;
     }
-    .foot-links{
-        text-decoration: none;
-        color: #ffff;
-        font-size: 0.9em;
+     /*here*/
+     #foot-para{
+       font-size: 2vw;
     }
+     .foot-links{
+        font-size: 1.9vw;
+    }
+    /*to here*/
     #icon-cont{
         width:40%;
         margin-left:30%;
@@ -385,7 +394,7 @@ position: relative;
     }
     
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 590px) {
     /*styles phone view of heading, subheading and startlink texts*/
     p {
         font-size: 15px;
@@ -448,19 +457,19 @@ position: relative;
     }
 
     /*styles phone view of the statistics sub container and its contents*/
+    /*here*/
     #stat-sub-cont {
-        width:99%;
+        width:99.5%;
         float: left;
         text-align: center;
-        border: #9b9999 0.3px solid;
+        border: #9b9999 1px solid;
     }
+    /* to here*/
     .values {
         font-size: 30px;
         margin-bottom: 20px;
     
     }
-
-
     #footer-cont {
         width:100%;
         background-color: #042d69;
@@ -485,11 +494,14 @@ position: relative;
         text-align:center;
         margin-bottom: 15px;
     }
-    .foot-links{
-        text-decoration: none;
-        color: #ffff;
-        font-size: 0.9em;
-    }
+    /*here*/
+    #foot-para{
+        font-size: 4vw;
+     }
+      .foot-links{
+         font-size: 3.9vw;
+     }
+     /*to here*/
     #icon-cont{
         width:60%;
         margin-left:19%;
