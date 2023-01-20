@@ -1,0 +1,315 @@
+#out-most-cont{
+    width:100%;
+    margin-left: 0%;
+    padding: 80px 0 0 0;
+}
+#logo-container{
+    width:10%;
+    margin-bottom: 20px;
+
+}
+#logo-container img{
+    width: 100%;
+}
+#inner-cont{
+    width: 100%;
+}
+h2{
+    text-align: center;
+    font-size: 1.8vw;
+    color: #ffffff;
+    background-color: #212161;
+}
+.output-containers{
+    width:21%;
+    margin-left: 8%;
+    margin-bottom:50px;
+    display: inline-block;
+    padding: 0.2vw 1% 0px 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#image-cont{
+    width: 95%;
+    height: 14vw;
+    margin-left: 2.5%;
+    padding-top: 1vw;
+}
+#image-cont img{
+    width:100%;
+    
+
+}
+#text-cont{
+    width: 100%;
+    padding: 5px;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #161616;
+
+}
+.address-results{
+    font-size: 1.1vw;
+    font-weight: 500;
+}
+.price-results{
+    color:#161670;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+.type, .hostel, .street, .community{
+    color: #161616;
+    font-size:1vw;
+    font-weight: 500;
+    color: #152b8f;
+}
+.price{
+    color: #16850b;
+    font-size: 1.3vw;
+    font-weight: 700;
+}
+.icons-cont .fa{
+    font-size: 1.4vw;
+    margin-left: 10px;
+    color: #5f5f61;
+}
+#view-more-button{
+    background-color: #152b8f;
+    text-align: center;
+    padding: 5px;
+    width: 30%;
+    margin-left:35%;
+    color: #f5f2f2;
+    margin-bottom: 30px;
+}
+#button-text{
+    font-size: 18px;
+    font-weight: 600;
+}
+#view-more-cont {
+    display: none;
+}
+#view-more-button:hover {
+    cursor: pointer;
+    transition: 500ms;
+    background-color: #353536;
+}
+#new-upload-cont{
+    display: block;
+    background-color: #327712;
+    text-align: center;
+    width:30%;
+    padding: 5px 2.5% 5px 2.5%;
+    margin: 30px 0 30px 32.5%;
+}
+#new-upload-cont a {
+    color: #ffffff;
+}
+#new-upload-cont:hover{
+    background-color: #5e0957;
+    
+}
+h3{
+    text-align: center;
+    font-size: 1.4vw;
+    color:#16850b
+}
+#review-cont{
+    width: 40%;
+    margin-left: 30%;
+    padding:5px 5px 5px 5px;
+}
+.reviews{
+    width: 100%;
+    color: #313030;
+    background-color: #d8f3f5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.reviewer-img-cont{
+    width: 13%;
+    display: inline-block;
+    padding: 2px 2% 2px 2%;
+
+}
+.reviewer-img-cont img{
+    width: 85%;
+}
+.rewiewer-name-cont{
+    width: 81%;
+    display: inline-block;
+    padding-left: 1px;
+}
+.name{
+    font-size: 1.4vw;
+}
+.reviewer-message-cont{
+    margin: -20px 0 0 0;
+    font-weight: 500;
+    padding: 0 5px 5px 10px;
+}
+#message{
+    font-size: 1.1vw;
+}
+.more-reviews-cont{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    font-weight: 700;
+    
+}
+@media screen and (max-width: 900px){
+    #logo-container{
+        width:20%;
+        margin-bottom: 20px;
+    
+    }
+    h2{
+        text-align: center;
+        font-size: 3vw;
+    }
+    .output-containers{
+        width:60%;
+        margin-left: 20%;
+        padding: 1vw 5px 0px 5px;
+       
+    }
+    #image-cont{
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+    }
+    #text-cont{
+        width: 100%;
+        height: auto;
+    }
+    .address-results{
+        font-size: 2.1vw;
+    }
+    .price-results{
+        font-size: 2.2vw;
+    }
+    .type, .hostel, .street, .community{
+        font-size:2vw;
+    }
+    .price{
+        font-size: 2.3vw;
+    }
+    .icons-cont .fa{
+        font-size: 2.4vw;
+        margin-left: 10px;
+    }
+    #view-more-button{
+        padding: 1px;
+        width: 40%;
+        margin-left:30%;
+        margin-bottom: 30px;
+    }
+    h3{
+        font-size: 2.4vw;
+    }
+    #review-cont{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .reviewer-img-cont{
+        width: 13%;
+        display: inline-block;
+    }
+    .reviewer-img-cont img{
+        width:85%;
+    }
+    .rewiewer-name-cont{
+        width: 81%;
+        display: inline-block;
+        padding-left: 0px;
+    }
+    .name{
+        font-size: 2.3vw;
+    }
+    #message{
+        font-size: 1.9vw;
+    }
+    .more-reviews-cont{
+        width: 100%;
+    
+    }
+
+}
+@media screen and (max-width: 590px) {
+    #logo-container{
+        width:25%;
+        margin-bottom: 20px;
+    
+    }
+    h2{
+        text-align: center;
+        font-size: 4vw;
+    }
+    .output-containers{
+        width:80%;
+        margin-left: 10%;
+        padding: 1vw 5px 0px 5px;
+        margin-bottom:30px;
+       
+    }
+    .address-results{
+        font-size:2.9vw;
+    }
+    .price-results{
+        font-size: 3.2vw;
+    }
+    .type, .hostel, .street, .community{
+        font-size:3vw;
+    }
+    .price{
+        font-size: 3.3vw;
+    }
+    .icons-cont .fa{
+        font-size: 3.2vw;
+        margin-left: 10px;
+    }
+    #view-more-button{
+        padding: 1px;
+        width: 60%;
+        margin-left:20%;
+    }
+    #new-upload-cont{
+        width:50%;
+        padding: 5px 2.5% 5px 2.5%;
+        margin: 30px 0 30px 23%;
+    }
+    h3{
+        font-size: 3.4vw;
+    }
+    #review-cont{
+        width: 85%;
+        margin-left: 7.5%;
+    }
+    .reviewer-img-cont{
+        width: 14%;
+        display: inline-block;
+    }
+    .reviewer-img-cont img{
+        width:80%;
+    }
+    .rewiewer-name-cont{
+        width: 79%;
+        display: inline-block;
+        padding-left: 0px;
+    }
+    .name{
+        font-size: 3.1vw;
+    }
+    #message{
+        font-size: 2.6vw;
+    }
+    .more-reviews-cont{
+        width: 100%;
+    
+    }
+
+}

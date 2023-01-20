@@ -243,12 +243,11 @@ position: relative;
     width:40%;
     height:220px;
     padding: 5px;
-    font-size: 1.3em;
 }
 .foot-links{
     text-decoration: none;
     color: #ffff;
-    font-size: 1.1em;
+    font-size: 0.8em;
     font-weight: 500;
 }
 #small1, #small2, #small3{
@@ -373,7 +372,7 @@ position: relative;
     .foot-links{
         text-decoration: none;
         color: #ffff;
-        font-size: 1em;
+        font-size: 0.9em;
     }
     #icon-cont{
         width:40%;
@@ -489,7 +488,7 @@ position: relative;
     .foot-links{
         text-decoration: none;
         color: #ffff;
-        font-size: 1em;
+        font-size: 0.9em;
     }
     #icon-cont{
         width:60%;

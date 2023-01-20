@@ -15,8 +15,8 @@
      <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
-        <a href=""class="active">Apartments</a>
-        <a href="">products & services </a>
+        <a href="Apartment-page.html">Apartments</a>
+        <a href="product-service-page.html">products & services </a>
         <a href="">contact</a>
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
@@ -29,6 +29,7 @@
 
     <div id="outer-most-container">
 
+      <!---Contains input fields, select boxes, image upload container, submit button and notice container-->
         <form action="" id="apart-upload-form">
             <div id="logo-container">
                 <img src="images/Black logo on white.png">
@@ -36,6 +37,7 @@
 
              <h2 id="form-title">Upload apartment</h2>
 
+             <!--select box for apartment type-->
              <label for="">Apartment type</label>
              <select name="type" class="type" required>
                  <option value="Single-Room">Single Room</option>
@@ -45,9 +47,12 @@
                  <option value="Three-bedroom">Three bedrooom flat</option>
              </select><br>
 
+             <!--Input field for hostel name-->
              <label for="Hostelname">Hostel name</label><br>
              <input type="text" class="hostel" name="Hostelname"><br>
 
+
+             <!--select box for community where apartment is located -->
              <label for="community">Select Community</label><br>
              <select name="community" id="community" class="community" onchange="changeOptions(this.id, 'street')" required>
                 <option value="Adolor">Adolor</option>
@@ -61,8 +66,11 @@
                 <option value="Uselu">Uselu</option>
              </select><br>
 
+             <!--select box for street where apartment is located depending on community selected-->
              <label for="street">Select street</label ><br>
              <select id="street" name="street" class="street"></select><br>
+
+             <!--Apartment features input and select boxes-->
 
              <label for="price">Rent per year</label><br>
              <input type="number" class="price" required><br>
@@ -85,6 +93,7 @@
              <label for="distance">How many mins walk from the school?</label>
              <input type="number" name="distance" id="time"  class="features">
 
+             <!-- contains apartment image upload input fields-->
              <h3>Upload three images of the apartment</h3>
              <div id="apartment-img-cont">
                  <label for="apartmemt img" id="upload">upload image
@@ -103,19 +112,18 @@
                 </label>
              </div>
 
+             <!--contains submit button-->
              <div id="Submit upload">
                 <button type="submit" id="Submit-apart">Save and upload</button>
              </div>
 
+             <!--notice contains important upload conditions-->
              <div id="notice">
                 <h4>Please Note:</h4>
                 <p> This form  is to be filled as factually as possible, using false information in this form is ill advised </p>
                 <p>Only currrently empty accomodation should be uploaded, and shall be deleted when leased</p>
 
              </div>
-
-
-
         </form>
     </div>
 

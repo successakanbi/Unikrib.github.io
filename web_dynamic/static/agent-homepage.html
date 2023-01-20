@@ -7,16 +7,16 @@
     <title>Agent Homepage</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="agent-homepage.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/agent-homepage.css">
 </head>
 <body>
     <!-- responsive top navigator bar -->
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
-        <a href="Apartment-page.html">Apartments</a>
-        <a href="product-service-page.html">products & services </a>
+        <a href="">Apartments</a>
+        <a href="">products & services </a>
         <a href="">contact</a>
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
@@ -36,10 +36,11 @@
             <h2>Your uploads</h2>
 
             <!--contains apartment image-cont and text-cont, it also contains important apartment info like location, type and price-->
+	    <div id="apartments">
             <div id="output-cont" class="output-containers">
-                <a href="apartment-info-page2.html">
+                <a href="">
                   <div id="image-cont">
-                    <img src="images/student-dorm.jpg" id="img1" class="apartment-img">
+                    <img src="images/student-dorm.jpg" id="img1">
                 </div>
                 <div id="text-cont">
                     <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
@@ -47,7 +48,6 @@
                     <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
                     <div class ="icons-cont">
                       <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                      <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                     </div>
                 </div>
                 </a>
@@ -55,9 +55,9 @@
               
 
               <div id="output-cont" class="output-containers">
-                <a href="apartment-info-page2.html">
+                <a href="">
                   <div id="image-cont">
-                    <img src="images/campus_housing-220520-0109.jpg" id="img2" class="apartment-img">
+                    <img src="images/campus_housing-220520-0109.jpg" id="img1">
                 </div>
                 <div id="text-cont">
                     <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
@@ -65,16 +65,15 @@
                     <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
                     <div class ="icons-cont">
                       <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                      <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                     </div>
                 </div>
                 </a>
               </div>
 
               <div id="output-cont" class="output-containers">
-                <a href="apartment-info-page2.html">
+                <a href="">
                   <div id="image-cont">
-                    <img src="images/Photo2016,205120PM.jpg" id="img3" class="apartment-img">
+                    <img src="images/Photo2016,205120PM.jpg" id="img1">
                 </div>
                 <div id="text-cont">
                     <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
@@ -82,11 +81,11 @@
                     <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
                     <div class ="icons-cont">
                       <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                      <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                     </div>
                 </div>
                 </a>
               </div>
+	    </div>
 
                <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
                <div id="view-more-button" onclick="viewMore()">
@@ -95,9 +94,9 @@
 
               <div id="view-more-cont">
                 <div id="output-cont" class="output-containers">
-                  <a href="apartment-info-page2.html">
+                  <a href="">
                     <div id="image-cont">
-                      <img src="images/campus_housing-220520-0109.jpg" id="img4" class="apartment-img">
+                      <img src="images/campus_housing-220520-0109.jpg" id="img1">
                   </div>
                   <div id="text-cont">
                       <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
@@ -105,7 +104,6 @@
                       <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
                       <div class ="icons-cont">
                         <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                        <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                       </div>
                   </div>
                   </a>
@@ -113,9 +111,9 @@
   
   
                 <div id="output-cont" class="output-containers">
-                  <a href="apartment-info-page2.html">
+                  <a href="">
                     <div id="image-cont">
-                      <img src="images/student-dorm.jpg" id="img5" class="apartment-img">
+                      <img src="images/student-dorm.jpg" id="img1">
                   </div>
                   <div id="text-cont">
                       <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
@@ -123,16 +121,15 @@
                       <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
                       <div class ="icons-cont">
                         <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                        <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                       </div>
                   </div>
                   </a>
                 </div>
   
                 <div id="output-cont" class="output-containers">
-                  <a href="apartment-info-page2.html">
+                  <a href="">
                     <div id="image-cont">
-                      <img src="images/Photo2016,205120PM.jpg" id="img6" class="apartment-img" >
+                      <img src="images/Photo2016,205120PM.jpg" id="img1">
                   </div>
                   <div id="text-cont">
                       <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
@@ -140,7 +137,6 @@
                       <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
                       <div class ="icons-cont">
                         <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                        <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                       </div>
                   </div>
                   </a>
@@ -165,7 +161,8 @@
      <!---contains customer review boxes containing the image, name and message of the reviewer it also contains the more reviews link-->
     <div id="review-cont">
       <h3>Your Reviews</h3>
-      <div id="review-1" class="reviews">
+      <div id="all-reviews">
+      <!--<div id="review-1" class="reviews">
         <div class="reviewer-img-cont">
           <img src="images/219969.png">
         </div>
@@ -176,10 +173,11 @@
         <div class ="reviewer-message-cont">
           <p id="message"> I had an excellent experience with Sunday maxwell. from start to finish
             he was always professional, responsive, and always available to answer 
-            any questions i had, i highly recommended him to anyone looking to rent 
+            any questions I had, I highly recommended him to anyone looking to rent 
             an apartment without stress
         </p> 
-        </div>
+	</div>
+      </div>-->
 
       </div>
       <div class="more-reviews-cont">
@@ -233,7 +231,7 @@
           </div>
         </div> 
       </div>
-    <script src = "main.js"></script>
+    <script src = "scripts/main2.js"></script>
     <script>
           //toggles see more button between visible and hidden
           //make view more container visible
