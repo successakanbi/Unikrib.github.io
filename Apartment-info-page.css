@@ -16,10 +16,12 @@
     margin: 0 0 30px 0;
 
 }
-img{
+/*here*/
+#Apartment-slide-cont img{
     vertical-align: middle;
     height: 25vw;
 }
+/*to here*/
 
 .prev, .next{
     position: absolute;
@@ -203,10 +205,12 @@ h4{
     .numb-text {
         font-size: 2.7vw;
     }
-    img{
+    /*here*/
+     #Apartment-slide-cont img{
         vertical-align: middle;
         height: 40vw;
     }
+    /*to here*/
     .address-results{
         font-size: 2.3vw;
         font-weight: 500;
@@ -268,10 +272,12 @@ h4{
     .numb-text {
         font-size: 3.7vw;
     }
-    img{
+    /*here*/
+    #Apartment-slide-cont img{
         vertical-align: middle;
         height: 60vw;
     }
+    /*to here*/
     .address-results{
         font-size: 3.3vw;
         font-weight: 500;
