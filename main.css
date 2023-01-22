@@ -230,6 +230,7 @@ position: relative;
     background-color: #042d69;
     display: inline-block;
     color: #ffff;
+    
 
 }
 .footer-sub-cont-a{
@@ -260,12 +261,13 @@ position: relative;
 #small1, #small2, #small3{
     font-size: 20px;
 }
+/*here*/
 #footer-base-cont{
     width:100%;
     display: inline-block;
     background-color: #042d69;
-    margin-top:-10px;
 }
+/*to here*/
 #icon-cont{
     width:30%;
     margin-left:35%;
@@ -512,7 +514,4 @@ position: relative;
         margin-left: 6%;
         float:left;
     }
-    
-    
-
 }
