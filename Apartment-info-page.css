@@ -17,7 +17,7 @@
 
 }
 /*here*/
-#Apartment-slide-cont img{
+.Apartment-slide-cont img{
     vertical-align: middle;
     height: 25vw;
 }
@@ -206,7 +206,7 @@ h4{
         font-size: 2.7vw;
     }
     /*here*/
-     #Apartment-slide-cont img{
+     .Apartment-slide-cont img{
         vertical-align: middle;
         height: 40vw;
     }
@@ -273,7 +273,7 @@ h4{
         font-size: 3.7vw;
     }
     /*here*/
-    #Apartment-slide-cont img{
+    .Apartment-slide-cont img{
         vertical-align: middle;
         height: 60vw;
     }
