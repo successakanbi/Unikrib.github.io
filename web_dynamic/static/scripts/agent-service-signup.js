@@ -20,7 +20,7 @@ $(function (){
 
 		$.ajax({
 			type: 'POST',
-			url: 'http://54.173.52.4:8000/unikrib/users',
+			url: 'http://localhost:8000/unikrib/users',
 			data: JSON.stringify(user_dict),
 			contentType: 'application/json',
 			dataType: 'json',

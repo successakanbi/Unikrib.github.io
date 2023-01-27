@@ -59,12 +59,12 @@ def update_house(house_id):
     if not request.json:
         abort(400, "Not a valid json")
     house_dict = request.get_json()
-    obj = storage.all(House)[house_dict]
+    obj = storage.get('House', house_id)
     if obj is None:
         abort(404, "House not found")
     for key, val in house_dict.items():
         setattr(obj, key, val)
-        storage.save()
+        obj.save()
     return jsonify(obj.to_dict())
 
 @app_views.route('/houses/<house_dict>', strict_slashes=False, methods=['DELETE'])

@@ -1,0 +1,413 @@
+#External-cont{
+    width:60%;
+    margin-left: 20%;
+    padding: 70px 0 0 0;
+}
+#logo-container{
+    width:15%;
+
+}
+#logo-container img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-size: 25px;
+}
+#service-prov-vendor-container{
+    width: 100%;
+    padding-top: 25px;
+    display: inline-block;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.filter-containers{
+    width:25%;
+    float:left;
+    text-align: center;
+}
+.filter-cont{
+    width:25%;
+    float:left;
+    text-align: center;
+}
+#button-cont{
+    width:25%;
+    float:left;
+    text-align: center;
+}
+label{
+    font-weight: 700;
+    font-size: 0.9vw;
+    color: #161670;
+}
+select{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    color: #504f4f;
+    font-size: 1vw;
+    font-weight: 700;
+    border: none;
+    border-top:#607dda solid 4px;
+}
+select:focus {
+    outline: none;
+    transition: 300ms;
+ }
+button {
+    width: 100%;
+    margin-top:24px;
+    border: 1px solid rgb(29, 112, 4);
+    background-color: rgb(29, 112, 4);
+    color: #ffff;
+    font-size: 15px;
+    height: 60px;
+}
+#search-filter{
+    font-size: 1.5vw;
+    text-align: center;
+    color: #0c1c61;
+}
+#figures{
+    background-color: #504f4f;
+    width: 99%;
+    display: block;
+    padding: 1% 0 1px 1%;
+    color: #f8f7f7;
+    margin-bottom: 50px;
+}
+#show {
+    font-size: 16px;
+    font-weight: 500;
+}
+#output-external-cont{
+    width: 100%;
+    margin-left: 0%;
+    margin-bottom: 20px;
+}
+.output-containers{
+    width:27%;
+    margin-left: 5%;
+    margin-bottom:70px;
+    display: inline-block;
+    padding: 0pxs 1% 0px 0%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.output-containers a{
+    text-decoration: none;
+}
+#img-container{
+    width: 48%;
+    height: auto;
+    float:left;
+}
+#img-container img{
+    width:100%;
+    height: 18vw;
+
+}
+#text-container{
+    width: 48%;
+    padding: 5px;
+    height: auto;
+    float:left;
+}
+.name{
+    color: #177177;
+    font-weight: 700;
+    font-size: 1.3vw;
+}
+.services{
+    color:#097e09;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+.community{
+    color: #353536;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+#uploader-phone{
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #092980;
+    padding: 0px 15px 0 15px;
+    
+}
+#uploader-whatsapp{
+    display: inline-block;
+    background-color: #0b880b;
+    padding: 0px 15px 0 15px;
+}
+.contact{
+    font-size: 0.9vw;
+}
+.contact .fa {
+    color: #ffffff;
+}
+.contact-links{
+    text-decoration: none;
+    color: #ffffffff;
+
+}
+#view-more-button{
+    background-color: #152b8f;
+    text-align: center;
+    padding: 5px;
+    width: 30%;
+    margin-left:35%;
+    color: #f5f2f2;
+    margin-bottom: 30px;
+}
+#button-text{
+    font-size: 1.1vw;
+    font-weight: 600;
+}
+#view-more-cont {
+    display: none;
+}
+#view-more-button:hover {
+    cursor: pointer;
+    transition: 500ms;
+    background-color: #353536;
+}
+#apartment-link-cont{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width: 40%;
+    background-color: #f3ebeb;
+    margin-left: 30%;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 10px 10px 10px;
+}
+#img-right-cont{
+    width:50%;
+    float:left;
+}
+#img-right-cont img{
+    width: 100%;
+}
+#text-left-cont{
+    width: 45%;
+    float:left;
+    padding: 2%;  
+}
+#text-left-cont a{
+    text-decoration: none; 
+    color: #086161;
+     
+}
+#redir{
+    font-weight: 500;
+}
+#redirect-link{
+    font-weight: 800;
+    text-decoration: none;
+    font-size:1.4vw;
+}
+
+@media screen and (max-width: 900px){
+    #External-cont{
+        width:90%;
+        margin-left: 5%;
+        padding: 70px 0 0 0;
+    }
+
+    #logo-container{
+        width:17%;
+    
+    }
+    label{
+        font-weight: 700;
+        font-size: 1.6vw;
+        color: #161670;
+    }
+    select{
+        font-size: 1.8vw;
+    }
+    #search-filter{
+        font-size: 2.5vw;
+    }
+    #figures{
+        margin-bottom: 20px;
+    }
+
+    .output-containers{
+        width:70%;
+        margin-left: 15%;
+        margin-bottom:70px;
+    }
+    #img-container{
+        width: 34%;
+        height: auto;
+        float:left;
+    }
+    #img-container img{
+        width:100%;
+        height: 32vw;
+    
+    }
+    #text-container{
+        width: 59%;
+        padding: 5px;
+        height: auto;
+        float:left;
+    }
+    .name{
+        color: #177177;
+        font-weight: 700;
+        font-size: 2.3vw;
+    }
+    .services{
+        color:#097e09;
+        font-size: 2.2vw;
+        font-weight: 600;
+    }
+    .community{
+        font-size: 2.2vw;
+        font-weight: 600;
+    }
+    .contact{
+        font-size: 1.9vw;
+    }
+    #button-text{
+        font-size: 1.8vw;
+    }
+    #apartment-link-cont{
+        width: 70%;
+        margin-left: 15%;
+    }
+    #redirect-link{
+        font-weight: 700;
+        color: #086161;
+        font-size:2.4vw;
+    }
+
+}
+@media screen and (max-width: 590px){
+    #logo-container{
+        width:17%;
+    
+    }
+    h1{
+        text-align: center;
+        font-size: 18px;
+    }
+    label{
+        font-weight: 700;
+        font-size: 3.2vw;
+        color: #161670;
+    }
+    .filter-containers{
+        width:50%;
+    }
+    .filter-cont{
+        width:100%;
+    }
+    #button-cont{
+        width:100%;
+        float:left;
+        text-align: center;
+    }
+    select{
+        font-size: 3.5vw;
+        height: 30px;
+    }
+    #search-filter{
+        font-size: 4vw;
+    }
+    #figures{
+        margin-bottom: 20px;
+    }
+    #service-prov-vendor-container{
+        margin-bottom: 20px;
+    }
+
+    .output-containers{
+        width:90%;
+        margin-left: 5%;
+        margin-bottom:70px;
+    }
+    #img-container{
+        width: 38%;
+        height: auto;
+        float:left;
+    }
+    #img-container img{
+        width:100%;
+        height: 46vw;
+    
+    }
+    #text-container{
+        width: 55%;
+        padding: 5px;
+        height: auto;
+        float:left;
+    }
+    .name{
+        color: #177177;
+        font-weight: 700;
+        font-size: 3.9vw;
+    }
+    .services{
+        color:#097e09;
+        font-size: 3.8vw;
+        font-weight: 600;
+    }
+    .community{
+        font-size: 3.8vw;
+        font-weight: 600;
+    }
+    #uploader-phone{
+        padding: 0px 5px 0 5px;
+        
+    }
+    #uploader-whatsapp{
+        display: inline-block;
+        background-color: #0b880b;
+        padding: 0px 5px 0 5px;
+    }
+    .contact{
+        font-size: 2.9vw;
+    }
+
+    #view-more-button{
+        width: 50%;
+        margin-left:25%;
+        margin-bottom: 30px;
+    }
+
+    #button-text{
+        font-size: 2.8vw;
+    }
+    #apartment-link-cont{
+        width: 70%;
+        margin-left: 15%;
+    }
+    #img-right-cont{
+        width:100%;
+    }
+    #img-right-cont img{
+        width: 100%;
+    }
+    #text-left-cont{
+        width: 100%;
+        padding: 2%;  
+    }
+    #redir{
+        font-weight: 400;
+        
+    }
+    #redirect-link{
+        font-weight: 700;
+        color: #086161;
+        font-size:3.4vw;
+    }
+
+}

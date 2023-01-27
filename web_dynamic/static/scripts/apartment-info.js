@@ -5,25 +5,50 @@ $(function (){
 	houseId = window.localStorage.getItem('houseId');
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/houses/' + houseId,
+		url: 'http://localhost:8000/unikrib/houses/' + houseId,
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
 		success: function (house) {
 			$.ajax({
 				type: 'GET',
-				url: 'http://54.173.52.4:8000/unikrib/streets/' + house.street_id,
+				url: 'http://localhost:8000/unikrib/streets/' + house.street_id,
 				data: {},
 				contentType: 'application/json',
 				dataType: 'json',
 				success: function (street){
 					$.ajax({
 						type: 'GET',
-						url: 'http://54.173.52.4:8000/unikrib/environments/' + street.env_id,
+						url: 'http://localhost:8000/unikrib/environments/' + street.env_id,
 						data: {},
 						contentType: 'application/json',
 						dataType: 'json',
 						success: function (env){
+							var count = 1;
+							if (house.image2 != null){
+								count += 1;
+							}
+							if (house.image3 != null){
+								count += 1;
+							}
+							$("#Apartment-slide-cont").html('');
+							$("#Apartment-slide-cont").append(`<div class ="currentImage change">
+							<div class="numb-text">1 / ` + count + `</div>
+							<img src="` + house.image1 + `" style="width:100%;" id="Apart-image1">
+							</div>`);
+	
+							if (house.image2 != null){
+								$("#Apartment-slide-cont").append(`<div class ="currentImage change">
+									<div class="numb-text">2 / ` + count + `</div>
+									<img src="` + house.image2 + `" style="width:100%;" id="Apart-image1">
+								</div>`)
+							}
+							if (house.image3 != null && count === 3){
+								$("#Apartment-slide-cont").append(`<div class ="currentImage change">
+									<div class="numb-text">3 / ` + count + `</div>
+									<img src="` + house.image3 + `" style="width:100%;" id="Apart-image1">
+								</div>`)
+							}
 							$("#apartment-details").html(` <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + ` </span>for rent
 					               <span class ="street" id="street1">` + street.name + ` street,</span><span class ="community" id="community1"> ` + env.name + ` </span>
 						            </p>
@@ -50,14 +75,14 @@ $(function (){
 	houseId = window.localStorage.getItem('houseId');
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/houses/' + houseId,
+		url: 'http://localhost:8000/unikrib/houses/' + houseId,
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
 		success: function (house){
 			$.ajax({
 				type: 'GET',
-				url: 'http://54.173.52.4:8000/unikrib/users/' + house.owner_id,
+				url: 'http://localhost:8000/unikrib/users/' + house.owner_id,
 				data: {},
 				contentType: 'application/json',
 				dataType: 'json',

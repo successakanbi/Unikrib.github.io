@@ -16,6 +16,9 @@ class House(BaseModel, Base):
     name = Column(String(128), nullable=True)
     street_id = Column(ForeignKey('streets.id'))
     description = Column(String(1024), nullable=True)
+    image1 = Column(String(128), nullable=True)
+    image2 = Column(String(128), nullable=True)
+    image3 = Column(String(128), nullable=True)
     owner_id = Column(ForeignKey('users.id'))
 
     def __init__(self, *args, **kwargs):

@@ -60,7 +60,7 @@ def update_review(review_id):
         obj.save()
     return jsonify(obj.to_dict())
 
-@app_views.route('/reviews/<reviews_id>' strict_slashes=False, methods=['DELETE'])
+@app_views.route('/reviews/<reviews_id>', strict_slashes=False, methods=['DELETE'])
 def delete_review(review_id):
     """This destroy a review frm storage based on id"""
     obj = storage.get('Review', review_id)

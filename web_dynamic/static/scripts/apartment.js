@@ -4,7 +4,7 @@
 $(function() {
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/environments',
+		url: 'http://localhost:8000/unikrib/environments',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -23,7 +23,7 @@ $(function() {
 $(function (){
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/houses/stats',
+		url: 'http://localhost:8000/unikrib/houses/stats',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -46,7 +46,7 @@ $(function (){
 $(function (){
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/houses',
+		url: 'http://localhost:8000/unikrib/houses',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -55,23 +55,28 @@ $(function (){
 			$.each(items, function(index, house) {
 				$.ajax({
 					type: 'GET',
-					url: 'http://54.173.52.4:8000/unikrib/streets/' + house.street_id,
+					url: 'http://localhost:8000/unikrib/streets/' + house.street_id,
 					data: {},
 					contentType: 'application/json',
 					dataType: 'json',
 					success: function(street) {
 						$.ajax({
 							type: 'GET',
-							url: 'http://54.173.52.4:8000/unikrib/environments/' + street.env_id,
+							url: 'http://localhost:8000/unikrib/environments/' + street.env_id,
 							data: {},
 							contentType: 'application/json',
 							dataType: 'json',
 							success: function(env) {
+								if (house.image1 === null){
+									var src1 = "images/student-dorm.jpg";
+								} else {
+									var src1 = house.image1;
+								}
 								if (index < 9) {
 									$("#all-apartments").append(`<div id="output-cont" class="output-containers">
                                                                                   <div id="info-` + house.id + `">
                                                                                     <div id="image-cont">
-                                                                                      <img src="images/student-dorm.jpg" id="img1">
+                                                                                      <img src="` + src1 + `" id="img1">
                                                                                   </div>
                                                                                   <div id="text-cont">
                                                                                       <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + `</span> for rent
@@ -92,7 +97,7 @@ $(function (){
 								} else {
 									$.ajax({
 										type: 'GET',
-										url: 'http://54.173.52.4:8000/unikrib/houses/stats',
+										url: 'http://localhost:8000/unikrib/houses/stats',
 										data: {},
 										contentType: 'application/json',
 										dataType: 'json',
@@ -100,7 +105,7 @@ $(function (){
 											$("#view-more-cont").append(`<div id="output-cont" class="output-containers">
                                 	                                                  <div id="info-` + house.id + `">
                                         	                                            <div id="image-cont">
-                                                	                                      <img src="images/student-dorm.jpg" id="img1">
+                                                	                                      <img src="` + src1 + `" id="img1">
                                                         	                          </div>
                                                                 	                  <div id="text-cont">
                                                                         	              <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + `</span> for rent
@@ -146,7 +151,7 @@ $(function (){
 		environment = $("#location-search :selected").val()
 		$.ajax({
 			type: 'GET',
-			url: 'http://54.173.52.4:8000/unikrib/environments/' + environment + '/streets',
+			url: 'http://localhost:8000/unikrib/environments/' + environment + '/streets',
 			data: {},
 			contentType: 'application/json',
 			dataType: 'json',
@@ -159,7 +164,7 @@ $(function (){
 				};
 				$.ajax({
 					type: 'POST',
-					url: 'http://54.173.52.4:8000/unikrib/houses/search',
+					url: 'http://localhost:8000/unikrib/houses/search',
 					data: JSON.stringify(search_dict),
 					contentType: 'application/json',
 					dataType: 'json',
@@ -180,24 +185,30 @@ $(function (){
 						$.each(items, function (index, item) {
 							$.ajax({
 								type: 'GET',
-								url: 'http://54.173.52.4:8000/unikrib/houses/' + item.id,
+								url: 'http://localhost:8000/unikrib/houses/' + item.id,
 								data: {},
 								contentType: 'application/json',
 								dataType: 'json',
 								success: function(house) {
 									$.ajax({
 										type: 'GET',
-										url: 'http://54.173.52.4:8000/unikrib/streets/' + house.street_id,
+										url: 'http://localhost:8000/unikrib/streets/' + house.street_id,
 										data: {},
 										contentType: 'application/json',
 										dataType: 'json',
 										success: function(street) {
 
+											if (house.image1 === null){
+												var src1 = "images/student-dorm.jpg";
+											} else {
+												var src1 = house.image1;
+											}
+
 											if (index < 10) {
 												$("#all-apartments").append(`<div id="output-cont" class="output-containers">
 												          <div id="info-` + house.id + `">
 												            <div id="image-cont">
-												              <img src="images/student-dorm.jpg" id="img1">
+												              <img src="` + src1 + `" id="img1">
 								        				  </div>
 										        		  <div id="text-cont">
 												              <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + `</span> for rent
@@ -217,20 +228,20 @@ $(function (){
 												});
 											} else {
 												$("#view-more-cont").append(`<div id="output-cont" class="output-containers">
-                                                                                                          <div id="info-` + house.id + `">
-                                                                                                            <div id="image-cont">
-                                                                                                              <img src="images/student-dorm.jpg" id="img1">
-                                                                                                          </div>
-                                                                                                          <div id="text-cont">
-                                                                                                              <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + `</span> for rent
-                                                                                                              <span class ="street" id="street1">` + street.name + ` street,</span><span class ="community" id="community1"> ` + $("#location-search :selected").text() + `</span></p>
-                                                                                                              <p class="price-results"><span class="price" id="price1">N` + house.price + `</span> per year</p>
-                                                                                                              <div class ="icons-cont">
-                                                                                                                <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                                                                                                              </div>
-                                                                                                          </div>
-                                                                                                          </div>
-                                                                                                        </div>`)
+																				<div id="info-` + house.id + `">
+																				<div id="image-cont">
+																				<img src="` + src1 + `" id="img1">
+																				</div>
+																				<div id="text-cont">
+																				<p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + `</span> for rent
+																				<span class ="street" id="street1">` + street.name + ` street,</span><span class ="community" id="community1"> ` + $("#location-search :selected").text() + `</span></p>
+																				<p class="price-results"><span class="price" id="price1">N` + house.price + `</span> per year</p>
+																				<div class ="icons-cont">
+																				<i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+																				</div>
+																				</div>
+																				</div>
+																				</div>`)
 												$(function (){
 													$("#info-" + house.id).on('click', function (){
 														window.localStorage.setItem('houseId', house.id);

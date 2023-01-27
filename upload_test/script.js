@@ -9,7 +9,12 @@ function submitForm(e) {
   const file = fileInput.files[0]
   const formData = new FormData()
   formData.append("file", file)
-  const response = fetch("http:/54.173.52.4:8005/upload_files", {
+  $.ajax({
+    type: 'POST',
+    url: 'http://54.173.52.4:8005/upload_files',
+    contentType: 'application/json',
+  })
+  const response = fetch("http://54.173.52.4:8005/upload_files", {
     method: "post",
     body: formData,
   })

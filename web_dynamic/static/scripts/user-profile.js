@@ -4,7 +4,7 @@
 $(function (){
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/environments',
+		url: 'http://localhost:8000/unikrib/environments',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -28,7 +28,7 @@ $(function (){
 		};
 		$.ajax({
 			type: 'PUT',
-			url: 'http://54.173.52.4:8000/unikrib/users/' + userId,
+			url: 'http://localhost:8000/unikrib/users/' + userId,
 			data: JSON.stringify(userDict),
 			contentType: 'application/json',
 			dataType: 'json',
@@ -56,13 +56,14 @@ $(function (){
 		var file = $("#profile-photo")
 		userId = window.localStorage.getItem('newId');
 
-		formData.append("file", file[0].files);
+		formData.append("file", file[0].files[0]);
 		formData.append("fileName", userId + '.jpeg');
+		formData.append("folder", "user_avatar");
 		formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
 
 		$.ajax({
 			type: 'GET',
-			url: 'http://54.173.52.4:8003/unikrib/auth-url',
+			url: 'http://localhost:8003/unikrib/auth-url',
 			dataType: 'json',
 			success: function(body) {
 				formData.append("signature", body.signature);

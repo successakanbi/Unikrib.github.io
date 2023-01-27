@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products and services page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/product-service-page.css">
+</head>
+<body>
+        <!-- responsive top navigator bar -->
+        <div class="top-nav" id="my-Top-nav">
+            <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+            <a href="homepage.html">Home</a>
+            <a href="Apartment-page.html">Apartments</a>
+            <a href="product-service-page.html" class="active">products & services </a>
+            <a href="">contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+                <div class="icon-cont" onclick="changeIcon(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+             </a>
+        </div>
+
+    <div id="External-cont">
+        <div id="logo-container">
+            <img src="images/Black logo on white.png">
+        </div>
+        <h1>Find vendors and service providers closest to you</h1>
+
+        <div id="internal-cont">
+            <div id="service-prov-vendor-container">
+                <div id="location-contain" class="filter-containers">
+                    <!--select box for community where service or product is needed-->
+                    <label for="community">Select Community</label><br>
+                    <select name="community" id="community" class="community-select">
+                         <option value="Adolor">Adolor</option>
+                         <option value="Ebvoumore">Ebvoumore</option>
+                         <option value="EDPA">EDPA</option>
+                         <option value="Ekosodin">Ekosodin</option>
+                         <option value="Evidence">Evidence</option>
+                         <option value="Isiohor">Isiohor</option>
+                         <option value="Osasoghie">Osasoghie</option>
+                         <option value="Oluku">Oluku</option>
+                        <option value="Uselu">Uselu</option>
+                    </select><br>
+                </div>
+    
+    
+                <div id="category-cont" class="filter-containers">
+                    <!--select box for category -->
+                   <label for="seller">Select category</label><br>
+                   <select name="seller" id="seller" class="seller" onchange="changeOptions(this.id, 'value-provider')" required>
+                        <option value=""></option>
+                        <option value="Service provider">Service provider</option>
+                        <option value="Vendor">Vendor</option>
+                   </select><br>
+                </div>
+    
+                <div id="value-provider-cont" class="filter-cont">
+                    <!--select box for specific service provider or vendor depending on category selected-->
+                    <label for="value provider">Service provider or vendor </label ><br>
+                    <select id="value-provider" name="value provider" class="value-providers"></select><br>
+                </div>
+    
+                <!--button container containing search button-->
+                <div id="button-cont" class="filter-containers">
+                     <button id="value-provider-search"type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+
+    <!--output external container containing all service provider and vendor search output containers-->
+    <div id="output-external-cont">
+        <h2 id="search-filter"><span id=""></span></h2>        
+        <div id="figures">
+           <p id="show">showing results <span id="number-results">1 - 6</span> out of
+           <span id="">9</span></p>
+       </div>
+
+       <div id="" class="output-containers">
+        <a href="">
+            <div id="img-container">
+             <img src="images/photo5.png">
+         </div>
+         <div id="text-container">
+             <p class ="name"><span id="fname">Osagede</span><span id="lname"> idehen</span></p>
+             <p class="services" id="service-select"> Painter</p>
+             <p class="community" id ="community-select">Osasoghie</p>
+             <div id="uploader-phone">
+                <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
+              </div>
+              <div id="uploader-whatsapp">
+                <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347037170954"
+                     class="contact-links"> 07037170954</a></icon></p>
+              </div>
+         </div>   
+        </a>
+       </div>
+
+       <div id="" class="output-containers">
+        <a href="">
+            <div id="img-container">
+                <img src="images/pretty-black-female-business-headshot.jpg">
+            </div>
+            <div id="text-container">
+                <p class ="name"><span id="fname">Margaret</span><span id="lname"> Oruwense</span></p>
+                <p class="services" id ="service-select"> Clothes vendor</p>
+                <p class="community" id="community-select">Osasoghie</p>
+                <div id="uploader-phone">
+                   <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
+                 </div>
+                 <div id="uploader-whatsapp">
+                   <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784"
+                        class="contact-links"> 09057758784</a></icon></p>
+                 </div>
+            </div>
+        </a>
+      </div>
+
+      <div id="" class="output-containers">
+        <a href="">
+            <div id="img-container">
+                <img src="images/web-shot-1.jpg">
+            </div>
+            <div id="text-container">
+                <p class ="name"><span id="fname">Justin</span><span id="lname"> Okafor</span></p>
+                <p class="services" id="service-select">Generator repairman</p>
+                <p class="community" id ="community-select">Ekosodin</p>
+                <div id="uploader-phone">
+                   <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
+                 </div>
+                 <div id="uploader-whatsapp">
+                   <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784"
+                        class="contact-links"> 09057758784</a></icon></p>
+                 </div>
+            </div>
+
+        </a>
+      </div>
+
+      <div id="" class="output-containers">
+          <a href="">
+            <div id="img-container">
+                <img src="images/photo5.png">
+            </div>
+            <div id="text-container">
+                <p class ="name"><span id="fname">Itavkase</span><span id="lname"> Bomor</span></p>
+                <p class="services" id="service-select"> Gas vendor</p>
+                <p class="community" id ="community-select">Evidence</p>
+                <div id="uploader-phone">
+                   <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
+                 </div>
+                 <div id="uploader-whatsapp">
+                   <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347037170954"
+                        class="contact-links"> 07037170954</a></icon></p>
+                 </div>
+            </div>
+          </a> 
+      </div>
+
+      <div id="" class="output-containers">
+             <a href="">
+                <div id="img-container">
+                    <img src="images/web-shot-1.jpg">
+                </div>
+                <div id="text-container">
+                    <p class ="name"><span id="fname">Okoro</span><span id="lname"> Ifake</span></p>
+                    <p class="services" id="service-select">Plumber</p>
+                    <p class="community" id ="community-select">EDPA</p>
+                    <div id="uploader-phone">
+                       <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
+                     </div>
+                     <div id="uploader-whatsapp">
+                       <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784"
+                            class="contact-links"> 09057758784</a></icon></p>
+                     </div>
+                </div>
+             </a>
+      </div>
+
+      <div id="" class="output-containers">
+              <a href="">
+                <div id="img-container">
+                    <img src="images/pretty-black-female-business-headshot.jpg">
+                </div>
+                <div id="text-container">
+                    <p class ="name"><span id="fname">Rosemary</span><span id="lname"> Adeyemi</span></p>
+                    <p class="services" id ="service-select"> Hair dresser</p>
+                    <p class="community" id="community-select">Uselu</p>
+                    <div id="uploader-phone">
+                       <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
+                     </div>
+                     <div id="uploader-whatsapp">
+                       <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784"
+                            class="contact-links"> 09057758784</a></icon></p>
+                     </div>
+                </div>
+              </div>
+              </a>
+    </div>
+
+    <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
+    <div id="view-more-button" onclick="viewMore()">
+        <p id="button-text">More results</p>
+      </div>
+
+      <!--view more container containing all hidden apartment output containers-->
+      <div id="view-more-cont">
+        <div id="" class="output-containers">
+                <a href="">
+                    <div id="img-container">
+                        <img src="images/web-shot-1.jpg">
+                    </div>
+                    <div id="text-container">
+                        <p class ="name"><span id="fname">Majesty</span><span id="lname"> Bako</span></p>
+                        <p class="services" id="service-select">Gadget vendor</p>
+                        <p class="community" id ="community-select">Oluku</p>
+                        <div id="uploader-phone">
+                           <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
+                         </div>
+                         <div id="uploader-whatsapp">
+                           <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784"
+                                class="contact-links"> 09057758784</a></icon></p>
+                         </div>
+                    </div>
+                </a>
+          </div>
+   
+          <div id="" class="output-containers">
+                   <a href="">
+                    <div id="img-container">
+                        <img src="images/pretty-black-female-business-headshot.jpg">
+                    </div>
+                    <div id="text-container">
+                        <p class ="name"><span id="fname">Adebola </span><span id="lname"> oluwapo</span></p>
+                        <p class="services" id ="service-select"> jewelry vendor</p>
+                        <p class="community" id="community-select">Adolor</p>
+                        <div id="uploader-phone">
+                           <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
+                         </div>
+                         <div id="uploader-whatsapp">
+                           <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784"
+                                class="contact-links"> 09057758784</a></icon></p>
+                         </div>
+                    </div>
+                   </a>
+         </div>
+
+         <div id="" class="output-containers">
+                <a href="">
+                    <div id="img-container">
+                        <img src="images/photo5.png">
+                    </div>
+                    <div id="text-container">
+                        <p class ="name"><span id="fname">Nasiru</span><span id="lname"> Muhammad</span></p>
+                        <p class="services" id="service-select"> Electrician</p>
+                        <p class="community" id ="community-select">Ebvoumore</p>
+                        <div id="uploader-phone">
+                           <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
+                         </div>
+                         <div id="uploader-whatsapp">
+                           <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347037170954"
+                                class="contact-links"> 07037170954</a></icon></p>
+                         </div>
+                    </div>
+                 </a>
+          </div>
+      </div>
+
+
+    <!-- apartment page  link container containing apartment search page link, image and text-->
+    <div id="apartment-link-cont">
+        <a href="Apartment-page.html">
+          <div id="img-right-cont">
+            <image src="images/Girl texting on phone - 2560x1922.jpg"></image>
+        </div>
+        <div id="text-left-cont">
+          <p id="redir">are you looking to rent an apartment close to your campus
+             without having to spend hours or days househunting? find vacant apartments <a href="Apartment-page.html" id="redirect-link">
+            Here
+          </a></p>
+        </div>
+        </a>   
+      </div>
+
+
+       <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="" class="foot-links">apartments</a></p>
+          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href=""class="foot-links">The team</a></p>
+          <p><a href=""class="foot-links">contact</a></p>
+          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <p style="font-size:18px; font-weight:500;">For feedback and inquiries contact us on</p>
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+      </div>
+
+      <div id="footer-base-cont">
+        <div id="icon-cont">
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/facebook-logo.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/124021.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/2048px-Instagram_icon.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/official-linkedin-icon-png-16.jpg">
+            </a>
+          </div>
+        </div> 
+      </div>
+
+    <script src = "scripts/main2.js"></script>
+    <script>
+        //changes the content of the street select box based on the selection in the community box
+        function changeOptions(lst1, lst2) {
+            var lst1 = document.getElementById(lst1);
+            var lst2 = document.getElementById(lst2);
+
+            //street option values for various community selected
+            lst2.innerHTML = "";
+            if(lst1.value == "Service provider") {
+                var optionArray = ["Ac installer|Ac installer","Carpenter|Carpenter", "Caterer|Caterer", "Dstv installer|Dstv installer"
+                ,"Electrician|Electrician","Fashion designer|Fashion designer","Generator repairman|Generator repairman",
+                "Hair stylist|Hair stylist","laundryman|laundryman","Makeup artist|Makeup artist","Painter|Painter","Plumber|Plumber",
+                "Refrigerator repairman|Refrigerator repairman" 
+            ];
+
+            } else if(lst1.value == "Vendor") {
+                var optionArray = ["Clothes vendor|Clothes vendor","Food vendor|Food vendor", "Gadget vendor|Gadget vendor", 
+                "Gas vendor|Gas vendor","jewelry vendor|jewelry vendor"];
+            } 
+            for (var option in optionArray) {
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                lst2.options.add(newOption);
+
+            }
+        }
+
+        //toggles see more button between visible and hidden
+        //make view more container visible
+        function viewMore() {
+           var self = document.getElementById("view-more-button");
+           var more = document.querySelector("#view-more-cont");
+           var result = document.querySelector("#number-results");
+           more.style.display = "block";
+           self.style.display = "none";
+           result.innerHTML = "1 - 9";
+        }
+
+        //displays search parameters in search result heading
+        function searchParameter() {
+            let community = document.getElementById("community").value;
+            let valueCreators = document.getElementById("value-provider").value;
+            document.getElementById("search-filter").innerHTML = 
+              "Search results for " + valueCreators + " in " + community;
+        }
+
+        //changes the search button colour from green to purple
+        var button = document.getElementById("value-provider-search");
+        button.addEventListener("click", changeColor)
+
+        function changeColor() {
+             button.style.backgroundColor = "purple"
+        }
+
+
+    </script>
+</body>
+</html>

@@ -31,10 +31,10 @@ class Storage:
         """
         self.__engine = create_engine(
             'mysql+mysqldb://{}:{}@{}/{}'.format(
-                getenv('UNIKRIB_USER'),
-                getenv('UNIKRIB_PWD'),
-                getenv('UNIKRIB_HOST'),
-                getenv('UNIKRIB_DB')))
+                'unikrib_dev',
+                'unikrib_dev_pwd',
+                'localhost',
+                'unikrib_db'))
 
     def all(self, cls=None):
         """

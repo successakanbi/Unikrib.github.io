@@ -30,7 +30,7 @@ function uploadFile(req, res) {
 			if(err) {
 				return res.status(500).json({
 					status: 'failed',
-					message: "An error occured during file upload. Please try again later"
+					message: "An error occured during file upload. Please try again later" + err,
 				})
 			} else {
 				const { url } = response
