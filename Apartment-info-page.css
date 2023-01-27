@@ -21,7 +21,7 @@
 }
 .Apartment-slide-cont img{
     vertical-align: middle;
-    height: 25vw;
+    height: 27vw;
 }
 
 .prev, .next{
@@ -297,29 +297,43 @@
        padding: 1.5vw 1.5% 1.5vw 1.5%;
        text-align: center;
    }
-
-#Edit-delete-cont{
-    width:40%;
-    margin-left: 30%;
-    margin-bottom: 20px;
-}
-#edit-button{
-    width:40%;
-    height:60px;
+   /*here*/
+   #edit-delete-cont{
+    width: 99%;
+    background-color: #dbd8d8;
+    padding: 1vw 0 1vw 1%;
+    display: inline-block;
+   }
+   #edit-delete-left{
+    width:50%;
+    float: left;
+   }
+   #edit-delete-right{
+    width:50%;
+    float: left;
+   }
+   #edit-apartment{
+    width:70%;
+    margin-left: 15%;
+    padding: 1.5vw 0 1.5vw 0;
+    background-color: #eb0c0c;
+    color: #ffffff;
+    border: none;
+    font-size: 1vw;
+   }
+   #delete-apartment{
+    width:70%;
+    margin-left: 15%;
+    padding: 1.5vw 0 1.5vw 0;
     background-color: #0b880b;
-    border: none;
     color: #ffffff;
-    margin-right:10%;
-    font-size: 1.2vw;
-}
-#delete-button{
-    width:40%;
-    height:60px;
-    background-color:#8b1d09;
     border: none;
-    color: #ffffff;
-    font-size: 1.2vw;
-}
+    font-size: 1vw;
+   }
+   button .fa{
+     color: #ffffff;
+    }
+   /*to here*/
 
 @media screen and (max-width: 900px) {
     #external-main-cont{
@@ -576,31 +590,24 @@
         padding: 3.5vw 2% 3.5vw 2%;
         text-align: center;
     }
-    
-    #Edit-delete-cont{
-        width:40%;
-        margin-left: 30%;
-        margin-bottom: 20px;
-    }
-    #edit-button{
-        width:40%;
-        height:60px;
-        background-color: #0b880b;
-        border: none;
-        color: #ffffff;
-        margin-right:10%;
-        font-size: 1.2vw;
-    }
-    #delete-button{
-        width:40%;
-        height:60px;
-        background-color:#8b1d09;
-        border: none;
-        color: #ffffff;
-        font-size: 1.2vw;
-    }
-    
-
+    /*here*/
+   #edit-delete-cont{
+    width: 48%;
+    padding: 2vw 0 2vw 1%;
+   }
+   #edit-apartment{
+    width:80%;
+    margin-left: 10%;
+    padding: 2vw 0 2vw 0;
+    font-size: 1.7vw;
+   }
+   #delete-apartment{
+    width:80%;
+    margin-left: 10%;
+    padding: 2vw 0 2vw 0;
+    font-size: 1.7vw;
+   }
+   /*to here*/
 }
 @media screen and (max-width: 590px){
     #external-main-cont{
@@ -849,28 +856,24 @@
         text-align: center;
     }
     
-    #Edit-delete-cont{
-        width:40%;
-        margin-left: 30%;
-        margin-bottom: 20px;
+     /*here*/
+     #edit-delete-cont{
+       width: 98%;
+       padding: 4vw 0 4vw 1%;
     }
-    #edit-button{
-        width:40%;
-        height:60px;
-        background-color: #0b880b;
-        border: none;
-        color: #ffffff;
-        margin-right:10%;
-        font-size: 1.2vw;
+     #edit-apartment{
+       width:80%;
+       margin-left: 10%;
+       padding: 4vw 0 4vw 0;
+       font-size:3.5vw;
     }
-    #delete-button{
-        width:40%;
-        height:60px;
-        background-color:#8b1d09;
-        border: none;
-        color: #ffffff;
-        font-size: 1.2vw;
+     #delete-apartment{
+       width:80%;
+       margin-left: 10%;
+       padding: 4vw 0 4vw 0;
+       font-size:3.5vw;
     }
+   /*to here*/
     
 
    
