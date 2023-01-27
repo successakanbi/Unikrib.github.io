@@ -92,9 +92,11 @@ button {
     margin-left: 5%;
     margin-bottom:70px;
     display: inline-block;
+    /*here*/
     padding: 0pxs 1% 0px 0%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(68, 67, 67, 0.2), 
+    0 6px 20px 0 rgba(73, 72, 72, 0.19);
+    /*to here*/
 }
 .output-containers a{
     text-decoration: none;
@@ -291,10 +293,11 @@ button {
 
 }
 @media screen and (max-width: 590px){
+    /*here*/
     #logo-container{
-        width:17%;
-    
+        width:25%;
     }
+    /*to here*/
     h1{
         text-align: center;
         font-size: 18px;
@@ -350,18 +353,21 @@ button {
         height: auto;
         float:left;
     }
+    /*here*/
     .name{
         color: #177177;
         font-weight: 700;
-        font-size: 3.9vw;
+        font-size: 4.3vw;
     }
+
     .services{
         color:#097e09;
-        font-size: 3.8vw;
+        font-size: 4.2vw;
         font-weight: 600;
     }
+    /* to here*/
     .community{
-        font-size: 3.8vw;
+        font-size: 4.2vw;
         font-weight: 600;
     }
     #uploader-phone{
@@ -373,19 +379,23 @@ button {
         background-color: #0b880b;
         padding: 0px 5px 0 5px;
     }
+    /*here*/
     .contact{
-        font-size: 2.9vw;
+        font-size: 3.1vw;
     }
+    /* to here*/
 
     #view-more-button{
         width: 50%;
         margin-left:25%;
         margin-bottom: 30px;
     }
-
+    /*here*/
     #button-text{
-        font-size: 2.8vw;
+        font-size: 3.5vw;
     }
+    /*to here*/
+    
     #apartment-link-cont{
         width: 70%;
         margin-left: 15%;
@@ -404,10 +414,12 @@ button {
         font-weight: 400;
         
     }
+    /*here*/
     #redirect-link{
         font-weight: 700;
         color: #086161;
-        font-size:3.4vw;
+        font-size:4vw;
     }
+    /*to here*/
 
 }
