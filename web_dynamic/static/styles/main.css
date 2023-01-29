@@ -235,12 +235,18 @@ position: relative;
     padding: 5px;
     font-size: 1.3em;
 }
+
 .foot-links{
     text-decoration: none;
     color: #ffff;
-    font-size: 1.2em;
+    font-size: 1.1vw;
     font-weight: 500;
 }
+#foot-para{
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
 #small1, #small2, #small3{
     font-size: 20px;
 }
@@ -248,7 +254,6 @@ position: relative;
     width:100%;
     display: inline-block;
     background-color: #042d69;
-    margin-top:-10px;
 }
 #icon-cont{
     width:30%;

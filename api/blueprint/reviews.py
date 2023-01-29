@@ -23,7 +23,7 @@ def get_review(review_id):
     else:
         return jsonify(obj.to_dict())
 
-@app_views.route('/users/<user_id>/review', strict_slashes=False)
+@app_views.route('/users/<user_id>/reviews', strict_slashes=False)
 def get_user_review(user_id):
     """This returns a list of all the reviews about a user"""
     all_reviews = []

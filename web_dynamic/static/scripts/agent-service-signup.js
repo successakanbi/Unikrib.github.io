@@ -27,7 +27,11 @@ $(function (){
 			success: function(new_dict) {
 				alert(new_dict.first_name + " account has been created successfully.");
 				window.localStorage.setItem('newId', new_dict.id);
-				window.location.href = 'user-profile.html';
+				if (user_type === 'sp'){
+					window.location.href = 'service-profile.html';
+				} else {
+					window.location.href = 'user-profile.html';
+				}
 			},
 			error: function (){
 				alert("An error has occured, please try again later");

@@ -20,7 +20,7 @@ class Storage:
     storage of class instances
     """
     classes = {"User": User, "Service": Service, "House": House,
-            "Environment": Environment, "Street": Street}
+            "Environment": Environment, "Street": Street, "Review": Review}
 
     __engine = None
     __session = None

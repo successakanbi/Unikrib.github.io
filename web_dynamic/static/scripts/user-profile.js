@@ -80,6 +80,22 @@ $(function (){
 					contentType: false,
 					success: function(body) {
 						console.log(body);
+						userDict = {
+							"avatar": body.url,
+						}
+						$.ajax({
+							type: 'PUT',
+							url: 'http://localhost:8000/unikrib/users/' + userId,
+							data: JSON.stringify(userDict),
+							contentType: 'application/json',
+							dataType: 'json',
+							success: function (){
+								alert("User image updated successfully");
+							},
+							error: function(){
+								alert("Could not upload user image, please try again later");
+							}
+						})
 						window.location.href = 'Apartment-page.html';
 					},
 					error: function (jqxhr, text, error) {
@@ -93,4 +109,3 @@ $(function (){
 		});
 	});
 });
-

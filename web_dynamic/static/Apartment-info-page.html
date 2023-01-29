@@ -15,7 +15,7 @@
         <div class="top-nav" id="my-Top-nav">
             <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
             <a href="homepage.html">Home</a>
-            <a href="Apartment-page.html" class="active">Apartments</a>
+            <a href="Apartment-page.html"class="active">Apartments</a>
             <a href="product-service-page.html">products & services </a>
             <a href="apartment-upload-page.html">contact</a>
             <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
@@ -26,107 +26,150 @@
                 </div>
              </a>
         </div>
-        <!--External container containing Apartment image slide show container-->
-        <div id="Ext-info-cont">
-            <div id="Ext-info-sub-cont">
-              <!--container containing apartment slide images,prev&next buttons and  dot container -->
-                <div class ="Apartment-slide-cont" id="Apartment-slide-cont">
-                    <!--<div class ="currentImage change">
+
+        <div id="external-main-cont">
+          <div id="internal-left-container">
+            <div id="">
+                <!--container containing apartment slide images,prev&next buttons and  dot container -->
+                <div class ="Apartment-slide-cont">
+                     <!--<div class ="currentImage change">
                         <div class="numb-text">1 / 3</div>
                         <img src="images/student-dorm.jpg" style="width:100%;" id="Apart-image1">
-                    </div>
+                     </div>
 
-                    <div class ="currentImage change">
-                        <div class="numb-text">2 / 3</div>
-                        <img src="images/campus_housing-220520-0109.jpg" style="width:100%;" id="Apart-image1">
-                    </div>
+                      <div class ="currentImage change">
+                           <div class="numb-text">2 / 3</div>
+                           <img src="images/campus_housing-220520-0109.jpg" style="width:100%;" id="Apart-image2">
+                      </div>
 
-                    <div class ="currentImage change">
-                        <div class="numb-text">3 / 3</div>
-                        <img src="images/Photo2016,205120PM.jpg" style="width:100%;" id="Apart-image1">
-                    </div>-->
-                    
-                    <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></a>
-                    <a class="next" onclick="plusSlides(1)"><i class="fa fa-angle-right"></i></a>
+                      <div class ="currentImage change">
+                           <div class="numb-text">3 / 3</div>
+                          <img src="images/Photo2016,205120PM.jpg" style="width:100%;" id="Apart-image3">
+                      </div>-->
+                      <a class="prev" id="plus"><i class="fa fa-angle-left"></i></a>
+                      <a class="next" id="minus"><i class="fa fa-angle-right"></i></a>
+                
+                <!--<div id="changeSlide">
+                  <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></a>
+                  <a class="next" onclick="plusSlides(1)"><i class="fa fa-angle-right"></i></a>
+                </div>-->
+
+                  <!--contains dots that show current image-->
+                  <div id="dot-container">
+                      <!--<span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>-->
+                 </div>
+                 <!--contains apartment details-->
+                 <div id="apartment-details">
+                       <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
+                            <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span>
+                       </p>
+                       <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
+                 </div>
+                 <!--contains apartment features-->
+                 <div id="feature-cont">
+                       <h4>Apartment Features</h4>
+                       <p class="feature"><icon class="fa fa-tint"></icon> Running water available</p>
+                       <p class="feature"><icon class="fa fa-trash"></icon> waste disposal available</p>
+                       <p class="feature"><icon class="fa fa-bolt"></icon> 6h of power daily</p>
+                       <p class="feature"><icon class="fa fa-clock-o"></icon> 25min walk from school</p>
                 </div>
-                <!--contains dots that show current image-->
-                <div id="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <!--contains disclaimer text-->
+                <div id="disclaimer">
+                    <h4>Disclaimer<icon class="fa fa-warning"></icon></h4>
+                    <p id="message">Please note that we do not endorse or guarantee the services or
+                        properties provided by agents and service providers listed on our website. 
+                        It is the responsibility of the student to confirm apartments, products and services 
+                        before making payments. we will not be held liable for issues that may arise from payments
+                        made before due diligence is done. 
+                    </p>
+               </div>
+    
+      
+               </div> 
+            </div>
+
+          </div>
+          <!--contains profile pic container and uploader info, review container, security tip cont, and report cont  -->
+          <div id="internal-right-container">
+            <!--contains uploader information, profile pic and uploader contacts-->
+            <div id="profile-cont">
+              <!--<div id="profile-pic-cont">
+                <img src="images/photo5.png">
+              </div>
+              <div id="name-cont">
+                <p class="name"><span id="fname">Igueben </span><span id="lname"> charles</span></p>
+                <p class="services" id="service-select">Agent</span></p>
+              </div>
+              <div id="contact-cont">
+                <div id="uploader-phone">
+                    <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
                 </div>
+                <div id="uploader-whatsapp">
+                   <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347045678389"
+                    class="contact-links"> 07045678389</a></icon></p>
+                </div>
+              </div>-->
             </div>
+            <!--contains reviews link , reviewer information profile pic and message-->
+            <div id="review-cont">
+              <p id="rev-headr">latest review</p>
+              <div id="latest-review-cont">
+                <!--<div id="rev-img-cont">
+                  <img src="images/219969.png">
+                </div>
+                <div id="rev-name-cont">
+                  <p class="rev-name">Mary jane</p>
+                </div>
+                <div id="rev-message-cont">
+                  <p id="review-message">I had an excellent experience with Osagede, he is highly skilled, 
+                    professional and reliable, and he finishes his work on time
+                    i highly recommended him to anyone who wants to turn their apartment
+                     to a work of art</p> 
+                     <p class="time-stamp"><span id="day">21st </span><span id="month">July</span><span id="year"> 2022</span></p>
+                </div>-->
+              </div>
+              <div id="other-reviews-cont">
+                <a href="">
+                  <p>read <span id="review-length">10 </span> more reviews</p>
+                </a>
+              </div>
+            </div>
+            <!--contains security header and security tips-->
+            <div id="security-tip-cont">
+              <h4>Security tips</h4>
+              <p class="tips">Don't make any payments to the agent without confirmation from the landlord</p>
+              <p class="tips">Schedule a date to view the apartment and let atleast one other person know where you are going</p>
+              <P class="tips">For your first meeting with the agent make sure you meet in an open place</P>
+            </div>
+            <div id="report-cont">
+              <a href="">
+                <div id="report-button"><icon class="fa fa-flag"></icon> Report this user</div>
+              </a> 
+            </div>
+          </div>
+
+          </div>
         </div>
-
-        <!--Text info container containing apartment details, uploader, feature, security and disclaimer containers-->
-        <div id="Text-info-container">
-          <!--contains apartment details such as type, hostel, community & price-->
-          <div id="apartment-details">
-            <!--<p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-               <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span>
-            </p>
-	    <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>-->
-	  </div>
-
-          <!--contains uploader name, uploader phone and whatsapp containers and contact details-->
-            <div id="uploader-cont">
-                <!--<p id="uploader">Uploaded by<span class ="Agent"> Igueben Charles</span></p>
-                    <div id="uploader-phone">
-                      <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347088523412" class="contact-links"> 07088523412</a></icon></p>
-                    </div>
-                    <div id="uploader-whatsapp">
-                      <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2349057758784" class="contact-links"> 09057758784</a></icon></p>
-		    </div>-->
-            </div>
-
-            <!--Contains apartment features and icons-->
-            <div id="feature-cont">
-              <h4>Apartment Features</h4>
-              <p class="feature"><icon class="fa fa-tint"></icon> Running water available</p>
-              <p class="feature"><icon class="fa fa-trash"></icon> waste disposal available</p>
-              <p class="feature"><icon class="fa fa-bolt"></icon> 6h of power daily</p>
-              <p class="feature"><icon class="fa fa-clock-o"></icon> 25min walk from school</p>
-            </div>
-
-            <!--contains security tips-->
-            <div id="security">
-              <h4>Security Tips</h4>
-              <p class="tip">Don't make any payments to the agent without confirmation from the landlord</p>
-              <p class="tip">Schedule a date to view the apartment and let atleast one other person know where you're going</p>
-              <P class="tip">For your first meeting with the agent make sure you meet in an open place</P>
-            </div>
-
-            <!--contains disclaimer text-->
-            <div id="disclaimer">
-              <h4>Disclaimer<icon class="fa fa-warning"></icon></h4>
-              <p id="message">Please note that we do not endorse or guarantee the services or
-                properties provided by agents and service providers listed on our website. 
-                It is the responsibility od the student to confirm apartments, products and services 
-                before making payments. we will not be held liable for issues that may arise from payments
-                made before due diligence is done.
-
-              </p>
-            </div>
-        </div>
-
 
     <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
     <div id="footer-cont">
-        <div class="footer-sub-cont-a">
-          <p ><a href="" class="foot-links">apartments</a></p>
-          <p><a href="" class="foot-links">products and services</a></p>
-          <p><a href=""class="foot-links">The team</a></p>
-          <p><a href=""class="foot-links">contact</a></p>
-          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
-        </div>
-        <div class="footer-sub-cont-b">
-          <p style="font-size:18px; font-weight:500;">For feedback and inquiries contact us on</p>
-          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
-          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
-          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
-        </div>
+      <div class="footer-sub-cont-a">
+        <p ><a href="" class="foot-links">apartments</a></p>
+        <p><a href="" class="foot-links">products and services</a></p>
+        <p><a href=""class="foot-links">The team</a></p>
+        <p><a href=""class="foot-links">contact</a></p>
+        <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
       </div>
-
+      <div class="footer-sub-cont-b">
+        <!--here-->
+        <p id="foot-para">For feedback and inquiries contact us on</p>
+        <!--to here-->
+        <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+        <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+        <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+      </div>
       <div id="footer-base-cont">
         <div id="icon-cont">
           <div class="icon-sub-cont">
@@ -151,6 +194,10 @@
           </div>
         </div> 
       </div>
+    </div>
+      <!--to here-->
+
+      
     
 
 
@@ -160,10 +207,11 @@
 
         <script src = "scripts/main2.js"></script>
         <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-      <script src="scripts/apartment-info.js"></script>
-        <script>
+      <script src="scripts/apartment-info.js"></script>"
+        
+        <!--<script>
           //changes Apartment slide images when next or previous buttons are clicked
-            let slideIndex = 1;
+            /*let slideIndex = 1;
             showSlides(slideIndex);
 
             function plusSlides(n) {
@@ -190,7 +238,9 @@
                 }
                 slides[slideIndex-1].style.display = "block";
                 dots[slideIndex-1].className += " active";
-            }
-        </script>
+            }*/
+        </script>-->
+      
+        
 </body>
 </html>
