@@ -121,6 +121,9 @@ $(function (){
                     var formData = new FormData();
     
                     var file = $("#Apart-image2")
+                    if (file.length === 0) {
+                        return;
+                    }
 
                     formData.append("file", file[0].files[0]);
                     formData.append("fileName", house.id + '.jpg');
@@ -171,6 +174,9 @@ $(function (){
                     var formData = new FormData();
     
                     var file = $("#Apart-image3")
+                    if (file === 0) {
+                        return;
+                    }
 
                     formData.append("file", file[0].files[0]);
                     formData.append("fileName", house.id + '.jpg');

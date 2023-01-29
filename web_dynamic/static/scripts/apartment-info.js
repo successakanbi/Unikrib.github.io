@@ -40,18 +40,30 @@ $(function (){
 				 
 				 $("#dot-container").append(`<span class="dot" id="current` + i + `" ></span>`)
 				 $("#current" + i).on('click', function(){
-					showSlides(slideIndex = i)
+					showSlides(slideIndex=i-1)
 				 })
 			}
 			
 			let slideIndex = 1;
     		showSlides(slideIndex);
 
-			$("#plus").on('click', function(){
-				showSlides(slideIndex += -1)
-			})
 			$("#minus").on('click', function(){
-				showSlides(slideIndex += 1)
+				if (slideIndex-- < 1) {
+					showSlides(count)
+					
+				} else {
+					showSlides(slideIndex)
+					
+				}
+			})
+			$("#plus").on('click', function(){
+				if (slideIndex++ > count){
+					showSlides(1);
+				
+				} else {
+					showSlides(slideIndex)
+					
+				}
 			})
 			
 
@@ -107,24 +119,7 @@ $(function (){
 							if (house.image3 != null){
 								count += 1;
 							}
-							$("#Apartment-slide-cont").html('');
-							$("#Apartment-slide-cont").append(`<div class ="currentImage change">
-							<div class="numb-text">1 / ` + count + `</div>
-							<img src="` + house.image1 + `" style="width:100%;" id="Apart-image1">
-							</div>`);
-	
-							if (house.image2 != null){
-								$("#Apartment-slide-cont").append(`<div class ="currentImage change">
-									<div class="numb-text">2 / ` + count + `</div>
-									<img src="` + house.image2 + `" style="width:100%;" id="Apart-image1">
-								</div>`)
-							}
-							if (house.image3 != null && count === 3){
-								$("#Apartment-slide-cont").append(`<div class ="currentImage change">
-									<div class="numb-text">3 / ` + count + `</div>
-									<img src="` + house.image3 + `" style="width:100%;" id="Apart-image1">
-								</div>`)
-							}
+							
 							$("#apartment-details").html(` <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + ` </span>for rent
 					               <span class ="street" id="street1">` + street.name + ` street,</span><span class ="community" id="community1"> ` + env.name + ` </span>
 						            </p>
