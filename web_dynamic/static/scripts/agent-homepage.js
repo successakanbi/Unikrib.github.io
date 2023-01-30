@@ -6,7 +6,7 @@ $(function (){
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/users/' + userId + '/houses',
+		url: 'http://localhost:8000/unikrib/users/' + userId + '/houses',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -14,14 +14,14 @@ $(function (){
 			$.each(apartments, function(index, house) {
 				$.ajax({
 					type: 'GET',
-					url: 'http://54.173.52.4:8000/unikrib/streets/' + house.street_id,
+					url: 'http://localhost:8000/unikrib/streets/' + house.street_id,
 					data: {},
 					contentType: 'application/json',
 					dataType: 'json',
 					success: function(street) {
 						$.ajax({
 							type: 'GET',
-							url: 'http://54.173.52.4:8000/unikrib/environments/' + street.env_id,
+							url: 'http://localhost:8000/unikrib/environments/' + street.env_id,
 							data: {},
 							contentType: 'application/json',
 							datatype: 'json',
@@ -87,7 +87,7 @@ $(function (){
 	userId = window.localStorage.getItem('newId');
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/user' + userId + '/reviews',
+		url: 'http://localhost:8000/unikrib/user' + userId + '/reviews',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json'
@@ -99,7 +99,7 @@ $(function (){
 				$.each(reviews, function(index, review) {
 					$.ajax({
 						type: 'GET',
-						url: 'http://54.173.52.4:8000/unikrib/users/' + review.reviewer,
+						url: 'http://localhost:8000/unikrib/users/' + review.reviewer,
 						data: {},
 						contentType: 'application/json',
 						dataType: 'json',

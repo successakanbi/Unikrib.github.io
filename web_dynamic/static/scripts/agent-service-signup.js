@@ -20,14 +20,18 @@ $(function (){
 
 		$.ajax({
 			type: 'POST',
-			url: 'http://54.173.52.4:8000/unikrib/users',
+			url: 'http://localhost:8000/unikrib/users',
 			data: JSON.stringify(user_dict),
 			contentType: 'application/json',
 			dataType: 'json',
 			success: function(new_dict) {
 				alert(new_dict.first_name + " account has been created successfully.");
 				window.localStorage.setItem('newId', new_dict.id);
-				window.location.href = 'user-profile.html';
+				if (user_type === 'sp'){
+					window.location.href = 'service-profile.html';
+				} else {
+					window.location.href = 'user-profile.html';
+				}
 			},
 			error: function (){
 				alert("An error has occured, please try again later");

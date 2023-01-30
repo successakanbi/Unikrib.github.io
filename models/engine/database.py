@@ -20,7 +20,7 @@ class Storage:
     storage of class instances
     """
     classes = {"User": User, "Service": Service, "House": House,
-            "Environment": Environment, "Street": Street}
+            "Environment": Environment, "Street": Street, "Review": Review}
 
     __engine = None
     __session = None
@@ -31,10 +31,10 @@ class Storage:
         """
         self.__engine = create_engine(
             'mysql+mysqldb://{}:{}@{}/{}'.format(
-                getenv('UNIKRIB_USER'),
-                getenv('UNIKRIB_PWD'),
-                getenv('UNIKRIB_HOST'),
-                getenv('UNIKRIB_DB')))
+                'unikrib_dev',
+                'unikrib_dev_pwd',
+                'localhost',
+                'unikrib_db'))
 
     def all(self, cls=None):
         """

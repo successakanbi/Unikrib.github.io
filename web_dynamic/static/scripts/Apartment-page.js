@@ -20,7 +20,7 @@ function viewMore() {
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/houses/stats',
+		url: 'http://localhost:8000/unikrib/houses/stats',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',

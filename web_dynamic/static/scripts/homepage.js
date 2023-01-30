@@ -3,7 +3,7 @@
 $(function(){
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/houses/stats',
+		url: 'http://localhost:8000/unikrib/houses/stats',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
@@ -17,7 +17,7 @@ $(function(){
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://54.173.52.4:8000/unikrib/stats/users',
+		url: 'http://localhost:8000/unikrib/stats/users',
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
