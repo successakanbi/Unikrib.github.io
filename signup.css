@@ -110,13 +110,22 @@ input[type=text], input[type=email], input[type=password],
  .other{
     font-weight: 600;
  }
- 
- a{
+ /*here*/
+ #google a {
     font-size: 17px;
     color: #05349b;
-    font-weight: 800;
+    font-weight: 700;
+    text-decoration: none;
+   
+ }
+ #other a, .other a{
+    font-size: 17px;
+    color: #05349b;
+    font-weight: 700;
     text-decoration: none;
  }
+ /*to here*/
+
 
  @media screen and (max-width: 1000px) {
 

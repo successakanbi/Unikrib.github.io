@@ -1,0 +1,134 @@
+#ext-team-cont{
+    width: 80%;
+    margin-left: 10%;
+    padding: 80px 0 0 0;
+    display: block;
+
+}
+#inn-team-cont{
+    width: 80%;
+    margin: 0 0 0 10%;
+}
+#inn-team-cont h2 {
+    text-align: center;
+    color: #0f6479;
+    font-size: 1.7vw;
+}
+.individual-cont{
+    border-top: 5px solid #1c9ad4;
+    border-radius: 5px;
+    background-color: #e5e6e7;
+    display: inline-block;
+    margin: 1vw 0 3vw 0;
+}
+.img-cont{
+    width: 20%;
+    float: left;
+    padding: 1vw 0 1vw 2%;
+}
+.img-cont img{
+    width:94%;
+    height: 12vw;
+    border-radius: 50%;
+}
+.name-title-cont{
+    width: 80%;
+    padding:0 0 0 1%;
+}
+.name-para {
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #0f4979;
+    line-height: 0.1vw;
+}
+.title-para{
+    font-size: 1.1vw;
+    font-weight: 600;
+    color:#2c8509;
+    line-height: 0.2vw;
+    
+}
+.bio-cont{
+    width:94%;
+    padding: 1vw 3% 0 3%;
+    color: #4d4e4e;
+}
+.bio-cont p {
+    font-size: 1vw;
+    font-weight: 500;
+}
+@media screen and (max-width: 900px) {
+    #ext-team-cont{
+        width: 90%;
+        margin-left: 5%;
+        padding: 80px 0 0 0;
+        display: block;
+    
+    }
+    #inn-team-cont{
+        width: 90%;
+        margin: 0 0 0 5%;
+    }
+    #inn-team-cont h2 {
+        font-size: 3.7vw;
+    }
+    .img-cont{
+        width: 33%;
+        float: left;
+        padding: 1vw 0 1vw 2%;
+    }
+    .img-cont img{
+        height: 25vw;
+    }
+    .name-title-cont{
+        width: 67%;
+        
+    }
+    .name-para {
+        font-size: 2.6vw;
+        line-height: 0.3vw;
+    }
+    .title-para{
+        font-size: 1.8vw;
+        line-height: 0.3vw;
+    }
+    .bio-cont p {
+        font-size: 1.7vw;
+    }
+
+}
+@media screen and (max-width: 590px) {
+
+    #inn-team-cont h2 {
+        font-size: 6vw;
+    }
+    .individual-cont{
+        margin: 1vw 0 7vw 0;
+    }
+    .img-cont{
+        width: 78%;
+        float: left;
+        padding: 1vw 0 3vw 15%;
+    }
+    .img-cont img{
+        height: 55vw;
+    }
+    .name-title-cont{
+        width: 100%;
+        text-align: center;
+        padding:0 0 0 0;
+        
+    }
+    .name-para {
+        font-size: 4.8vw;
+        line-height: 0.3vw;
+    }
+    .title-para{
+        font-size: 3.8vw;
+        line-height: 0.3vw;
+    }
+    .bio-cont p {
+        font-size: 3.7vw;
+    }
+
+}

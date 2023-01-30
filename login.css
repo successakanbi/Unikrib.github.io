@@ -92,12 +92,20 @@ input[type=email],input[type=text], input[type=password]{
     font-weight: 500;
 
 }
-a {
+/*here*/
+#forgot, #google {
     text-decoration: none;
     font-size: 15px;
     font-weight: 700;
     color: #1a3897;
 }
+#signin-with a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: #18328a;
+}
+/*to here*/
 #reset-info{
     margin-left: 5%;
     font-weight: 500;

@@ -312,16 +312,8 @@
     width:50%;
     float: left;
    }
+   /*here*/
    #edit-apartment{
-    width:70%;
-    margin-left: 15%;
-    padding: 1.5vw 0 1.5vw 0;
-    background-color: #eb0c0c;
-    color: #ffffff;
-    border: none;
-    font-size: 1vw;
-   }
-   #delete-apartment{
     width:70%;
     margin-left: 15%;
     padding: 1.5vw 0 1.5vw 0;
@@ -330,6 +322,16 @@
     border: none;
     font-size: 1vw;
    }
+   #delete-apartment{
+    width:70%;
+    margin-left: 15%;
+    padding: 1.5vw 0 1.5vw 0;
+    background-color: #eb0c0c;
+    color: #ffffff;
+    border: none;
+    font-size: 1vw;
+   }
+   /*to here*/
    button .fa{
      color: #ffffff;
     }
