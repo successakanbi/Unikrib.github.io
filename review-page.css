@@ -1,0 +1,352 @@
+#review-external-cont{
+    padding-top: 90px;
+    width: 100%;
+    display: inline-block;
+
+}
+#review-internal-cont {
+    width: 80%;
+    margin: 0 0 2vw 10%;
+    display: inline-flex;
+}
+#review-right-cont{
+    width:60%;
+    padding: 1vw 0 0 2.5%;
+    background-color: #bfeefac0;
+}
+.review-inbox{
+    width: 80%;
+    display: inline-block;
+    margin: 0 0 1vw 10%;
+    border-radius: 10px;
+    background-color: #ffffffc0;
+}
+.reviewer-img-cont{
+    width: 10%;
+    float: left;
+    padding: 0.2vw 0 0.2vw 1%;
+}
+.reviewer-img-cont img{
+    border-radius: 50%;
+    width: 95%;
+    height: 3.2vw;
+}
+.reviewer-name-cont{
+    width:73%;
+    padding: 0.1vw 0 0.1vw 12%;
+
+}
+.reviewer-name-cont p{
+    font-size: 1.1vw;
+    font-weight: 700;
+    color: #085b5ee7;
+}
+.review-message-cont{
+    width: 95%;
+    padding: 0 2.5% 0 2.5%;
+
+}
+.rev-message {
+    font-size: 0.8vw;
+    font-weight: 500;
+    color: #04464bf1;
+}
+.star-cont{
+    width:10%;
+    float: left;
+}
+.star-cont p {
+    font-size: 1vw;
+}
+.star-cont .fa{
+    color: #d6da1fe7;
+}
+.time-stamp-cont{
+    width: 89%;
+    float: left;
+    padding: 0.4vw 0 0.4vw 0;
+
+}
+.time-stamp{
+    font-size: 0.8vw;
+    text-align: right;
+    color: #494949c0;
+    font-weight: 500;
+}
+#review-left-cont{
+    width:41%;
+    padding: 0 2% 0 2%;
+    background-color: #e6e6e6fd;
+}
+#sub-header{
+    font-size: 1.1vw;
+    text-align: center;
+    color: #4c4e4e;
+}
+#leave-review-cont{
+    width: 95%;
+    padding: 2vw 0 2vw 5%;
+}
+label{
+    font-size: 0.9vw;
+    font-weight: 700;
+    color: #0a6860;
+    margin-bottom:1vw;
+}
+select{
+    margin:1vw 0 1vw 5%;
+    width: 80%;
+    border:none;
+    border-top:2px solid #1616a8;
+    height: 2.3vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #474747;
+    background-color: #f7fafa;
+
+}
+textarea{
+    width: 80%;
+    height: 8vw;
+    margin:1vw 0 0 5%;
+    border: none;
+    border-top:2px solid #1616a8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f9fbfc;
+}
+select:focus {
+    width:83%;
+    height: 2.5vw;
+    outline: none;
+    border-top:3px solid #1616a8;
+    transition: 0.2s;
+}
+textarea:focus {
+    width:85%;
+    height: 8.7vw;
+    outline: none;
+    transition:0.4s;
+}
+button{
+    width: 50%;
+    margin: 2vw 0 0 20%;
+    background-color: #17960cf1;
+    color: #ffffff;
+    border: none;
+    padding: 1.3vw 0 1.3vw 0;
+    font-size: 1.2vw;
+}
+
+@media screen and (max-width: 1000px) {
+    #review-internal-cont {
+        display: inline-block;
+    }
+    #review-right-cont{
+        width:97.5%;
+        padding: 1vw 0 0 2.5%;
+        background-color: #bfeefac0;
+        margin: 0 0 2vw 0;
+    }
+    .review-inbox{
+        width: 70%;
+        margin: 0 0 2.5vw 15%;
+    }
+    .reviewer-img-cont{
+        width: 15%;
+    }
+    .reviewer-img-cont img{
+        height: 7vw;
+    }
+    .reviewer-name-cont{
+        width:73%;
+        padding: 0.1vw 0 0.1vw 12%;
+    
+    }
+    .reviewer-name-cont p{
+        font-size: 1.8vw;
+    }
+    .review-message-cont{
+        width: 95%;
+        padding: 0 2.5% 0 2.5%;
+    
+    }
+    .rev-message {
+        font-size: 1.5vw;
+        font-weight: 500;
+        color: #04464bf1;
+    }
+    .star-cont{
+        width:10%;
+        float: left;
+    }
+    .star-cont p {
+        font-size: 2vw;
+    }
+    .star-cont .fa{
+        color: #d6da1fe7;
+    }
+    .time-stamp-cont{
+        width: 89%;
+        float: left;
+        padding: 0.4vw 0 0.4vw 0;
+    
+    }
+    .time-stamp{
+        font-size: 1.2vw;
+        text-align: right;
+        color: #494949c0;
+        font-weight: 500;
+    }
+
+    #review-left-cont{
+        width:96%;
+        padding: 1.5vw 2% 0 2%;
+    }
+    #sub-header{
+        font-size: 2vw;
+    }
+    #leave-review-cont{
+        width: 70%;
+        padding: 2vw 0 2vw 15%;
+    }
+    label{
+        font-size: 1.7vw;
+        margin-bottom:1.5vw;
+    }
+    select{
+        margin:1vw 0 2vw 7%;
+        width: 80%;
+        height: 4.5vw;
+        font-size: 1.6vw;
+    
+    }
+    textarea{
+        width: 80%;
+        height: 15vw;
+        margin:1vw 0 0 7%;
+    }
+    select:focus {
+        width:83%;
+        height: 5vw;
+        outline: none;
+        border-top:3px solid #1616a8;
+        transition: 0.2s;
+    }
+    textarea:focus {
+        width:85%;
+        height: 16vw;
+        outline: none;
+        transition:0.4s;
+    }
+    button{
+        width: 50%;
+        margin: 2vw 0 0 20%;
+        background-color: #17960cf1;
+        color: #ffffff;
+        border: none;
+        padding: 2.5vw 0 2.5vw 0;
+        font-size: 2vw;
+    }
+
+
+}
+@media screen and (max-width: 590px) {
+    #review-internal-cont {
+        width: 95%;
+        margin: 0 0 0 2.5%;
+        display: inline-block;
+    }
+    #review-right-cont{
+        width:100%;
+        padding: 1vw 0 0 0;
+        background-color: #bfeefac0;
+        margin: 0 0 5vw 0;
+    }
+    .review-inbox{
+        width: 95%;
+        margin: 0 0 5vw 2.5%;
+    }
+    .reviewer-img-cont{
+        width: 25%;
+    }
+    .reviewer-img-cont img{
+        height: 20vw;
+    }
+    .reviewer-name-cont{
+        width:75%;
+        padding: 0.1vw 0 0.1vw 12%;
+    
+    }
+    .reviewer-name-cont p{
+        font-size: 3.8vw;
+    }
+    .review-message-cont{
+        width: 95%;
+        padding: 0 2.5% 0 2.5%;
+    
+    }
+    .rev-message {
+        font-size: 3.2vw;
+        font-weight: 500;
+        color: #04464bf1;
+    }
+    .star-cont{
+        width:10%;
+        float: left;
+    }
+    .star-cont p {
+        font-size: 4vw;
+    }
+    .time-stamp-cont{
+        width: 89%;
+        float: left;
+        padding: 0.4vw 0 0.4vw 0;
+    
+    }
+    .time-stamp{
+        font-size: 3vw;
+        text-align: right;
+        color: #494949c0;
+        font-weight: 500;
+    }
+
+    #review-left-cont{
+        width:96%;
+        padding: 1.5vw 2% 0 2%;
+        margin:  0 0 5vw 0
+    }
+    #sub-header{
+        font-size: 3.8vw;
+    }
+    #leave-review-cont{
+        width: 90%;
+        padding: 2vw 0 2vw 5%;
+    }
+    label{
+        font-size: 3.8vw;
+        margin-bottom:2.5vw;
+    }
+    select{
+        margin:2vw 0 2vw 5%;
+        width: 90%;
+        height: 8vw;
+        font-size: 3.5vw;
+    
+    }
+    textarea{
+        width: 90%;
+        height: 20vw;
+        margin:1vw 0 0 5%;
+    }
+    button{
+        width: 70%;
+        margin: 5vw 0 0 15%;
+        background-color: #17960cf1;
+        color: #ffffff;
+        border: none;
+        padding: 4.5vw 0 4.5vw 0;
+        font-size: 4vw;
+    }
+
+}
