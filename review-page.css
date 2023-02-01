@@ -58,8 +58,14 @@
 .star-cont p {
     font-size: 1vw;
 }
-.star-cont .fa{
-    color: #d6da1fe7;
+#positive {
+    color: #09c718;
+}
+#average {
+    color: #dbdf16;
+}
+#poor {
+    color: #da0c0cf1;
 }
 .time-stamp-cont{
     width: 89%;
@@ -182,9 +188,6 @@ button{
     }
     .star-cont p {
         font-size: 2vw;
-    }
-    .star-cont .fa{
-        color: #d6da1fe7;
     }
     .time-stamp-cont{
         width: 89%;
