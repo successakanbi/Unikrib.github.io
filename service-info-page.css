@@ -1,12 +1,14 @@
+/*here*/
 #external-main-cont{
     width:100%;
-    padding: 100px 0 0 0;
+    padding: 80px 0 0 0;
     display: inline-block;
     
 }
+/* to here*/
 #internal-left-cont{
     float: left;
-    width: 55%;
+    width: 52%;
     padding: 0 0 0 10%;
 
 }
@@ -99,11 +101,9 @@ cursor{
 }
 #internal-right-cont{
     float: left;
-    width: 27%;
+    width: 30%;
     margin:2vw 0 0 3%;
-    padding: 0 0 0 1%;
-    
-    
+    padding: 0 0 0 1%;   
 }
 #profile-cont{
     width:100%;
@@ -141,6 +141,19 @@ cursor{
     line-height: 0.4vw;
 
 }
+/*here*/
+.rating{
+    color: #c7c409;
+    font-size: 1.1vw;
+    margin-top: -10px;
+}
+.bio{
+    font-size: 0.8vw;
+    font-weight: 500;
+    color: #0c5555;
+    margin-top: -10px;
+}
+/* to here*/
 #contact-cont{
     padding: 1vw 0 1vw 3%;
 }
@@ -192,6 +205,7 @@ cursor{
 }
 #rev-img-cont img{
     width: 100%;
+    border-radius: 50%;
 }
 #rev-name-cont{
     float: left;
@@ -238,12 +252,14 @@ cursor{
  padding: 1.5vw 0 1.5vw 0;
  width:100% ;
 }
+/*here*/
 #report-cont a {
     color: #e9e6e6;
     text-decoration: none;
-    font-size: 1.2vw;
+    font-size: 0.9vw;
     font-weight: 500;
 }
+/* to here*/
 #report-button{
     background-color: #e20f0f;
     width: 42%;
@@ -252,6 +268,11 @@ cursor{
     text-align: center;
 }
 @media screen and (max-width: 900px){
+    /*here*/
+    #external-main-cont{
+        padding: 80px 0 0 0;
+    }
+    /*to here*/
 
     #internal-left-cont{
         width: 90%;
@@ -264,8 +285,13 @@ cursor{
     .slides img{
         vertical-align:middle;
         width:100%;
-        height: 50vw;
+        height: 55vw;
     }
+    /*here*/
+    .prev, .next{
+        font-size: 12vw;
+    }
+    /* to here*/
     #caption-cont{   
         padding: 3vw 0 3vw 0;
     }
@@ -328,8 +354,15 @@ cursor{
         font-weight: 600;
         color: #686666;
         line-height: 1vw;
-    
     }
+    /*here*/
+    .rating{
+        font-size: 1.8vw;
+    }
+    .bio{
+        font-size: 1.5vw;
+    }
+    /*to here*/
     #contact-cont{
         padding: 1vw 0 1vw 5%;
     }
@@ -426,19 +459,19 @@ cursor{
      padding: 1.5vw 0 1.5vw 0;
      float: right;
      width:49%;
-     margin: -14.5vw 0 5vw 0;
+     margin: -16.5vw 0 5vw 0;
     }
     #report-cont a {
         color: #e9e6e6;
         text-decoration: none;
-        font-size: 1.7vw;
+        font-size: 1.5vw;
         font-weight: 500;
     }
     #report-button{
         background-color: #e20f0f;
         width: 42%;
         margin-left: 29%;
-        padding: 3.5vw 2% 3.5vw 2%;
+        padding: 3vw 2% 3vw 2%;
         text-align: center;
     }
 }
@@ -456,8 +489,13 @@ cursor{
     .slides img{
         vertical-align:middle;
         width:100%;
-        height: 50vw;
+        height: 55vw;
     }
+    /*here*/
+    .prev, .next{
+        font-size: 15vw;
+    }
+    /* to here*/
     #caption-cont{
         padding: 4.5vw 0 4.5vw 0;
     }
@@ -516,12 +554,20 @@ cursor{
         line-height: 1.5vw;
     }
     .services, .community{
-        font-size: 3.6vw;
+        font-size: 3.8vw;
         font-weight: 600;
         color: #686666;
         line-height: 1.5vw;
     
     }
+    /*here*/
+    .rating{
+        font-size: 3.8vw;
+    }
+    .bio{
+        font-size: 3.2vw;
+    }
+    /*to here*/
     #contact-cont{
         padding: 1vw 0 3vw 1%;
     }
@@ -622,9 +668,9 @@ cursor{
     }
     #report-button{
         background-color: #e20f0f;
-        width: 42%;
-        margin-left: 29%;
-        padding: 6vw 2% 6vw 2%;
+        width: 62%;
+        margin-left: 19%;
+        padding: 8vw 2% 8vw 2%;
         text-align: center;
     }
 

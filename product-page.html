@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products search page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="product-page.css">
+</head>
+<body>
+    <!-- responsive top navigator bar -->
+    <div class="top-nav" id="my-Top-nav">
+        <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+        <a href="homepage.html">Home</a>
+        <a href="Apartment-page.html">Apartments</a>
+        <!--here-->
+        <a href="product-page.html" class="active">products</a>
+        <a href="service-page.html">services</a>
+        <!--to here-->
+        <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+            <div class="icon-cont" onclick="changeIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+         </a>
+    </div>
+
+    <div id="main-ext-cont"> 
+        <h1>What do you want to buy</h1>
+        <!--Apartment container containing filter select options-->
+        <div id="product-container">
+            <div id="search-filters-cont">
+                <!--location container containing location filter select box-->
+                <div id="location-cont" class="filter-containers">
+                    <label for="location search">Location</label><br>
+                    <select id="location-search" name="location search">
+                         <option value="Adolor">Adolor</option>
+                         <option value="Ebvoumore">Ebvoumore</option>
+                         <option value="EDPA">EDPA</option>
+                         <option value="Ekosodin">Ekosodin</option>
+                         <option value="Evidence">Evidence</option>
+                         <option value="Isiohor">Isiohor</option>
+                         <option value="Osasoghie">Osasoghie</option>
+                         <option value="Oluku">Oluku</option>
+                        <option value="Uselu">Uselu</option>       
+                   </select>
+                </div>
+                
+                <!--Apartment container containing Apartment filter select box-->
+                <div id="Apartment-cont" class="filter-containers">
+                    <label for="product category">Product category</label><br>
+                    <select id="product-category" name="product category">
+                         <option value="Beds and beddings">Beds and beddings</option>
+                         <option value="Books and stationery">Books and stationery</option>
+                         <option value="Cosmetics and care products">Cosmetics and care products</option>
+                         <option value="Clothing and Accesories">Clothing and Accessories</option>
+                         <option value="Drinks and Beverages">Drinks and Beverages</option>
+                         <option value="Footwear">Footwear and bags</option>
+                         <option value="Electronics and Accessories">Electronics and Accessories</option>
+                         <option value="Food and Groceries">Food and groceries</option>
+                         <option value="Home furniture">Furniture</option>
+                         <option value="Kitchen utensils">Kitchen utensils</option>
+                         <option value="Laptops and Accessories">Laptops and Accessories</option>
+                         <option value="Jewellery">Jewellery</option>
+                         <option value="Phones and Accessories">Phones and Accessories</option>
+                         <option value="Stationery">Stationery</option>
+                    </select>
+                </div>
+
+                 <!--minimum container containing minimum price filter select box-->
+                <div id="search-cont" class="search-container">
+                    <label for="search box">Product name</label><br>
+                    <input type="search" id="product-search-box" name="search box" placeholder="Enter product name">
+                </div>
+
+
+                <!--button container containing search button-->
+                <div id="button-cont" class="filter-containers">
+                    <button id="apartment-search"type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <!--output container containing all apartment output containers-->
+    <div id="output-ext-cont">
+        <h2 id="search-filter"><span id=""></span></h2>
+
+        <div id="figures">
+          <p id="show">showing results <span id="num-results">1- 9</span> out of
+            <span id="">50</span></p>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html">
+            <div id="image-cont">
+              <img src="images/Infinix hot12i.jpg" id="img1" class="product-imgs">
+          </div>
+          <div id="text-cont">
+              <p class="product-results"><span class="product-name">Infinix Hot 12i </span></p>
+              <p class="price-results"><span class="product-price" id="product-price-1">N89,000</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html" class ="value-links">
+            <div id="image-cont">
+              <img src="images/indomie-onion.jpg"  class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="product-name">Indomie onion chicken carton</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-2">N4,800</span></p>
+            <p class="ven-location">Vendors location: <span class="community">Osasoghie</span></p>
+          </div>
+          </a>
+        </div>
+
+        
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html">
+            <div id="image-cont">
+              <img src="images/Hp elitebook.jpg"  class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="product-name">HP Elitebook 850 G8</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-3">N970,000</span></p>
+            <p class="ven-location">Vendors location: <span class="community">EDPA</span></p>
+          </div>
+          </a>
+        </div>
+
+
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html" class ="value-links">
+            <div id="image-cont">
+              <img src="images/Sneakers.jpg" id="img4" class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="name">Mens Smart fit sneakers</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-4">N5,000</span></p>
+            <p class="ven-location">Vendors location: <span class="community">Uselu</span></p>
+          </div>
+          </a>
+        </div>
+
+
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html" class ="value-links">
+            <div id="image-cont">
+              <img src="images/Small chop.jpg" id="img5" class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="product-name">Small chops tray</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-5">N12,000</span></p>
+            <p class="ven-location">Vendors location: <span class="community">Evidence</span></p>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html" class ="value-links">
+            <div id="image-cont">
+              <img src="images/smart tv.jpg" id="img6" class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="product-name">32 Inch LG HD Smart TV</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-6">N175,000</span></p>
+            <p class="ven-location">Vendors location: <span class="community">Isiohor</span></p>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html" class ="value-links">
+            <div id="image-cont">
+              <img src="images/oraimo-freepods.jpg" id="img7" class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="product-name">Oriamo wireless freepods 3</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-7">N11,000</span></p>
+            <p class="ven-location">Vendors location: <span class="community">Osasoghie</span></p>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="products-info-page.html" class ="value-links">
+            <div id="image-cont">
+              <img src="images/jellof-rice.jpeg" id="img8" class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="product-name">Jellof Rice and chicken takeaway pack</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-8">N3,000</span></p>
+            <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
+          </div>
+          </a>
+        </div>
+
+        <div id="output-cont" class="output-containers">
+          <a href="product-info-page.html" class ="value-links">
+            <div id="image-cont">
+              <img src="images/longsleeves.jpg" id="img9" class="product-imgs">
+          </div>
+          <div id="text-cont">
+            <p class="product-results"><span class="product-name">2-in-1 Mens Long sleeve shirt</span></p>
+            <p class="price-results"><span class="product-price" id="product-price-9">N24,500</span></p>
+            <p class="ven-location">Vendors location: <span class="community">Oluku</span></p>
+          </div>
+          </a>
+        </div>
+
+        <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
+        <div id="view-more-button" onclick="viewMore()">
+          <p id="button-text">See more results</p>
+        </div>
+
+        <!--view more container containing all hidden apartment output containers-->
+        <div id="view-more-cont">
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/IPhone-charger.jpg" id="img9" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">20W Fast charger for Iphone</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-10">N4,500</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Oluku</span></p>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html">
+              <div id="image-cont">
+                <img src="images/student_mattress.png" id="img2" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Student bed</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-11">N15,000</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Adolor</span></p>
+            </div>
+            </a>
+          </div>
+  
+  
+  
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/knorr_nigerian.jpg" id="img9" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">knorr beef seasoning pack</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-12">N800</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Osasoghie</span></p>
+            </div>
+            </a>
+          </div>
+          
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/malta-guiness.jpg" id="img9" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Malta guiness can 330ml pack</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-13">N4,900</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Adolor</span></p>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html">
+              <div id="image-cont">
+                <img src="images/iPhone-13pro.jpg" id="img2" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Iphone 13 Promax 128GB</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-14">N415,000</span></p>
+              <p class="ven-location">Vendors location: <span class="community">EDPA</span></p>
+            </div>
+            </a>
+          </div>
+  
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html">
+              <div id="image-cont">
+                <img src="images/3-in-1 backpack.jpg" id="img2" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">3-in-1 backpack</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-15">N7,590</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Evidence</span></p>
+            </div>
+            </a>
+          </div>
+  
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/Apple_watch.jpg" id="img9" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Apple smartch watch</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-16">N42,700</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Uselu</span></p>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/dell-latitude.png" id="img9" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Dell latitude 3190X360 INTEL</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-17">N160,500</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/food-tray.jpg" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Food tray with rice,pasta, fruits and drinks</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-18">N22,000</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Isiohor</span></p>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/ox-plus.jpg" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Ox plus 18" Standing fan</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-19">N14,300</span></p>
+              <p class="ven-location">Vendors location: <span class="community">EDPA</span></p>
+            </div>
+            </a>
+          </div>
+
+          
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/pleated-midi-skirt.jpg" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Pleated skirt</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-20">N6,300</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Adolor</span></p>
+            </div>
+            </a>
+          </div>
+
+          <div id="output-cont" class="output-containers">
+            <a href="product-info-page.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/toshiba-cooking.jpg" class="product-imgs">
+            </div>
+            <div id="text-cont">
+              <p class="product-results"><span class="product-name">Toshiba cooking set</span></p>
+              <p class="price-results"><span class="product-price" id="product-price-20">N17,700</span></p>
+              <p class="ven-location">Vendors location: <span class="community">Oluku</span></p>
+            </div>
+            </a>
+          </div>
+        </div>
+    </div>
+
+    
+     
+    <!-- Service link container containing service search page link, image and text-->
+    <div id="service-link-cont">
+      <a href="product-service-page.html">
+        <div id="img-right-cont">
+          <image src="images/Woman texting - 2560x1707.jpg"></image>
+      </div>
+      <div id="text-left-cont">
+        <p id="redir">Do you need a service but can't seem to find the right service provider?
+          <a href="product-service-page.html" id="redirect-link">
+          Click here
+        </a></p>
+      </div>
+
+      </a>
+        
+    </div>
+    
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <!--here-->
+    <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="" class="foot-links">apartments</a></p>
+          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href=""class="foot-links">The team</a></p>
+          <p><a href=""class="foot-links">contact</a></p>
+          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <!--here-->
+          <p id="foot-para">For feedback and inquiries contact us on</p>
+          <!--to here-->
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+        <div id="footer-base-cont">
+          <div id="icon-cont">
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/facebook-logo.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/124021.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/2048px-Instagram_icon.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/official-linkedin-icon-png-16.jpg">
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!--to here-->
+
+      
+      
+    <script src = "main.js"></script>
+    <script src = "product-page.js"></script>
+</body>
+</html>

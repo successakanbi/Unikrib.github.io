@@ -2,7 +2,7 @@
     width:92%;
     margin-left: 0%;
     display: inline-block;
-    padding: 100px 0 0 8%;
+    padding: 80px 0 0 8%;
 }
 #internal-left-container{
     width: 45%;
@@ -12,29 +12,28 @@
 .currentImage{
     display: none; 
 }
-.Apartment-slide-cont{
+.product-slide-cont{
     display: block;
     width:100%;
     position: relative;
     margin: 0 0 30px 0;
 
 }
-.Apartment-slide-cont img{
+.product-slide-cont img{
     vertical-align: middle;
-    height: 27vw;
+    height: 33vw;
 }
 
 .prev, .next{
     position: absolute;
     width:auto;
     padding: 1vw;
-    color: #181818;
+    color: #302f2fa6;
     font-weight: 900;
     top:10%;
     transition: 0.6s ease;
     font-size: 8vw;
     font-weight: 900;
-    color: #f3f3f5;
     user-select: none;
 }
 .next{
@@ -58,13 +57,13 @@
     width: 30%;
     display: block;
     margin-left: 40%;
-    padding: 1.5vw 0 1.5vw 0;
+    padding: 00 0 1vw 0;
     
 }
 .dot {
     cursor: pointer;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     background-color: #e0dbdb;
     border-radius: 50%;
     display: inline-block;
@@ -88,27 +87,47 @@
     display: block;
     width: 100%;
 }
-#apartment-details{
+#product-details{
     background-color: #d1d1cc79;
     padding: 10px 0 2px 10px;
 }
-.address-results{
+.product-results{
     font-size: 1.3vw;
-    font-weight: 500;
+    color:#161670;
+    font-weight: 700;
+    line-height: 0.3vw;
 }
 .price-results{
-    font-size: 1.3vw;
-    font-weight: 600;
-}
-.type, .hostel, .street, .community{
-    font-size:1.5vw;
-    font-weight: 600;
-    color: #172074;
-}
-.price{
-    font-size: 1.5vw;
+    color:#28880b;
+    font-size: 1.4vw;
     font-weight: 700;
-    color:#326805;
+    line-height: 0.2vw;
+}
+.ven-location {
+    font-size:1.2vw;
+    font-weight: 500;
+    color: #262727;
+    line-height: 0.2vw;
+
+} 
+.community{
+    font-size:1vw;
+    font-weight: 500;
+    color: #152b8f;
+    line-height: 0.2vw;
+}
+.delivery{
+    font-size: 1.2vw;
+    font-weight: 600;
+    line-height: 0.8vw;
+}
+.Available{
+    color: #057405;
+    font-weight: 700;
+}
+.Unavailable{
+    color: #be0d0d;
+    font-weight: 700;
 }
 #feature-cont{
     padding: 10px 0 2px 10px;
@@ -169,28 +188,21 @@
     float: left;
     margin: 0 0 1vw 0;
 }
-/*here*/
 .name{
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     font-weight: 600;
-    line-height: 0.2vw;
+    line-height: 0.4vw;
 }
 .services{
     font-size: 0.9vw;
     font-weight: 600;
     color: #686666;
-    line-height: 0.2vw;
-}
-.community2{
-    font-size:1vw;
-    font-weight: 600;
-    color: #172074;
-    margin-top: -10px;
+    line-height: 0.4vw;
 }
 .rating{
     color: #c7c409;
-    font-size: 1vw;
-    margin-top: -15px;
+    font-size: 1.1vw;
+    margin-top: -10px;
 }
 .bio{
     font-size: 0.8vw;
@@ -198,7 +210,6 @@
     color: #0c5555;
     margin-top: -10px;
 }
-/*to here*/
 #contact-cont{
     padding: 1vw 0 1vw 3%;
 }
@@ -251,7 +262,6 @@
 #rev-img-cont img{
     width: 100%;
     border-radius: 50%;
-    height: 3.5vw;
 }
 #rev-name-cont{
     float: left;
@@ -307,7 +317,7 @@
    #report-cont a {
        color: #e9e6e6;
        text-decoration: none;
-       font-size: 1.2vw;
+       font-size: 1vw;
        font-weight: 500;
    }
    #report-button{
@@ -332,7 +342,6 @@
     width:50%;
     float: left;
    }
-   /*here*/
    #edit-apartment{
     width:70%;
     margin-left: 15%;
@@ -351,11 +360,9 @@
     border: none;
     font-size: 1vw;
    }
-   /*to here*/
    button .fa{
      color: #ffffff;
     }
-   /*to here*/
 
 @media screen and (max-width: 900px) {
     #external-main-cont{
@@ -371,32 +378,29 @@
     .currentImage{
         display: none; 
     }
-    .Apartment-slide-cont{
+    .product-slide-cont{
         display: block;
         width:100%;
         position: relative;
         margin: 0 0 30px 0;
     
     }
-    .Apartment-slide-cont img{
+    .product-slide-cont img{
         vertical-align: middle;
-        height: 45vw;
+        height: 58vw;
     }
     .prev, .next{
         position: absolute;
         width:auto;
         padding: 1vw;
-        color: #181818;
+        color: #181818b4;
         font-weight: 900;
         top:10%;
         transition: 0.6s ease;
         font-size: 16vw;
         font-weight: 900;
-        color: #f3f3f5;
         user-select: none;
     }
-    
-    
     .numb-text {
         font-size: 2.4vw;
         font-weight: 700;
@@ -406,7 +410,7 @@
         width: 30%;
         display: block;
         margin-left: 40%;
-        padding: 3.5vw 0 3.5vw 0;
+        padding: 1.5vw 0 1.5vw 0;
         
     }
     
@@ -415,28 +419,49 @@
         width: 100%;
         float: left;
     }
-    #apartment-details{
+    #product-details{
         background-color: #d1d1cc79;
         padding: 10px 0 2px 10px;
     }
-    .address-results{
+    .product-results{
         font-size: 2.3vw;
-        font-weight: 500;
+        color:#161670;
+        font-weight: 700;
+        line-height: 1vw;
     }
     .price-results{
-        font-size: 2.3vw;
-        font-weight: 600;
-    }
-    .type, .hostel, .street, .community{
-        font-size:2.5vw;
-        font-weight: 600;
-        color: #172074;
-    }
-    .price{
-        font-size: 2.5vw;
+        color:#28880b;
+        font-size: 2.4vw;
         font-weight: 700;
-        color:#326805;
+        line-height: 0.4vw;
     }
+    .ven-location {
+        font-size:2.2vw;
+        font-weight: 500;
+        color: #262727;
+        line-height: 0.4vw;
+    
+    } 
+    .community{
+        font-size:2vw;
+        font-weight: 500;
+        color: #152b8f;
+        line-height: 0.4vw;
+    }
+    .delivery{
+        font-size: 2.2vw;
+        font-weight: 600;
+        line-height: 1.6vw;
+    }
+    .Available{
+        color: #057405;
+        font-weight: 700;
+    }
+    .Unavailable{
+        color: #910808;
+        font-weight: 700;
+    }
+
     #feature-cont{
         padding: 10px 0 2px 10px;
         margin: 1vw 0 2vw 0;
@@ -457,23 +482,20 @@
         font-size: 1.6vw;
         font-weight: 500;
     }
-    /*here*/
     #internal-right-container{
         float: left;
-        width: 80%;
+        width: 79%;
         margin:2vw 0 0 4%;
         padding: 0 0 0 1%;   
     }
-    /*to here*/
     #profile-cont{
         width:49%;
         display:inline-block;
         margin-bottom: 1vw;
         margin: 0 1vw 1vw 0; 
     }
-    /*here*/
     #profile-pic-cont{
-        width:25%;
+        width:30%;
         float: left;
         margin: 0 0 5vw 0;
         padding: 3px 0 0 0;
@@ -481,39 +503,41 @@
     #profile-pic-cont img{
         width: 90%;
         margin-left: 10%;
-        height: 7.5vw;
+        height: 10vw;
         border-radius: 50%;
     }
     #name-cont{
         padding: 0 0 0 3%;
-        width:70%;
+        width:65%;
         float: left;
         margin: 0 0 5vw 0;
     }
-    /*to here*/
     .name{
         font-size: 2.2vw;
         font-weight: 600;
-        line-height: 0.5vw;
+        line-height: 1vw;
     }
     .services{
-        font-size: 1.9vw;
+        font-size: 1.8vw;
         font-weight: 600;
         color: #686666;
-        line-height: 0.5vw;
-    
+        line-height: 4vw;
     }
-    /*here*/
-    .community2{
-        font-size:2vw;
+    .name{
+        font-size: 2.2vw;
         font-weight: 600;
-        color: #172074;
-        margin-top: -10px;
+        line-height: 0.4vw;
+    }
+    .services{
+        font-size: 1.7vw;
+        font-weight: 600;
+        color: #686666;
+        line-height: 0.4vw;
     }
     .rating{
         color: #c7c409;
-        font-size: 2vw;
-        margin-top: -15px;
+        font-size: 2.1vw;
+        margin-top: -5px;
     }
     .bio{
         font-size: 1.5vw;
@@ -521,7 +545,6 @@
         color: #0c5555;
         margin-top: -10px;
     }
-    /*to here*/
     #contact-cont{
         padding: 1vw 0 1vw 5%;
     }
@@ -564,20 +587,19 @@
         background-color: #ffffff;
         border-radius: 5px;
     }
-    /*here*/
     #rev-img-cont{
         float: left;
-        width: 17%;
+        width: 14%;
         padding: 0.5vw 0 0 1%;
     }
     #rev-img-cont img{
         width: 100%;
-        height: 4.5vw;
+        
     }
     #rev-name-cont{
         float: left;
-        width:80%;
-        padding:0 0 0 2%;
+        width:82.5%;
+        padding:0 0 0 2.5%;
     }
     .rev-name{
         font-size: 1.8vw;
@@ -589,10 +611,9 @@
         padding: 0 1% 0 1%;
     }
     #review-message {
-        font-size: 1.5vw;
+        font-size: 1.3vw;
         font-weight: 500;
     }
-    /*to here*/
     .time-stamp{
         font-size: 1.3vw;
     }
@@ -605,7 +626,7 @@
     #security-tip-cont{
         width: 48%;
         background-color: #1aa1a1;
-        padding: 2vw 0 2vw 1%;
+        padding: 3vw 0 3vw 1%;
         margin: 0 0 5vw 0;
     }
     #security-tip-cont h4{
@@ -623,7 +644,7 @@
      padding: 1.5vw 0 1.5vw 0;
      float: right;
      width:48%;
-     margin: -21.5vw 0 5vw 0;
+     margin: -25.5vw 0 5vw 0;
     }
     #report-cont a {
         color: #e9e6e6;
@@ -631,7 +652,6 @@
         font-size: 1.7vw;
         font-weight: 500;
     }
-    /*here*/
     #report-button{
         background-color: #e20f0f;
         width: 62%;
@@ -639,15 +659,15 @@
         padding: 3.5vw 2% 3.5vw 2%;
         text-align: center;
     }
-    #edit-delete-cont{
-        width: 48%;
-        padding: 2vw 0 2vw 1%;
+   #edit-delete-cont{
+    width: 48%;
+    padding: 2vw 0 2vw 1%;
    }
    #edit-apartment{
-        width:80%;
-        margin-left: 10%;
-        padding: 2vw 0 2vw 0;
-        font-size: 1.7vw;
+    width:80%;
+    margin-left: 10%;
+    padding: 2vw 0 2vw 0;
+    font-size: 1.7vw;
    }
    #delete-apartment{
     width:80%;
@@ -655,15 +675,12 @@
     padding: 2vw 0 2vw 0;
     font-size: 1.7vw;
    }
-   /*to here*/
 }
 @media screen and (max-width: 590px){
     #external-main-cont{
         width: 95%;     
         padding: 100px 0 0 5%;
     }
-   
-
     #internal-left-container{
         width: 90%;
         margin: 0 0 0 2.5%;
@@ -672,25 +689,15 @@
         display: none; 
     }
 
-    .Apartment-slide-cont img{
+    .product-slide-cont img{
         vertical-align: middle;
-        height: 60vw;
+        height: 70vw;
     }
     .prev, .next{
         position: absolute;
         width:auto;
-        padding: 1vw;
-        color: #181818;
-        font-weight: 900;
-        top:10%;
-        transition: 0.6s ease;
-        font-size: 16vw;
-        font-weight: 900;
-        color: #f3f3f5;
-        user-select: none;
+        font-size: 20vw;
     }
-    
-    
     .numb-text {
         font-size: 3.4vw;
         font-weight: 700;
@@ -703,47 +710,59 @@
         padding: 3.5vw 0 3.5vw 0;
         
     }
-    
     #Text-info-container{
         display: block;
         width: 100%;
         float: left;
     }
-    #apartment-details{
+    #product-details{
         background-color: #d1d1cc79;
         padding: 10px 0 2px 10px;
     }
-    /*here*/
-    .address-results{
-        font-size: 4vw;
+    .product-results{
+        font-size: 4.5vw;
+        line-height: 2vw;
     }
     .price-results{
-        font-size: 4vw;
-        font-weight: 600;
+        font-size: 4.6vw;
+        line-height: 1vw;
     }
-    .type, .hostel, .street, .community{
-        font-size:4.5vw;
-        font-weight: 600;
-        color: #172074;
+    .ven-location {
+        font-size:4vw;
+        font-weight: 500;
+        color: #262727;
+        line-height: 1vw;
+    
+    } 
+    .community{
+        font-size:4vw;
+        font-weight: 500;
+        color: #152b8f;
+        line-height: 0.4vw;
     }
-    .price{
+    .delivery{
         font-size: 4.5vw;
-        font-weight: 700;
-        color:#326805;
+        font-weight: 600;
+        line-height: 3vw;
     }
-    /*to here*/
+    .Available{
+        color: #057405;
+        font-weight: 700;
+    }
+    .Unavailable{
+        color: #910808;
+        font-weight: 700;
+    }
     #feature-cont{
         padding: 10px 0 2px 10px;
         margin: 1vw 0 2vw 0;
         color: #ffffff;
         background-color: #0e9215a4;
     }
-    /*here*/
-    .feature{
-        font-size: 3.5vw;
+    .features{
+        font-size: 4vw;
         font-weight: 500;
     }
-    /*to here*/
     #disclaimer{
         padding: 10px 0 2px 10px;
         color: #cc2b0e;
@@ -785,28 +804,20 @@
         margin: 0 0 5vw 0;
     }
     .name{
-        font-size: 4.5vw;
+        font-size: 4.8vw;
         font-weight: 600;
         line-height: 2vw;
     }
     .services{
-        font-size: 4.2vw;
+        font-size: 4vw;
         font-weight: 600;
         color: #686666;
-        line-height: 1vw;
-    
-    }
-    /*here*/
-    .community2{
-        font-size:4vw;
-        font-weight: 600;
-        color: #172074;
-        margin-top: -10px;
+        line-height: 2vw;
     }
     .rating{
         color: #c7c409;
-        font-size: 4vw;
-        margin-top: -15px;
+        font-size: 4.4vw;
+        margin-top: -5px;
     }
     .bio{
         font-size: 3.5vw;
@@ -837,7 +848,7 @@
         color: #ffffff;
     }
     .contact{
-        font-size: 3.3vw;
+        font-size: 3.7vw;
     }
     .contact .fa {
         color: #ffffff;
@@ -857,23 +868,21 @@
         background-color: #ffffff;
         border-radius: 5px;
     }
-    /*here*/
     #rev-img-cont{
         float: left;
-        width: 17%;
+        width: 14%;
         padding: 0.5vw 0 0 1%;
     }
     #rev-img-cont img{
         width: 100%;
-        height: 13vw;
     }
     #rev-name-cont{
         float: left;
-        width:79.5%;
+        width:82.5%;
         padding:0 0 0 2.5%;
     }
     .rev-name{
-        font-size: 4.5vw;
+        font-size: 4vw;
         font-weight: 700;
     }
     #rev-message-cont {
@@ -882,10 +891,9 @@
         padding: 0 1% 0 1%;
     }
     #review-message {
-        font-size: 3.5vw;
+        font-size: 3.4vw;
         font-weight: 500;
     }
-    /*to here*/
     .time-stamp{
         font-size: 3vw;
     }
@@ -923,9 +931,9 @@
     }
     #report-button{
         background-color: #e20f0f;
-        width: 42%;
-        margin-left: 29%;
-        padding: 5.5vw 2% 5.5vw 2%;
+        width: 62%;
+        margin-left: 19%;
+        padding: 6vw 2% 6vw 2%;
         text-align: center;
     }
     

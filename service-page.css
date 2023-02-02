@@ -1,29 +1,24 @@
 #External-cont{
-    width:60%;
-    margin-left: 20%;
+    width:50%;
+    margin-left: 25%;
     padding: 70px 0 0 0;
-}
-#logo-container{
-    width:15%;
-
-}
-#logo-container img{
-    width: 100%;
 }
 h1{
     text-align: center;
     font-size: 25px;
 }
-#service-prov-vendor-container{
+/*here*/
+#service-prov-container{
     width: 100%;
-    padding-top: 25px;
+    padding-top: 15px;
     display: inline-block;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/*to here*/
 .filter-containers{
-    width:25%;
+    width:37.5%;
     float:left;
     text-align: center;
 }
@@ -43,8 +38,10 @@ label{
     color: #161670;
 }
 select{
+    /*here*/
     width: 100%;
-    height: 60px;
+    height: 45px;
+    /*to here*/
     text-align: center;
     color: #504f4f;
     font-size: 1vw;
@@ -63,20 +60,22 @@ button {
     background-color: rgb(29, 112, 4);
     color: #ffff;
     font-size: 15px;
-    height: 60px;
+    height: 50px;
 }
 #search-filter{
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     text-align: center;
     color: #0c1c61;
 }
 #figures{
     background-color: #504f4f;
-    width: 99%;
+    width: 98%;
     display: block;
-    padding: 1% 0 1px 1%;
+    /*here*/
+    padding: 1px 0 1px 1%;
+    /*to here*/
     color: #f8f7f7;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 #show {
     font-size: 16px;
@@ -88,12 +87,12 @@ button {
     margin-bottom: 20px;
 }
 .output-containers{
-    width:27%;
-    margin-left: 5%;
-    margin-bottom:70px;
+    width:22%;
+    margin-left: 6%;
+    margin-bottom:50px;
     display: inline-block;
-    padding: 0pxs 1% 0px 0%;
     /*here*/
+    padding: 1vw 1.5% 0px 1.5%;
     border-top: 5px solid #1c9ad4;
     border-radius: 5px;
     /*to here*/
@@ -104,17 +103,17 @@ button {
     text-decoration: none;
 }
 #img-container{
-    width: 48%;
+    width: 100%;
     height: auto;
-    float:left;
+    text-align: right;
 }
 #img-container img{
     width:100%;
-    height: 18vw;
+    height: 16vw;
 
 }
 #text-container{
-    width: 48%;
+    width: 100%;
     padding: 5px;
     height: auto;
     float:left;
@@ -122,42 +121,40 @@ button {
 .name{
     color: #177177;
     font-weight: 700;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
+    /*here*/
+    line-height: 0.3vw;
+    /*to here*/
 }
 .services{
     color:#097e09;
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: 600;
+    /*here*/
+    line-height: 0.3vw;
+    /*to here*/
 }
 .community{
     color: #353536;
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: 600;
+    /*here*/
+    line-height: 0.3vw;
+    /*to here*/
 }
-
-#uploader-phone{
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: #092980;
-    padding: 0px 15px 0 15px;
-    
-}
-#uploader-whatsapp{
-    display: inline-block;
-    background-color: #0b880b;
-    padding: 0px 15px 0 15px;
-}
-.contact{
+/*here*/
+.rating{
     font-size: 0.9vw;
+    float: right;
+    color: #4c4c4dd2;
+    font-weight: 600;
+    margin-top: -10px;
+    line-height: 0.3vw;
 }
-.contact .fa {
-    color: #ffffff;
+.rating .fa{
+    color: #d9dd06;
 }
-.contact-links{
-    text-decoration: none;
-    color: #ffffffff;
-
-}
+ /*to here*/
 #view-more-button{
     background-color: #152b8f;
     text-align: center;
@@ -222,11 +219,6 @@ button {
         margin-left: 5%;
         padding: 70px 0 0 0;
     }
-
-    #logo-container{
-        width:17%;
-    
-    }
     label{
         font-weight: 700;
         font-size: 1.6vw;
@@ -239,47 +231,67 @@ button {
         font-size: 2.5vw;
     }
     #figures{
+        padding: 1px 1% 1px 1%;
         margin-bottom: 20px;
     }
 
     .output-containers{
-        width:70%;
-        margin-left: 15%;
-        margin-bottom:70px;
+        width:50%;
+        margin-left: 25%;
+        /*here*/
+        padding: 2.5vw 2% 0px 2%;
+        margin-bottom:50px;
+       /*to here*/
+        
     }
     #img-container{
-        width: 34%;
+        width: 100%;
         height: auto;
         float:left;
     }
     #img-container img{
         width:100%;
-        height: 32vw;
+        height: 33vw;
     
     }
     #text-container{
-        width: 59%;
+        width: 100%;
         padding: 5px;
         height: auto;
         float:left;
     }
     .name{
+        /*here*/
         color: #177177;
         font-weight: 700;
         font-size: 2.3vw;
+        line-height: 0.7vw;
+        /*to here*/
     }
     .services{
+        /*here*/
         color:#097e09;
-        font-size: 2.2vw;
+        font-size: 2vw;
         font-weight: 600;
+        line-height: 0.5vw;
+        /*to here*/
     }
     .community{
-        font-size: 2.2vw;
+        font-size: 2vw;
         font-weight: 600;
+        /*here*/
+        line-height: 0.5vw;
+        /*to here*/
     }
-    .contact{
-        font-size: 1.9vw;
+    /*here*/
+    .rating{
+        font-size: 1.6vw;
+        float: right;
+        color: #4c4c4dd2;
+        font-weight: 600;
+        line-height: 0.3vw;
     }
+    /*to here*/
     #button-text{
         font-size: 1.8vw;
     }
@@ -295,22 +307,25 @@ button {
 
 }
 @media screen and (max-width: 590px){
-    /*here*/
-    #logo-container{
-        width:25%;
+    #External-cont{
+        width:90%;
+        margin-left: 5%;
+        padding: 60px 0 0 0;
     }
-    /*to here*/
     h1{
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
     }
     label{
         font-weight: 700;
-        font-size: 3.2vw;
+        /*here*/
+        font-size: 3.5vw;
+        /*to here*/
         color: #161670;
     }
     .filter-containers{
         width:50%;
+
     }
     .filter-cont{
         width:100%;
@@ -322,35 +337,49 @@ button {
     }
     select{
         font-size: 3.5vw;
-        height: 30px;
+        height: 40px;
     }
+    /*here*/
+    button {
+        margin-top:5px;
+    }
+    
     #search-filter{
         font-size: 4vw;
+        
     }
+    /*to here*/
     #figures{
         margin-bottom: 20px;
+        /*here*/
+        padding: 0px 1% 0px 1%;
+        /*to here*/
+
     }
-    #service-prov-vendor-container{
+    #service-prov-container{
         margin-bottom: 20px;
     }
 
     .output-containers{
-        width:90%;
-        margin-left: 5%;
-        margin-bottom:70px;
+        width:77%;
+        margin-left: 8%;
+         /*here*/
+         padding: 4vw 4% 0px 4%;
+         margin-bottom:50px;
+        /*to here*/
     }
     #img-container{
-        width: 38%;
+        width: 100%;
         height: auto;
         float:left;
     }
     #img-container img{
         width:100%;
-        height: 46vw;
+        height: 60vw;
     
     }
     #text-container{
-        width: 55%;
+        width: 100%;
         padding: 5px;
         height: auto;
         float:left;
@@ -359,34 +388,36 @@ button {
     .name{
         color: #177177;
         font-weight: 700;
-        font-size: 4.3vw;
+        font-size: 4.5vw;
+        /*here*/
+        line-height: 2vw;
+        /*to here*/
     }
-
     .services{
         color:#097e09;
         font-size: 4.2vw;
         font-weight: 600;
+        /*here*/
+        line-height: 2vw;
+        /*to here*/
     }
     /* to here*/
     .community{
-        font-size: 4.2vw;
         font-weight: 600;
-    }
-    #uploader-phone{
-        padding: 0px 5px 0 5px;
-        
-    }
-    #uploader-whatsapp{
-        display: inline-block;
-        background-color: #0b880b;
-        padding: 0px 5px 0 5px;
+        /*here*/
+        font-size: 4vw;
+        line-height: 2vw;
+        /*to here*/
     }
     /*here*/
-    .contact{
-        font-size: 3.1vw;
+    .rating{
+        font-size: 3vw;
+        float: right;
+        color: #4c4c4dd2;
+        font-weight: 600;
+        line-height: 0.3vw;
     }
-    /* to here*/
-
+    /*to here*/
     #view-more-button{
         width: 50%;
         margin-left:25%;

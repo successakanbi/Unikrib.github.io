@@ -1,30 +1,34 @@
 #main-ext-cont{
     width:60%;
     margin-left: 20%;
-    padding: 50px 0 0 0;
+    padding: 60px 0 0 0;
 }
-/*here*/
 h1{
     text-align: center;
+    font-size: 1.7em;
 }
-/* to here*/
 h2{
     margin-left: 5%;
 }
-/*here*/
-#Apartment-container{
+#product-container{
     width: 100%;
-    padding-top: 15px;
+    padding-top: 25px;
     display: inline-block;
     margin-bottom: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/*to here*/
 .filter-containers{
-    width:20%;
+    width:26.65%;
     float:left;
     text-align: center;
+}
+.search-container{
+    width:26.65%;
+    float:left;
+    text-align: center;
+    
+
 }
 #button-cont{
     width:20%;
@@ -36,23 +40,34 @@ label{
     font-size: 1vw;
     color: #161670;
 }
-/*here*/
 select{
     width: 100%;
     height: 50px;
     text-align: center;
     color: #504f4f;
-    font-size: 15px;
+    font-size: 0.9vw;
     font-weight: 700;
     border: none;
     border-top:#607dda solid 4px;
 }
-/* to here*/
 select:focus {
     outline: none;
     transition: 300ms;
  }
- /*here*/
+ input[type=search] {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #504f4f;
+    font-size: 0.9vw;
+    font-weight: 700;
+    border: none;
+    border-top:#607dda solid 4px;
+ }
+ input[type=search]:focus {
+    outline: none;
+    transition: 300ms;
+ }
 button {
     width: 100%;
     margin-top:24px;
@@ -62,7 +77,6 @@ button {
     font-size: 15px;
     height: 50px;
 }
-/* to here*/
 #figures{
     background-color: #504f4f;
     width: 99%;
@@ -85,7 +99,7 @@ button {
     margin-left: 8%;
     margin-bottom:30px;
     display: inline-block;
-    padding: 0.2vw 1% 0px 1%;
+    padding: 0 1% 0px 1%;
      /*here*/
      border-top: 5px solid #1b9110;
      border-radius: 5px;
@@ -102,7 +116,7 @@ button {
 #image-cont img{
     width:100%;
     /*here*/
-    height: 13vw;
+    height: 16vw;
     /*to here*/
 }
 #text-cont{
@@ -116,29 +130,29 @@ a {
     color: #161616;
 
 }
-.address-results{
+.product-results{
     font-size: 1.1vw;
-    font-weight: 500;
+    color:#161670;
+    font-weight: 600;
+    line-height: 1vw;
 }
 .price-results{
-    color:#161670;
-    font-size: 1.2vw;
-    font-weight: 600;
+    color:#28880b;
+    font-size: 1.3vw;
+    font-weight: 700;
+    line-height: 0.5vw;
 }
-.type, .hostel, .street, .community{
-    color: #161616;
+.ven-location {
+    font-size:1vw;
+    font-weight: 500;
+    color: #262727;
+    line-height: 0.5vw;
+
+} 
+.community{
     font-size:1vw;
     font-weight: 500;
     color: #152b8f;
-}
-.price{
-    color: #16850b;
-    font-size: 1.3vw;
-    font-weight: 700;
-}
-.icons-cont .fa{
-    margin-left: 10px;
-    color: #5f5f61;
 }
 #view-more-button{
     background-color: #152b8f;
@@ -197,25 +211,19 @@ a {
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
-        padding: 50px 0 0 0;
+        padding: 60px 0 0 0;
     }
-    /*here*/
-    h1{
-        text-align: center;
-        font-size: 22px;
-    }
-    h2{
-        font-size: 14px;
-    }
-    /* to here*/
-    #Apartment-container{
-        padding-top: 15px;
+    #product-container{
+        width: 100%;
+        padding-top: 25px;
+        display: inline-block;
         margin-bottom: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-    /*to here*/
     label{
-        font-weight: 800;
-        font-size: 1.8vw;
+        font-weight: 700;
+        font-size: 1.7vw;
         color: #161670;
     }
     a {
@@ -228,7 +236,11 @@ a {
         text-align: center;
         color: #504f4f;
         font-weight: 700;
+        font-size: 1.6vw;
     }
+    input[type=search] {
+        font-size: 1.6vw;
+     }
     button {
         width: 100%;
         margin-top:22.2px;
@@ -245,7 +257,7 @@ a {
     .output-containers{
         width:50%;
         margin-left: 25%;
-        padding: 1vw 5px 0px 5px;
+        padding: 0 5px 0 5px;
        
     }
     #image-cont{
@@ -256,7 +268,7 @@ a {
     #image-cont img{
         width:100%;
         /*here*/
-        height: 28vw;
+        height: 35vw;
         /*to here*/
     }
     #text-cont{
@@ -276,18 +288,19 @@ a {
         font-size: 16px;
         font-weight: 600;
     }
-    .address-results{
-        font-size: 2vw;
+    .product-results{
+        font-size: 2.2vw;
     }
     .price-results{
-        font-size: 2vw;
-    }
-    .type, .hostel, .street, .community{
-        font-size:2.3vw;
-    }
-    .price{
         font-size: 2.5vw;
     }
+    .ven-location {
+        font-size:2vw;
+    } 
+    .community{
+        font-size:2vw;
+    }
+    
     #service-link-cont{
         width: 75%;
         margin-left: 12.5%;
@@ -313,25 +326,32 @@ a {
     }
 
 }
-@media screen and (max-width: 590px){
+@media screen and (max-width: 550px){
 
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
         padding: 60px 0 0 0;
     }
-    /*here*/
     h1{
         text-align: center;
         font-size: 17px;
         margin-top: 5px;
     }
-    h2{
-        font-size: 14px;
+    #product-container{
+        padding-top: 15px;
+        display: inline-block;
+        margin-bottom: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-    /*to here*/
     .filter-containers{
         width:50%;
+        float:left;
+        text-align: center;
+    }
+    .search-container{
+        width:100%;
         float:left;
         text-align: center;
     }
@@ -340,30 +360,30 @@ a {
         float:left;
         text-align: center;
     }
-    /*here*/
-    select{ 
+    select{
         height: 30px;
-        font-size: 4vw;
+        font-size: 3.3vw;
     }
-    button {
+    input[type=search] {
+        height: 30px;
+        font-size: 3.3vw;
+     }
+     button {
         margin-top:5px;
     }
-    /*to here*/
     label{
         font-weight: 700;
-        font-size: 3.3vw;
+        font-size: 3.6vw;
         color: #161670;
     }
     a {
         font-size:3.5vw;
     
     }
-    /*here*/
     #figures{
         width: 95%;
-        padding: 0px 0 0px 19px;
+        padding: 0 0 0 5vw;
     }
-    /*to here*/
     #output-ext-cont{
         width: 100%;
         margin-left: 0%;
@@ -377,14 +397,13 @@ a {
     }
     #image-cont{
         width: 90%;
-        height: 60vw;
         height: auto;
         margin-left: 5%;
         padding-top: 2vw;
     }
     #image-cont img{
         width:100%;
-        height: 50vw;
+        height: 60vw;
     }
     #text-cont{
         width: 100%;
@@ -399,20 +418,17 @@ a {
         color: #f5f2f2;
         margin-bottom: 30px;
     }
-    .address-results{
-        font-size: 2.9vw;
-        font-weight: 500;
+    .product-results{
+        font-size: 4.2vw;
     }
     .price-results{
-        color:#161670;
-        font-size: 3vw;
-        font-weight: 600;
+        font-size: 4.5vw;
     }
-    .type, .hostel, .street, .community{
-        font-size:3.5vw;
-    }
-    .price{
-        font-size: 4vw;
+    .ven-location {
+        font-size:4vw;
+    } 
+    .community{
+        font-size:4vw;
     }
     #service-link-cont{
         width: 80%;
@@ -432,7 +448,7 @@ a {
         padding: 2%;  
     }
     #redir{
-        font-weight: 400;
+        font-weight: 500;
         font-size: 21px;
     }
     #redirect-link{
