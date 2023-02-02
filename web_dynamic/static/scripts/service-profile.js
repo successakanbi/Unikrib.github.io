@@ -21,6 +21,7 @@ $(function (){
 $(function (){
     $("#submit").on('click', function (){
         const userId = window.localStorage.getItem('newId');
+        console.log("Updating...")
         var ins = $("#profile-photo")[0].files.length;
 
         if(ins == 0) {
@@ -28,7 +29,6 @@ $(function (){
             return;
         }
         var spDict = {
-            "service_category": $("#service-select :selected").val(),
             "com_res": $("#community-select :selected").val(),
         };
 
@@ -39,6 +39,7 @@ $(function (){
             contentType: 'application/json',
             dataType: 'json',
             success: function(data){
+                console.log("Done")
                 alert("User details updated successfully");
                 var formData = new FormData();
                 var file = $("#profile-photo")
@@ -83,7 +84,7 @@ $(function (){
                                         alert("Error encountered while updating profile image");
                                     }
                                 })
-                                window.location.href = 'Apartment-page.html';
+                                //window.location.href = 'Apartment-page.html';
                             },
                             error: function (jqxhr, text, error) {
                                 console.log(error);

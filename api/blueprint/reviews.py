@@ -38,8 +38,16 @@ def create_review():
     if not request.json:
         abort(400, "Not a valid json")
     review_dict = request.get_json()
+    if "text" not in review_dict:
+        abort(400, "Please include review text")
+    if "reviewer" not in review_dict:
+        abort('400, Please include a reviewer')
+    if "reviewee" not in review_dict:
+        abort(400, "Please include a reviewee")
+    if "star" not in review_dict:
+        abort(400, "Please include a star rating")
 
-    if len(review_dict.text) < 2:
+    if len(review_dict['text']) < 2:
         abort(400, "Please include a text")
 
     model = Review(**review_dict)

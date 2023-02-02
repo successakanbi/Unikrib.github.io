@@ -9,3 +9,5 @@ from api.blueprint.houses import *
 from api.blueprint.environments import *
 from api.blueprint.streets import *
 from api.blueprint.reviews import *
+from api.blueprint.products import *
+from api.blueprint.categories import *

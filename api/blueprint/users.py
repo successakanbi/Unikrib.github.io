@@ -95,7 +95,7 @@ def create_user():
         resp.status_code = 400
         return resp
     for key, obj in storage.all(User).items():
-        if user_dict['email'] == obj.email:
+        if user_dict['email'].lower() == obj.email.lower():
             resp = jsonify({"message": "Email already exists"})
             resp.status_code = 400
             return resp

@@ -109,10 +109,17 @@ input[type=text], input[type=email], input[type=password],
     font-weight: 600;
  }
  
- a{
+ #google a {
     font-size: 17px;
     color: #05349b;
-    font-weight: 800;
+    font-weight: 700;
+    text-decoration: none;
+   
+ }
+ #other a, .other a{
+    font-size: 17px;
+    color: #05349b;
+    font-weight: 700;
     text-decoration: none;
  }
 

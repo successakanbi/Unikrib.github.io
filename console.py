@@ -3,20 +3,24 @@
 import cmd
 from models import storage
 from models.house import House
-from models.service import Service
+from models.product import Product
 from models.environment import Environment
 from models.street import Street
 from models.user import User
 from models.review import Review
+from models.category import Category
+from models.service import Service
 
 
 classes = {
         "House": House,
-        "Service": Service,
+        "Product": Product,
         "Environment": Environment,
         "Street": Street,
         "User": User,
-        "Review": Review}
+        "Review": Review,
+        "Category": Category,
+        "Service": Service}
 
 class Unikrib(cmd.Cmd):
     """This is to enable me manipulate the objects"""
@@ -97,12 +101,15 @@ class Unikrib(cmd.Cmd):
             if "env_id" not in class_dict:
                 print("* Please include env_id *")
                 return False
-        if line_args[0] == 'Service':
+        if line_args[0] == 'Product':
             if "name" not in class_dict:
-                print("* Please include service name *")
+                print("* Please include product name *")
                 return False
             if "owner_id" not in class_dict:
                 print("* Please include owner_id *")
+                return False
+            if "category_id" not in class_dict:
+                print("* Please include a category_id *")
                 return False
         if line_args[0] == 'Review':
             if 'text' not in class_dict:
@@ -113,6 +120,20 @@ class Unikrib(cmd.Cmd):
                 return False
             if 'reviewee' not in class_dict:
                 print("* Please include a reviewee *")
+                return False
+        if line_args[0] == 'Category':
+            if 'name' not in class_dict:
+                print("* Please include a category name *")
+                return False
+        if line_args[0] == 'Service':
+            if 'title' not in class_dict:
+                print('* Please include the service title *')
+                return False
+            if 'owner_id' not in class_dict:
+                print("* Please include an owner_id *")
+                return False
+            if 'description' not in class_dict:
+                print("* Please include a description *")
                 return False
         model = classes[line_args[0]](**class_dict)
         print(model.id)
@@ -168,8 +189,9 @@ class Unikrib(cmd.Cmd):
             v = line_args[3]
         if search_key in storage.all(line_args[0]):
             obj = storage.all()[search_key]
-            setattr(obj, k, v)
-            obj.save()
+            if v not in ('id', 'created_at', 'updated_at'):
+                setattr(obj, k, v)
+                obj.   save()
         else:
             print("* No instance found *")
             return False

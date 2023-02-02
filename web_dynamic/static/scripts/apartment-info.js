@@ -23,7 +23,7 @@ $(function (){
 				count += 1;
 			}
 			
-			for (let i = count; i >= 1; i--){
+			for (let i = 1; i <= count; i++){
 				var image;
 				if (i === 1){
 					image = house.image1;
@@ -33,14 +33,14 @@ $(function (){
 					image = house.image3;
 				}
 				
-				$(".Apartment-slide-cont").prepend(`<div class ="currentImage change">
+				$("#apart-images").append(`<div class ="currentImage change">
 					<div class="numb-text">` + i + ` / ` + count + `</div>
 					<img src=` + image + ` style="width:100%;" id="Apart-image1">
 				 </div>`)
 				 
-				 $("#dot-container").append(`<span class="dot" id="current` + i + `" ></span>`)
+				 $("#dot-container").append(`<span class="dot" id="current` + i + `"></span>`)
 				 $("#current" + i).on('click', function(){
-					showSlides(slideIndex=i-1)
+					showSlides(slideIndex=i)
 				 })
 			}
 			
@@ -48,39 +48,29 @@ $(function (){
     		showSlides(slideIndex);
 
 			$("#minus").on('click', function(){
-				if (slideIndex-- < 1) {
-					showSlides(count)
-					
-				} else {
-					showSlides(slideIndex)
-					
-				}
+				showSlides(slideIndex += -1)
 			})
 			$("#plus").on('click', function(){
-				if (slideIndex++ > count){
-					showSlides(1);
-				
-				} else {
-					showSlides(slideIndex)
-					
-				}
+				showSlides(slideIndex += 1);
 			})
 			
 
 			function showSlides(n) {
-				let slides = $(".currentImage");
+				const slides = document.getElementsByClassName("currentImage");
 				let dots = document.getElementsByClassName("dot");
 
 				if (n > slides.length) {slideIndex = 1}
-				if(n < 1) {slideIndex = slides.length}
-				for(i = 0; i < slides.length; i++){
+				else if(n < 1) {slideIndex = slides.length}
+				else {slideIndex = n}
+				for(let i = 0; i < slides.length; i++){
 					slides[i].style.display = "none"
 				}
 				for(let i = 0; i < dots.length; i++) {
 					dots[i].className = dots[i].className.replace(" active", "");
 				}
 				
-				slides[slideIndex-1].style.display = "block";
+				if (slideIndex-1 >= count){slideIndex=1}
+				slides[slideIndex-1].style.display = "block";				
 				dots[slideIndex-1].className += " active";
 			}
 		},
@@ -111,19 +101,19 @@ $(function (){
 						data: {},
 						contentType: 'application/json',
 						dataType: 'json',
-						success: function (env){
-							var count = 1;
-							if (house.image2 != null){
-								count += 1;
-							}
-							if (house.image3 != null){
-								count += 1;
-							}
-							
+						success: function (env){							
 							$("#apartment-details").html(` <p class="address-results"><span class="type">` + house.apartment + `</span> in <span class="hostel" id="hostel1">` + house.name + ` </span>for rent
 					               <span class ="street" id="street1">` + street.name + ` street,</span><span class ="community" id="community1"> ` + env.name + ` </span>
 						            </p>
 						          <p class="price-results"><span class="price" id="price1">N` + house.price + ` </span>per year</p>`)
+							if (house.running_water === 'yes'){
+								$('#feature-cont').append('<p class="feature"><icon class="fa fa-tint"></icon> Running water available</p>');
+							}
+							if (house.waste_disposal === 'yes'){
+								$('#feature-cont').append('<p class="feature"><icon class="fa fa-trash"></icon> waste disposal available</p>');
+							}
+							$('#feature-cont').append('<p class="feature"><icon class="fa fa-bolt"></icon> ' + house.power_supply + 'h of power daily</p>')
+						
 						},
 						error: function(){
 							alert("Could not load Environment, please try again later");
@@ -199,6 +189,7 @@ $(function (){
 		contentType: 'application/json',
 		dataType: 'json',
 		success: function (house){
+			window.localStorage.setItem('houseOwnerId', house.owner_id);
 			$.ajax({
 				type: 'GET',
 				url: 'http://localhost:8000/unikrib/users/' + house.owner_id + '/reviews',
@@ -225,12 +216,12 @@ $(function (){
 								</div>
 								<div id="rev-message-cont">
 									<p id="review-message">` + reviews[0].text + `</p> 
-									<p class="time-stamp"><span id="day">21st </span><span id="month">July</span><span id="year"> 2022</span></p>
+									<p class="time-stamp">` + reviews[0].updated_at.slice(0, 10) + `</p>
 								</div>`)
 								if (reviews.length === 1){
 									$("#other-reviews-cont").addClass("currentImage");
 								} else {
-									$("#review-length").text(reviews.length - 1)
+									$("#review-length").text(reviews.length - 1)															
 								}
 
 							},

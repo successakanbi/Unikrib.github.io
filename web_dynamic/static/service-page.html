@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products and services page</title>
+    <title>Products page</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/product-service-page.css">
+    <link rel="stylesheet" href="styles/service-page.css">
 </head>
 <body>
         <!-- responsive top navigator bar -->
@@ -16,8 +16,10 @@
             <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
             <a href="homepage.html">Home</a>
             <a href="Apartment-page.html">Apartments</a>
-            <a href="product-service-page.html" class="active">products & services </a>
-            <a href="">contact</a>
+            <!--here-->
+            <a href="product-page.html">products</a>
+            <a href="service-page.html" class="active">services</a>
+            <!--to here-->
             <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
                 <div class="icon-cont" onclick="changeIcon(this)">
                     <div class="bar1"></div>
@@ -39,7 +41,7 @@
                     <!--select box for community where service or product is needed-->
                     <label for="community">Select Community</label><br>
                     <select name="community" id="community" class="community-select">
-                         <!--<option value="Adolor">Adolor</option>
+                         <option value="Adolor">Adolor</option>
                          <option value="Ebvoumore">Ebvoumore</option>
                          <option value="EDPA">EDPA</option>
                          <option value="Ekosodin">Ekosodin</option>
@@ -47,7 +49,7 @@
                          <option value="Isiohor">Isiohor</option>
                          <option value="Osasoghie">Osasoghie</option>
                          <option value="Oluku">Oluku</option>
-                        <option value="Uselu">Uselu</option>-->
+                        <option value="Uselu">Uselu</option>
                     </select><br>
                 </div>
     
@@ -55,10 +57,10 @@
                 <div id="category-cont" class="filter-containers">
                     <!--select box for category -->
                    <label for="seller">Select category</label><br>
-                   <select name="seller" id="seller" class="seller" required>
+                   <select name="seller" id="seller" class="seller" onchange="changeOptions(this.id, 'value-provider')" required>
                         <option value=""></option>
-                        <!--<option value="Service provider">Service provider</option>
-                        <option value="Vendor">Vendor</option>-->
+                        <option value="Service provider">Service provider</option>
+                        <option value="Vendor">Vendor</option>
                    </select><br>
                 </div>
     
@@ -87,96 +89,96 @@
            <span id="">9</span></p>
        </div>
 
-       <div id="all-products">
-        <!--<div id="" class="output-containers">
-          
-          <a href="product-service-info-page.html">
-            
-              <div id="img-container">
-              <img src="images/photo5.png">
-          </div>
-          <div id="text-container">
-              <p class ="name"><span id="fname">Osagede</span><span id="lname"> idehen</span></p>
-              <p class="services" id="service-select"> Painter</p>
-              <p class="community" id ="community-select">Osasoghie</p>
-          </div>   
-          </a>
-        </div>
+       <div id="" class="output-containers">
+        <!--here-->
+        <a href="service-info-page.html">
+          <!--to here-->
+            <div id="img-container">
+             <img src="images/photo5.png">
+         </div>
+         <div id="text-container">
+             <p class ="name"><span id="fname">Osagede</span><span id="lname"> idehen</span></p>
+             <p class="services" id="service-select"> Painter</p>
+             <p class="community" id ="community-select">Osasoghie</p>
+         </div>   
+        </a>
+       </div>
 
-        <div id="" class="output-containers">
-         
-          <a href="product-service-info-page.html">
-            
-              <div id="img-container">
-                  <img src="images/pretty-black-female-business-headshot.jpg">
-              </div>
-              <div id="text-container">
-                  <p class ="name"><span id="fname">Margaret</span><span id="lname"> Oruwense</span></p>
-                  <p class="services" id ="service-select"> Clothes vendor</p>
-                  <p class="community" id="community-select">Osasoghie</p>
-              </div>
-          </a>
-        </div>
+       <div id="" class="output-containers">
+         <!--here-->
+         <a href="service-info-page.html">
+          <!--to here-->
+            <div id="img-container">
+                <img src="images/pretty-black-female-business-headshot.jpg">
+            </div>
+            <div id="text-container">
+                <p class ="name"><span id="fname">Margaret</span><span id="lname"> Oruwense</span></p>
+                <p class="services" id ="service-select"> Clothes vendor</p>
+                <p class="community" id="community-select">Osasoghie</p>
+            </div>
+        </a>
+      </div>
 
-        <div id="" class="output-containers">
-          <a href="product-service-info-page.html">
-              <div id="img-container">
-                  <img src="images/web-shot-1.jpg">
-              </div>
-              <div id="text-container">
-                  <p class ="name"><span id="fname">Justin</span><span id="lname"> Okafor</span></p>
-                  <p class="services" id="service-select">Generator repairman</p>
-                  <p class="community" id ="community-select">Ekosodin</p>
-              </div>
+      <div id="" class="output-containers">
+         <!--here-->
+         <a href="service-info-page.htmls">
+          <!--to here-->
+            <div id="img-container">
+                <img src="images/web-shot-1.jpg">
+            </div>
+            <div id="text-container">
+                <p class ="name"><span id="fname">Justin</span><span id="lname"> Okafor</span></p>
+                <p class="services" id="service-select">Generator repairman</p>
+                <p class="community" id ="community-select">Ekosodin</p>
+            </div>
 
-          </a>
-        </div>
+        </a>
+      </div>
 
-        <div id="" class="output-containers">
-            
-            <a href="product-service-info-page.html">
-            
-              <div id="img-container">
-                  <img src="images/photo5.png">
-              </div>
-              <div id="text-container">
-                  <p class ="name"><span id="fname">Itavkase</span><span id="lname"> Bomor</span></p>
-                  <p class="services" id="service-select"> Gas vendor</p>
-                  <p class="community" id ="community-select">Evidence</p>
-              </div>
-            </a> 
-        </div>
+      <div id="" class="output-containers">
+           <!--here-->
+          <a href="service-info-page.html">
+          <!--to here-->
+            <div id="img-container">
+                <img src="images/photo5.png">
+            </div>
+            <div id="text-container">
+                <p class ="name"><span id="fname">Itavkase</span><span id="lname"> Bomor</span></p>
+                <p class="services" id="service-select"> Gas vendor</p>
+                <p class="community" id ="community-select">Evidence</p>
+            </div>
+          </a> 
+      </div>
 
-        <div id="" class="output-containers">
-              
-              <a href="product-service-info-page.html">
-              
-                  <div id="img-container">
-                      <img src="images/web-shot-1.jpg">
-                  </div>
-                  <div id="text-container">
-                      <p class ="name"><span id="fname">Okoro</span><span id="lname"> Ifake</span></p>
-                      <p class="services" id="service-select">Plumber</p>
-                      <p class="community" id ="community-select">EDPA</p>
-                  </div>
-              </a>
-        </div>
-
-        <div id="" class="output-containers">
-            
-            <a href="product-service-info-page.html">
-            
-                  <div id="img-container">
-                      <img src="images/pretty-black-female-business-headshot.jpg">
-                  </div>
-                  <div id="text-container">
-                      <p class ="name"><span id="fname">Rosemary</span><span id="lname"> Adeyemi</span></p>
-                      <p class="services" id ="service-select"> Hair dresser</p>
-                      <p class="community" id="community-select">Uselu</p>
-                  </div>
+      <div id="" class="output-containers">
+            <!--here-->
+            <a href="service-info-page.html">
+            <!--to here-->
+                <div id="img-container">
+                    <img src="images/web-shot-1.jpg">
                 </div>
-                </a>
-      </div>-->
+                <div id="text-container">
+                    <p class ="name"><span id="fname">Okoro</span><span id="lname"> Ifake</span></p>
+                    <p class="services" id="service-select">Plumber</p>
+                    <p class="community" id ="community-select">EDPA</p>
+                </div>
+             </a>
+      </div>
+
+      <div id="" class="output-containers">
+          <!--here-->
+          <a href="service-info-page.html">
+          <!--to here-->
+                <div id="img-container">
+                    <img src="images/pretty-black-female-business-headshot.jpg">
+                </div>
+                <div id="text-container">
+                    <p class ="name"><span id="fname">Rosemary</span><span id="lname"> Adeyemi</span></p>
+                    <p class="services" id ="service-select"> Hair dresser</p>
+                    <p class="community" id="community-select">Uselu</p>
+                </div>
+              </div>
+              </a>
     </div>
 
     <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
@@ -188,7 +190,7 @@
       <div id="view-more-cont">
         <div id="" class="output-containers">
                <!--here-->
-               <a href="product-service-info-page.html">
+               <a href="product-info-page.html">
                <!--to here-->
                     <div id="img-container">
                         <img src="images/web-shot-1.jpg">
@@ -203,7 +205,7 @@
    
           <div id="" class="output-containers">
                   <!--here-->
-                   <a href="product-service-info-page.html">
+                   <a href="product-info-page.html">
                   <!--to here-->
                     <div id="img-container">
                         <img src="images/pretty-black-female-business-headshot.jpg">
@@ -218,7 +220,7 @@
 
          <div id="" class="output-containers">
                  <!--here-->
-                 <a href="product-service-info-page.html">
+                 <a href="product-info-page.html">
                  <!--to here-->
                     <div id="img-container">
                         <img src="images/photo5.png">
@@ -339,8 +341,8 @@
 
         //displays search parameters in search result heading
         function searchParameter() {
-            let community = $("#community :selected").text();
-            let valueCreators = $("#value-provider :selected").text();
+            let community = document.getElementById("community").value;
+            let valueCreators = document.getElementById("value-provider").value;
             document.getElementById("search-filter").innerHTML = 
               "Search results for " + valueCreators + " in " + community;
         }
@@ -355,7 +357,5 @@
 
 
     </script>
-    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-    <script src="scripts/product-service-page.js"></script>"
 </body>
 </html>
