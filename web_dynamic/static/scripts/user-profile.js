@@ -10,7 +10,7 @@ $(function (){
 		dataType: 'json',
 		success: function (envs){
 			$.each(envs, function(index, env){
-				$("#community-select").append('<option value="' + env.name + '">' + env.name + '</option>')
+				$("#community-select").append('<option value="' + env.id + '">' + env.name + '</option>')
 			});
 		},
 		error: function (){

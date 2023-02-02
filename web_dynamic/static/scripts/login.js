@@ -17,7 +17,8 @@ $(function () {
             dataType: 'json',
             success: function(user_dict) {
                 alert("Welcome back " + user_dict.first_name);
-		    window.location.href = 'Apartment-page.html';
+                window.localStorage.setItem('newId', user_dict.id);
+		        window.location.href = 'Apartment-page.html';
             },
             error: function(response) {
                 alert(JSON.stringify(response.responseJSON.message));

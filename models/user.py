@@ -16,8 +16,7 @@ class User(BaseModel, Base):
     user_type = Column(String(60), nullable=False)
     com_res = Column(String(60), nullable=True)
     avatar = Column(String(128), nullable=True)
-    service_category = Column(String(256), nullable=True)
-    services = relationship("Service", backref="service", cascade="all, delete, delete-orphan")
+    product = relationship("Product", backref="product", cascade="all, delete, delete-orphan")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

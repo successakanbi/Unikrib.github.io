@@ -1,8 +1,7 @@
 #!/usr/bin/node
 
+// Load all environments
 $(function (){
-
-    // Load all environments
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8000/unikrib/environments',
@@ -20,6 +19,7 @@ $(function (){
     })
 });
 
+// Load the streets in the selected environment
 $(function (){
     $("#community").on('change', function(){
         const env_id = $("#community :selected").val();
@@ -48,6 +48,9 @@ $(function (){
             "name": $('#name').val(),
             "street_id": $("#street").val(),
             "price": $('#price').val(),
+            "running_water": $('#running-water :selected').val(),
+            "waste_disposal": $('#adequate-disposal :selected').val(),
+            "power_supply": $('#hours').val(),
             "owner_id": userId,
         };
         var ins = $("#Apart-image1")[0].files.length;

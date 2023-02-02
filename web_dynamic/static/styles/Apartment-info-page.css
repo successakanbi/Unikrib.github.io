@@ -316,22 +316,22 @@
     width:70%;
     margin-left: 15%;
     padding: 1.5vw 0 1.5vw 0;
-    background-color: #eb0c0c;
+    background-color: #0b880b;
     color: #ffffff;
     border: none;
     font-size: 1vw;
-   }
-   .block{
-    display: block;
    }
    #delete-apartment{
     width:70%;
     margin-left: 15%;
     padding: 1.5vw 0 1.5vw 0;
-    background-color: #0b880b;
+    background-color: #eb0c0c;
     color: #ffffff;
     border: none;
     font-size: 1vw;
+   }
+   .block {
+    display: block;
    }
    button .fa{
      color: #ffffff;

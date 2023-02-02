@@ -19,9 +19,9 @@ p {
 }
 
 .top-nav a img {
-    height: 25px;
-    width: 125px;
-    margin-right: 19vw;
+    height: 1.8vw;
+    width: 8vw;
+    margin-right: 47.5vw;
 }
 
 .top-nav a {
@@ -29,16 +29,16 @@ p {
     display:block;
     color: #ffffff;
     text-align: center;
-    padding:14px 16px;
+    padding:1vw 1.2vw;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1vw;
     height: 25px;       
 }
 
 .top-nav a:hover:not(:first-child) {
     background-color: #d1caca;
     color:#141414;
-    font-size:19px;
+    font-size:0.9vw;
     transition: 0.5s;
 }
 
@@ -270,7 +270,7 @@ position: relative;
 
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     .top-nav a img {
         height: 25px;
         width: 125px;
@@ -285,6 +285,11 @@ position: relative;
     
     .top-nav a:not(:first-child){
         display: none;
+    }
+    .top-nav a:hover:not(:first-child) {
+        font-size:2.3vw;
+        font-weight: 500;
+        transition: 0.5s;
     }
     .top-nav a.icon {
         float: right;
@@ -303,7 +308,8 @@ position: relative;
     .top-nav.responsive a {
         float:none;
         display:block;
-        margin-bottom: 20px;
+        font-size: 2.1vw;
+        margin-bottom: 25px;
         text-align: left;
           
     }
@@ -382,6 +388,11 @@ position: relative;
     }
     h1 {
         font-size:22px;
+    }
+    .top-nav.responsive a {
+        font-size: 4.1vw;
+        margin-bottom: 25px;
+        text-align: left;     
     }
     
     #headtext{

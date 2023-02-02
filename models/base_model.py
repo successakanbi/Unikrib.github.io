@@ -7,7 +7,7 @@ import uuid
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Float, DateTime
 
-time = "%Y-%m-%dT%H:%M:%S.%f"
+time = "%d-%m-%Y %H:%M.%f"
 Base = declarative_base()
 
 class BaseModel:

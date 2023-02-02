@@ -8,19 +8,22 @@ from sqlalchemy import create_engine, MetaData, and_
 from sqlalchemy.orm import sessionmaker, scoped_session
 from models.base_model import Base
 from models.user import User
-from models.service import Service
+from models.product import Product
 from models.house import House
 from models.environment import Environment
 from models.street import Street
 from models.review import Review
+from models.category import Category
+from models.service import Service
   
 
 class Storage:
     """
     storage of class instances
     """
-    classes = {"User": User, "Service": Service, "House": House,
-            "Environment": Environment, "Street": Street, "Review": Review}
+    classes = {"User": User, "Product": Product, "House": House,
+            "Environment": Environment, "Street": Street, "Review": Review,
+            "Category": Category, "Service": Service}
 
     __engine = None
     __session = None

@@ -23,9 +23,9 @@ $(function() {
             contentType: 'application/json',
             dataType: 'json',
             success: function (new_user){
-		    alert("User successfully created.");
-		    window.localStorage.setItem('newId', new_user.id);
-		    window.location.href = "user-profile.html"
+		        alert("User successfully created.");
+    		    window.localStorage.setItem('newId', new_user.id);
+	    	    window.location.href = "user-profile.html"
             },
             error: function(response){
 		    alert(response.message);
