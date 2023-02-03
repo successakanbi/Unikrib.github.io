@@ -53,7 +53,7 @@ select:focus {
     transition: 300ms;
  }
  /*here*/
-button {
+ .search-btn {
     width: 100%;
     margin-top:24px;
     border: 1px solid rgb(29, 112, 4);
@@ -229,11 +229,13 @@ a {
         color: #504f4f;
         font-weight: 700;
     }
-    button {
+    /*here*/
+    .search-btn {
         width: 100%;
         margin-top:22.2px;
         height: 50px;
     }
+    /*to here*/
     #figures{
         width: 98%;
     }
@@ -340,12 +342,12 @@ a {
         float:left;
         text-align: center;
     }
-    /*here*/
     select{ 
         height: 30px;
         font-size: 4vw;
     }
-    button {
+    /*here*/
+    .search-btn {
         margin-top:5px;
     }
     /*to here*/

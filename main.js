@@ -13,4 +13,14 @@ function changeIcon(x) {
     x.classList.toggle("change");
 }
 
-
+function dropDown() {
+    document.getElementById("dropdown-cont").classList.toggle("show");
+}
+window.onclick = function(e) {
+    if(!e.target.matches(".dropbtn")) {
+        var myDropdown =  document.getElementById("dropdown-cont");
+        if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+        }
+    }
+}

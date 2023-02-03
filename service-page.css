@@ -7,7 +7,6 @@ h1{
     text-align: center;
     font-size: 25px;
 }
-/*here*/
 #service-prov-container{
     width: 100%;
     padding-top: 15px;
@@ -16,7 +15,6 @@ h1{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/*to here*/
 .filter-containers{
     width:37.5%;
     float:left;
@@ -38,10 +36,8 @@ label{
     color: #161670;
 }
 select{
-    /*here*/
     width: 100%;
     height: 45px;
-    /*to here*/
     text-align: center;
     color: #504f4f;
     font-size: 1vw;
@@ -53,7 +49,8 @@ select:focus {
     outline: none;
     transition: 300ms;
  }
-button {
+ /*here*/
+ #service-search {
     width: 100%;
     margin-top:24px;
     border: 1px solid rgb(29, 112, 4);
@@ -62,6 +59,7 @@ button {
     font-size: 15px;
     height: 50px;
 }
+/* to here*/
 #search-filter{
     font-size: 1.3vw;
     text-align: center;
@@ -71,9 +69,7 @@ button {
     background-color: #504f4f;
     width: 98%;
     display: block;
-    /*here*/
     padding: 1px 0 1px 1%;
-    /*to here*/
     color: #f8f7f7;
     margin-bottom: 30px;
 }
@@ -91,11 +87,9 @@ button {
     margin-left: 6%;
     margin-bottom:50px;
     display: inline-block;
-    /*here*/
     padding: 1vw 1.5% 0px 1.5%;
     border-top: 5px solid #1c9ad4;
     border-radius: 5px;
-    /*to here*/
     box-shadow: 0 4px 8px 0 rgba(68, 67, 67, 0.2), 
     0 6px 20px 0 rgba(73, 72, 72, 0.19);
 }
@@ -122,27 +116,20 @@ button {
     color: #177177;
     font-weight: 700;
     font-size: 1.1vw;
-    /*here*/
     line-height: 0.3vw;
-    /*to here*/
 }
 .services{
     color:#097e09;
     font-size: 1vw;
     font-weight: 600;
-    /*here*/
     line-height: 0.3vw;
-    /*to here*/
 }
 .community{
     color: #353536;
     font-size: 1vw;
     font-weight: 600;
-    /*here*/
     line-height: 0.3vw;
-    /*to here*/
 }
-/*here*/
 .rating{
     font-size: 0.9vw;
     float: right;
@@ -154,7 +141,6 @@ button {
 .rating .fa{
     color: #d9dd06;
 }
- /*to here*/
 #view-more-button{
     background-color: #152b8f;
     text-align: center;
@@ -238,10 +224,8 @@ button {
     .output-containers{
         width:50%;
         margin-left: 25%;
-        /*here*/
         padding: 2.5vw 2% 0px 2%;
         margin-bottom:50px;
-       /*to here*/
         
     }
     #img-container{
@@ -261,29 +245,22 @@ button {
         float:left;
     }
     .name{
-        /*here*/
         color: #177177;
         font-weight: 700;
         font-size: 2.3vw;
         line-height: 0.7vw;
-        /*to here*/
     }
     .services{
-        /*here*/
         color:#097e09;
         font-size: 2vw;
         font-weight: 600;
         line-height: 0.5vw;
-        /*to here*/
     }
     .community{
         font-size: 2vw;
         font-weight: 600;
-        /*here*/
         line-height: 0.5vw;
-        /*to here*/
     }
-    /*here*/
     .rating{
         font-size: 1.6vw;
         float: right;
@@ -291,7 +268,6 @@ button {
         font-weight: 600;
         line-height: 0.3vw;
     }
-    /*to here*/
     #button-text{
         font-size: 1.8vw;
     }
@@ -340,20 +316,18 @@ button {
         height: 40px;
     }
     /*here*/
-    button {
+    #service-search {
         margin-top:5px;
     }
+    /*here*/
     
     #search-filter{
         font-size: 4vw;
         
     }
-    /*to here*/
     #figures{
         margin-bottom: 20px;
-        /*here*/
         padding: 0px 1% 0px 1%;
-        /*to here*/
 
     }
     #service-prov-container{
@@ -363,10 +337,8 @@ button {
     .output-containers{
         width:77%;
         margin-left: 8%;
-         /*here*/
          padding: 4vw 4% 0px 4%;
          margin-bottom:50px;
-        /*to here*/
     }
     #img-container{
         width: 100%;
@@ -384,32 +356,23 @@ button {
         height: auto;
         float:left;
     }
-    /*here*/
     .name{
         color: #177177;
         font-weight: 700;
         font-size: 4.5vw;
-        /*here*/
         line-height: 2vw;
-        /*to here*/
     }
     .services{
         color:#097e09;
         font-size: 4.2vw;
         font-weight: 600;
-        /*here*/
         line-height: 2vw;
-        /*to here*/
     }
-    /* to here*/
     .community{
         font-weight: 600;
-        /*here*/
         font-size: 4vw;
         line-height: 2vw;
-        /*to here*/
     }
-    /*here*/
     .rating{
         font-size: 3vw;
         float: right;
@@ -417,18 +380,14 @@ button {
         font-weight: 600;
         line-height: 0.3vw;
     }
-    /*to here*/
     #view-more-button{
         width: 50%;
         margin-left:25%;
         margin-bottom: 30px;
     }
-    /*here*/
     #button-text{
         font-size: 3.5vw;
     }
-    /*to here*/
-    
     #apartment-link-cont{
         width: 70%;
         margin-left: 15%;
@@ -447,12 +406,10 @@ button {
         font-weight: 400;
         
     }
-    /*here*/
     #redirect-link{
         font-weight: 700;
         color: #086161;
         font-size:4vw;
     }
-    /*to here*/
 
 }

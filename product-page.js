@@ -18,7 +18,7 @@ function viewMore() {
     result.innerHTML = "1 - 20";
 }
 //changes the search button colour from green to purple
-var button = document.getElementById("apartment-search");
+var button = document.getElementById("product-search");
 button.addEventListener("click", changeColor)
 
 function changeColor() {

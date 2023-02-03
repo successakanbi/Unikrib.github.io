@@ -10,6 +10,7 @@ p {
     font-size: 17px;
 }
 /* styles the navigation bar icon links display on desktop */
+/*here*/
 .top-nav {
     overflow: hidden;
     background-color: #070707;
@@ -17,13 +18,12 @@ p {
     z-index: 1;
     width: 100%;
 }
-/*here*/
 .top-nav a img {
     height: 1.8vw;
     width: 8vw;
-    margin-right: 47.5vw;
+    margin: 0 47.5vw 0 0;
 }
-
+/* to here*/
 .top-nav a {
     float: left;
     display:block;
@@ -41,8 +41,6 @@ p {
     font-size:0.9vw;
     transition: 0.5s;
 }
-/* to here*/
-
 .top-nav a.active {
     background-color: #141414;
     color: #ffffff;
@@ -50,7 +48,6 @@ p {
     text-underline-offset: 5px;
     
 }
-
 .top-nav .icon {
     display: none;
     padding:13px 3px 15px;
@@ -60,6 +57,61 @@ p {
     cursor: pointer;
     margin-top:-7px;
 }
+/*here*/
+.dropdown{
+    float: left;
+    overflow: hidden;
+    color: #ffff;
+}
+.dropdown {
+    cursor: pointer;
+    border: none;
+    font-size: 0.9vw;
+    outline: none;
+    color: #ffff;
+    background-color: #070707;
+    font-family: inherit;
+    margin: 0;
+}
+.dropbtn{
+    cursor: pointer;
+    border: none;
+    font-size: 0.9vw;
+    padding:1.15vw 1.2vw;
+    outline: none;
+    color: #ffff;
+    background-color: #070707;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown:hover, .dropbtn:hover, .dropbtn:focus{
+    background-color:#d1caca;
+}
+.dropmenu-content{
+    margin-top: 1vw;
+    display: none;
+    width: 30vw;
+    position: fixed;
+    background-color: #070707;
+    min-height: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropmenu-content p{
+    float: none;
+    color: #fff;
+    padding:1vw 1.2vw;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropmenu-content p:hover {
+    background-color:#d1caca;
+}
+.show{
+    display: block;
+}
+/*to here*/
 
 /* styles the dropdownmenu bars icon and its transformation animation to the close button*/
 .bar1, .bar2, .bar3 {
@@ -247,7 +299,6 @@ position: relative;
     height:220px;
     padding: 5px;
 }
-/*here*/
 #foot-para{
     font-size: 1.2vw;
     font-weight: 500;
@@ -258,17 +309,14 @@ position: relative;
     font-size: 1.1vw;
     font-weight: 500;
 }
-/*to here*/
 #small1, #small2, #small3{
     font-size: 20px;
 }
-/*here*/
 #footer-base-cont{
     width:100%;
     display: inline-block;
     background-color: #042d69;
 }
-/*to here*/
 #icon-cont{
     width:30%;
     margin-left:35%;
@@ -286,11 +334,14 @@ position: relative;
 
 @media screen and (max-width: 900px) {
     /* styles the navigation bar icon links display for tab view */
+    /*here*/
     .top-nav a img {
         height: 25px;
         width: 125px;
         margin-right: 0px;
+        margin: 1vw 0px 0 0;
     }
+    /*to here*/
     h1 {
         font-size:30px;
     }
@@ -315,6 +366,9 @@ position: relative;
         position: fixed; 
         z-index: 1; 
     }
+    .top-nav.top-nav.responsive .dropbtn {
+        display: none;
+    }
     .top-nav.responsive .icon{
         position: absolute;
         right: 0;
@@ -325,9 +379,29 @@ position: relative;
         display:block;
         font-size: 2.1vw;
         margin-bottom: 25px;
-        text-align: left;
-          
+        text-align: left;      
     }
+    /*here*/
+    .dropdown{
+        margin-left:65vw;
+        overflow: hidden;
+        color: #ffff;
+    }
+    .dropbtn{
+        font-size: 1.8vw;
+        padding:2vw 2vw;
+    }
+    .dropmenu-content{
+        margin: 2vw 0 0 -10vw ;
+        width: 25vw;
+        position: fixed;
+        background-color: #070707;
+        min-height: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    /*to here*/
+
     /*styles tab view of the about sub containers and contents*/
     #about-sub-cont{
         width:70%;
@@ -385,14 +459,12 @@ position: relative;
         padding: 5px;
         text-align: left;
     }
-     /*here*/
      #foot-para{
        font-size: 2vw;
     }
      .foot-links{
         font-size: 1.9vw;
     }
-    /*to here*/
     #icon-cont{
         width:40%;
         margin-left:30%;
@@ -406,20 +478,44 @@ position: relative;
 }
 @media screen and (max-width: 590px) {
     /*styles phone view of heading, subheading and startlink texts*/
+        /*here*/
+        .top-nav a img {
+            height: 25px;
+            width: 125px;
+            margin: 2vw 1.5vw 0 0;
+        }
+        /*to here*/
     p {
         font-size: 15px;
     }
     h1 {
         font-size:22px;
     }
-    /*here*/
     .top-nav.responsive a {
         font-size: 4.1vw;
         margin-bottom: 25px;
         text-align: left;     
     }
-    /* to here*/
-    
+    /*here*/
+    .dropdown{
+        margin-left:32vw;
+        overflow: hidden;
+        color: #ffff;
+    }
+    .dropbtn{
+        font-size: 4vw;
+        padding:5vw 4vw;
+    }
+    .dropmenu-content{
+        margin: 4vw 0 0 -20vw ;
+        width: 45vw;
+        position: fixed;
+        background-color: #070707;
+        min-height: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    /*to here*/
     #headtext{
         font-size: 30px;
         font-weight: 700;
@@ -474,14 +570,12 @@ position: relative;
     }
 
     /*styles phone view of the statistics sub container and its contents*/
-    /*here*/
     #stat-sub-cont {
         width:99.5%;
         float: left;
         text-align: center;
         border: #9b9999 1px solid;
     }
-    /* to here*/
     .values {
         font-size: 30px;
         margin-bottom: 20px;
@@ -511,14 +605,12 @@ position: relative;
         text-align:center;
         margin-bottom: 15px;
     }
-    /*here*/
     #foot-para{
         font-size: 4vw;
      }
       .foot-links{
          font-size: 3.9vw;
      }
-     /*to here*/
     #icon-cont{
         width:60%;
         margin-left:19%;

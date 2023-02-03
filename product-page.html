@@ -16,10 +16,21 @@
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
         <a href="Apartment-page.html">Apartments</a>
-        <!--here-->
         <a href="product-page.html" class="active">products</a>
         <a href="service-page.html">services</a>
-        <!--to here-->
+        <!--here-->
+        <div class="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p href="" class="drop-links">Profile</p>
+             <p href="" class="drop-links">Notifications</p>
+             <p href="" class="drop-links">Edit profile</p>
+             <p href="" class="drop-links">Settings</p>
+             <p href="" class="drop-links">Help</p>
+             <p href="" class="drop-links">logout</p>
+         </div>
+       </div>
+       <!--to here-->
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -79,9 +90,11 @@
 
 
                 <!--button container containing search button-->
+                <!--here-->
                 <div id="button-cont" class="filter-containers">
-                    <button id="apartment-search"type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                    <button id="product-search"type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
                 </div>
+                <!--here-->
             </div>
         </div>
     </div>
