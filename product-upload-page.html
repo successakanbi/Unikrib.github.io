@@ -178,49 +178,9 @@
     
     <script src = "main.js"></script>
     <script>
-        //changes the content of the street select box based on the selection in the community box
-        function changeOptions(lst1, lst2) {
-            var lst1 = document.getElementById(lst1);
-            var lst2 = document.getElementById(lst2);
-
-            //street option values for various community selected
-            lst2.innerHTML = "";
-            if(lst1.value == "Adolor") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-
-            } else if(lst1.value == "Ebvoumore") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-
-            } else if(lst1.value == "EDPA") {
-                var optionArray = ["18th street|18th street", "19th street|19th street","20th street|20th street",
-                "21st street|21st street", "22nd street|22nd street","|","|"];
-
-            } else if(lst1.value == "Ekosodin") {
-                var optionArray = ["Boundary|Boundary", "edo street|edo street","JB|JB","newton street|newton street", "|","|","|"];
-
-            } else if(lst1.value == "Evidence") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Isiohor") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Osasoghie") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Oluku") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            }else if(lst1.value == "Uselu") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            }
-            
-            for (var option in optionArray) {
-                var pair = optionArray[option].split("|");
-                var newOption = document.createElement("option");
-                newOption.value = pair[0];
-                newOption.innerHTML = pair[1];
-                lst2.options.add(newOption);
-
-            }
-        }
-
+      //here
         //displays name and size of uploaded image file
+        //here
         const file = document.getElementById("product-image1")
         const file2 = document.getElementById("product-image2")
         const file3 = document.getElementById("product-image3")
@@ -255,7 +215,7 @@
             fileNameAndSize;
         
         })
-
+        //to here
     </script>
 </body>
 </html>

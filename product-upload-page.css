@@ -37,13 +37,16 @@ input[type=text], input[type=number] {
     border:none;
     border-bottom: #607dda solid 3px;
  }
+ /*here*/
  textarea{
     width: 70%;
     padding: 7px;
     margin: 5px 0 5px 15%;
     border:none;
+    resize: none;
     border-bottom: #607dda solid 3px;
  }
+ /*to here*/
  input[type=text]:focus, input[type=number]:focus{
     width: 73%;
     padding: 15px;
