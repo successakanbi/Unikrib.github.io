@@ -20,8 +20,8 @@ p {
 }
 .top-nav a img {
     height: 1.8vw;
-    width: 8vw;
-    margin: 0 47.5vw 0 0;
+    width: 9vw;
+    margin: 0 45.5vw 0 0;
 }
 /* to here*/
 .top-nav a {
@@ -111,16 +111,17 @@ p {
 .show{
     display: block;
 }
-/*to here*/
+
 
 /* styles the dropdownmenu bars icon and its transformation animation to the close button*/
 .bar1, .bar2, .bar3 {
-    width: 40px;
-    height: 7px;
+    width: 6vw;
+    height: 1.1vw;
     background-color: #ffffff;
-    margin: 6px 0;
+    margin: 0.6vw 0;
     transition: 0.5s;
 }
+/*to here*/
 .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
 }
@@ -336,10 +337,9 @@ position: relative;
     /* styles the navigation bar icon links display for tab view */
     /*here*/
     .top-nav a img {
-        height: 25px;
-        width: 125px;
-        margin-right: 0px;
-        margin: 1vw 0px 0 0;
+        height: 3.5vw;
+        width: 16vw;
+        margin: 1.5vw 0px 0 0;
     }
     /*to here*/
     h1 {
@@ -383,12 +383,12 @@ position: relative;
     }
     /*here*/
     .dropdown{
-        margin-left:65vw;
+        margin-left:63.5vw;
         overflow: hidden;
         color: #ffff;
     }
     .dropbtn{
-        font-size: 1.8vw;
+        font-size: 2.5vw;
         padding:2vw 2vw;
     }
     .dropmenu-content{
@@ -478,12 +478,12 @@ position: relative;
 }
 @media screen and (max-width: 590px) {
     /*styles phone view of heading, subheading and startlink texts*/
-        /*here*/
-        .top-nav a img {
-            height: 25px;
-            width: 125px;
-            margin: 2vw 1.5vw 0 0;
-        }
+    /*here*/
+    .top-nav a img {
+        height: 5vw;
+        width: 24vw;
+        margin: 2.5vw 1.5vw 0 0;
+    }
         /*to here*/
     p {
         font-size: 15px;
@@ -498,13 +498,13 @@ position: relative;
     }
     /*here*/
     .dropdown{
-        margin-left:32vw;
+        margin-left:44vw;
         overflow: hidden;
         color: #ffff;
     }
     .dropbtn{
-        font-size: 4vw;
-        padding:5vw 4vw;
+        font-size: 3.3vw;
+        padding:3vw 4vw;
     }
     .dropmenu-content{
         margin: 4vw 0 0 -20vw ;
@@ -514,6 +514,13 @@ position: relative;
         min-height: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 10vw;
+        height: 1.8vw;
+        background-color: #ffffff;
+        margin: 0.9vw 0;
+        transition: 0.5s;
     }
     /*to here*/
     #headtext{
