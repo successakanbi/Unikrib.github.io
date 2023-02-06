@@ -35,14 +35,32 @@ label {
     margin: 5px 0 10px 15%;
     border:none;
     border-bottom: #607dda solid 3px;
-    
+  
  }
+ /*here*/
  select:focus{
     background-color: #f9f9fa;
+    width: 77%;
     outline:none;
-    font-size: 14px;
-    transition: 300ms;
+    transition: 400ms;
  }
+ textarea {
+   width: 73%;
+   margin: 5px 0 10px 15%;
+   height:3vw;
+   border: none;
+   border-bottom: #607dda solid 3px;
+   resize: none; 
+ }
+ textarea:focus{
+   width: 77%;
+   height: 5vw;
+   background-color: #e9e5e5;
+   outline: none;
+   transition: 300ms;
+ }
+ /* to here*/ 
+
  p{
     font-weight: 700;
     margin-left: 10%;
@@ -105,6 +123,18 @@ label {
         padding-top: 140px;
         display: block;
     }
+    /*here*/
+    select{
+      height:3.5vw;
+    }
+    textarea {
+      height:5vw;
+      
+    }
+    textarea:focus{
+      height: 10vw;
+    }
+     /*to here*/
 
  }
  @media screen and (max-width: 600px){
@@ -114,6 +144,18 @@ label {
         padding-top: 80px;
         display: block;
     }
+    /*here*/
+    select{
+      height:7vw;
+    }
+    textarea {
+      height:10vw;
+      
+    }
+    textarea:focus{
+      height: 20vw;
+    }
+     /*to here*/
 
 
  }
