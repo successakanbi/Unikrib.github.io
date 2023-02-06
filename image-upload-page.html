@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--here-->
-    <title>Upload a product</title>
+    <title>Upload images</title>
     <!--to here-->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="product-upload-page.css">
+    <link rel="stylesheet" href="image-upload-page.css">
 </head>
 <body>
      <!-- responsive top navigator bar -->
@@ -20,19 +20,8 @@
         <a href="Apartment-page.html">Apartments</a>
         <a href="product-page.html">products</a>
         <a href="service-page.html">services</a>
-        <!--here-->
-        <div class="dropdown">
-          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
-          <div class="dropmenu-content" id="dropdown-cont">
-             <p href="" class="drop-links">Profile</p>
-             <p href="" class="drop-links">Notifications</p>
-             <p href="" class="drop-links">Edit profile</p>
-             <p href="" class="drop-links">Settings</p>
-             <p href="" class="drop-links">Help</p>
-             <p href="" class="drop-links">logout</p>
-         </div>
-       </div>
-       <!--to here-->
+
+
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -44,86 +33,53 @@
 
     <div id="outer-most-container">
 
-      <!---Contains input fields, select boxes, image upload container, submit button and notice container-->
-        <form action="" id="product-upload-form">
+      <!---Contains image upload container, submit button and notice container-->
+        <form action="" id="service-images-form">
             <div id="logo-container">
                 <img src="images/Black logo on white.png">
              </div>
 
-             <h2 id="form-title">Upload product</h2>
+             <h2 id="form-title">Service images</h2>
 
-             <!--select box for product category-->
-             <label for="">product category</label>
-             <select name="product category" id="product-category" class="type" required>
-                <option value="Beds and beddings">Beds and beddings</option>
-                <option value="Books and stationery">Books and stationery</option>
-                <option value="Cosmetics and care products">Cosmetics and care products</option>
-                <option value="Clothing and Accesories">Clothing and Accessories</option>
-                <option value="Drinks and Beverages">Drinks and Beverages</option>
-                <option value="Footwear">Footwear and bags</option>
-                <option value="Electronics and Accessories">Electronics and Accessories</option>
-                <option value="Food and Groceries">Food and groceries</option>
-                <option value="Home furniture">Furniture</option>
-                <option value="Kitchen utensils">Kitchen utensils</option>
-                <option value="Laptops and Accessories">Laptops and Accessories</option>
-                <option value="Jewellery">Jewellery</option>
-                <option value="Phones and Accessories">Phones and Accessories</option>
-                <option value="Stationery">Stationery</option>
-             </select><br>
-
-             <!--Input field for product name-->
-             <label for="productname">product name</label><br>
-             <input type="text" id="product-name" name="productname" class="products"><br>
-
-             <!--product price input field-->
-             <label for="product-price">Product price</label><br>
-             <input type="number" class="price" required><br>
-
-             <!--product features textarea field-->
-             <label for="product features">Product features</label><br>
-             <textarea id="product-features" name="product features"></textarea><br>
-
-             <label for="delivery status">Delivery</label><br>
-             <select name="delivery status" id ="delivery-status" class="deliveries">
-                <option value="Available">Available</option>
-                <option value="Unavailable">Unavailable</option>
-             </select><br>
-
-             <label for="product status">product status</label><br>
-             <select name="product status" id="product-status" class="status">
-                <option value="in stock">in stock</option>
-                <option value="Out of stock">Out of stock</option>
-
-             </select>
              <!-- contains product image upload input fields-->
-             <h3>Upload three images of the product</h3>
-             <div id="product-img-cont">
-                 <label for="product img" id="upload">upload image
-                     <input type="file" name="product img" id="product-image1" class="product-img"/>
+             <h3>Upload up to five images of your services</h3>
+             <div id="service-img-cont">
+                 <label for="service img" id="upload">upload image
+                     <input type="file" name="service img" id="service-image1" class="service-imgs"/>
                      <p id ="file-name1" class="file-name"></p>
                  </label>
 
-                 <label for="apartmemt img" id="upload">upload image
-                    <input type="file" name="product img" id="product-image2" class="product-img"/>
+                 <label for="service img" id="upload">upload image
+                    <input type="file" name=" service img" id="service-image2" class="service-imgs"/>
                     <p id ="file-name2" class="file-name"></p>
                 </label>
 
-                <label for="product img" id="upload">upload image
-                    <input type="file" name="product img" id="product-image3" class="product-img"/>
+                <label for="service img" id="upload">upload image
+                    <input type="file" name="service img" id="service-image3" class="service-imgs"/>
                     <p id ="file-name3" class="file-name"></p>
+                </label>
+
+                <label for="service img" id="upload">upload image
+                    <input type="file" name="service img" id="service-image4" class="service-imgs"/>
+                    <p id ="file-name4" class="file-name"></p>
+                </label>
+
+                <label for="service img" id="upload">upload image
+                    <input type="file" name="service img" id="service-image5" class="service-imgs"/>
+                    <p id ="file-name5" class="file-name"></p>
                 </label>
              </div>
 
              <!--contains submit button-->
              <div id="Submit upload">
-                <button type="submit" id="Submit-product" class="submit-btn">Save and upload</button>
+                <button type="submit" id="imgs-submit" class="submit-btn">Save and upload</button>
              </div>
 
              <!--notice contains important upload conditions-->
              <div id="notice">
                 <h4>Please Note:</h4>
-                <p> This form  is to be filled as factually as possible, using false information in this form is ill advised </p>
-                <p>Only currrently available products should be uploaded, and should be deleted when unavailable</p>
+                <p> only one photo of your work, workshop or you working is required, you are allowed to upload as many as 5 images</p>
+                <p>pls try to upload original pictures of you ,your workshop or you working</p>
 
              </div>
         </form>
@@ -194,9 +150,12 @@
       //here
         //displays name and size of uploaded image file
         //here
-        const file = document.getElementById("product-image1")
-        const file2 = document.getElementById("product-image2")
-        const file3 = document.getElementById("product-image3")
+        const file = document.getElementById("service-image1")
+        const file2 = document.getElementById("service-image2")
+        const file3 = document.getElementById("service-image3")
+        const file4 = document.getElementById("service-image4")
+        const file5 = document.getElementById("service-image5")
+
         //for first image
         file.addEventListener("change", (e) => {
             const [file] = e.target.files;
@@ -225,6 +184,28 @@
             const fileSize = (size / 1000).toFixed(2);
             const fileNameAndSize = `${fileName} - ${fileSize}KB`;
             document.querySelector('#file-name3').textContent = 
+            fileNameAndSize;
+        
+        })
+
+        //for fourth image
+        file4.addEventListener("change", (e) => {
+            const [file4] = e.target.files;
+            const {name: fileName , size} = file4;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name4').textContent = 
+            fileNameAndSize;
+        
+        })
+
+         //for fifth image
+         file5.addEventListener("change", (e) => {
+            const [file5] = e.target.files;
+            const {name: fileName , size} = file5;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name5').textContent = 
             fileNameAndSize;
         
         })
