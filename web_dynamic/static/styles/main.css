@@ -21,7 +21,7 @@ p {
 .top-nav a img {
     height: 1.8vw;
     width: 8vw;
-    margin-right: 47.5vw;
+    margin: 0 45.5vw 0 0;
 }
 
 .top-nav a {
@@ -58,6 +58,59 @@ p {
     display: inline-block;
     cursor: pointer;
     margin-top:-7px;
+}
+.dropdown{
+    float: left;
+    overflow: hidden;
+    color: #ffff;
+}
+.dropdown {
+    cursor: pointer;
+    border: none;
+    font-size: 0.9vw;
+    outline: none;
+    color: #ffff;
+    background-color: #070707;
+    font-family: inherit;
+    margin: 0;
+}
+.dropbtn{
+    cursor: pointer;
+    border: none;
+    font-size: 0.9vw;
+    padding:1.15vw 1.2vw;
+    outline: none;
+    color: #ffff;
+    background-color: #070707;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown:hover, .dropbtn:hover, .dropbtn:focus{
+    background-color:#d1caca;
+}
+.dropmenu-content{
+    margin-top: 1vw;
+    display: none;
+    width: 30vw;
+    position: fixed;
+    background-color: #070707;
+    min-height: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropmenu-content p{
+    float: none;
+    color: #fff;
+    padding:1vw 1.2vw;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropmenu-content p:hover {
+    background-color:#d1caca;
+}
+.show{
+    display: block;
 }
 
 .bar1, .bar2, .bar3 {
@@ -275,6 +328,7 @@ position: relative;
         height: 25px;
         width: 125px;
         margin-right: 0px;
+        margin: 1vw 0px 0 0;
     }
     h1 {
         font-size:30px;
@@ -300,6 +354,9 @@ position: relative;
         position: fixed; 
         z-index: 1; 
     }
+    .top-nav.responsive .dropbtn {
+        display: none;
+    }
     .top-nav.responsive .icon{
         position: absolute;
         right: 0;
@@ -312,6 +369,24 @@ position: relative;
         margin-bottom: 25px;
         text-align: left;
           
+    }
+    .dropdown{
+        margin-left:65vw;
+        overflow: hidden;
+        color: #ffff;
+    }
+    .dropbtn{
+        font-size: 1.8vw;
+        padding:2vw 2vw;
+    }
+    .dropmenu-content{
+        margin: 2vw 0 0 -10vw ;
+        width: 25vw;
+        position: fixed;
+        background-color: #070707;
+        min-height: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
     }
     #about-sub-cont{
         width:70%;
@@ -382,7 +457,12 @@ position: relative;
     }
     
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 590px) {
+    .top-nav a img {
+        height: 25px;
+        width: 125px;
+        margin: 2vw 1.5vw 0 0;
+    }
     p {
         font-size: 15px;
     }
@@ -394,7 +474,24 @@ position: relative;
         margin-bottom: 25px;
         text-align: left;     
     }
-    
+    .dropdown{
+        margin-left:32vw;
+        overflow: hidden;
+        color: #ffff;
+    }
+    .dropbtn{
+        font-size: 4vw;
+        padding:5vw 4vw;
+    }
+    .dropmenu-content{
+        margin: 4vw 0 0 -20vw ;
+        width: 45vw;
+        position: fixed;
+        background-color: #070707;
+        min-height: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
     #headtext{
         font-size: 30px;
         font-weight: 700;

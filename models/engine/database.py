@@ -15,7 +15,8 @@ from models.street import Street
 from models.review import Review
 from models.category import Category
 from models.service import Service
-  
+from models.service_category import ServiceCategory
+
 
 class Storage:
     """
@@ -23,7 +24,8 @@ class Storage:
     """
     classes = {"User": User, "Product": Product, "House": House,
             "Environment": Environment, "Street": Street, "Review": Review,
-            "Category": Category, "Service": Service}
+            "Category": Category, "Service": Service,
+            "ServiceCategory": ServiceCategory}
 
     __engine = None
     __session = None

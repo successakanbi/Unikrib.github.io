@@ -11,3 +11,5 @@ from api.blueprint.streets import *
 from api.blueprint.reviews import *
 from api.blueprint.products import *
 from api.blueprint.categories import *
+from api.blueprint.services import *
+from api.blueprint.service_categories import *

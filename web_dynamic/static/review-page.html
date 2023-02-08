@@ -20,6 +20,15 @@
         <!--here-->
         <a href="product-page.html">products</a>
         <a href="service-page.html">services</a>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p href="" class="drop-links">Profile</p>
+             <p href="" class="drop-links">Edit profile</p>  
+             <p href="" class="drop-links">Help</p>
+             <p href="" class="drop-links" onclick="logout()">logout</p>
+          </div>
+        </div>
         <!--to here-->
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
@@ -34,7 +43,7 @@
 
         <div id="review-internal-cont">
             <div id="review-right-cont">
-                <h3 id="sub-header"><span id="fname">Osagede's</span> Reviews</h3>
+                <h3 id="sub-header"><span id="fname"></span> Reviews</h3>
                 <!--<div class="review-inbox">
                     <div class="reviewer-img-cont">
                         <img src="images/219969.png">
@@ -100,7 +109,7 @@
                 
             </div>
             <div id="review-left-cont">
-                <h3 id="sub-header">Leave a review for <span id="fname">Osagede</span></h3>
+                <h3 id="sub-header">Leave a review for <span id="fname2"></span></h3>
                 <div id="leave-review-cont">
                     <div id="inter-review-container">
                         <label for="">Rate your experience</label><br>
@@ -170,19 +179,11 @@
         </div>
       </div>
       <!--to here-->
-    
-
-
-
-
-
-
-
-
 
 
     <script src = "scripts/main2.js"></script>
     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-      <script src="scripts/review-page.js"></script>
-</body>
+    <script src="scripts/review-page.js"></script>
+    
+    </body>
 </html>

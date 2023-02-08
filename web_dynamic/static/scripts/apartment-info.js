@@ -158,6 +158,9 @@ $(function (){
 					  <div id="name-cont">
 						<p class="name"><span id="fname">` + user.first_name + ` </span><span id="lname"> ` + user.last_name + `</span></p>
 						<p class="services" id="service-select">Agent</span></p>
+						<p class="community2" id="community-select">Ekosodin</p>
+            			<p class="rating"><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon></span></p>
+            			<p class="bio">I help students find affordable and suitable apartments of all types</p>
 					  </div>
 					  <div id="contact-cont">
 						<div id="uploader-phone">
@@ -189,7 +192,7 @@ $(function (){
 		contentType: 'application/json',
 		dataType: 'json',
 		success: function (house){
-			window.localStorage.setItem('houseOwnerId', house.owner_id);
+			window.localStorage.setItem('revieweeId', house.owner_id);
 			$.ajax({
 				type: 'GET',
 				url: 'http://localhost:8000/unikrib/users/' + house.owner_id + '/reviews',
@@ -199,6 +202,7 @@ $(function (){
 				success: function (reviews){
 					if (reviews.length === 0){
 						$("#latest-review-cont").html('<p id="review-message"> No reviews has been left for this agent yet.</p>');
+						$("#view-review").text('Add a new review');
 					} else {
 				
 						$.ajax({
@@ -219,7 +223,7 @@ $(function (){
 									<p class="time-stamp">` + reviews[0].updated_at.slice(0, 10) + `</p>
 								</div>`)
 								if (reviews.length === 1){
-									$("#other-reviews-cont").addClass("currentImage");
+									$("#view-review").text('Add a new review');
 								} else {
 									$("#review-length").text(reviews.length - 1)															
 								}

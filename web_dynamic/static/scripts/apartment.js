@@ -88,12 +88,7 @@ $(function (){
                                                                                   </div>
                                                                                   </div>
                                                                                 </div>`);
-									$(function (){
-										$("#info-" + house.id).on('click', function(){
-											window.localStorage.setItem('houseId', house.id)
-											window.location.href = 'Apartment-info-page.html';
-										});
-									});
+									
 								} else {
 									$.ajax({
 										type: 'GET',
@@ -117,16 +112,34 @@ $(function (){
                                 	                                                  </div>
                                         	                                          </div>
                                                 	                                </div>`);
-
+											console.log(house.id)
 											$(function (){
-												$("#info-" + house.id).on('click', function (){
-													window.localStorage.setItem('houseId', house.id);
-													window.location.href = 'Apartment-info-page.html';
+												$("#info-" + house.id).on('click', function(){																				
+													var user = window.localStorage.getItem('newId');
+													if (user === null) {
+														alert("Please log in or create an account first")
+														window.location.href = 'login.html';
+													} else {
+														window.localStorage.setItem('houseId', house.id);								
+														window.location.href = 'Apartment-info-page.html';
+													}
 												});
-											})
+											});
 										},
 									});
 								};
+								$(function (){
+									$("#info-" + house.id).on('click', function(){																				
+										var user = window.localStorage.getItem('newId');
+										if (user === null) {
+											alert("Please log in or create an account first")
+											window.location.href = 'login.html';
+										} else {
+											window.localStorage.setItem('houseId', house.id);								
+											window.location.href = 'Apartment-info-page.html';
+										}
+									});
+								});
 							},
 							error: function(){
 								alert("Could not load house environment");
@@ -219,13 +232,7 @@ $(function (){
 									        			      </div>
 											        	  </div>
 												          </div>
-										        		</div>`);
-												$(function (){
-													$("#info-" + house.id).on('click', function (){
-														window.localStorage.setItem('houseId', house.id);
-														window.location.href = 'Apartment-info-page.html'
-													});
-												});
+										        		</div>`);												
 											} else {
 												$("#view-more-cont").append(`<div id="output-cont" class="output-containers">
 																				<div id="info-` + house.id + `">
@@ -241,14 +248,20 @@ $(function (){
 																				</div>
 																				</div>
 																				</div>
-																				</div>`)
-												$(function (){
-													$("#info-" + house.id).on('click', function (){
-														window.localStorage.setItem('houseId', house.id);
-														window.location.href = 'Apartment-info-page.html';
-													});
-												});
+																				</div>`)												
 											};
+											$(function (){
+												$("#info-" + house.id).on('click', function(){										
+													window.localStorage.setItem('houseId', house.id)
+													var user = window.localStorage.getItem('newId');
+													if (user === null) {
+														alert("Please log in or create an account first")
+														window.location.href = 'login.html';
+													} else {											
+														window.location.href = 'Apartment-info-page.html';
+													}
+												});
+											});
 
 										},
 										error: function() {

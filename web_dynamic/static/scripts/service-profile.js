@@ -17,6 +17,21 @@ $(function (){
     })
 })
 
+//Load all the available service categories
+$(function (){
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:8000/unikrib/service-categories',
+        contentType: 'application/json',
+        dataType: 'json',
+        success: function (cats){
+            $.each(cats, function (index, cat){
+                $("#service-select").append('<option value="' + cat.id + '">' + cat.name + '</option>')
+            })
+        }
+    })
+})
+
 // Update the user category and location
 $(function (){
     $("#submit").on('click', function (){

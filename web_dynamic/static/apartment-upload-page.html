@@ -16,8 +16,19 @@
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
         <a href="Apartment-page.html">Apartments</a>
-        <a href="product-service-page.html">products & services </a>
-        <a href="">contact</a>
+        <a href="product-page.html">products</a>
+        <a href="service-page.html">services</a>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p href="" class="drop-links">Profile</p>
+             <p href="" class="drop-links">Notifications</p>
+             <p href="" class="drop-links">Edit profile</p>
+             <p href="" class="drop-links">Settings</p>
+             <p href="" class="drop-links">Help</p>
+             <p class="drop-links" onclick="logout()">logout</p>
+          </div>
+        </div>
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -114,14 +125,14 @@
 
              <!--contains submit button-->
              <div id="Submit upload">
-                <button type="submit" id="Submit-apart">Save and upload</button>
+                <button type="submit" class="submit-btn" id="Submit-apart">Save and upload</button>
              </div>
 
              <!--notice contains important upload conditions-->
              <div id="notice">
                 <h4>Please Note:</h4>
                 <p> This form  is to be filled as factually as possible, using false information in this form is ill advised </p>
-                <p>Only currrently empty accomodation should be uploaded, and shall be deleted when leased</p>
+                <p>Only currrently empty accomodation should be uploaded, and should be deleted when leased</p>
 
              </div>
             </div>

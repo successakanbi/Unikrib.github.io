@@ -15,11 +15,18 @@
         <div class="top-nav" id="my-Top-nav">
             <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
             <a href="homepage.html">Home</a>
-            <a href="Apartment-page.html">Apartments</a>
-            <!--here-->
+            <a href="Apartment-page.html">Apartments</a>            
             <a href="product-page.html">products</a>
             <a href="service-page.html" class="active">services</a>
-            <!--to here-->
+            <div class="dropdown">
+              <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+              <div class="dropmenu-content" id="dropdown-cont">
+                 <p href="" class="drop-links">Profile</p>
+                 <p href="" class="drop-links">Edit profile</p>  
+                 <p href="" class="drop-links">Help</p>
+                 <p href="" class="drop-links" onclick="logout()">logout</p>
+              </div>
+            </div>            
             <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
                 <div class="icon-cont" onclick="changeIcon(this)">
                     <div class="bar1"></div>
@@ -29,50 +36,52 @@
              </a>
         </div>
 
-    <div id="External-cont">
-        <div id="logo-container">
-            <img src="images/Black logo on white.png">
-        </div>
-        <h1>Find vendors and service providers closest to you</h1>
-
-        <div id="internal-cont">
-            <div id="service-prov-vendor-container">
+    <div id="External-cont">      
+        <h1>Find service providers closest to you</h1>
+      <!-- to here-->
+        <div id="internal-cont">          
+            <div id="service-prov-container">         
                 <div id="location-contain" class="filter-containers">
-                    <!--select box for community where service or product is needed-->
+                    <!--select box for community where service provideris domiciled-->
                     <label for="community">Select Community</label><br>
                     <select name="community" id="community" class="community-select">
-                         <option value="Adolor">Adolor</option>
-                         <option value="Ebvoumore">Ebvoumore</option>
-                         <option value="EDPA">EDPA</option>
-                         <option value="Ekosodin">Ekosodin</option>
-                         <option value="Evidence">Evidence</option>
-                         <option value="Isiohor">Isiohor</option>
-                         <option value="Osasoghie">Osasoghie</option>
-                         <option value="Oluku">Oluku</option>
-                        <option value="Uselu">Uselu</option>
+                        <option value="all">All communities</option>
+                        <!--<option value="Adolor">Adolor</option>
+                        <option value="Ebvoumore">Ebvoumore</option>
+                        <option value="EDPA">EDPA</option>
+                        <option value="Ekosodin">Ekosodin</option>
+                        <option value="Evidence">Evidence</option>
+                        <option value="Isiohor">Isiohor</option>
+                        <option value="Osasoghie">Osasoghie</option>
+                        <option value="Oluku">Oluku</option>
+                        <option value="Uselu">Uselu</option>-->
                     </select><br>
                 </div>
+                
     
     
                 <div id="category-cont" class="filter-containers">
                     <!--select box for category -->
-                   <label for="seller">Select category</label><br>
-                   <select name="seller" id="seller" class="seller" onchange="changeOptions(this.id, 'value-provider')" required>
-                        <option value=""></option>
-                        <option value="Service provider">Service provider</option>
-                        <option value="Vendor">Vendor</option>
+                   <label for="seller">Select service provider</label><br>
+                   <select name="service provider" id="service-provider" class="service-providers" required>
+                        <!--<option value="AC installer">AC installer</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Dstv installer">Dstv installer</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Fashion designer">Fashion designer</option>
+                        <option value="Generator repairman">Generator repairman</option> 
+                        <option value="Hair stylist">Hair stylist</option>
+                        <option value="Makeup artist">Makeup artist</option>                       
+                        <option value="Painter">Painter</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Refrigerator repairman">Refrigerator repairman</option>
+                        <option value="Welder">Welder</option>-->
                    </select><br>
-                </div>
-    
-                <div id="value-provider-cont" class="filter-cont">
-                    <!--select box for specific service provider or vendor depending on category selected-->
-                    <label for="value provider">Service provider or vendor </label ><br>
-                    <select id="value-provider" name="value provider" class="value-providers"></select><br>
                 </div>
     
                 <!--button container containing search button-->
                 <div id="button-cont" class="filter-containers">
-                     <button id="value-provider-search"type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                     <button id="service-search"type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
                 </div>
             </div>
             
@@ -81,154 +90,147 @@
         </div>
     </div>
 
-    <!--output external container containing all service provider and vendor search output containers-->
+    <!--output external container containing all service provider search output containers-->
     <div id="output-external-cont">
         <h2 id="search-filter"><span id=""></span></h2>        
         <div id="figures">
-           <p id="show">showing results <span id="number-results">1 - 6</span> out of
-           <span id="">9</span></p>
+           <p id="show">showing results <span id="number-results"></span> out of
+           <span id="total-length"></span></p>
        </div>
 
-       <div id="" class="output-containers">
-        <!--here-->
-        <a href="service-info-page.html">
-          <!--to here-->
-            <div id="img-container">
-             <img src="images/photo5.png">
-         </div>
-         <div id="text-container">
-             <p class ="name"><span id="fname">Osagede</span><span id="lname"> idehen</span></p>
-             <p class="services" id="service-select"> Painter</p>
-             <p class="community" id ="community-select">Osasoghie</p>
-         </div>   
-        </a>
-       </div>
-
-       <div id="" class="output-containers">
-         <!--here-->
-         <a href="service-info-page.html">
-          <!--to here-->
-            <div id="img-container">
-                <img src="images/pretty-black-female-business-headshot.jpg">
-            </div>
-            <div id="text-container">
-                <p class ="name"><span id="fname">Margaret</span><span id="lname"> Oruwense</span></p>
-                <p class="services" id ="service-select"> Clothes vendor</p>
-                <p class="community" id="community-select">Osasoghie</p>
-            </div>
-        </a>
-      </div>
-
-      <div id="" class="output-containers">
-         <!--here-->
-         <a href="service-info-page.htmls">
-          <!--to here-->
-            <div id="img-container">
-                <img src="images/web-shot-1.jpg">
-            </div>
-            <div id="text-container">
-                <p class ="name"><span id="fname">Justin</span><span id="lname"> Okafor</span></p>
-                <p class="services" id="service-select">Generator repairman</p>
-                <p class="community" id ="community-select">Ekosodin</p>
-            </div>
-
-        </a>
-      </div>
-
-      <div id="" class="output-containers">
-           <!--here-->
-          <a href="service-info-page.html">
-          <!--to here-->
-            <div id="img-container">
-                <img src="images/photo5.png">
-            </div>
-            <div id="text-container">
-                <p class ="name"><span id="fname">Itavkase</span><span id="lname"> Bomor</span></p>
-                <p class="services" id="service-select"> Gas vendor</p>
-                <p class="community" id ="community-select">Evidence</p>
-            </div>
-          </a> 
-      </div>
-
-      <div id="" class="output-containers">
-            <!--here-->
-            <a href="service-info-page.html">
-            <!--to here-->
-                <div id="img-container">
-                    <img src="images/web-shot-1.jpg">
-                </div>
-                <div id="text-container">
-                    <p class ="name"><span id="fname">Okoro</span><span id="lname"> Ifake</span></p>
-                    <p class="services" id="service-select">Plumber</p>
-                    <p class="community" id ="community-select">EDPA</p>
-                </div>
-             </a>
-      </div>
-
-      <div id="" class="output-containers">
-          <!--here-->
-          <a href="service-info-page.html">
-          <!--to here-->
-                <div id="img-container">
-                    <img src="images/pretty-black-female-business-headshot.jpg">
-                </div>
-                <div id="text-container">
-                    <p class ="name"><span id="fname">Rosemary</span><span id="lname"> Adeyemi</span></p>
-                    <p class="services" id ="service-select"> Hair dresser</p>
-                    <p class="community" id="community-select">Uselu</p>
-                </div>
+       <div id="all-services">
+          <!--<div id="" class="output-containers">        
+            <a href="service-info-page.html">          
+              <div id="img-container">
+                <img src="images/building-painting.png">
               </div>
+              <div id="text-container">
+                <p class ="name"><span id="fname">Osagede</span><span id="lname"> idehen</span></p>
+                <p class="services" id="service-select"> Painter</p>
+                <p class="community" id ="community-select">Osasoghie</p>
+                <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">2 <icon class="fa fa-star"></icon></span></p>
+              </div>   
+            </a>
+          </div>
+
+          <div id="" class="output-containers">         
+            <a href="service-info-page.html">          
+              <div id="img-container">
+                <img src="images/female-tailor.jpg">
+              </div>
+              <div id="text-container">
+                <p class ="name"><span id="fname">Margaret</span><span id="lname"> Oruwense</span></p>
+                <p class="services" id ="service-select">Fashion designer</p>
+                <p class="community" id="community-select">Osasoghie</p>
+                <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">4 <icon class="fa fa-star"></icon></span></p>
+              </div>
+            </a>
+          </div>
+
+            <div id="" class="output-containers">         
+              <a href="service-info-page.html">          
+                  <div id="img-container">
+                      <img src="images/gen4.jpg">
+                  </div>
+                  <div id="text-container">
+                      <p class ="name"><span id="fname">Justin</span><span id="lname"> Okafor</span></p>
+                      <p class="services" id="service-select">Generator repairman</p>
+                      <p class="community" id ="community-select">Ekosodin</p>
+                      <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">2 <icon class="fa fa-star"></icon></span></p>
+                  </div>
+
               </a>
-    </div>
+            </div>
+
+            <div id="" class="output-containers">           
+                <a href="service-info-page.html">          
+                  <div id="img-container">
+                      <img src="images/ac repairman.jpg">
+                  </div>
+                  <div id="text-container">
+                      <p class ="name"><span id="fname">Itavkase</span><span id="lname"> Bomor</span></p>
+                      <p class="services" id="service-select">AC installer</p>
+                      <p class="community" id ="community-select">Evidence</p>
+                      <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">3 <icon class="fa fa-star"></icon></span></p>
+                  </div>
+                </a> 
+            </div>
+
+            <div id="" class="output-containers">            
+                  <a href="service-info-page.html">            
+                      <div id="img-container">
+                          <img src="images/plumbing1.jpg">
+                      </div>
+                      <div id="text-container">
+                          <p class ="name"><span id="fname">Okoro</span><span id="lname"> Ifake</span></p>
+                          <p class="services" id="service-select">Plumber</p>
+                          <p class="community" id ="community-select">EDPA</p>
+                          <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">5 <icon class="fa fa-star"></icon></span></p>
+                      </div>
+                  </a>
+            </div>
+
+            <div id="" class="output-containers">          
+                <a href="service-info-page.html">          
+                      <div id="img-container">
+                          <img src="images/Hair stylist.jpg">
+                      </div>
+                      <div id="text-container">
+                          <p class ="name"><span id="fname">Rosemary</span><span id="lname"> Adeyemi</span></p>
+                          <p class="services" id ="service-select"> Hair stylist</p>
+                          <p class="community" id="community-select">Uselu</p>
+                          <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">4 <icon class="fa fa-star"></icon></span></p>
+                      </div>
+                    </div>
+                    </a>
+          </div>-->
+        </div>
 
     <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
     <div id="view-more-button" onclick="viewMore()">
         <p id="button-text">More results</p>
       </div>
 
-      <!--view more container containing all hidden apartment output containers-->
+      <!--view more container containing all hidden service output containers-->
       <div id="view-more-cont">
-        <div id="" class="output-containers">
-               <!--here-->
-               <a href="product-info-page.html">
-               <!--to here-->
+        <div id="" class="output-containers">               
+               <a href="product-info-page.html">               
                     <div id="img-container">
-                        <img src="images/web-shot-1.jpg">
+                        <img src="images/Carpenter.jpg">
                     </div>
                     <div id="text-container">
                         <p class ="name"><span id="fname">Majesty</span><span id="lname"> Bako</span></p>
-                        <p class="services" id="service-select">Gadget vendor</p>
+                        <p class="services" id="service-select">Carpenter</p>
                         <p class="community" id ="community-select">Oluku</p>
+                        <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">5 <icon class="fa fa-star"></icon></span></p>
                     </div>
                 </a>
           </div>
    
-          <div id="" class="output-containers">
-                  <!--here-->
-                   <a href="product-info-page.html">
-                  <!--to here-->
+          <div id="" class="output-containers">                  
+                   <a href="product-info-page.html">                  
                     <div id="img-container">
-                        <img src="images/pretty-black-female-business-headshot.jpg">
+                        <img src="images/makeup artist.jpg">
                     </div>
                     <div id="text-container">
                         <p class ="name"><span id="fname">Adebola </span><span id="lname"> oluwapo</span></p>
-                        <p class="services" id ="service-select"> jewelry vendor</p>
+                        <p class="services" id ="service-select">Makeup artist</p>
                         <p class="community" id="community-select">Adolor</p>
+                        <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">3 <icon class="fa fa-star"></icon></span></p>
                     </div>
                    </a>
          </div>
 
-         <div id="" class="output-containers">
-                 <!--here-->
-                 <a href="product-info-page.html">
-                 <!--to here-->
+         <div id="" class="output-containers">                 
+                 <a href="product-info-page.html">                 
                     <div id="img-container">
-                        <img src="images/photo5.png">
+                        <img src="images/pexels-emmanuel-ikwuegbu-7861963.jpg">
                     </div>
                     <div id="text-container">
                         <p class ="name"><span id="fname">Nasiru</span><span id="lname"> Muhammad</span></p>
                         <p class="services" id="service-select"> Electrician</p>
                         <p class="community" id ="community-select">Ebvoumore</p>
+                        <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">4 <icon class="fa fa-star"></icon></span></p>
                     </div>
                  </a>
           </div>
@@ -251,8 +253,7 @@
       </div>
 
 
-    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
-    <!--here-->
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->    
     <div id="footer-cont">
         <div class="footer-sub-cont-a">
           <p ><a href="" class="foot-links">apartments</a></p>
@@ -261,10 +262,8 @@
           <p><a href=""class="foot-links">contact</a></p>
           <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
         </div>
-        <div class="footer-sub-cont-b">
-          <!--here-->
-          <p id="foot-para">For feedback and inquiries contact us on</p>
-          <!--to here-->
+        <div class="footer-sub-cont-b">          
+          <p id="foot-para">For feedback and inquiries contact us on</p>          
           <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
           <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
           <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
@@ -293,41 +292,15 @@
             </div>
           </div> 
         </div>
-      </div>
-      <!--to here-->
+      </div>      
 
       
 
     <script src = "scripts/main2.js"></script>
+    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+      <script src="scripts/service-page.js"></script>"
+
     <script>
-        //changes the content of the street select box based on the selection in the community box
-        function changeOptions(lst1, lst2) {
-            var lst1 = document.getElementById(lst1);
-            var lst2 = document.getElementById(lst2);
-
-            //street option values for various community selected
-            lst2.innerHTML = "";
-            if(lst1.value == "Service provider") {
-                var optionArray = ["Ac installer|Ac installer","Carpenter|Carpenter", "Caterer|Caterer", "Dstv installer|Dstv installer"
-                ,"Electrician|Electrician","Fashion designer|Fashion designer","Generator repairman|Generator repairman",
-                "Hair stylist|Hair stylist","laundryman|laundryman","Makeup artist|Makeup artist","Painter|Painter","Plumber|Plumber",
-                "Refrigerator repairman|Refrigerator repairman" 
-            ];
-
-            } else if(lst1.value == "Vendor") {
-                var optionArray = ["Clothes vendor|Clothes vendor","Food vendor|Food vendor", "Gadget vendor|Gadget vendor", 
-                "Gas vendor|Gas vendor","jewelry vendor|jewelry vendor"];
-            } 
-            for (var option in optionArray) {
-                var pair = optionArray[option].split("|");
-                var newOption = document.createElement("option");
-                newOption.value = pair[0];
-                newOption.innerHTML = pair[1];
-                lst2.options.add(newOption);
-
-            }
-        }
-
         //toggles see more button between visible and hidden
         //make view more container visible
         function viewMore() {
@@ -342,13 +315,13 @@
         //displays search parameters in search result heading
         function searchParameter() {
             let community = document.getElementById("community").value;
-            let valueCreators = document.getElementById("value-provider").value;
+            let valueCreators = document.getElementById("service-provider").value;
             document.getElementById("search-filter").innerHTML = 
               "Search results for " + valueCreators + " in " + community;
         }
 
         //changes the search button colour from green to purple
-        var button = document.getElementById("value-provider-search");
+        var button = document.getElementById("service-search");
         button.addEventListener("click", changeColor)
 
         function changeColor() {
