@@ -118,7 +118,7 @@ $(function (){
                                     <p class="name">` + owner.first_name + ` ` + owner.last_name + `</p>
                                     <p class="services" id="service-select">` + cat.name + `</span></p>
                                     <p class="community" id="community-select">` + env.name + `</p>
-                                    <p class="rating"><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon></span></p>
+                                    <p class="rating">Average rating: <span id="">3</span><icon class="fa fa-star"></icon></span></p>
                                     <p class="bio">` + service.description + `</p>
                                   </div>
                                   <div id="contact-cont">
