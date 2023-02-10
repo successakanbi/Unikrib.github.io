@@ -134,7 +134,8 @@ textarea:focus {
     outline: none;
     transition:0.4s;
 }
-button{
+/*here*/
+.submit-btn{
     width: 50%;
     margin: 2vw 0 0 20%;
     background-color: #17960cf1;
@@ -143,6 +144,7 @@ button{
     padding: 1.3vw 0 1.3vw 0;
     font-size: 1.2vw;
 }
+/* to here*/
 
 @media screen and (max-width: 1000px) {
     #review-internal-cont {
@@ -242,7 +244,8 @@ button{
         outline: none;
         transition:0.4s;
     }
-    button{
+    /*here*/
+    .submit-btn{
         width: 50%;
         margin: 2vw 0 0 20%;
         background-color: #17960cf1;
@@ -251,6 +254,7 @@ button{
         padding: 2.5vw 0 2.5vw 0;
         font-size: 2vw;
     }
+    /*to here*/
 
 
 }
@@ -342,7 +346,7 @@ button{
         height: 20vw;
         margin:1vw 0 0 5%;
     }
-    button{
+    .submit-btn{
         width: 70%;
         margin: 5vw 0 0 15%;
         background-color: #17960cf1;

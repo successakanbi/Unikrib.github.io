@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apartment info page</title>
+    <title>product info page</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="Apartment-info-page.css">
+    <link rel="stylesheet" href="product-info-page.css">
 </head>
 <body>
         <!-- responsive top navigator bar -->
         <div class="top-nav" id="my-Top-nav">
             <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
             <a href="homepage.html">Home</a>
-            <a href="Apartment-page.html"class="active">Apartments</a>
-            <a href="product-page.html">products</a>
+            <a href="Apartment-page.html">Apartments</a>
+            <a href="product-page.html" class="active">products</a>
             <a href="service-page.html">services</a>
             <!--here-->
             <div class="dropdown">
-                  <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
-                  <div class="dropmenu-content" id="dropdown-cont">
-                     <p href="" class="drop-links">Profile</p>
-                     <p href="" class="drop-links">Notifications</p>
-                     <p href="" class="drop-links">Edit profile</p>
-                     <p href="" class="drop-links">Settings</p>
-                     <p href="" class="drop-links">Help</p>
-                     <p href="" class="drop-links">logout</p>
-                 </div>
-            </div>
-          <!--to here-->
+              <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+              <div class="dropmenu-content" id="dropdown-cont">
+                 <p href="" class="drop-links">Profile</p>
+                 <p href="" class="drop-links">Notifications</p>
+                 <p href="" class="drop-links">Edit profile</p>
+                 <p href="" class="drop-links">Settings</p>
+                 <p href="" class="drop-links">Help</p>
+                 <p href="" class="drop-links">logout</p>
+             </div>
+           </div>
+           <!--to here-->
             <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
                 <div class="icon-cont" onclick="changeIcon(this)">
                     <div class="bar1"></div>
@@ -44,20 +44,20 @@
           <div id="internal-left-container">
             <div id="">
                   <!--container containing apartment slide images,prev&next buttons and  dot container -->
-                 <div class ="Apartment-slide-cont">
+                 <div class ="product-slide-cont">
                      <div class ="currentImage change">
                         <div class="numb-text">1 / 3</div>
-                        <img src="images/student-dorm.jpg" style="width:100%;" id="Apart-image1">
+                        <img src="images/Infinix hot12i.jpg" style="width:100%;" id="Apart-image1">
                      </div>
 
                       <div class ="currentImage change">
                            <div class="numb-text">2 / 3</div>
-                           <img src="images/campus_housing-220520-0109.jpg" style="width:100%;" id="Apart-image2">
+                           <img src="images/infinix-hot-blue.jpg" style="width:100%;" id="Apart-image2">
                       </div>
 
                       <div class ="currentImage change">
                            <div class="numb-text">3 / 3</div>
-                          <img src="images/Photo2016,205120PM.jpg" style="width:100%;" id="Apart-image3">
+                          <img src="images/hot-12i-black.gif" style="width:100%;" id="Apart-image3">
                  </div>
                   <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></a>
                   <a class="next" onclick="plusSlides(1)"><i class="fa fa-angle-right"></i></a>
@@ -69,31 +69,30 @@
                       <span class="dot" onclick="currentSlide(3)"></span>
                  </div>
                  <!--contains apartment details-->
-                 <div id="apartment-details">
-                       <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-                            <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span>
-                       </p>
-                       <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
+                 <div id="product-details">
+                  <p class="product-results"><span class="product-name">Infinix Hot 12i </span></p>
+                  <p class="price-results"><span class="product-price" id="product-price-1">N89,000</span></p>
+                  <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
+                  <p class="delivery">Delivery: <span class="Available">Available</span></p>
                  </div>
                  <!--contains apartment features-->
                  <div id="feature-cont">
-                       <h4>Apartment Features</h4>
-                       <p class="feature"><icon class="fa fa-tint"></icon> Running water available</p>
-                       <p class="feature"><icon class="fa fa-trash"></icon> waste disposal available</p>
-                       <p class="feature"><icon class="fa fa-bolt"></icon> 6h of power daily</p>
-                       <p class="feature"><icon class="fa fa-clock-o"></icon> 25min walk from school</p>
+                       <h4>Product Features</h4>
+                       <p class="features">6.6" HD+ display, (3 + 3GB RAM, 64GB ROM), Android 11,13MP Triple camera
+                        +8MP selfie camera, Dual sim, 5000mAh battery, 4G network- available in black, gold and blue
+                       </p>
                 </div>
                 <!--contains disclaimer text-->
                 <div id="disclaimer">
                     <h4>Disclaimer<icon class="fa fa-warning"></icon></h4>
-                    <!--here-->
-                    <p id="message">Please note that we do not endorse or guarantee the properties provided by 
-                      agents listed on our website.  It is the responsibility of the student to confirm apartments,
-                        before making payments. we will not be held liable for issues that may arise from payments
-                        made before due diligence is done. 
+                    <p id="message">Please note that we do not endorse or guarantee the products  provided by vendors
+                       listed on our website. It is the responsibility of the student to confirm products before making
+                       payments. we will not be held liable for issues that may arise from payments made before due 
+                       diligence is done. 
                     </p>
-                    <!-- to here-->
                </div>
+    
+      
                </div> 
             </div>
 
@@ -103,14 +102,14 @@
             <!--contains uploader information, profile pic and uploader contacts-->
             <div id="profile-cont">
               <div id="profile-pic-cont">
-                <img src="images/photo5.png">
+                <img src="images/pretty-black-female-business-headshot.jpg">
               </div>
               <div id="name-cont">
-                <p class="name"><span id="fname">Igueben </span><span id="lname"> charles</span></p>
-                <p class="services" id="service-select">Agent</span></p>
-                <p class="community2" id="community-select">Ekosodin</p>
-                <p class="rating">Average rating:<span id="">4</span><icon class="fa fa-star"></icon></span></p>
-                <p class="bio">I help students find affordable and suitable apartments of all types</p>
+                <p class="name"><span id="fname">Martha</span><span id="lname"> Agbore</span></p>
+                <p class="services" id="service-select">Phone Vendor</span></p>
+                <p class="community" id="community-select">Ekosodin</p>
+                <p class="rating">Average rating: <span id="">5</span><icon class="fa fa-star"></icon></span></p>
+                <p class="bio">I sell all kind of phones,Including Iphone, samsung, infinix, Redmi etc. I also sell phone accesories</p>
               </div>
               <div id="contact-cont">
                 <div id="uploader-phone">
@@ -127,17 +126,16 @@
               <p id="rev-headr">latest review</p>
               <div id="latest-review-cont">
                 <div id="rev-img-cont">
-                  <!--here-->
-                  <img src="images/web-shot-1.jpg">
+                  <img src="images/male-avatar.jpg">
                 </div>
                 <div id="rev-name-cont">
-                  <p class="rev-name">Femi Adeyemi</p>
+                  <p class="rev-name">David ibihe</p>
                 </div>
                 <div id="rev-message-cont">
-                  <p id="review-message">I had an excellent experience with igueben charles, he is
-                    professional, reliable and cordial. he answered all my questions truthfully
-                    and charged me a fair sum for his service. I highly recommend him</p> 
-                    <!-- to here-->
+                  <p id="review-message">My experience with martha was simply exceptional, and best of all? she does
+                    home deliveries and on time as well. what more can i say if you want to buy a phone she's definitely
+                     your girl
+                  </p> 
                      <p class="time-stamp"><span id="day">21st </span><span id="month">July</span><span id="year"> 2022</span></p>
                 </div>
               </div>
@@ -147,35 +145,29 @@
                 </a>
               </div>
             </div>
-            <!--contains security header and security tips-->
-            <div id="security-tip-cont">
-              <!--here-->
-              <h4>Security tips</h4>
-              <p class="tips">Don't make any payments to the agent without confirmation from the landlord</p>
-              <p class="tips">Schedule a date to view the apartment and let atleast one other person know where you're going</p>
-              <P class="tips">For your first meeting with the agent make sure you meet in an open place</P>
+
+           <!--contains Edit and delete buttons-->
+           <div id="edit-delete-cont">
+            <div id="edit-delete-left">
+              <button id="edit-apartment"><icon class="fa fa-pencil"></icon> Edit</button>
             </div>
-            <div id="report-cont">
-              <a href="">
-                <div id="report-button"><icon class="fa fa-flag"></icon> Report this agent</div>
-              </a> 
-              <!--here-->
+            <div id="edit-delete-right">
+              <button id="delete-apartment"><icon class="fa fa-trash"></icon> Delete</button>
             </div>
           </div>
 
           </div>
         </div>
 
-
     <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
-       <!--here-->
-       <div id="footer-cont">
+    <!--here-->
+    <div id="footer-cont">
         <div class="footer-sub-cont-a">
-          <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
-          <p><a href="product-page.html" class="foot-links">products</a></p>
-          <p><a href="service-page.html"class="foot-links">services</a></p>
-          <p><a href="about-page.html"class="foot-links">about us</a></p>
-          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+          <p ><a href="" class="foot-links">apartments</a></p>
+          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href=""class="foot-links">about us</a></p>
+          <p><a href=""class="foot-links">contact</a></p>
+          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
         </div>
         <div class="footer-sub-cont-b">
           <!--here-->
@@ -185,7 +177,6 @@
           <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
           <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
         </div>
-
         <div id="footer-base-cont">
           <div id="icon-cont">
             <div class="icon-sub-cont">
@@ -212,6 +203,7 @@
         </div>
       </div>
       <!--to here-->
+
       
     
 
