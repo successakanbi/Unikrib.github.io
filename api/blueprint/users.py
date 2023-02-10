@@ -12,7 +12,7 @@ def get_all_users():
     """This returns a list of all the user objects in storage"""
     user_list = []
     for key, obj in storage.all(User).items():
-        user_list.append(obj.to_dict())
+        user_list.append(obj.to_dict(1))
 
     return jsonify(user_list)
 
@@ -22,7 +22,7 @@ def get_user(user_id):
     search_key = 'User.' + user_id
     for key, obj in storage.all(User).items():
         if key == search_key:
-            return jsonify(obj.to_dict())
+            return jsonify(obj.to_dict(1))
     abort(404, "No User Found")
 
 @app_views.route('/stats/users', strict_slashes=False)
@@ -101,7 +101,7 @@ def create_user():
             return resp
     model = User(**user_dict)
     model.save()
-    return jsonify(model.to_dict()), 200
+    return jsonify(model.to_dict(1)), 200
 
 @app_views.route('/users/login', strict_slashes=False, methods=['POST'])
 def user_login():
@@ -141,14 +141,14 @@ def update_user(user_id):
         abort(400, "Not a valid Json")
     new_dict = request.get_json()
     search_key = 'User.' + user_id
-    obj = storage.all(User)[search_key]
+    obj = storage.get('User', user_id)
     if obj is None:
         abort(404, "No user found")
     for key, val in new_dict.items():
         if key not in ('id', 'created_at', 'updated_at'):
             setattr(obj, key, val)
             obj.save()
-    return jsonify(obj.to_dict())
+    return jsonify(obj.to_dict(1))
 
 
 @app_views.route('/users/<user_id>', strict_slashes=False, methods=['DELETE'])

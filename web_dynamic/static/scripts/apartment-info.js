@@ -109,10 +109,12 @@ $(function (){
 							if (house.running_water === 'yes'){
 								$('#feature-cont').append('<p class="feature"><icon class="fa fa-tint"></icon> Running water available</p>');
 							}
+							if (house.power_supply != null){
+								$('#feature-cont').append('<p class="feature"><icon class="fa fa-bolt"></icon> ' + house.power_supply + 'h of power daily</p>')
+							}
 							if (house.waste_disposal === 'yes'){
 								$('#feature-cont').append('<p class="feature"><icon class="fa fa-trash"></icon> waste disposal available</p>');
-							}
-							$('#feature-cont').append('<p class="feature"><icon class="fa fa-bolt"></icon> ' + house.power_supply + 'h of power daily</p>')
+							}							
 						
 						},
 						error: function(){

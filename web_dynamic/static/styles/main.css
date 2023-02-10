@@ -20,7 +20,7 @@ p {
 
 .top-nav a img {
     height: 1.8vw;
-    width: 8vw;
+    width: 9vw;
     margin: 0 45.5vw 0 0;
 }
 
@@ -97,6 +97,7 @@ p {
     min-height: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    transition: all 1s ease-in-out;
 }
 .dropmenu-content p{
     float: none;
@@ -114,18 +115,18 @@ p {
 }
 
 .bar1, .bar2, .bar3 {
-    width: 40px;
-    height: 7px;
+    width: 6vw;
+    height: 1.1vw;
     background-color: #ffffff;
-    margin: 6px 0;
+    margin: 0.6vw 0;
     transition: 0.5s;
 }
 .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+    transform: translate(0, 13px) rotate(-45deg);
 }
 .change .bar2 {opacity: 0;}
 .change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+    transform: translate(0, -13px) rotate(45deg);
 }
 .mySlides {
     display: none;
@@ -325,10 +326,9 @@ position: relative;
 
 @media screen and (max-width: 900px) {
     .top-nav a img {
-        height: 25px;
-        width: 125px;
-        margin-right: 0px;
-        margin: 1vw 0px 0 0;
+        height: 3.5vw;
+        width: 16vw;
+        margin: 1.5vw 0px 0 0;
     }
     h1 {
         font-size:30px;
@@ -371,12 +371,12 @@ position: relative;
           
     }
     .dropdown{
-        margin-left:65vw;
+        margin-left:63.5vw;
         overflow: hidden;
         color: #ffff;
     }
     .dropbtn{
-        font-size: 1.8vw;
+        font-size: 2.5vw;
         padding:2vw 2vw;
     }
     .dropmenu-content{
@@ -459,9 +459,9 @@ position: relative;
 }
 @media screen and (max-width: 590px) {
     .top-nav a img {
-        height: 25px;
-        width: 125px;
-        margin: 2vw 1.5vw 0 0;
+        height: 5vw;
+        width: 24vw;
+        margin: 2.5vw 1.5vw 0 0;
     }
     p {
         font-size: 15px;
@@ -475,7 +475,7 @@ position: relative;
         text-align: left;     
     }
     .dropdown{
-        margin-left:32vw;
+        margin-left:43vw;
         overflow: hidden;
         color: #ffff;
     }
@@ -491,6 +491,20 @@ position: relative;
         min-height: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 10vw;
+        height: 1.8vw;
+        background-color: #ffffff;
+        margin: 0.9vw 0;
+        transition: 0.5s;
+    }
+    .change .bar1 {
+        transform: translate(0, 9px) rotate(-45deg);
+    }
+    .change .bar2 {opacity: 0;}
+    .change .bar3 {
+        transform: translate(0, -9px) rotate(45deg);
     }
     #headtext{
         font-size: 30px;

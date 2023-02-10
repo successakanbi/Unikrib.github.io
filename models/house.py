@@ -22,7 +22,7 @@ class House(BaseModel, Base):
     image1 = Column(String(128), nullable=True)
     image2 = Column(String(128), nullable=True)
     image3 = Column(String(128), nullable=True)
-    owner_id = Column(ForeignKey('users.id'))
+    owner_id = Column(ForeignKey('users.id'), nullable=False)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

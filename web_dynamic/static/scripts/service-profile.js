@@ -32,7 +32,7 @@ $(function (){
     })
 })
 
-// Update the user category and location
+// Update the user category, avatar and location
 $(function (){
     $("#submit").on('click', function (){
         const userId = window.localStorage.getItem('newId');
@@ -88,12 +88,12 @@ $(function (){
                                 }
                                 $.ajax({
                                     type: 'PUT',
-                                    url: 'http://localhost:8000/users/' + userId,
+                                    url: 'http://localhost:8000/unikrib/users/' + userId,
                                     data: JSON.stringify(userDict),
                                     contentType: 'application/json',
                                     dataType: 'json',
                                     success: function (){
-                                        alert("User details successfully updated");
+                                        alert("User image successfully uploaded");
                                     },
                                     error: function (){
                                         alert("Error encountered while updating profile image");
@@ -113,6 +113,26 @@ $(function (){
             },
             error: function(){
                 alert("Error uploading user details");
+            }
+        })
+        serviceDict = {
+            "category_id": $("#service-select :selected").val(),
+            "description": $("#descript-text").val(),
+            "owner_id": userId,
+        }
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:8000/unikrib/services',
+            data: JSON.stringify(serviceDict),
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function (service){
+                alert("Details updated successfully");
+                window.localStorage.setItem('serviceId', service.id)
+                window.location.href = "image-upload-page.html";
+            },
+            error: function() {
+                alert("An error has occurred");
             }
         })
     })

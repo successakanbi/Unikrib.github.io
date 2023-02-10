@@ -18,7 +18,7 @@ $(function() {
         }
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:8000/unikrib/users',  // to be editted later
+            url: 'http://localhost:8000/unikrib/users',
             data: JSON.stringify(user_dict),
             contentType: 'application/json',
             dataType: 'json',

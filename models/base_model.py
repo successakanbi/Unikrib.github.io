@@ -48,6 +48,7 @@ class BaseModel:
         dictionary.pop('_sa_instance_state', None)
         if api != None:
             dictionary.pop('password', None)
+            dictionary.pop("email", None)
         dictionary['__class__'] = self.__class__.__name__
         return dictionary
 

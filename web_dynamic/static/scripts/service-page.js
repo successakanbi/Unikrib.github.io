@@ -45,7 +45,7 @@ $(function (){
         success: function (services){
             if (services.length === 0){
                 $('#number-results').text('0 - 0');
-                $('#view-more-button').addClass('disappear')
+                $('#view-more-button').addClass('disappear');
             } else if (services.length < 10){
                 $('#number-results').text('1 - ' + services.length);
                 $('#view-more-button').addClass('disappear')
@@ -59,29 +59,51 @@ $(function (){
             $.each(services, function (index, service){
                 $.ajax({
                     type: 'GET',
-                    url: 'http://localhost:8000/unikrib/users' + service.owner_id,
+                    url: 'http://localhost:8000/unikrib/users/' + service.owner_id,
                     contentType: 'application/json',
                     dataType: 'json',
                     success: function (owner){
                         $.ajax({
                             type: 'GET',
-                            url: 'http://localhost:8000/unikrib/environments' + owner.com_res,
+                            url: 'http://localhost:8000/unikrib/environments/' + owner.com_res,
                             contentType: 'application/json',
                             dataType: 'json',
                             success: function (env){
-                                $("#all-services").append(`<div id="" class="output-containers">        
-                                <a href="service-info-page.html">          
-                                  <div id="img-container">
-                                    <img src="` + service.image1 + `">
-                                  </div>
-                                  <div id="text-container">
-                                    <p class ="name">` + owner.first_name + ` ` + owner.last_name + `</p>
-                                    <p class="services" id="service-select"> ` + service.title + `</p>
-                                    <p class="community" id ="community-select">` + env.name + `</p>
-                                    <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">2 <icon class="fa fa-star"></icon></span></p>
-                                  </div>   
-                                </a>
-                              </div>`)
+                                $.ajax({
+                                    type: 'GET',
+                                    url: 'http://localhost:8000/unikrib/service-categories/' + service.category_id,
+                                    contentType: 'application/json',
+                                    dataType: 'json',
+                                    success: function (cat){
+                                        $("#all-services").append(`<div id="" class="output-containers">        
+                                        <div id="` + service.id + `">          
+                                         <div id="img-container">
+                                       <img src="` + service.image1 + `">
+                                         </div>
+                                         <div id="text-container">
+                                           <p class ="name">` + owner.first_name + ` ` + owner.last_name + `</p>
+                                           <p class="services" id="service-select"> ` + cat.name + `</p>
+                                          <p class="community" id ="community-select">` + env.name + `</p>
+                                          <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">2 <icon class="fa fa-star"></icon></span></p>
+                                         </div>   
+                                         </div>
+                                        </div>`)
+
+                                        $(function (){
+                                            $("#" + service.id).on('click', function(){										                                        
+                                                var user = window.localStorage.getItem('newId');
+                                                if (user === null) {
+                                                    alert("Please log in or create an account first")
+                                                    window.location.href = 'login.html';
+                                                } else {
+                                                    window.localStorage.setItem('serviceId', service.id);											
+                                                    window.location.href = 'service-info-page.html';
+                                                }
+                                            });
+                                        });
+                                    }
+                                })
+                                
                             }
                         })
                     }

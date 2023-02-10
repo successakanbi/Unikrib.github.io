@@ -17,7 +17,7 @@ def all_serv_cats():
 @app_views.route('/service-categories/<cat_id>', strict_slashes=False)
 def get_serv_cat(cat_id):
     """This returns a category by id"""
-    obj = storage.get('Service_Category', cat_id)
+    obj = storage.get('ServiceCategory', cat_id)
     if obj == None:
         abort(404, "No category found")
     return jsonify(obj.to_dict())

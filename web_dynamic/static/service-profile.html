@@ -17,8 +17,7 @@
         <a href="homepage.html"class="active">Home</a>
         <a href="Apartment-page.html">Apartments</a>
         <a href="product-page.html">products</a>
-        <a href="service-page.html">services</a>
-        <a href="">contact</a>
+        <a href="service-page.html">services</a>        
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -38,8 +37,9 @@
          <h3>Complete your profile</h3>
          
          <!--Select box for vendors or service providers-->
-         <label for="service">What's your trade</label>
+         <label for="service">Service category</label>
          <select id="service-select" name="select service">
+          <option value=""></option>
             <!--<option value="Ac installer">Ac installer</option>
             <option value="Carpenter">Carpenter</option>
             <option value="Caterer">Caterer</option>
@@ -74,9 +74,12 @@
             <option value="Isiohor">Isiohor</option>
             <option value="Osasoghie">Osasoghie</option>
             <option value="Oluku">Oluku</option>
-            <option value="Uselu">Uselu</option>-->
-            
+            <option value="Uselu">Uselu</option>-->            
          </select><br/>
+
+         <!--contains service provider description-->
+         <label for="description">Description</label>
+         <textarea id="descript-text" name="description" ></textarea>
           
          <!--contains image input field-->
          <div id="profile-pic-cont">
@@ -85,7 +88,6 @@
             <p id="file-name"></p>
          </label>
          </div>
-
 
          <div>
             <button type="submit" id="submit">Finish</button>
@@ -99,7 +101,7 @@
         <div class="footer-sub-cont-a">
           <p ><a href="" class="foot-links">apartments</a></p>
           <p><a href="" class="foot-links">products and services</a></p>
-          <p><a href=""class="foot-links">The team</a></p>
+          <p><a href=""class="foot-links">About us</a></p>
           <p><a href=""class="foot-links">contact</a></p>
           <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
         </div>
@@ -151,7 +153,7 @@
             fileNameAndSize;
         })
     </script>
-     <script src = "scripts/main2.js"></script>
+     <script src = "scripts/main3.js"></script>
      <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
       <script src="scripts/service-profile.js"></script>"
 </body>

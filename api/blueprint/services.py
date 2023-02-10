@@ -36,13 +36,25 @@ def create_serv():
     if not request.json:
         abort(400, "Not a valid JSON")
     request_dict = request.get_json()
-    if "title" not in request_dict:
-        abort(400, "Please include a service name")
+    if "category_id" not in request_dict:
+        abort(400, "Please include a category_id")
     if "owner_id" not in request_dict:
         abort(400, "Please include an owner_id")
     model = Service(**request_dict)
     model.save()
     return jsonify(model.to_dict())
+
+@app_views.route('/services/<service_id>', strict_slashes=False, methods=['PUT'])
+def update_service(service_id):
+    """This updates an instance of a service in storage"""
+    obj = storage.get('Service', service_id)
+    if obj == None:
+        abort(404, "No service instance found")
+    request_dict = request.get_json()
+    for key, val in request_dict.items():
+        setattr(obj, key, val)
+        obj.save()
+    return jsonify(obj.to_dict())
 
 @app_views.route('/services/<service_id>', strict_slashes=False, methods=['DELETE'])
 def delete_service(service_id):

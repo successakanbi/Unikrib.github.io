@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product information page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/service-info-page.css">
+</head>
+<body>
+    <!-- responsive top navigator bar -->
+    <div class="top-nav" id="my-Top-nav">
+        <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+        <a href="homepage.html">Home</a>
+        <a href="Apartment-page.html">Apartments</a>
+        <a href="product-page.html">products</a>
+        <a href="service-page.html" class="active">services</a>
+        <!--here-->
+        <div class="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p href="" class="drop-links">Profile</p>
+             <p href="" class="drop-links">Help</p>
+             <p href="" class="drop-links">logout</p>
+         </div>
+       </div>
+       <!--to here-->
+        <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+            <div class="icon-cont" onclick="changeIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+         </a>
+    </div>
+
+    <!--contains both left and right internal containers-->
+    <div id="external-main-cont">
+      <!--contains the image slides prev and next buttons and small-img-->
+      <div id="internal-left-cont">
+           <div id="img-container">
+            <div id="images">
+               <!--<div class="slides">
+                    <div id="numbertext"> 1 / 5  </div>
+                    <img src="images/campus_housing-220520-0109.jpg" class="sldimgs" id="descript-img-1"/>         
+               </div>
+               <div class="slides">
+                    <div id="numbertext"> 2 / 5</div>
+                    <img src="images/Photo2016,205120PM.jpg" class="sldimgs" id="descript-img-2"/>
+               </div>
+               <div class="slides">
+                    <div id="numbertext"> 3 / 5</div>
+                    <img src="images/student-dorm.jpg" class="sldimgs" id="descript-img-3"/>
+               </div>
+               <div class="slides">
+                    <div id="numbertext"> 4 / 5</div>
+                    <img src="images/1068589.jpg" class="sldimgs" id="descript-img-4"/>
+               </div>
+               <div class="slides">
+                    <div id="numbertext"> 5 / 5</div>
+                    <img src="images/B38Mki.webp" class="sldimgs" id="descript-img-5"/>
+              </div>-->
+            </div>
+          
+
+             <!--<a class="prev" onclick="plusSlides(-1)">-->
+              <a class="prev" id="plusSlides">
+             <i class="fa fa-angle-left"></i></a>
+             <a class="next" id="minusSlides">
+             <i class="fa fa-angle-right"></i></a>
+
+             <div id="caption-cont">
+                   <p id="caption"></p>
+             </div>
+
+             <div class="rw" id="rw">
+                  <!--<div class="column">
+                        <img class="small-Imgs" src="images/campus_housing-220520-0109.jpg" 
+                        onclick="currentSlide(1)" alt=" " id="descript-img-1">
+                  </div>
+                  <div class="column">
+                        <img class="small-Imgs" src="images/Photo2016,205120PM.jpg" 
+                        onclick="currentSlide(2)" alt=" " id="descript-img-2">
+                  </div>
+                  <div class="column">
+                         <img class="small-Imgs" src="images/student-dorm.jpg" 
+                         onclick="currentSlide(3)" alt=" " id="descript-img-3" >
+                  </div>
+                  <div class="column">
+                         <img class="small-Imgs" src="images/1068589.jpg" 
+                         onclick="currentSlide(4)" alt=" " id="descript-img-4" >
+                  </div>
+                  <div class="column">
+                         <img class="small-Imgs" src="images/B38Mki.webp" 
+                         onclick="currentSlide(5)" alt=" " id="descript-img-5">
+                 </div>-->
+              </div>
+           </div>
+           <div id="disclaimer-cont">
+            <p id="dis-message">Please note that we do not endorse or guarantee the services or
+              products provided by service providers and vendors listed on our website. 
+              It is the responsibility of the student to confirm products and services 
+              before making payments. we will not be held liable for issues that may arise from payments
+              made before due diligence is done.</p>
+           </div>
+      </div>
+      <div id="internal-right-cont">
+        <div id="profile-cont">
+          <!--<div id="profile-pic-cont">
+            <img src="images/photo5.png">
+          </div>
+          <div id="name-cont">
+            <p class="name"><span id="fname">Osagede </span><span id="lname"> Idehen</span></p>
+            <p class="services" id="service-select">Painter</span></p>
+            <p class="community" id="community-select">Osasoghie</p>
+            <p class="rating"><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon><icon class="fa fa-star"></icon></span></p>
+            <p class="bio">I paint building  interiors and exteriors with emulsion paint and decorative wallpapers</p>
+          </div>
+          <div id="contact-cont">
+            <div id="uploader-phone">
+                <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
+            </div>
+            <div id="uploader-whatsapp">
+               <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347045678389"
+                class="contact-links"> 07045678389</a></icon></p>
+            </div>
+          </div>-->
+        </div>
+        <div id="review-cont">
+          <p id="rev-headr">latest review</p>
+          <div id="latest-review-cont">
+            <!--<div id="rev-img-cont">
+              <img src="images/219969.png">
+            </div>
+            <div id="rev-name-cont">
+              <p class="rev-name">Mary jane</p>
+            </div>
+            <div id="rev-message-cont">
+              <p id="review-message">I had an excellent experience with Osagede, he is highly skilled, 
+                professional and reliable , and he finishes his work on time
+                i highly recommended him to anyone who wants to turn their apartment
+                 to a work of art</p> 
+            </div>-->
+          </div>
+          <div id="other-reviews-cont">
+            <a href="review-page.html">
+              <p id="view-review">read <span>10 </span>more reviews</p>
+            </a>
+          </div>
+        </div>
+        <div id="security-tip-cont">
+          <!--from here-->
+          <h4>Security tips</h4>
+          <p class="tips">Always make payments AFTER service has been rendered</p>
+          <p class="tips">ensure that service provider matches profile image before 
+            letting them into your house in case of home service</p>
+        </div>
+        <div id="report-cont">
+          <a href="">
+            
+            <div id="report-button"><icon class="fa fa-flag"></icon> Report this Service provider</div>
+            <!--to here-->
+          </a>
+          
+        </div>
+        
+
+      </div>
+
+    </div>
+
+    
+
+
+
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <!--here-->
+    <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="" class="foot-links">apartments</a></p>
+          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href=""class="foot-links">about us</a></p>
+          <p><a href=""class="foot-links">contact</a></p>
+          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <!--here-->
+          <p id="foot-para">For feedback and inquiries contact us on</p>
+          <!--to here-->
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+        <div id="footer-base-cont">
+          <div id="icon-cont">
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/facebook-logo.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/124021.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/2048px-Instagram_icon.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/official-linkedin-icon-png-16.jpg">
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!--to here-->
+
+    
+
+
+
+
+
+
+
+    <script src = "scripts/main2.js"></script>
+    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+      <script src="scripts/service-info-page.js"></script>
+    <script>
+        /*let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+             showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+             showSlides(slideIndex = n);
+        }
+        function showSlides(n){
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("small-Imgs");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if(n < 1) {slideIndex = slides.length}
+            for(i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+            }
+            for(i = 0; i < dots.length; i++) {
+                   dots[i].className = dots[i].className.replace("active", "");   
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+
+        }*/             
+    </script>
+</body>
+</html>

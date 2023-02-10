@@ -71,8 +71,12 @@ $(function (){
                           $('#product-price').text('N' + product.price)
                           $('#community').text(env.name)
                           if (product.delivery === 'yes') {
+                            $('delivery').removeClass('Unavailable')
+                            $('delivery').addClass('Available')
                             $('#delivery').text('Available')
                           } else {
+                            $('#delivery').removeClass('Available')
+                            $('#delivery').addClass('Unavailable')
                             $('#delivery').text('Unavailable')
                           }
                           $('#features').text(product.features)
@@ -107,6 +111,7 @@ $(function (){
                         contentType: 'application/json',
                         dataType: 'json',
                         success: function (env){
+                            $('#profile-pic-cont').html('<img src="' + owner.avatar + '">')
                             $('#name').text(owner.first_name + ' ' + owner.last_name)
                             $('#community-select').text(env.name);
                             $('#uploader-phone').html('<p class="contact"><icon class="fa fa-phone"><a href="tel:' + owner.phone_no +'" class="contact-links"> ' + owner.phone_no + '</a></icon></p>')
