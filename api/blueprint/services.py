@@ -30,6 +30,25 @@ def cat_services(cat_id):
             cat_serv.append(obj.to_dict())
     return jsonify(cat_serv)
 
+@app_views.route('/service-search', strict_slashes=False, methods=['POST'])
+def search_services():
+    """This searces for services that meet some criteria"""
+    if not request.json:
+        abort(400, "Not a valid json")
+
+    searchList = []
+
+    search_dict = request.get_json()
+    location = search_dict['location']
+    category = search_dict['category_id']
+
+    for key, obj in storage.all(Service).items():
+        owner = storage.get('User', obj.owner_id)
+        if owner.com_res == location or location == 'all':
+            if obj.category_id == category:
+                searchList.append(obj.to_dict())
+    return jsonify(searchList)
+
 @app_views.route('/services', strict_slashes=False, methods=['POST'])
 def create_serv():
     """This creates a new service in storage"""

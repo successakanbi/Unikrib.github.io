@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String, ForeignKey, Float
 from sqlalchemy.orm import relationship
 
 
@@ -16,7 +16,7 @@ class User(BaseModel, Base):
     user_type = Column(String(60), nullable=False)
     com_res = Column(String(60), nullable=True)
     avatar = Column(String(128), nullable=True, default='images/default-img.webp')
-    product = relationship("Product", backref="product", cascade="all, delete, delete-orphan")
+    rating = Column(Float, nullable=False, default=0)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -10,6 +10,9 @@ function dropMenu() {
 function changeIcon(x) {
     x.classList.toggle("change");
 }
+function dropDown() {
+    document.getElementById("dropdown-cont").classList.toggle("show");
+}
 function imageChange() {
     let slideImage1 = document.getElementById("handyman");
     let slideImage2 = document.getElementById("pexels");

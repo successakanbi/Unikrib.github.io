@@ -112,7 +112,7 @@ $(function (){
                                 	                                                  </div>
                                         	                                          </div>
                                                 	                                </div>`);
-											console.log(house.id)
+
 											$(function (){
 												$("#info-" + house.id).on('click', function(){																				
 													var user = window.localStorage.getItem('newId');

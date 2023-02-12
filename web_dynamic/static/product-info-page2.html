@@ -16,18 +16,21 @@
             <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
             <a href="homepage.html">Home</a>
             <a href="Apartment-page.html">Apartments</a>
-            <!--here-->
             <a href="product-page.html" class="active">products</a>
             <a href="service-page.html">services</a>
-            <div class="dropdown">
+            <div id="login-cont">
+              <a href="login.html">Login</a>
+              <a href="signup.html">sign up</a>
+            </div>
+            <div class="dropdown" id="dropdown">
               <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
               <div class="dropmenu-content" id="dropdown-cont">
-                 <p class="drop-links" onclick="getUserType()">Profile</p>
-                 <p href="" class="drop-links">Edit profile</p>  
+                 <p href="" class="drop-links">Profile</p>
+                 <p href="" class="drop-links">Edit profile</p>
                  <p href="" class="drop-links">Help</p>
-                 <p href="" class="drop-links" onclick="logout()">logout</p>
-              </div>
-            </div>
+                 <p href="" class="drop-links">logout</p>
+             </div>
+           </div>
            <!--to here-->
             <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
                 <div class="icon-cont" onclick="changeIcon(this)">
@@ -58,22 +61,22 @@
                            <div class="numb-text">3 / 3</div>
                           <img src="images/hot-12i-black.gif" style="width:100%;" id="Apart-image3">
                       </div>-->
-                  </div>
+                 </div>
                   <a class="prev" id="minus"><i class="fa fa-angle-left"></i></a>
                   <a class="next" id="plus"><i class="fa fa-angle-right"></i></a>
 
                   <!--contains dots that show current image-->
                   <div id="dot-container">
-                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <!--<span class="dot" onclick="currentSlide(1)"></span>
                       <span class="dot" onclick="currentSlide(2)"></span>
-                      <span class="dot" onclick="currentSlide(3)"></span>
-                 </div>
+                      <span class="dot" onclick="currentSlide(3)"></span>-->
+                  </div>
                  <!--contains apartment details-->
                  <div id="product-details">
-                  <p class="product-results"><span class="product-name" id="prod-name"> </span></p>
-                  <p class="price-results"><span class="product-price" id="product-price"></span></p>
-                  <p class="ven-location">Vendors location: <span class="community" id="community"></span></p>
-                  <p class="delivery">Delivery: <span class="Available" id="delivery"></span></p>
+                  <!--<p class="product-results"><span class="product-name">Infinix Hot 12i </span></p>
+                  <p class="price-results"><span class="product-price" id="product-price-1">N89,000</span></p>
+                  <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
+                  <p class="delivery">Delivery: <span class="Available">Available</span></p>-->
                  </div>
                  <!--contains apartment features-->
                  <div id="feature-cont">
@@ -89,8 +92,7 @@
                        diligence is done. 
                     </p>
                </div>
-    
-      
+
                </div> 
             </div>
 
@@ -99,24 +101,25 @@
           <div id="internal-right-container">
             <!--contains uploader information, profile pic and uploader contacts-->
             <div id="profile-cont">
-              <div id="profile-pic-cont">
-                <!--<img src="images/pretty-black-female-business-headshot.jpg">-->
+              <!--<div id="profile-pic-cont">
+                <img src="images/pretty-black-female-business-headshot.jpg">
               </div>
               <div id="name-cont">
-                <p class="name" id="name"></span></p>
-                <p class="services" id="service-select">Vendor</span></p>
-                <p class="community" id="community-select"></p>
+                <p class="name"><span id="fname">Martha</span><span id="lname"> Agbore</span></p>
+                <p class="services" id="service-select">Phone Vendor</span></p>
+                <p class="community" id="community-select">Ekosodin</p>
                 <p class="rating">Average rating: <span id="">5</span><icon class="fa fa-star"></icon></span></p>
+                <p class="bio">I sell all kind of phones,Including Iphone, samsung, infinix, Redmi etc. I also sell phone accesories</p>
               </div>
               <div id="contact-cont">
                 <div id="uploader-phone">
-                    <!--<p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>-->
+                    <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
                 </div>
                 <div id="uploader-whatsapp">
-                   <!--<p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347045678389"
-                    class="contact-links"> 07045678389</a></icon></p>-->
+                   <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347045678389"
+                    class="contact-links"> 07045678389</a></icon></p>
                 </div>
-              </div>
+              </div>-->
             </div>
             <!--contains reviews link , reviewer information profile pic and message-->
             <div id="review-cont">
@@ -138,20 +141,18 @@
               </div>
               <div id="other-reviews-cont">
                 <a href="review-page.html">
-                  <p id="view-review">read <span>10 </span>more reviews</p>
+                  <p id="view-review">View all</p>
                 </a>
               </div>
             </div>
-            <!--contains security header and security tips-->
-            <div id="security-tip-cont">
-              <h4>Security tips</h4>
-              <p class="tips">Don't make any payments to vendor without confirming the product especially in case of delivery</p>
-              <p class="tips">in cases of delivery its better to collect product in an open place </p>
+
+           <!--contains Edit and delete buttons-->
+           <div id="edit-delete-cont">
+            <div id="edit-delete-left">
+              <button id="edit-apartment"><icon class="fa fa-pencil"></icon> Edit</button>
             </div>
-            <div id="report-cont">
-              <a href="">
-                <div id="report-button"><icon class="fa fa-flag"></icon> Report this vendor</div>
-              </a> 
+            <div id="edit-delete-right">
+              <button id="delete-apartment"><icon class="fa fa-trash"></icon> Delete</button>
             </div>
           </div>
 
@@ -163,9 +164,9 @@
     <div id="footer-cont">
         <div class="footer-sub-cont-a">
           <p ><a href="" class="foot-links">apartments</a></p>
-          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href="" class="foot-links">products</a></p>
+          <p><a href=""class="foot-links">Services</a></p>
           <p><a href=""class="foot-links">About us</a></p>
-          <p><a href=""class="foot-links">contact</a></p>
           <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
         </div>
         <div class="footer-sub-cont-b">
@@ -203,20 +204,12 @@
       </div>
       <!--to here-->
 
-      
-    
-
-
-
-
-
-
         <script src = "scripts/main2.js"></script>
         <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-        <script src="scripts/product-info-page.js"></script>"
-        <script>
+        <script src="scripts/product-info2.js"></script>
+        <!--<script>
           //changes Apartment slide images when next or previous buttons are clicked
-            /*let slideIndex = 1;
+            let slideIndex = 1;
             showSlides(slideIndex);
 
             function plusSlides(n) {
@@ -239,16 +232,11 @@
                     slides[i].style.display = "none"
                 }
                 for(i = 0; i < dots.length; i++) {
-                  console.log(i)
-                  dots[i].className = dots[i].className.replace(" active", "");
+                    dots[i].className = dots[i].className.replace(" active", "");
                 }
-                let index = slideIndex-1
-                console.log('Showing slide ' + index)
-                console.log(slideIndex-1)
                 slides[slideIndex-1].style.display = "block";
                 dots[slideIndex-1].className += " active";
-            }*/
-        </script>
-        
+            }
+        </script>-->
 </body>
 </html>

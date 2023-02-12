@@ -1,5 +1,15 @@
 #!/usr/bin/node
 
+/*const user = window.localStorage.getItem('newId')
+var login = document.getElementById('login-cont')
+var dropdown = document.getElementById('dropdown')
+if (user === null){
+	login.style.display = 'block';
+	dropdown.style.display = 'none'
+} else {
+	login.style.display = 'none';
+	dropdown.style.display = 'block'
+}*/
 $(function(){
 	$.ajax({
 		type: 'GET',
