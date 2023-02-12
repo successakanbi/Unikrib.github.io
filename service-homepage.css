@@ -1,0 +1,599 @@
+#external-main-cont{
+    width:100%;
+    padding: 80px 0 0 0;
+    display: inline-block;
+    
+}
+#internal-left-cont{
+    float: left;
+    width: 27%;
+    margin:2vw 0 0 10%;
+    padding: 0 0 0 1%;   
+}
+#profile-cont{
+    width:100%;
+    display:inline-block;
+    margin-bottom: 1vw;
+    background-color: #f0ebeb; 
+}
+#profile-pic-cont{
+    width:15%;
+    float: left;
+    margin: 0 0 1vw 0;
+    padding: 3px 0 0 0;
+}
+#profile-pic-cont img{
+    width: 90%;
+    margin-left: 10%;
+    height: 4vw;
+    border-radius: 50%;
+}
+#name-cont{
+    padding: 0 0 0 3%;
+    width:82%;
+    float: left;
+    margin: 0 0 1vw 0;
+}
+.edit-icon a{
+    float:right;
+    margin-right: 10%;
+    margin-top: -1.3vw;
+    font-size: 1.3vw;
+    color: #7e7e81;
+
+}
+.name{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #0e36a5;
+    line-height: 0.1vw;
+}
+.services, .community{
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: #071355;
+    line-height: 0.4vw;
+
+}
+.rating{
+    color: #c7c409;
+    font-size: 1.1vw;
+    margin-top: -10px;
+}
+.bio{
+    font-size: 0.8vw;
+    font-weight: 500;
+    color: #0c5555;
+    margin-top: -10px;
+}
+#contact-cont{
+    padding: 1vw 0 1vw 3%;
+}
+#uploader-phone{
+    display: inline-block;
+    background-color: #092980;
+    padding: 0px 3vw 0 3vw;
+    margin-right: 1vw;
+    
+}
+#uploader-whatsapp{
+    display: inline-block;
+    background-color: #0b880b;
+    padding: 0px 3vw 0 3vw;
+}
+#uploader-phone a, #uploader-whatsapp a {
+    text-decoration: none;
+    color: #ffffff;
+} 
+#uploader-phone .fa #uploader-whatsapp .fa{
+    color: #ffffff;
+}
+.contact{
+    font-size: 0.9vw;
+}
+.contact .fa {
+    color: #ffffff;
+}
+#review-cont{
+    width: 95%;
+    background-color: #b3f0f5;
+    padding: 1vw 2.5% 1vw 2.5%;
+    margin: 0 0 1vw 0;
+}
+#rev-headr{
+    font-size: 1.4vw;
+    font-weight: 700;
+    color: #474545;
+}
+#latest-review-cont{
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 0 0 0 1vw;
+    display: inline-block;
+}
+#rev-img-cont{
+    float: left;
+    width: 14%;
+    padding: 0.5vw 0 0 1%;
+}
+#rev-img-cont img{
+    width: 100%;
+    border-radius: 50%;
+}
+#rev-name-cont{
+    float: left;
+    width:82.5%;
+    padding:0 0 0 2.5%;
+}
+.rev-name{
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+#rev-message-cont {
+    width: 98%;
+    margin-top: 4.5vw;
+    padding: 0 1% 0 1%;
+}
+#review-message {
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+#other-reviews-cont p {
+    font-size: 1vw;
+    text-align: center;
+    font-weight: 500;
+    color: #092980;
+}
+#security-tip-cont{
+    width: 99%;
+    background-color: #1aa1a1;
+    padding: 2.5px 0 2.5px 1%;
+    margin: 0 0 1vw 0;
+}
+#security-tip-cont h4{
+    font-size: 1.3vw;
+    color: #ffffff;
+    line-height: 0.2vw;
+}
+.tips {
+    font-size: 0.9vw;
+    color: #ffffff;
+    font-weight: 600;
+}
+#img-change-cont{
+ background-color: #e6e1e1;
+ padding: 2vw 0 2vw 0;
+ width:100% ;
+}
+#img-change-cont a {
+    color: #e9e6e6;
+    text-decoration: none;
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+#image-change-btn{
+    background-color: #1e8305;
+    width: 42%;
+    margin-left: 29%;
+    padding: 1.5vw 1.5% 1.5vw 1.5%;
+    text-align: center;
+}
+#internal-right-cont{
+    float: left;
+    width: 45%;
+    padding: 0 0 0 7%;
+
+}
+.slides img{
+    vertical-align:middle;
+    width:100%;
+    height: 30vw;
+}
+#img-container{
+    position: relative;
+    background-color: rgba(43, 42, 42, 0.4 );
+    margin-top:2vw;
+    left: 0;
+}
+.slides{
+    display: none;
+}
+cursor{
+    cursor: pointer;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width:auto;
+    padding: 2vw;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 7vw;
+}
+.next{
+    right: 0vw;
+    border-radius:3px 0 0 3px;
+}
+.prev{
+    left: 0vw;
+    border-radius:3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(17, 16, 16, 0.7);
+}
+#numbertext{
+    color: #ffffff;
+    font-size: 1.5vw;
+    padding: 2vw 2vw;
+    position: absolute;
+    top:0;
+    font-weight: 900;
+}
+#caption-cont{
+    text-align: center;
+    background-color:#c7c7c7;
+    padding: 1.5vw 0 1.5vw 0;
+    color: #474545;
+    font-weight: 700;
+    font-size: 4vw;
+}
+.rw:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float:left;
+    width:20%;
+    height: 6.5vw;
+}
+.small-Imgs{
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+.active,.small-Imgs:hover{
+    opacity:1;
+}
+#disclaimer-cont{
+    width:98%;
+    margin: 20px 0 20px 0;
+    background-color: #f3dbda;
+    padding: 0.2vw 1% 0.2vw 1%;
+}
+#disclaimer-cont h4{
+    color: #cc0e0e;
+    font-size: 1.2vw;
+    line-height: 0.1vw;
+
+}
+#dis-message{
+    font-size: 1vw;
+    color: #be0909;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 900px){
+
+    #external-main-cont{
+        padding: 100px 0 0 0;
+    }
+    #internal-left-cont{
+        display: inline-block;
+        width: 90%;
+        margin:2vw 0 0 5%;
+        padding: 0 0 0 1%;  
+        
+    }
+    #profile-cont{
+        width:50%;
+        display:inline-block;
+        margin-bottom: 1vw;
+        margin: 0 1vw 1vw 0; 
+    }
+    #profile-pic-cont{
+        width:25%;
+        float: left;
+        margin: 0 0 5vw 0;
+        padding: 3px 0 0 0;
+    }
+    #profile-pic-cont img{
+        width: 90%;
+        margin-left: 10%;
+        height: 9vw;
+        border-radius: 50%;
+    }
+    #name-cont{
+        padding: 0 0 0 3%;
+        width:72%;
+        float: left;
+        margin: 0 0 5vw 0;
+    }
+    .name{
+        font-size: 2vw;
+        font-weight: 600;
+        line-height: 1vw;
+    }
+    .edit-icon a{
+        margin-right: 10%;
+        margin-top: -2.5vw;
+        font-size: 2.5vw;
+    }
+    .services, .community{
+        font-size: 1.6vw;
+        line-height: 1vw;
+    }
+    .rating{
+        font-size: 1.8vw;
+    }
+    .bio{
+        font-size: 1.5vw;
+    }
+    #contact-cont{
+        padding: 1vw 0 1vw 5%;
+    }
+    #uploader-phone{
+        padding: 0px 4vw 0 4vw;
+        
+    }
+    #uploader-whatsapp{
+        padding: 0px 4vw 0 4vw;
+    }
+    .contact{
+        font-size: 1.7vw;
+    }
+    #review-cont{
+        width: 43.8%;
+        float: right;
+        padding: 1vw 2.5% 1vw 2.5%;
+        margin: 0 0 1vw 0;
+    }
+    #rev-headr{
+        font-size: 2vw;
+    }
+    #rev-img-cont{
+        width: 14%;
+        padding: 0.5vw 0 0 1%;
+    }
+    #rev-img-cont img{
+        width: 100%;
+    }
+    #rev-name-cont{
+        width:82.5%;
+        padding:0 0 0 2.5%;
+    }
+    .rev-name{
+        font-size: 1.8vw;
+    }
+    #rev-message-cont {
+        width: 98%;
+        margin-top: 4.5vw;
+        padding: 0 1% 0 1%;
+    }
+    #review-message {
+        font-size: 1.5vw;
+    }
+    #other-reviews-cont p {
+        font-size: 1.6vw;
+    }
+    #img-change-cont{
+     padding: 3vw 1% 3vw 1%;
+     width:48%;
+     margin: 0 0 5vw 0;
+    }
+    #img-change-cont a {
+        font-size: 1.5vw;
+    }
+    #image-change-btn{
+        width: 45%;
+        margin-left: 26%;
+        padding: 3vw 2% 3vw 2%;
+        text-align: center;
+    }
+    #internal-right-cont{
+        width: 90%;
+        padding: 0 0 0 5%;
+    
+    }
+    #numbertext{
+        font-size: 2.5vw;
+    }
+    .slides img{
+        width:100%;
+        height: 55vw;
+    }
+    .prev, .next{
+        font-size: 12vw;
+    }
+    #caption-cont{   
+        padding: 3vw 0 3vw 0;
+    }
+    .column{
+        float:left;
+        width:20%;
+        height: 10vw;
+    }
+    #disclaimer-cont{
+        padding: 0.2vw 1% 0.2vw 1%;
+    }
+    #disclaimer-cont h4{
+        font-size: 2vw;
+    }
+    #dis-message{
+        font-size: 1.5vw;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 590px){
+    #internal-left-cont{
+        width: 90%;
+        margin:2vw 0 0 5%;
+        padding: 0 0 0 1%;  
+        
+    }
+    #profile-cont{
+        width:100%;
+        margin-bottom: 1vw;
+        margin: 0 1vw 3vw 0; 
+    }
+    #profile-pic-cont{
+        width:25%;
+        float: left;
+        margin: 0 0 5vw 0;
+        padding: 3px 0 0 0;
+    }
+    #profile-pic-cont img{
+        width: 90%;
+        margin-left: 10%;
+        height: 18vw;
+        border-radius: 50%;
+    }
+    #name-cont{
+        padding: 0 0 0 3%;
+        width:72%;
+        float: left;
+        margin: 0 0 5vw 0;
+    }
+    .name{
+        font-size: 4.5vw;
+        font-weight: 600;
+        line-height: 1.5vw;
+    }
+    .edit-icon a{
+        margin-right: 10%;
+        margin-top: -7vw;
+        font-size: 6vw;
+    }
+    .services, .community{
+        font-size: 3.8vw;
+        font-weight: 600;
+        color: #686666;
+        line-height: 1.5vw;
+    
+    }
+    .rating{
+        font-size: 3.8vw;
+    }
+    .bio{
+        font-size: 3.2vw;
+    }
+    #contact-cont{
+        padding: 1vw 0 3vw 1%;
+    }
+    #uploader-phone{
+        display: inline-block;
+        background-color: #092980;
+        padding: 0px 7vw 0 7vw;
+        margin-right: 5%;
+        
+    }
+    #uploader-whatsapp{
+        display: inline-block;
+        background-color: #0b880b;
+        padding: 0px 7vw 0 7vw;
+    }
+    .contact{
+        font-size: 3.5vw;
+    }
+    .contact .fa {
+        color: #ffffff;
+    }
+    #review-cont{
+        width: 95%;
+        float: none;
+        padding: 1vw 2.5% 1vw 2.5%;
+        margin: 0 0 5vw 0;
+    }
+    #rev-headr{
+        font-size: 4vw;
+    }
+    #latest-review-cont{
+        border-radius: 5px;
+        display: inline-block;
+    }
+    #rev-img-cont{
+        float: left;
+        width: 14%;
+        padding: 0.5vw 0 0 1%;
+    }
+    #rev-img-cont img{
+        width: 100%;
+    }
+    #rev-name-cont{
+        float: left;
+        width:82.5%;
+        padding:0 0 0 2.5%;
+    }
+    .rev-name{
+        font-size: 3.8vw;
+    }
+    #rev-message-cont {
+        width: 98%;
+        margin-top: 4.5vw;
+        padding: 0 1% 0 1%;
+    }
+    #review-message {
+        font-size: 3.2vw;
+    }
+    #other-reviews-cont p {
+        font-size: 3.6vw;
+    }
+    #img-change-cont{
+     padding: 5vw 0 5vw 0;
+     width:100%;
+     margin: 0 0 5vw 0;
+    }
+    #img-change-cont a {
+        font-size: 3.7vw;
+    }
+    #image-change-btn{
+        width: 56%;
+        margin-left: 19%;
+        padding: 8vw 2% 8vw 2%;
+        text-align: center;
+    }
+
+    #internal-right-cont{
+        width: 90%;
+        padding: 0 0 0 5%;
+    
+    }
+    #numbertext{
+        font-size: 3.5vw;
+    }
+    .slides img{
+        vertical-align:middle;
+        width:100%;
+        height: 55vw;
+    }
+    .prev, .next{
+        font-size: 15vw;
+    }
+    #caption-cont{
+        padding: 4.5vw 0 4.5vw 0;
+    }
+    .column{
+        float:left;
+        width:20%;
+        height: 12vw;
+    }
+    #disclaimer-cont{
+        width:98%;
+        margin: 20px 0 20px 1%;
+        padding: 0.2vw 1% 0.2vw 1%;
+    }
+    #disclaimer-cont h4{
+        font-size: 4vw;
+    }
+    #dis-message{
+        font-size: 3vw;
+    }
+
+    
+
+}
