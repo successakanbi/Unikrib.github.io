@@ -15,7 +15,7 @@ class User(BaseModel, Base):
     phone_no = Column(String(60), nullable=True)
     user_type = Column(String(60), nullable=False)
     com_res = Column(String(60), nullable=True)
-    avatar = Column(String(128), nullable=True)
+    avatar = Column(String(128), nullable=True, default='images/default-img.webp')
     product = relationship("Product", backref="product", cascade="all, delete, delete-orphan")
 
     def __init__(self, *args, **kwargs):

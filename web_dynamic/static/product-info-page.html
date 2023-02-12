@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product info page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/product-info-page.css">
+</head>
+<body>
+        <!-- responsive top navigator bar -->
+        <div class="top-nav" id="my-Top-nav">
+            <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+            <a href="homepage.html">Home</a>
+            <a href="Apartment-page.html">Apartments</a>
+            <!--here-->
+            <a href="product-page.html" class="active">products</a>
+            <a href="service-page.html">services</a>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+              <div class="dropmenu-content" id="dropdown-cont">
+                 <p href="" class="drop-links">Profile</p>
+                 <p href="" class="drop-links">Edit profile</p>  
+                 <p href="" class="drop-links">Help</p>
+                 <p href="" class="drop-links" onclick="logout()">logout</p>
+              </div>
+            </div>
+           <!--to here-->
+            <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+                <div class="icon-cont" onclick="changeIcon(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+             </a>
+        </div>
+
+        <div id="external-main-cont">
+          <div id="internal-left-container">
+            <div id="">
+                  <!--container containing apartment slide images,prev&next buttons and  dot container -->
+                 <div class ="product-slide-cont">
+                  <div id="product-images">
+                     <!--<div class ="currentImage change">
+                        <div class="numb-text">1 / 3</div>
+                        <img src="images/Infinix hot12i.jpg" style="width:100%;" id="Apart-image1">
+                     </div>
+
+                      <div class ="currentImage change">
+                           <div class="numb-text">2 / 3</div>
+                           <img src="images/infinix-hot-blue.jpg" style="width:100%;" id="Apart-image2">
+                      </div>
+
+                      <div class ="currentImage change">
+                           <div class="numb-text">3 / 3</div>
+                          <img src="images/hot-12i-black.gif" style="width:100%;" id="Apart-image3">
+                      </div>-->
+                  </div>
+                  <a class="prev" id="minus"><i class="fa fa-angle-left"></i></a>
+                  <a class="next" id="plus"><i class="fa fa-angle-right"></i></a>
+
+                  <!--contains dots that show current image-->
+                  <div id="dot-container">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                 </div>
+                 <!--contains apartment details-->
+                 <div id="product-details">
+                  <p class="product-results"><span class="product-name" id="prod-name"> </span></p>
+                  <p class="price-results"><span class="product-price" id="product-price"></span></p>
+                  <p class="ven-location">Vendors location: <span class="community" id="community"></span></p>
+                  <p class="delivery">Delivery: <span class="Available" id="delivery"></span></p>
+                 </div>
+                 <!--contains apartment features-->
+                 <div id="feature-cont">
+                       <h4>Product Features</h4>
+                       <p class="features" id="features"></p>
+                </div>
+                <!--contains disclaimer text-->
+                <div id="disclaimer">
+                    <h4>Disclaimer<icon class="fa fa-warning"></icon></h4>
+                    <p id="message">Please note that we do not endorse or guarantee the products  provided by vendors
+                       listed on our website. It is the responsibility of the student to confirm products before making
+                       payments. we will not be held liable for issues that may arise from payments made before due 
+                       diligence is done. 
+                    </p>
+               </div>
+    
+      
+               </div> 
+            </div>
+
+          </div>
+          <!--contains profile pic container and uploader info, review container, security tip cont, and report cont  -->
+          <div id="internal-right-container">
+            <!--contains uploader information, profile pic and uploader contacts-->
+            <div id="profile-cont">
+              <div id="profile-pic-cont">
+                <!--<img src="images/pretty-black-female-business-headshot.jpg">-->
+              </div>
+              <div id="name-cont">
+                <p class="name" id="name"></span></p>
+                <p class="services" id="service-select">Vendor</span></p>
+                <p class="community" id="community-select"></p>
+                <p class="rating">Average rating: <span id="">5</span><icon class="fa fa-star"></icon></span></p>
+              </div>
+              <div id="contact-cont">
+                <div id="uploader-phone">
+                    <!--<p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>-->
+                </div>
+                <div id="uploader-whatsapp">
+                   <!--<p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347045678389"
+                    class="contact-links"> 07045678389</a></icon></p>-->
+                </div>
+              </div>
+            </div>
+            <!--contains reviews link , reviewer information profile pic and message-->
+            <div id="review-cont">
+              <p id="rev-headr">latest review</p>
+              <div id="latest-review-cont">
+                <!--<div id="rev-img-cont">
+                  <img src="images/male-avatar.jpg">
+                </div>
+                <div id="rev-name-cont">
+                  <p class="rev-name">David ibihe</p>
+                </div>
+                <div id="rev-message-cont">
+                  <p id="review-message">My experience with martha was simply exceptional, and best of all? she does
+                    home deliveries and on time as well. what more can i say if you want to buy a phone she's definitely
+                     your girl
+                  </p> 
+                     <p class="time-stamp"><span id="day">21st </span><span id="month">July</span><span id="year"> 2022</span></p>
+                </div>-->
+              </div>
+              <div id="other-reviews-cont">
+                <a href="review-page.html">
+                  <p id="view-review">read <span>10 </span>more reviews</p>
+                </a>
+              </div>
+            </div>
+            <!--contains security header and security tips-->
+            <div id="security-tip-cont">
+              <h4>Security tips</h4>
+              <p class="tips">Don't make any payments to vendor without confirming the product especially in case of delivery</p>
+              <p class="tips">in cases of delivery its better to collect product in an open place </p>
+            </div>
+            <div id="report-cont">
+              <a href="">
+                <div id="report-button"><icon class="fa fa-flag"></icon> Report this vendor</div>
+              </a> 
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <!--here-->
+    <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="" class="foot-links">apartments</a></p>
+          <p><a href="" class="foot-links">products and services</a></p>
+          <p><a href=""class="foot-links">About us</a></p>
+          <p><a href=""class="foot-links">contact</a></p>
+          <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <!--here-->
+          <p id="foot-para">For feedback and inquiries contact us on</p>
+          <!--to here-->
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+        <div id="footer-base-cont">
+          <div id="icon-cont">
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/facebook-logo.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/124021.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/2048px-Instagram_icon.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/official-linkedin-icon-png-16.jpg">
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!--to here-->
+
+      
+    
+
+
+
+
+
+
+        <script src = "scripts/main2.js"></script>
+        <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+        <script src="scripts/product-info-page.js"></script>"
+        <script>
+          //changes Apartment slide images when next or previous buttons are clicked
+            /*let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("currentImage");
+
+                let dots = document.getElementsByClassName("dot");
+
+                if (n > slides.length) {slideIndex = 1}
+                if(n < 1) {slideIndex = slides.length}
+                for(i = 0; i < slides.length; i++){
+                    slides[i].style.display = "none"
+                }
+                for(i = 0; i < dots.length; i++) {
+                  console.log(i)
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                let index = slideIndex-1
+                console.log('Showing slide ' + index)
+                console.log(slideIndex-1)
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }*/
+        </script>
+        
+</body>
+</html>

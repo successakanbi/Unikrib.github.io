@@ -10,6 +10,7 @@ from models.user import User
 from models.review import Review
 from models.category import Category
 from models.service import Service
+from models.service_category import ServiceCategory
 
 
 classes = {
@@ -20,7 +21,8 @@ classes = {
         "User": User,
         "Review": Review,
         "Category": Category,
-        "Service": Service}
+        "Service": Service,
+        "ServiceCategory": ServiceCategory}
 
 class Unikrib(cmd.Cmd):
     """This is to enable me manipulate the objects"""

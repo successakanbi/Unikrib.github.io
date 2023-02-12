@@ -1,15 +1,38 @@
+/*var user = window.localStorage.getItem('newId');
+if (user === null){
+    var dropdown = document.getElementsByClassName('dropdown')
+    dropdown.style.display = 'none'
+}*/
+
 function dropMenu() {
     var x = document.getElementById("my-Top-nav");
     if (x.className === "top-nav") {
         x.className += " responsive";
     } else {
         x.className  = "top-nav";
-    }
+    }    
+}
+
+function logout(){    
+    window.localStorage.clear();
+    window.location.href = 'homepage.html';
 }
 
 function changeIcon(x) {
     x.classList.toggle("change");
 }
+function dropDown() {
+    document.getElementById("dropdown-cont").classList.toggle("show");
+}
+window.onclick = function(e) {
+    if(!e.target.matches(".dropbtn")) {
+        var myDropdown =  document.getElementById("dropdown-cont");
+        if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+        }
+    }
+}
+
 function imageChange() {
     let slideImage1 = document.getElementById("handyman");
     let slideImage2 = document.getElementById("pexels");

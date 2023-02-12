@@ -16,8 +16,18 @@
             <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
             <a href="homepage.html">Home</a>
             <a href="Apartment-page.html"class="active">Apartments</a>
-            <a href="product-service-page.html">products & services </a>
+            <a href="product-page.html">products</a>
+            <a href="service-page.html">services</a>
             <a href="apartment-upload-page.html">contact</a>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+              <div class="dropmenu-content" id="dropdown-cont">
+                 <p href="" class="drop-links">Profile</p>
+                 <p href="" class="drop-links">Edit profile</p>
+                 <p href="" class="drop-links">Help</p>
+                 <p href="" class="drop-links" onclick="logout()">logout</p>
+              </div>
+            </div>
             <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
                 <div class="icon-cont" onclick="changeIcon(this)">
                     <div class="bar1"></div>
@@ -81,15 +91,12 @@
                 <!--contains disclaimer text-->
                 <div id="disclaimer">
                     <h4>Disclaimer<icon class="fa fa-warning"></icon></h4>
-                    <p id="message">Please note that we do not endorse or guarantee the services or
-                        properties provided by agents and service providers listed on our website. 
-                        It is the responsibility of the student to confirm apartments, products and services 
+                    <p id="message">Please note that we do not endorse or guarantee the properties provided by 
+                        agents listed on our website.  It is the responsibility of the student to confirm apartments,
                         before making payments. we will not be held liable for issues that may arise from payments
-                        made before due diligence is done. 
+                        made before due diligence is done.
                     </p>
-               </div>
-    
-      
+               </div>      
                </div> 
             </div>
 
@@ -104,6 +111,9 @@
               <div id="name-cont">
                 <p class="name"><span id="fname">Igueben </span><span id="lname"> charles</span></p>
                 <p class="services" id="service-select">Agent</span></p>
+                <p class="community2" id="community-select">Ekosodin</p>
+            <p class="rating">Average rating:<span id="">4</span><icon class="fa fa-star"></icon></span></p>
+            <p class="bio">I help students find affordable and suitable apartments of all types</p>                
               </div>
               <div id="contact-cont">
                 <div id="uploader-phone">
@@ -135,7 +145,7 @@
               </div>
               <div id="other-reviews-cont">
                 <a href="review-page.html">
-                  <p>read <span id="review-length"> </span> more reviews</p>
+                  <p id="view-review">read <span id="review-length"> </span> more reviews</p>
                 </a>
               </div>
             </div>
@@ -143,12 +153,12 @@
             <div id="security-tip-cont">
               <h4>Security tips</h4>
               <p class="tips">Don't make any payments to the agent without confirmation from the landlord</p>
-              <p class="tips">Schedule a date to view the apartment and let atleast one other person know where you are going</p>
+              <p class="tips">Schedule a date to view the apartment and let at least one other person know where you are going</p>
               <P class="tips">For your first meeting with the agent make sure you meet in an open place</P>
             </div>
             <div id="report-cont">
               <a href="">
-                <div id="report-button"><icon class="fa fa-flag"></icon> Report this user</div>
+                <div id="report-button"><icon class="fa fa-flag"></icon> Report this agent</div>
               </a> 
             </div>
           </div>
@@ -159,11 +169,11 @@
     <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
     <div id="footer-cont">
       <div class="footer-sub-cont-a">
-        <p ><a href="" class="foot-links">apartments</a></p>
-        <p><a href="" class="foot-links">products and services</a></p>
-        <p><a href=""class="foot-links">The team</a></p>
-        <p><a href=""class="foot-links">contact</a></p>
-        <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
+          <p><a href="product-page.html" class="foot-links">products</a></p>
+          <p><a href="service-page.html"class="foot-links">services</a></p>
+          <p><a href="about-page.html"class="foot-links">about us</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
       </div>
       <div class="footer-sub-cont-b">
         <!--here-->

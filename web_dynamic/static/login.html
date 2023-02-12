@@ -7,16 +7,20 @@
     <title>Sign in</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
+
+  <!-- responsive top navigator bar containing organisation logo, drop down menu icon and links-->
     <div class="top-nav" id="my-Top-nav">
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
-        <a href="Apartment-page.html">apartments</a>
-        <a href="product-service-page.html">products & services </a>
-        <a href="">contact</a>
+        <a href="Apartment-page.html">Apartments</a>
+        <!--here-->
+        <a href="product-page.html">products</a>
+        <a href="service-page.html">services</a>
+        <!--to here-->
         <a href="login.html" class="active">Login</a>
         <a href="signup.html">sign up</a>
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
@@ -27,12 +31,15 @@
             </div>
          </a>
     </div>
+
+    <!--External form container containing sign in form for all users regular,  agents etc-->
     <div id="ext-form-cont">
-        <div id="login-form">
+        <form action="" method="post" id="login-form">
             <div id="logo-container">
                 <img src="images/Black logo Icon on Transparent.png">
             </div>
             <div id="login-container">
+              <h2>Sign in to unikrib</h2>
                 <label for="E-mail">E-mail</label><br>
                 <input type="email" name="email" id="username" placeholder="Enter Email" required><br>
     
@@ -40,28 +47,40 @@
                 <input type="password" name="psw" value="" placeholder="Enter Password" 
                 id="input-pass" onfocus="showToggle()" required></br>
 
+                <!--eye icon toggles between visible password and hidden password-->
                 <icon class="fa fa-eye" onclick="showPassword()" id="eye-icon"></icon>
 
               <div>
-                <button type="submit" id="submit">Log in</button>
+                <button type="submit">Log in</button>
               </div>
-            
-                <p id="sign-up"><a href="Forgot-password.html" id="forgot">Forgot password?</a></p>
+                <!--here-->
+                <p id="sign-up"><a href="Forgot-password.html"id="forgot">Forgot password?</a></p>
+                <!--to here-->
+
+                <!--sign up with google div provides the sign up with google option-->
                 <div id="signin-with"><a href="/auth"role="button">
                     <p><img src="images/download.png" style="height: 20px;"> sign up with google</p>
                 </a>
                 </div>
+
+
                 <p id="sign-up">Don't have an account sign up <a href="signup.html" id=""><span>here</span></a></p>
+
+                
     
             </div>
-          </div>
+        </form>
     </div>
+    
 
+   
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <!--here-->
     <div id="footer-cont">
       <div class="footer-sub-cont-a">
         <p ><a href="" class="foot-links">apartments</a></p>
         <p><a href="" class="foot-links">products and services</a></p>
-        <p><a href=""class="foot-links">The team</a></p>
+        <p><a href=""class="foot-links">about us</a></p>
         <p><a href=""class="foot-links">contact</a></p>
         <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
       </div>
@@ -98,9 +117,41 @@
         </div> 
       </div>
     </div>
-      <script src="scripts/main.js"></script>
-      <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-      <script src="scripts/login.js"></script>
+    <!--to here-->
+
+      
+      <script src = "main.js"></script>
+      <script>
+        //toggles eye icon between visible and invisible
+        function showToggle () {
+        var icon = document.getElementById("eye-icon")
+        icon.style.display="block";
+        }
+
+        //toggles the eye icon between open and closed
+        let icon = document.getElementById("eye-icon");
+        icon.addEventListener("click", iconChange)
+
+         function iconChange () {
+         let x = document.getElementById("eye-icon");
+           if (icon.className == "fa fa-eye") {
+               icon.className = "fa fa-eye-slash";
+            } else {
+               icon.className = "fa fa-eye";
+            }
+         }
+
+         //toggles password between visible text and hidden text
+         function showPassword(){
+              var x = document.getElementById("input-pass");
+                if(x.type === "password") {
+                     x.type = "text";
+                } else {
+                   x.type = "password";
+                  }
+          }
+
+      </script>
 
     
     

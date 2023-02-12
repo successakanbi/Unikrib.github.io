@@ -98,7 +98,8 @@ h3{
     width: 100%;
     
  }
- button{
+ /*here*/
+ .submit-btn{
     padding: 15px;
     width: 70%;
     margin-top: 20px;
@@ -111,21 +112,23 @@ h3{
     border-radius: 5px;
     margin-bottom: 20px;
  }
+ /*to here*/
  button:hover{
     background-color: #941077;
  }
  #notice{
-    padding: 0 1% 0 2%;
+    padding: 1vw 1% 1vw 2%;
     width: 97%;
+    background-color: #f5d6bd;
     margin-bottom: 20px;
  }
  #notice h4{
-    color: #b3281f;
+    color: #ca2114;
     font-size: 1.1vw;
     margin-bottom: -5px;
  }
  #notice p{
-    color: #504f4f;
+    color: #d60b0b;
     font-size: 0.9vw;
     line-height: 13px;
     font-weight:500;

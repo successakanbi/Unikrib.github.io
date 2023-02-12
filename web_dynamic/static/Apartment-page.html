@@ -16,8 +16,17 @@
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
         <a href=""class="active">Apartments</a>
-        <a href="product-service-page.html">products & services </a>
-        <a href="">contact</a>
+        <a href="product-page.html">products</a>
+        <a href="service-page.html">services</a>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p href="" class="drop-links">Profile</p>
+             <p href="" class="drop-links">Edit profile</p>  
+             <p href="" class="drop-links">Help</p>
+             <p class="drop-links" onclick="logout()">logout</p>
+          </div>
+        </div>
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -28,14 +37,10 @@
     </div>
 
     <div id="main-ext-cont"> 
-        <div id="logo-container">
-            <img src="images/Black logo on white.png">
-        </div>
         <h1>Lets find you an apartment</h1>
+
         <!--Apartment container containing filter select options-->
         <div id="Apartment-container">
-
-
             <div id="search-filters-cont">
                 <!--location container containing location filter select box-->
                 <div id="location-cont" class="filter-containers">
@@ -98,7 +103,7 @@
 
                 <!--button container containing search button-->
                 <div id="button-cont" class="filter-containers">
-                    <button id='apartment-search' type="submit" onclick="searchParameter()"><i class="fa fa-search"></i> Search</button>
+                    <button id='apartment-search' type="submit" onclick="searchParameter()" class="search-btn"><i class="fa fa-search"></i> Search</button>
                 </div>
             </div>
         </div>
@@ -457,7 +462,7 @@
       </div>
       <div id="text-left-cont">
         <p id="redir">Do you need a service or want to buy a product
-           but can't seem to find the right service provider or vendor?<a href="" id="redirect-link">
+           but can't seem to find the right service provider or vendor?<a href="service-page.html" id="redirect-link">
           Click here
         </a></p>
       </div>
@@ -469,11 +474,11 @@
     <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
     <div id="footer-cont">
       <div class="footer-sub-cont-a">
-        <p ><a href="" class="foot-links">apartments</a></p>
-        <p><a href="" class="foot-links">products and services</a></p>
-        <p><a href=""class="foot-links">The team</a></p>
-        <p><a href=""class="foot-links">contact</a></p>
-        <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
+          <p><a href="product-page.html" class="foot-links">products</a></p>
+          <p><a href="service-page.html"class="foot-links">services</a></p>
+          <p><a href="about-page.html"class="foot-links">about us</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
       </div>
       <div class="footer-sub-cont-b">
         <!--here-->

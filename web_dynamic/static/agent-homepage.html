@@ -7,8 +7,8 @@
     <title>Agent Homepage</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/agent-homepage.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="agent-homepage.css">
 </head>
 <body>
     <!-- responsive top navigator bar -->
@@ -16,8 +16,23 @@
         <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
         <a href="homepage.html">Home</a>
         <a href="Apartment-page.html">Apartments</a>
-        <a href="product-service-page.html">products & services </a>
-        <a href="">contact</a>
+        <a href="product-page.html">products</a>
+        <a href="service-page.html">services</a>
+
+         <!--here-->
+         <div class="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p href="" class="drop-links">Profile</p>
+             <p href="" class="drop-links">Notifications</p>
+             <p href="" class="drop-links">Edit profile</p>
+             <p href="" class="drop-links">Settings</p>
+             <p href="" class="drop-links">Help</p>
+             <p href="" class="drop-links">logout</p>
+         </div>
+        </div>
+        <!-- to here-->
+
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -28,210 +43,200 @@
     </div>
 
     <div id="out-most-cont">
-        <div id="logo-container">
-            <img src="images/Black logo on white.png">
+      <div id="inn-left-cont">
+        <div id="profile-cont">
+          <div id="profile-pic-cont">
+            <img src="images/photo5.png">
+          </div>
+          <div id="name-cont">
+            <p class="name"><span id="fname">Igueben </span><span id="lname"> charles</span></p>
+            <p class="edit-icon"><a href="Edit-profile.html"><icon class="fa fa-pencil"></icon></a></p>
+            <p class="services" id="service-select">Agent</span></p>
+            <p class="community2" id="community-select">Ekosodin</p>
+            <p class="rating">Average rating:<span id=""> 4</span><icon class="fa fa-star"></icon></span></p>
+            <p class="bio">I help students find affordable and suitable apartments of all types</p>
+          </div>
+          <div id="contact-cont">
+            <div id="uploader-phone">
+                <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
+            </div>
+            <div id="uploader-whatsapp">
+               <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347045678389"
+                class="contact-links"> 07045678389</a></icon></p>
+            </div>
+          </div>
         </div>
-        <!-- contains the output containers, view more container, review container, view more container and apartment upload container-->
-        <div id="inner-cont">
-            <h2>Your uploads</h2>
+        <!--contains reviews link , reviewer information profile pic and message-->
+        <div id="review-cont">
+          <p id="rev-headr">latest review</p>
+          <div id="latest-review-cont">
+            <div id="rev-img-cont">
+              <!--here-->
+              <img src="images/web-shot-1.jpg">
+            </div>
+            <div id="rev-name-cont">
+              <p class="rev-name">Femi Adeyemi</p>
+            </div>
+            <div id="rev-message-cont">
+              <p id="review-message">I had an excellent experience with igueben charles, he is
+                professional, reliable and cordial. he answered all my questions truthfully
+                and charged me a fair sum for his service. I highly recommend him</p> 
+                <!-- to here-->
+                 <p class="time-stamp"><span id="day">21st </span><span id="month">July</span><span id="year"> 2022</span></p>
+            </div>
+          </div>
+          <div id="other-reviews-cont">
+            <a href="review-page.html">
+              <p>read <span>10 </span>more reviews</p>
+            </a>
+          </div>
+        </div>
+        <div id="new-upload-cont">
+          <div id="new-upload-btn">
+            <a href="apartment-upload-page.html">
+              <p id="upload-btn-txt">Upload new apartment</p>
+            </a>
+          </div>
 
-            <!--contains apartment image-cont and text-cont, it also contains important apartment info like location, type and price-->
-	    <div id="apartments">
-            <div id="output-cont" class="output-containers">
-                <a href="">
-                  <div id="image-cont">
-                    <img src="images/student-dorm.jpg" id="img1">
-                </div>
-                <div id="text-cont">
-                    <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-                    <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span></p>
-                    <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
-                    <div class ="icons-cont">
-                      <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                    </div>
-                </div>
-                </a>
-              </div>
-              
+        </div>
+      </div>
 
-              <div id="output-cont" class="output-containers">
-                <a href="">
-                  <div id="image-cont">
-                    <img src="images/campus_housing-220520-0109.jpg" id="img1">
-                </div>
-                <div id="text-cont">
-                    <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-                    <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span></p>
-                    <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
-                    <div class ="icons-cont">
-                      <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                    </div>
-                </div>
-                </a>
-              </div>
+      <div id="inn-right-cont">
+        <div id="uploads-cont">
 
-              <div id="output-cont" class="output-containers">
-                <a href="">
-                  <div id="image-cont">
-                    <img src="images/Photo2016,205120PM.jpg" id="img1">
-                </div>
-                <div id="text-cont">
-                    <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-                    <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span></p>
-                    <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
-                    <div class ="icons-cont">
-                      <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                    </div>
-                </div>
-                </a>
-              </div>
-	    </div>
+          <h2>Your uploads</h2>
 
-               <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
-               <div id="view-more-button" onclick="viewMore()">
-                  <p id="button-text">view more uploads</p>
-               </div>
-
-              <div id="view-more-cont">
-                <div id="output-cont" class="output-containers">
-                  <a href="">
-                    <div id="image-cont">
-                      <img src="images/campus_housing-220520-0109.jpg" id="img1">
-                  </div>
-                  <div id="text-cont">
-                      <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-                      <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span></p>
-                      <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
-                      <div class ="icons-cont">
-                        <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                      </div>
-                  </div>
-                  </a>
+          <div id="output-cont" class="output-containers">
+            <a href="apartment-info-page2.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/Photo2016,205120PM.jpg" id="img9" class="apartment-img">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class="type">One-bedroom flat</span> in <span class ="hostel" id="hostel9">whitegate hostel </span>for rent
+                <span class ="street" id="street9">Image street</span><span class ="community"  id="community9"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price9">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
                 </div>
+            </div>
+            </a>
+          </div>
+
+        </div>
+        <!--view more button call viewMore Function when clicked and displayed vew more container and its hidden content-->
+        <div id="view-more-button" onclick="viewMore()">
+          <p id="button-text">See more results</p>
+        </div>
+
+        <!--view more container containing all hidden apartment output containers-->
+        <div id="view-more-cont">
+          <div id="output-cont" class="output-containers">
+            <a href="apartment-info-page2.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/campus_housing-220520-0109.jpg" id="img10" class="apartment-img">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel10">whitegate hostel </span>for rent
+                <span class ="street" id="street10">Image street</span><span class ="community"  id="community10"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price10">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                  <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
+                </div>
+            </div>
+            </a>
+          </div>
   
   
-                <div id="output-cont" class="output-containers">
-                  <a href="">
-                    <div id="image-cont">
-                      <img src="images/student-dorm.jpg" id="img1">
-                  </div>
-                  <div id="text-cont">
-                      <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-                      <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span></p>
-                      <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
-                      <div class ="icons-cont">
-                        <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                      </div>
-                  </div>
-                  </a>
+          <div id="output-cont" class="output-containers">
+            <a href="apartment-info-page2.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/Photo2016,205120PM.jpg" id="img11" class="apartment-img">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel11">whitegate hostel </span>for rent
+                <span class ="street" id="street11">Image street</span><span class ="community"  id="community11"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price11">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                  <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                 </div>
-  
-                <div id="output-cont" class="output-containers">
-                  <a href="">
-                    <div id="image-cont">
-                      <img src="images/Photo2016,205120PM.jpg" id="img1">
-                  </div>
-                  <div id="text-cont">
-                      <p class="address-results"><span class="type">Single room</span> in <span class="hostel" id="hostel1">Atitude hostel </span>for rent
-                      <span class ="street" id="street1">Edo street,</span><span class ="community" id="community1"> Ekosodin</span></p>
-                      <p class="price-results"><span class="price" id="price1">N70,000 </span>per year</p>
-                      <div class ="icons-cont">
-                        <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                      </div>
-                  </div>
-                  </a>
+            </div>
+            </a>
+          </div>
+          
+          <div id="output-cont" class="output-containers">
+            <a href="apartment-info-page2.html" class ="value-links">
+              <div id="image-cont">
+                <img src="images/student-dorm.jpg" id="img12" class="apartment-img">
+            </div>
+            <div id="text-cont">
+                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel12">whitegate hostel </span>for rent
+                <span class ="street" id="street12">Image street</span><span class="community"  id="community12"> Osasoghie</span></p>
+                <p class="price-results"><span class ="price" id="price12">N200,000 </span>per year</p>
+                <div class ="icons-cont">
+                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+                  <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
                 </div>
-
-              </div>
-
-
-              
-
-              <!--contains link to the apartment upload page-->
-              <div id="new-upload-cont">
-                <a href="apartment-upload-page.html">
-                    <p>Upload new apartment</p>
-                </a>
-              </div>
-        </div>
-
-
-    </div>
-
-     <!---contains customer review boxes containing the image, name and message of the reviewer it also contains the more reviews link-->
-    <div id="review-cont">
-      <h3>Your Reviews</h3>
-      <div id="all-reviews">
-      <!--<div id="review-1" class="reviews">
-        <div class="reviewer-img-cont">
-          <img src="images/219969.png">
-        </div>
-
-        <div class="rewiewer-name-cont">
-          <h4 class ="name">Janet Rene</h4>
-        </div>
-        <div class ="reviewer-message-cont">
-          <p id="message"> I had an excellent experience with Sunday maxwell. from start to finish
-            he was always professional, responsive, and always available to answer 
-            any questions I had, I highly recommended him to anyone looking to rent 
-            an apartment without stress
-        </p> 
-	</div>
-      </div>-->
-
-      </div>
-      <div class="more-reviews-cont">
-        <a href="" id="more-rev">More reviews</a>
-      </div>
-
-    </div>
-
-
-    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
-    <div id="footer-cont">
-      <div class="footer-sub-cont-a">
-        <p ><a href="" class="foot-links">apartments</a></p>
-        <p><a href="" class="foot-links">products and services</a></p>
-        <p><a href=""class="foot-links">The team</a></p>
-        <p><a href=""class="foot-links">contact</a></p>
-        <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
-      </div>
-      <div class="footer-sub-cont-b">
-        <!--here-->
-        <p id="foot-para">For feedback and inquiries contact us on</p>
-        <!--to here-->
-        <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
-        <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
-        <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
-      </div>
-      <div id="footer-base-cont">
-        <div id="icon-cont">
-          <div class="icon-sub-cont">
-            <a href="">
-              <img src="images/facebook-logo.png">
+            </div>
             </a>
           </div>
-          <div class="icon-sub-cont">
-            <a href="">
-              <img src="images/124021.png">
-            </a>
-          </div>
-          <div class="icon-sub-cont">
-            <a href="">
-              <img src="images/2048px-Instagram_icon.png">
-            </a>
-          </div>
-          <div class="icon-sub-cont">
-            <a href="">
-              <img src="images/official-linkedin-icon-png-16.jpg">
-            </a>
-          </div>
-        </div> 
       </div>
     </div>
 
     
-    <script src = "scripts/main2.js"></script>
+
+
+
+
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+       <!--here-->
+       <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
+          <p><a href="product-page.html" class="foot-links">products</a></p>
+          <p><a href="service-page.html"class="foot-links">services</a></p>
+          <p><a href="about-page.html"class="foot-links">about us</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <!--here-->
+          <p id="foot-para">For feedback and inquiries contact us on</p>
+          <!--to here-->
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+
+        <div id="footer-base-cont">
+          <div id="icon-cont">
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/facebook-logo.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/124021.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/2048px-Instagram_icon.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/official-linkedin-icon-png-16.jpg">
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!--to here-->
+
+      
+    <script src = "main.js"></script>
     <script>
           //toggles see more button between visible and hidden
           //make view more container visible
