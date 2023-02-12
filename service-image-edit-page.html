@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--here-->
+    <title>Edit service portfolio images</title>
+    <!--to here-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="image-upload-page.css">
+</head>
+<body>
+     <!-- responsive top navigator bar -->
+     <div class="top-nav" id="my-Top-nav">
+        <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+        <a href="homepage.html">Home</a>
+        <a href="Apartment-page.html">Apartments</a>
+        <a href="product-page.html">products</a>
+        <a href="service-page.html">services</a>
+
+
+        <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+            <div class="icon-cont" onclick="changeIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+         </a>
+    </div>
+
+    <div id="outer-most-container">
+
+      <!---Contains image upload container, submit button and notice container-->
+        <form action="" id="service-images-form">
+            <div id="logo-container">
+                <img src="images/Black logo on white.png">
+             </div>
+
+             <h2 id="form-title">Update portfolio images</h2>
+
+             <!-- contains product image upload input fields-->
+             <h3>Upload up to five images of your services</h3>
+             <div id="service-img-cont">
+                 <label for="service img" id="upload">upload new image
+                     <input type="file" name="service img" id="service-image1" class="service-imgs" required/>
+                     <p id ="file-name1" class="file-name"></p>
+                 </label>
+
+                 <label for="service img" id="upload">upload new image
+                    <input type="file" name=" service img" id="service-image2" class="service-imgs"/>
+                    <p id ="file-name2" class="file-name"></p>
+                </label>
+
+                <label for="service img" id="upload">upload new image
+                    <input type="file" name="service img" id="service-image3" class="service-imgs"/>
+                    <p id ="file-name3" class="file-name"></p>
+                </label>
+
+                <label for="service img" id="upload">upload new image
+                    <input type="file" name="service img" id="service-image4" class="service-imgs"/>
+                    <p id ="file-name4" class="file-name"></p>
+                </label>
+
+                <label for="service img" id="upload">upload new image
+                    <input type="file" name="service img" id="service-image5" class="service-imgs"/>
+                    <p id ="file-name5" class="file-name"></p>
+                </label>
+             </div>
+
+             <!--contains submit button-->
+             <div id="Submit upload">
+                <button type="submit" id="imgs-submit" class="submit-btn">Save changes</button>
+             </div>
+
+             <!--notice contains important upload conditions-->
+             <div id="notice">
+                <h4>Please Note:</h4>
+                <p> only one photo of your work, workshop or you working is required, you are allowed to upload as many as 5 images</p>
+                <p>pls try to upload original pictures of you ,your workshop or you working</p>
+
+             </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+    <!--here-->
+    <div id="footer-cont">
+      <div class="footer-sub-cont-a">
+        <p ><a href="" class="foot-links">apartments</a></p>
+        <p><a href="" class="foot-links">products and services</a></p>
+        <p><a href=""class="foot-links">about us</a></p>
+        <p><a href=""class="foot-links">contact</a></p>
+        <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+      </div>
+      <div class="footer-sub-cont-b">
+        <!--here-->
+        <p id="foot-para">For feedback and inquiries contact us on</p>
+        <!--to here-->
+        <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+        <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+        <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+      </div>
+      <div id="footer-base-cont">
+        <div id="icon-cont">
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/facebook-logo.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/124021.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/2048px-Instagram_icon.png">
+            </a>
+          </div>
+          <div class="icon-sub-cont">
+            <a href="">
+              <img src="images/official-linkedin-icon-png-16.jpg">
+            </a>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <!--to here-->
+
+      
+    
+
+
+    
+    <script src = "main.js"></script>
+    <script>
+      //here
+        //displays name and size of uploaded image file
+        //here
+        const file = document.getElementById("service-image1")
+        const file2 = document.getElementById("service-image2")
+        const file3 = document.getElementById("service-image3")
+        const file4 = document.getElementById("service-image4")
+        const file5 = document.getElementById("service-image5")
+
+        //for first image
+        file.addEventListener("change", (e) => {
+            const [file] = e.target.files;
+            const {name: fileName , size} = file;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name1').textContent = 
+            fileNameAndSize;
+        
+        })
+        //for second image
+        file2.addEventListener("change", (e) => {
+            const [file2] = e.target.files;
+            const {name: fileName , size} = file2;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name2').textContent = 
+            fileNameAndSize;
+        
+        })
+
+        //for third image
+        file3.addEventListener("change", (e) => {
+            const [file3] = e.target.files;
+            const {name: fileName , size} = file3;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name3').textContent = 
+            fileNameAndSize;
+        
+        })
+
+        //for fourth image
+        file4.addEventListener("change", (e) => {
+            const [file4] = e.target.files;
+            const {name: fileName , size} = file4;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name4').textContent = 
+            fileNameAndSize;
+        
+        })
+
+         //for fifth image
+         file5.addEventListener("change", (e) => {
+            const [file5] = e.target.files;
+            const {name: fileName , size} = file5;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name5').textContent = 
+            fileNameAndSize;
+        
+        })
+        //to here
+    </script>
+</body>
+</html>

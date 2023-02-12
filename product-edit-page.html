@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit apartment</title>
+    <!--here-->
+    <title>Edit product</title>
+    <!--to here-->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="apartment-upload-page.css">
+    <link rel="stylesheet" href="product-upload-page.css">
 </head>
 <body>
      <!-- responsive top navigator bar -->
@@ -29,8 +31,8 @@
              <p href="" class="drop-links">Help</p>
              <p href="" class="drop-links">logout</p>
          </div>
-    </div>
-  <!--to here-->
+       </div>
+       <!--to here-->
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -43,99 +45,85 @@
     <div id="outer-most-container">
 
       <!---Contains input fields, select boxes, image upload container, submit button and notice container-->
-        <form action="" id="apart-upload-form">
+        <form action="" id="product-upload-form">
             <div id="logo-container">
                 <img src="images/Black logo on white.png">
              </div>
 
-             <h2 id="form-title">Edit apartment</h2>
+             <h2 id="form-title">Edit product</h2>
 
-             <!--select box for apartment type-->
-             <label for="">Apartment type</label>
-             <select name="type" class="type" required>
-                 <option value="Single-Room">Single Room</option>
-                 <option value="Self-contain">Self-contain</option>
-                 <option value="One-bedroom">One bedroom flat</option>
-                 <option value="Two-bedroom">Two bedrooom flat</option>
-                 <option value="Three-bedroom">Three bedrooom flat</option>
+             <!--select box for product category-->
+             <label for="">product category</label>
+             <select name="product category" id="product-category" class="type" required>
+                <option value="Beds and beddings">Beds and beddings</option>
+                <option value="Books and stationery">Books and stationery</option>
+                <option value="Cosmetics and care products">Cosmetics and care products</option>
+                <option value="Clothing and Accesories">Clothing and Accessories</option>
+                <option value="Drinks and Beverages">Drinks and Beverages</option>
+                <option value="Footwear">Footwear and bags</option>
+                <option value="Electronics and Accessories">Electronics and Accessories</option>
+                <option value="Food and Groceries">Food and groceries</option>
+                <option value="Home furniture">Furniture</option>
+                <option value="Kitchen utensils">Kitchen utensils</option>
+                <option value="Laptops and Accessories">Laptops and Accessories</option>
+                <option value="Jewellery">Jewellery</option>
+                <option value="Phones and Accessories">Phones and Accessories</option>
+                <option value="Stationery">Stationery</option>
              </select><br>
 
-             <!--Input field for hostel name-->
-             <label for="Hostelname">Hostel name</label><br>
-             <input type="text" class="hostel" name="Hostelname"><br>
+             <!--Input field for product name-->
+             <label for="productname">product name</label><br>
+             <input type="text" id="product-name" name="productname" class="products"><br>
 
-
-             <!--select box for community where apartment is located -->
-             <label for="community">Select Community</label><br>
-             <select name="community" id="community" class="community" onchange="changeOptions(this.id, 'street')" required>
-                <option value="Adolor">Adolor</option>
-                <option value="Ebvoumore">Ebvoumore</option>
-                <option value="EDPA">EDPA</option>
-                <option value="Ekosodin">Ekosodin</option>
-                <option value="Evidence">Evidence</option>
-                <option value="Isiohor">Isiohor</option>
-                <option value="Osasoghie">Osasoghie</option>
-                <option value="Oluku">Oluku</option>
-                <option value="Uselu">Uselu</option>
-             </select><br>
-
-             <!--select box for street where apartment is located depending on community selected-->
-             <label for="street">Select street</label ><br>
-             <select id="street" name="street" class="street"></select><br>
-
-             <!--Apartment features input and select boxes-->
-
-             <label for="price">Rent per year</label><br>
+             <!--product price input field-->
+             <label for="product-price">Product price</label><br>
              <input type="number" class="price" required><br>
 
-             <label for="running-water">Running water?</label><br>
-             <select name="running-water" id="Running water" class="features">
-                <option value="yes">Yes</option>
-                <option value="nO">NO</option>
+             <!--product features textarea field-->
+             <label for="product features">Product features</label><br>
+             <textarea id="product-features" name="product features"></textarea><br>
+
+             <label for="delivery status">Delivery</label><br>
+             <select name="delivery status" id ="delivery-status" class="deliveries">
+                <option value="Available">Available</option>
+                <option value="Unavailable">Unavailable</option>
              </select><br>
 
-             <label for="waste-disposal">Adequate waste disposal?</label><br>
-             <select name="waste-disposal" id ="Adequate disposal" class="features">
-                <option value="yes">Yes</option>
-                <option value="No">No</option>
-             </select><br>
+             <label for="product status">product status</label><br>
+             <select name="product status" id="product-status" class="status">
+                <option value="in stock">in stock</option>
+                <option value="Out of stock">Out of stock</option>
 
-             <label for="Electricity">hours of power supply daily</label><br>
-             <input type="number" name="Electricity" id="hours" max="24" min="0" class="features">
-
-             <!-- contains apartment image upload input fields-->
-             <h3>Change apartment images</h3>
-             <div id="apartment-img-cont">
-                 <label for="apartmemt img" id="upload">upload new image
-                     <input type="file" name="apartment img" id="Apart-image1" class="apartmemt-img"/>
+             </select>
+             <!-- contains product image upload input fields-->
+             <h3>Change product images</h3>
+             <div id="product-img-cont">
+                 <label for="product img" id="upload">upload image
+                     <input type="file" name="product img" id="product-image1" class="product-img"/>
                      <p id ="file-name1" class="file-name"></p>
                  </label>
 
-                 <label for="apartmemt img" id="upload">upload new image
-                    <input type="file" name="apartment img" id="Apart-image2" class="apartmemt-img"/>
+                 <label for="apartmemt img" id="upload">upload image
+                    <input type="file" name="product img" id="product-image2" class="product-img"/>
                     <p id ="file-name2" class="file-name"></p>
                 </label>
 
-                <label for="apartmemt img" id="upload">upload new image
-                    <input type="file" name="apartment img" id="Apart-image3" class="apartmemt-img"/>
+                <label for="product img" id="upload">upload image
+                    <input type="file" name="product img" id="product-image3" class="product-img"/>
                     <p id ="file-name3" class="file-name"></p>
                 </label>
              </div>
 
              <!--contains submit button-->
              <div id="Submit upload">
-              <!--here-->
-                <button type="submit" id="submit-apart" class="submit-btn">Save changes</button>
-              <!--to here-->
+                <button type="submit" id="Submit-product" class="submit-btn">Save changes</button>
              </div>
 
              <!--notice contains important upload conditions-->
              <div id="notice">
                 <h4>Please Note:</h4>
-                <!--here-->
                 <p> This form  is to be filled as factually as possible, using false information in this form is ill advised </p>
-                <p>Only currrently empty accomodation should be uploaded, and should be deleted when leased</p>
-                <!--to here-->
+                <p>Only currrently available products should be uploaded, and should be deleted when unavailable</p>
 
              </div>
         </form>
@@ -196,7 +184,6 @@
         </div>
       </div>
       <!--to here-->
-
       
     
 
@@ -204,52 +191,12 @@
     
     <script src = "main.js"></script>
     <script>
-        //changes the content of the street select box based on the selection in the community box
-        function changeOptions(lst1, lst2) {
-            var lst1 = document.getElementById(lst1);
-            var lst2 = document.getElementById(lst2);
-
-            //street option values for various community selected
-            lst2.innerHTML = "";
-            if(lst1.value == "Adolor") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-
-            } else if(lst1.value == "Ebvoumore") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-
-            } else if(lst1.value == "EDPA") {
-                var optionArray = ["18th street|18th street", "19th street|19th street","20th street|20th street",
-                "21st street|21st street", "22nd street|22nd street","|","|"];
-
-            } else if(lst1.value == "Ekosodin") {
-                var optionArray = ["Boundary|Boundary", "edo street|edo street","JB|JB","newton street|newton street", "|","|","|"];
-
-            } else if(lst1.value == "Evidence") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Isiohor") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Osasoghie") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Oluku") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            }else if(lst1.value == "Uselu") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            }
-            
-            for (var option in optionArray) {
-                var pair = optionArray[option].split("|");
-                var newOption = document.createElement("option");
-                newOption.value = pair[0];
-                newOption.innerHTML = pair[1];
-                lst2.options.add(newOption);
-
-            }
-        }
-
+      //here
         //displays name and size of uploaded image file
-        const file = document.getElementById("Apart-image1")
-        const file2 = document.getElementById("Apart-image2")
-        const file3 = document.getElementById("Apart-image3")
+        //here
+        const file = document.getElementById("product-image1")
+        const file2 = document.getElementById("product-image2")
+        const file3 = document.getElementById("product-image3")
         //for first image
         file.addEventListener("change", (e) => {
             const [file] = e.target.files;
@@ -281,7 +228,7 @@
             fileNameAndSize;
         
         })
-
+        //to here
     </script>
 </body>
 </html>
