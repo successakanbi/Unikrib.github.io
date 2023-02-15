@@ -21,6 +21,17 @@ def get_service(service_id):
         abort(404, "service not found")
     return jsonify(obj.to_dict())
 
+@app_views.route('/users/<user_id>/services', strict_slashes=False)
+def user_service(user_id):
+    """This return the service associated with a user"""
+    obj = storage.get('User', user_id)
+    if obj == None:
+        abort(404, "No user found")
+    for key, obj in storage.all(Service).items():
+        if obj.owner_id == user_id:
+            return jsonify(obj.to_dict())
+    return {}
+
 @app_views.route('/service-categories/<cat_id>/services', strict_slashes=False)
 def cat_services(cat_id):
     """This returns a list of all services in a category"""

@@ -42,7 +42,7 @@ $(function (){
 //Post the inputted apartment details
 $(function (){
     const userId = window.localStorage.getItem('newId')
-    $("#Submit-apart").on('click', function(){
+    $("#submit-apart").on('click', function(){
         houseDict = {
             "apartment": $('#apartment :selected').val(),
             "name": $('#name').val(),

@@ -2,12 +2,14 @@
 
 DELIMITER // ;
 DROP TRIGGER IF EXISTS ratings
-CREATE TRIGGER ratings
-BEFORE INSERT ON reviews
-FOR EACH ROW
+CREATE TRIGGER calc_avg
+    AFTER INSERT
+    ON reviews FOR EACH ROW
     BEGIN
         UPDATE users
-        SET rating=AVG(SELECT * 
-                       FROM users
-                       WHERE id=reviews.reviewee;)
+        SET rating=(SELECT AVG(star)
+            FROM reviews
+            WHERE id=NEW.id)
+        WHERE id=NEW.id;
     END//
+DELIMITER ;

@@ -20,6 +20,10 @@ function getUserType(){
                 window.location.href = 'agent-homepage.html';
             } else if (currentUser.user_type === 'vendor') {
                 window.location.href = 'vendor-homepage.html';
+            } else if (currentUser.user_type === 'sp'){
+                window.location.href = 'service-homepage.html';
+            } else if (currentUser.user_type === 'regular'){
+                window.location.href = 'user-homepage.html';
             }
         },
         error: function (){

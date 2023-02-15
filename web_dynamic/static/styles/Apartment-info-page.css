@@ -129,16 +129,23 @@
 .tip{
     font-size: 1.1vw;
 }
+/*here*/
 #disclaimer{
-    padding: 10px 0 2px 10px;
+    padding: 10px 2px 2px 10px;
     color: #cc2b0e;
     background-color: #f8debb;
     margin-bottom: 50px;
 }
-#message{
+#disclaimer h4{
     font-size: 1.1vw;
+    line-height: 0.2vw;
+}
+#message{
+    margin-top: -1vw;
+    font-size: 0.9vw;
     font-weight: 400;
 }
+/*here*/
 #internal-right-container{
     float: left;
     width: 30%;
@@ -169,18 +176,36 @@
     float: left;
     margin: 0 0 1vw 0;
 }
+/*here*/
 .name{
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     font-weight: 600;
-    line-height: 0.1vw;
+    line-height: 0.2vw;
 }
 .services{
     font-size: 0.9vw;
     font-weight: 600;
     color: #686666;
-    line-height: 1.4vw;
-
+    line-height: 0.2vw;
 }
+.community2{
+    font-size:1vw;
+    font-weight: 600;
+    color: #172074;
+    margin-top: -10px;
+}
+.rating{
+    color: #c7c409;
+    font-size: 1vw;
+    margin-top: -15px;
+}
+.bio{
+    font-size: 0.8vw;
+    font-weight: 500;
+    color: #0c5555;
+    margin-top: -10px;
+}
+/*to here*/
 #contact-cont{
     padding: 1vw 0 1vw 3%;
 }
@@ -232,6 +257,8 @@
 }
 #rev-img-cont img{
     width: 100%;
+    border-radius: 50%;
+    height: 3.5vw;
 }
 #rev-name-cont{
     float: left;
@@ -312,6 +339,7 @@
     width:50%;
     float: left;
    }
+   /*here*/
    #edit-apartment{
     width:70%;
     margin-left: 15%;
@@ -330,9 +358,7 @@
     border: none;
     font-size: 1vw;
    }
-   .block {
-    display: block;
-   }
+   /*to here*/
    button .fa{
      color: #ffffff;
     }
@@ -434,24 +460,31 @@
         background-color: #f8debb;
         margin-bottom: 30px;
     }
+    /*here*/
+    #disclaimer h4{
+        font-size: 1.8vw;
+    }
+    /*to here*/
     #message{
         font-size: 1.6vw;
         font-weight: 500;
     }
     #internal-right-container{
         float: left;
-        width: 79%;
+        width: 80%;
         margin:2vw 0 0 4%;
         padding: 0 0 0 1%;   
     }
+    /*to here*/
     #profile-cont{
         width:49%;
         display:inline-block;
         margin-bottom: 1vw;
         margin: 0 1vw 1vw 0; 
     }
+    /*here*/
     #profile-pic-cont{
-        width:30%;
+        width:25%;
         float: left;
         margin: 0 0 5vw 0;
         padding: 3px 0 0 0;
@@ -459,27 +492,47 @@
     #profile-pic-cont img{
         width: 90%;
         margin-left: 10%;
-        height: 10vw;
+        height: 7.5vw;
         border-radius: 50%;
     }
     #name-cont{
         padding: 0 0 0 3%;
-        width:65%;
+        width:70%;
         float: left;
         margin: 0 0 5vw 0;
     }
+    /*to here*/
     .name{
         font-size: 2.2vw;
         font-weight: 600;
-        line-height: 1vw;
+        line-height: 0.5vw;
     }
     .services{
-        font-size: 1.8vw;
+        font-size: 1.9vw;
         font-weight: 600;
         color: #686666;
-        line-height: 4vw;
+        line-height: 0.5vw;
     
     }
+    /*here*/
+    .community2{
+        font-size:2vw;
+        font-weight: 600;
+        color: #172074;
+        margin-top: -10px;
+    }
+    .rating{
+        color: #c7c409;
+        font-size: 1.8vw;
+        margin-top: -15px;
+    }
+    .bio{
+        font-size: 1.5vw;
+        font-weight: 500;
+        color: #0c5555;
+        margin-top: -10px;
+    }
+    /*to here*/
     #contact-cont{
         padding: 1vw 0 1vw 5%;
     }
@@ -522,18 +575,20 @@
         background-color: #ffffff;
         border-radius: 5px;
     }
+    /*here*/
     #rev-img-cont{
         float: left;
-        width: 14%;
+        width: 17%;
         padding: 0.5vw 0 0 1%;
     }
     #rev-img-cont img{
         width: 100%;
+        height: 4.5vw;
     }
     #rev-name-cont{
         float: left;
-        width:82.5%;
-        padding:0 0 0 2.5%;
+        width:80%;
+        padding:0 0 0 2%;
     }
     .rev-name{
         font-size: 1.8vw;
@@ -545,9 +600,10 @@
         padding: 0 1% 0 1%;
     }
     #review-message {
-        font-size: 1.3vw;
+        font-size: 1.5vw;
         font-weight: 500;
     }
+    /*to here*/
     .time-stamp{
         font-size: 1.3vw;
     }
@@ -557,12 +613,15 @@
         font-weight: 500;
         color: #092980;
     }
+    /*here*/
     #security-tip-cont{
         width: 48%;
+        float: left;
         background-color: #1aa1a1;
         padding: 2vw 0 2vw 1%;
         margin: 0 0 5vw 0;
     }
+    /* to here*/
     #security-tip-cont h4{
         font-size: 1.9vw;
         color: #ffffff;
@@ -578,7 +637,7 @@
      padding: 1.5vw 0 1.5vw 0;
      float: right;
      width:48%;
-     margin: -19vw 0 5vw 0;
+     margin: 0 0 5vw 0;
     }
     #report-cont a {
         color: #e9e6e6;
@@ -586,23 +645,23 @@
         font-size: 1.7vw;
         font-weight: 500;
     }
+    /*here*/
     #report-button{
         background-color: #e20f0f;
-        width: 42%;
-        margin-left: 29%;
+        width: 62%;
+        margin-left: 19%;
         padding: 3.5vw 2% 3.5vw 2%;
         text-align: center;
     }
-    /*here*/
-   #edit-delete-cont{
-    width: 48%;
-    padding: 2vw 0 2vw 1%;
+    #edit-delete-cont{
+        width: 48%;
+        padding: 2vw 0 2vw 1%;
    }
    #edit-apartment{
-    width:80%;
-    margin-left: 10%;
-    padding: 2vw 0 2vw 0;
-    font-size: 1.7vw;
+        width:80%;
+        margin-left: 10%;
+        padding: 2vw 0 2vw 0;
+        font-size: 1.7vw;
    }
    #delete-apartment{
     width:80%;
@@ -668,39 +727,48 @@
         background-color: #d1d1cc79;
         padding: 10px 0 2px 10px;
     }
+    /*here*/
     .address-results{
-        font-size: 3.3vw;
+        font-size: 4vw;
     }
     .price-results{
-        font-size: 3.3vw;
+        font-size: 4vw;
         font-weight: 600;
     }
     .type, .hostel, .street, .community{
-        font-size:3.5vw;
+        font-size:4.5vw;
         font-weight: 600;
         color: #172074;
     }
     .price{
-        font-size: 3.5vw;
+        font-size: 4.5vw;
         font-weight: 700;
         color:#326805;
     }
+    /*to here*/
     #feature-cont{
         padding: 10px 0 2px 10px;
         margin: 1vw 0 2vw 0;
         color: #ffffff;
         background-color: #0e9215a4;
     }
+    /*here*/
     .feature{
-        font-size: 3.2vw;
+        font-size: 3.5vw;
         font-weight: 500;
     }
+    /*to here*/
     #disclaimer{
         padding: 10px 0 2px 10px;
         color: #cc2b0e;
         background-color: #f8debb;
         margin-bottom: 20px;
     }
+    /*here*/
+    #disclaimer h4{
+        font-size: 3.6vw;
+    }
+    /*to here*/
     #message{
         font-size: 3.2vw;
         font-weight: 500;
@@ -741,11 +809,29 @@
         line-height: 2vw;
     }
     .services{
-        font-size: 3.8vw;
+        font-size: 4.2vw;
         font-weight: 600;
         color: #686666;
-        line-height: 7vw;
+        line-height: 1vw;
     
+    }
+    /*here*/
+    .community2{
+        font-size:4vw;
+        font-weight: 600;
+        color: #172074;
+        margin-top: -10px;
+    }
+    .rating{
+        color: #c7c409;
+        font-size: 4vw;
+        margin-top: -15px;
+    }
+    .bio{
+        font-size: 3.5vw;
+        font-weight: 500;
+        color: #0c5555;
+        margin-top: -10px;
     }
     #contact-cont{
         padding: 1vw 0 1vw 5%;
@@ -790,21 +876,23 @@
         background-color: #ffffff;
         border-radius: 5px;
     }
+    /*here*/
     #rev-img-cont{
         float: left;
-        width: 14%;
+        width: 17%;
         padding: 0.5vw 0 0 1%;
     }
     #rev-img-cont img{
         width: 100%;
+        height: 13vw;
     }
     #rev-name-cont{
         float: left;
-        width:82.5%;
+        width:79.5%;
         padding:0 0 0 2.5%;
     }
     .rev-name{
-        font-size: 3.8vw;
+        font-size: 4.5vw;
         font-weight: 700;
     }
     #rev-message-cont {
@@ -813,21 +901,25 @@
         padding: 0 1% 0 1%;
     }
     #review-message {
-        font-size: 3.3vw;
+        font-size: 3.5vw;
         font-weight: 500;
     }
+    /*to here*/
     .time-stamp{
         font-size: 3vw;
     }
     #other-reviews-cont p {
         font-size: 3.6vw;
     }
+    /*here*/
     #security-tip-cont{
+        float: none;
         width: 98%;
         background-color: #1aa1a1;
         padding: 2vw 0 2vw 1%;
         margin: 0 0 6vw 0;
     }
+    /*to here*/
     #security-tip-cont h4{
         font-size: 3.9vw;
         color: #ffffff;
@@ -838,13 +930,15 @@
         color: #ffffff;
         font-weight: 600;
     }
+    /*here*/
     #report-cont{
      background-color: #e6e1e1;
-     padding: 1.5vw 0 1.5vw 0;
+     padding: 3vw 0 3vw 0;
      float: none;
      width:98%;
-     margin: -3.5vw 0 5vw 0;
+     margin: 0 0 5vw 0;
     }
+    /*here*/
     #report-cont a {
         color: #e9e6e6;
         text-decoration: none;

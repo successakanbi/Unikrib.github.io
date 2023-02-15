@@ -1,0 +1,340 @@
+#external-main-cont{
+    width:100%;
+    padding: 80px 0 0 0;
+    display: inline-block;
+    
+}
+#internal-left-cont{
+    width: 65%;
+    display: subgrid;
+    margin:5vw 0 5vw 17.5%;
+    padding: 0 0 0 1%;   
+}
+#profile-cont{
+    width:49%;
+    display:inline-block;
+    margin: 0 0 1vw 0;
+    background-color: #f8f4f4; 
+}
+#profile-pic-cont{
+    width:25%;
+    float: left;
+    margin: 0 0 1vw 0;
+    padding: 1vw 0 0 0;
+}
+#profile-pic-cont img{
+    width: 90%;
+    margin-left: 10%;
+    height: 7vw;
+    border-radius: 50%;
+}
+#name-cont{
+    padding: 0 0 0 3%;
+    width:72%;
+    float: left;
+    margin: 0 0 1vw 0;
+}
+.edit-icon a{
+    float:right;
+    margin-right: 10%;
+    margin-top: -2.5vw;
+    font-size: 1.5vw;
+    color: #7e7e81;
+
+}
+.name{
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: #0e36a5;
+    line-height: 1vw;
+}
+ .community{
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: #071355;
+    line-height: 0.2vw;
+
+}
+.email{
+    font-size: 1vw;
+    margin-bottom: 4vw;
+    color: #078167;
+    font-weight: 500;
+}
+#contact-cont{
+    padding: 1vw 0 1vw 3%;
+}
+#uploader-phone{
+    display: inline-block;
+    background-color: #092980;
+    padding: 0px 4vw 0 4vw;
+    margin-right: 1vw;
+    
+}
+#uploader-whatsapp{
+    display: inline-block;
+    background-color: #0b880b;
+    padding: 0px 4vw 0 4vw;
+}
+#uploader-phone a, #uploader-whatsapp a {
+    text-decoration: none;
+    color: #ffffff;
+} 
+#uploader-phone .fa #uploader-whatsapp .fa{
+    color: #ffffff;
+}
+.contact{
+    font-size: 0.9vw;
+}
+.contact .fa {
+    color: #ffffff;
+}
+#security-tip-cont{
+    width: 49%;
+    float: right;
+    background-color: #1a60a1e1;
+    padding: 2.5px 0 2.5px 1%;
+    margin: 0 0 1vw 0;
+}
+#security-tip-cont h4{
+    font-size: 1.3vw;
+    color: #ffffff;
+    line-height: 0.2vw;
+}
+.tips {
+    font-size: 0.9vw;
+    color: #ffffff;
+    font-weight: 600;
+}
+#disclaimer{
+    width: 48%;
+    padding: 0.5vw 0 0.5vw 1%;
+    color: #cc2b0e;
+    background-color: #f8debb;
+    margin-bottom: 50px;
+}
+#disclaimer h4{
+    font-size: 1.1vw;
+}
+#message{
+    font-size: 0.9vw;
+    font-weight: 400;
+    margin-top: -1vw;
+}
+#internal-right-cont{
+    float: left;
+    width: 45%;
+    padding: 0 0 0 7%;
+
+}
+
+@media screen and (max-width: 900px){
+
+    #external-main-cont{
+        padding: 80px 0 0 0;
+    }
+    #internal-left-cont{
+        display: inline-block;
+        width: 90%;
+        margin:8vw 0 8vw 5%;
+        padding: 0 0 0 1%;  
+        
+    }
+    #profile-cont{
+        width:49%;
+        float: left;
+        padding: 1vw 0 0 0;
+        margin: 0 1vw 1vw 0; 
+    }
+    #profile-pic-cont{
+        width:25%;
+        float: left;
+        margin: 0 0 5vw 0;
+        padding: 3px 0 0 0;
+    }
+    #profile-pic-cont img{
+        width: 90%;
+        margin-left: 10%;
+        height: 9vw;
+        border-radius: 50%;
+    }
+    #name-cont{
+        padding: 0 0 0 3%;
+        width:72%;
+        float: left;
+        margin: 0 0 5vw 0;
+    }
+    .name{
+        font-size: 2vw;
+        font-weight: 600;
+        line-height: 1vw;
+    }
+    .edit-icon a{
+        margin-right: 10%;
+        margin-top: -4vw;
+        font-size: 2.5vw;
+    }
+    .community{
+        font-size: 1.7vw;
+        line-height: 1vw;
+    }
+    .email{
+        font-size: 1.6vw;
+    }
+    #contact-cont{
+        padding: 1vw 0 1vw 5%;
+    }
+    #uploader-phone{
+        padding: 0px 4vw 0 4vw;
+        
+    }
+    #uploader-whatsapp{
+        padding: 0px 4vw 0 4vw;
+    }
+    .contact{
+        font-size: 1.7vw;
+    }
+    #security-tip-cont{
+        width: 47%;
+        float: right;
+        padding: 2.5px 1% 2.5px 1%;
+        margin: 0 0 1vw 0;
+    }
+    #security-tip-cont h4{
+        font-size: 2vw;
+    }
+    .tips {
+        font-size: 1.4vw;
+        color: #ffffff;
+        font-weight: 600;
+    }
+    #disclaimer{
+        width: 47%;
+        padding: 0.5vw 1% 0.5vw 1%;
+        float: left;
+        margin-bottom: 50px;
+    }
+    #disclaimer h4{
+        font-size: 2vw;
+    }
+    #message{
+        font-size: 1.3vw;
+        font-weight: 400;
+        margin-top: -2vw;
+    }
+    #internal-right-cont{
+        width: 90%;
+        padding: 0 0 0 5%;
+    
+    }
+    
+}
+
+@media screen and (max-width: 590px){
+    #internal-left-cont{
+        width: 89%;
+        margin:2vw 0 0 5%;
+        padding: 0 0 0 1%;  
+        
+    }
+    #profile-cont{
+        width:100%;
+        float: none;
+        margin-bottom: 1vw;
+        margin: 0 1vw 3vw 0; 
+    }
+    #profile-pic-cont{
+        width:25%;
+        float: left;
+        margin: 0 0 5vw 0;
+        padding: 3px 0 0 0;
+    }
+    #profile-pic-cont img{
+        width: 90%;
+        margin-left: 10%;
+        height: 18vw;
+        border-radius: 50%;
+    }
+    #name-cont{
+        padding: 0 0 0 3%;
+        width:72%;
+        float: left;
+        margin: 0 0 5vw 0;
+    }
+    .name{
+        font-size: 4.5vw;
+        font-weight: 600;
+        line-height: 1.5vw;
+    }
+    .edit-icon a{
+        margin-right: 10%;
+        margin-top: -7vw;
+        font-size: 6vw;
+    }
+    .community{
+        font-size: 3.8vw;
+        font-weight: 600;
+        color: #686666;
+        line-height: 1.5vw;
+    
+    }
+    .email{
+        font-size: 3.6vw;
+        font-weight: 500;
+    }
+    #contact-cont{
+        padding: 1vw 0 3vw 1%;
+    }
+    #uploader-phone{
+        display: inline-block;
+        background-color: #092980;
+        padding: 0px 7vw 0 7vw;
+        margin-right: 5%;
+        
+    }
+    #uploader-whatsapp{
+        display: inline-block;
+        background-color: #0b880b;
+        padding: 0px 7vw 0 7vw;
+    }
+    .contact{
+        font-size: 3.5vw;
+    }
+    .contact .fa {
+        color: #ffffff;
+    }
+    #internal-right-cont{
+        width: 90%;
+        padding: 0 0 0 5%;
+    
+    }
+    #security-tip-cont{
+        width: 98%;
+        float: none;
+        padding: 2.5px 1% 2.5px 1%;
+        margin: 0 0 3vw 0;
+    }
+    #security-tip-cont h4{
+        font-size: 4.5vw;
+    }
+    .tips {
+        font-size: 3.2vw;
+        color: #ffffff;
+        font-weight: 600;
+    }
+    #disclaimer{
+        width: 98%;
+        padding: 0.5vw 1% 0.5vw 1%;
+        float: none;
+    }
+    #disclaimer h4{
+        font-size: 4vw;
+    }
+    #message{
+        font-size: 3.1vw;
+        font-weight: 400;
+        margin-top: -2vw;
+    }
+    
+
+}
