@@ -154,10 +154,16 @@
     background-color: #f8debb;
     margin-bottom: 50px;
 }
-#message{
+/*here*/
+#disclaimer h4{
     font-size: 1.1vw;
-    font-weight: 400;
 }
+#message{
+    font-size: 0.9vw;
+    font-weight: 400;
+    margin-top: -1vw;
+}
+/* to here*/
 #internal-right-container{
     float: left;
     width: 30%;
@@ -478,6 +484,11 @@
         background-color: #f8debb;
         margin-bottom: 30px;
     }
+    /*here*/
+    #disclaimer h4{
+        font-size: 1.8vw;
+    }
+     /* to here*/
     #message{
         font-size: 1.6vw;
         font-weight: 500;
@@ -623,12 +634,15 @@
         font-weight: 500;
         color: #092980;
     }
+    /*here*/
     #security-tip-cont{
         width: 48%;
         background-color: #1aa1a1;
+        float: left;
         padding: 3vw 0 3vw 1%;
         margin: 0 0 5vw 0;
     }
+    /*to here*/
     #security-tip-cont h4{
         font-size: 1.9vw;
         color: #ffffff;
@@ -639,13 +653,16 @@
         color: #ffffff;
         font-weight: 600;
     }
+    /*here*/
     #report-cont{
      background-color: #e6e1e1;
      padding: 1.5vw 0 1.5vw 0;
      float: right;
      width:48%;
-     margin: -25.5vw 0 5vw 0;
+     margin: 0 0 5vw 0;
     }
+    /*here*/
+
     #report-cont a {
         color: #e9e6e6;
         text-decoration: none;
@@ -663,6 +680,7 @@
     width: 48%;
     padding: 2vw 0 2vw 1%;
    }
+   /*here*/
    #edit-product{
     width:80%;
     margin-left: 10%;
@@ -675,6 +693,7 @@
     padding: 2vw 0 2vw 0;
     font-size: 1.7vw;
    }
+   /*here*/
 }
 @media screen and (max-width: 590px){
     #external-main-cont{
@@ -769,6 +788,11 @@
         background-color: #f8debb;
         margin-bottom: 20px;
     }
+     /*here*/
+     #disclaimer h4{
+        font-size: 3.6vw;
+    }
+     /* to here*/
     #message{
         font-size: 3.2vw;
         font-weight: 500;
@@ -900,12 +924,14 @@
     #other-reviews-cont p {
         font-size: 3.6vw;
     }
+    /*here*/
     #security-tip-cont{
         width: 98%;
-        background-color: #1aa1a1;
+        float: none;
         padding: 2vw 0 2vw 1%;
         margin: 0 0 6vw 0;
     }
+     /*here*/
     #security-tip-cont h4{
         font-size: 3.9vw;
         color: #ffffff;
@@ -916,13 +942,15 @@
         color: #ffffff;
         font-weight: 600;
     }
+    /*here*/
     #report-cont{
      background-color: #e6e1e1;
-     padding: 1.5vw 0 1.5vw 0;
+     padding: 3.5vw 0 3.5vw 0;
      float: none;
      width:98%;
-     margin: -3.5vw 0 5vw 0;
+     margin: 0vw 0 5vw 0;
     }
+    /* to here*/
     #report-cont a {
         color: #e9e6e6;
         text-decoration: none;

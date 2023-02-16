@@ -61,7 +61,7 @@
     margin-top: -5px;
 }
 .rating{
-    color: #7c7a09;
+    color: #e2df0c;
     font-size: 1vw;
     margin-top: -15px;
 }
@@ -102,7 +102,7 @@
 }
 #review-cont{
     width: 96%;
-    background-color: #6cdf61ce;
+    background-color: #39d62a9c;
     padding: 1vw 2% 1vw 2%;
     margin: 2vw 0 1vw 0;
 }
@@ -199,22 +199,28 @@ h2{
     color: #fff;
 }
 .output-containers{
-    width:60%;
-    margin-left: 20%;
-    margin-bottom:50px;
+    width:50%;
+    margin-left: 25%;
+    margin-bottom:30px;
     display: inline-block;
-    padding: 0.2vw 1% 0px 1%;
-    background-color: #faf6f6;
-    
+    padding: 0 1% 0px 1%;
+    background-color: #fff;
+    border-top: 5px solid #1b9110;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #image-cont{
     width: 95%;
+    height: auto;
     margin-left: 2.5%;
     padding-top: 1vw;
 }
 #image-cont img{
     width:100%;
+    /*here*/
     height: 18vw;
+    /*to here*/
 }
 #text-cont{
     width: 100%;
@@ -227,31 +233,31 @@ a {
     color: #161616;
 
 }
-.address-results{
+.product-results{
     font-size: 1.1vw;
-    font-weight: 500;
+    color:#161670;
+    font-weight: 600;
+    line-height: 1vw;
 }
 .price-results{
-    color:#161670;
-    font-size: 1.2vw;
-    font-weight: 600;
+    color:#28880b;
+    font-size: 1.3vw;
+    font-weight: 700;
+    line-height: 0.5vw;
 }
-.type, .hostel, .street, .community{
-    color: #161616;
+.ven-location {
+    font-size:1vw;
+    font-weight: 500;
+    color: #262727;
+    line-height: 0.5vw;
+
+} 
+.community{
     font-size:1vw;
     font-weight: 500;
     color: #152b8f;
 }
-.price{
-    color: #16850b;
-    font-size: 1.3vw;
-    font-weight: 700;
-}
-.icons-cont .fa{
-    font-size: 1.4vw;
-    margin-left: 10px;
-    color: #5f5f61;
-}
+
 #view-more-button{
     background-color: #05740b;
     text-align: center;
@@ -275,29 +281,33 @@ a {
 }
 @media screen and (max-width: 900px){
     #inn-left-cont{
-        width: 70%;
-        float: left;
-        margin: 0 0 0 15%;
+        width: 90%;
+        display: inline-block;
+        margin: 0 0 0 5%;
+    }
+    #profile-cont{
+        width:46%;
+        display:inline-block;
+        padding:0 1% 2vw 1%;
     }
     #profile-pic-cont{
         width:20%;
     }
     #profile-pic-cont img{
-        height: 12vw;
+        height: 7vw;
     }
     #name-cont{
         padding: 0 0 0 3%;
         width:72%;
         margin: 0 0 2vw 0;
     }
-    /*here*/
     .name{
         font-size: 2.1vw;
         line-height: 0.5vw;
     }
     .edit-icon a{
-        margin-top: -2vw;
-        font-size: 3vw;
+        margin-top: -3vw;
+        font-size: 2.5vw;
     
     }
     .services{
@@ -305,7 +315,7 @@ a {
         line-height: 0.4vw;
     }
     .community2{
-        font-size:2vw;
+        font-size:1.8vw;
     }
     .rating{
         color: #c9c612;
@@ -315,16 +325,15 @@ a {
         font-size: 1.5vw;
         font-weight: 500;
     }
-    /*to here*/
     #contact-cont{
         padding: 1vw 0 1vw 3%;
     }
     #uploader-phone{
-        padding: 0px 5vw 0 5vw;
+        padding: 0px 3.5vw 0 3.5vw;
         
     }
     #uploader-whatsapp{
-        padding: 0px 5vw 0 5vw;
+        padding: 0px 3.5vw 0 3.5vw;
     }
     .contact{
         font-size: 1.7vw;
@@ -333,31 +342,32 @@ a {
         color: #ffffff;
     }
     #review-cont{
-        padding: 2vw 2% 2vw 2%;
-        margin: 2vw 0 2vw 0;
+        width: 45%;
+        float: right;
+        padding: 1vw 2% 1vw 2%;
+        margin: 0 0 2vw 0;
     }
     #rev-headr{
         font-size: 2.4vw;
         font-weight: 700;
-        color:#071981;
+        color:#065c58;
     }
     #rev-img-cont{
         padding: 1vw 0 0 1%;
     }
     #rev-img-cont img{
-        height: 8vw;
+        height: 6vw;
     }
     .rev-name{
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     #rev-message-cont {
         width: 96%;
-        margin-top: 10vw;
+        margin-top: 7vw;
         padding: 0 2% 0 2%;
     }
     #review-message {
-        font-size: 1.5vw;
-        font-weight: 500;
+        font-size: 1.3vw;
     }
     .time-stamp{
         font-size: 1.5vw;
@@ -366,10 +376,13 @@ a {
         font-size: 1.7vw;
     }
     #new-upload-cont{
-        padding: 5vw 2.5% 5vw 2.5%;
+        width: 43%;
+        padding: 3vw 2.5% 3vw 2.5%;
         margin: 2vw 0 2vw 0;
     }
     #new-upload-btn{
+        width: 60%;
+        margin: 0 0 0 17.5%;
         padding: 2vw 2.5% 2vw 2.5%;
     
     }
@@ -384,39 +397,50 @@ a {
         width: 70%;
         float: left;
         background-color:#0d666d71;
-        margin: 0 0 5vw 15%;
+        margin: 2vw 0 5vw 15%;
     }
     h2{
-         font-size: 2vw;
+         font-size: 2.5vw;
     }
     .output-containers{
-        width:70%;
-        margin-left: 15%;
-        padding: 0.5vw 1% 0px 1%;
-        
+        width:60%;
+        margin-left: 20%;
+    }
+    #image-cont{
+        width: 95%;
+        height: auto;
+        margin-left: 2.5%;
+        padding-top: 1vw;
     }
     #image-cont img{
-        width:100%;
-        height: 30vw;
+        height: 25vw;
     }
-    .address-results{
-        font-size: 1.7vw;
+    #text-cont{
+        width: 100%;
+        padding: 5px;
+        height: auto;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #161616;
+    
+    }
+    .product-results{
+        font-size: 2vw;
     }
     .price-results{
-        color:#161670;
-        font-size: 1.7vw;
-        font-weight: 600;
-    }
-    .type, .hostel, .street, .community{
-        font-size:2vw;
-    }
-    .price{
-        font-size: 2.1vw;
-    }
-    .icons-cont .fa{
         font-size: 2vw;
-        margin-left: 5px;
+        line-height: 0.5vw;
     }
+    .ven-location {
+        font-size:2vw;
+    
+    } 
+    .community{
+        font-size:1.8vw;
+    }
+    
     #view-more-button{
         width: 40%;
         margin-left:30%;
@@ -435,6 +459,11 @@ a {
         float: left;
         margin: 0 0 0 5%;
     }
+    #profile-cont{
+        width:98%;
+        display:inline-block;
+        padding:0 1% 2vw 1%;
+    }
     #profile-pic-cont{
         width:25%;
     }
@@ -446,7 +475,6 @@ a {
         width:67%;
         margin: 0 0 4vw 0;
     }
-    /*here*/
     .name{
         font-size: 4vw;
         line-height: 0.5vw;
@@ -458,7 +486,7 @@ a {
     }
     .services{
         font-size: 3.7vw;
-        line-height: 0.8vw;
+        line-height: 0.1vw;
     }
     .community2{
         font-size:4vw;
@@ -471,7 +499,6 @@ a {
         font-size: 3.1vw;
         font-weight: 500;
     }
-    /*to here*/
     #contact-cont{
         padding: 1.5vw 0 1.5vw 3%;
     }
@@ -489,6 +516,8 @@ a {
         color: #ffffff;
     }
     #review-cont{
+        width: 96%;
+        float: none;
         padding: 4vw 2% 4vw 2%;
         margin: 4vw 0 4vw 0;
     }
@@ -520,6 +549,7 @@ a {
         font-size: 3.5vw;
     }
     #new-upload-cont{
+        width:95%;
         padding: 10vw 2.5% 10vw 2.5%;
         margin: 4vw 0 4vw 0;
     }
@@ -541,30 +571,31 @@ a {
          font-size: 5vw;
     }
     .output-containers{
-        width:85%;
-        margin-left: 7.5%;
-        padding: 1vw 1% 0px 1%;
-        
+        width:80%;
+        margin-left: 10%;
     }
     #image-cont img{
         height: 50vw;
     }
-    .address-results{
+    
+    a {
+        text-decoration: none;
+        color: #161616;
+    
+    }
+    .product-results{
         font-size: 4vw;
     }
     .price-results{
-        color:#161670;
         font-size: 4vw;
-        font-weight: 600;
+        line-height: 0.5vw;
     }
-    .type, .hostel, .street, .community{
-        font-size:4.2vw;
-    }
-    .price{
-        font-size: 4.3vw;
-    }
-    .icons-cont .fa{
-        font-size: 4vw;
+    .ven-location {
+        font-size:4vw;
+    
+    } 
+    .community{
+        font-size:3.8vw;
     }
     #view-more-button{
         width: 50%;

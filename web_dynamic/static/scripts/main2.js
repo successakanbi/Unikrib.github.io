@@ -1,8 +1,36 @@
-/*var user = window.localStorage.getItem('newId');
+const user = window.localStorage.getItem('newId')
+var login = document.getElementById('login-cont')
+var dropdown = document.getElementById('dropdown')
 if (user === null){
-    var dropdown = document.getElementsByClassName('dropdown')
-    dropdown.style.display = 'none'
-}*/
+	login.style.display = 'block';
+	dropdown.style.display = 'none'
+} else {
+	login.style.display = 'none';
+	dropdown.style.display = 'block'
+}
+
+function getUserType(){
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:8000/unikrib/users/' + user,
+        contentType: 'application/json',
+        dataType: 'json',
+        success: function(currentUser){
+            if (currentUser.user_type === 'agent'){
+                window.location.href = 'agent-homepage.html';
+            } else if (currentUser.user_type === 'vendor') {
+                window.location.href = 'vendor-homepage.html';
+            } else if (currentUser.user_type === 'sp'){
+                window.location.href = 'service-homepage.html';
+            } else if (currentUser.user_type === 'regular'){
+                window.location.href = 'user-homepage.html';
+            }
+        },
+        error: function (){
+            alert('Can not determine user type')
+        }
+    })
+}
 
 function dropMenu() {
     var x = document.getElementById("my-Top-nav");

@@ -21,6 +21,17 @@ def get_service(service_id):
         abort(404, "service not found")
     return jsonify(obj.to_dict())
 
+@app_views.route('/users/<user_id>/services', strict_slashes=False)
+def user_service(user_id):
+    """This return the service associated with a user"""
+    obj = storage.get('User', user_id)
+    if obj == None:
+        abort(404, "No user found")
+    for key, obj in storage.all(Service).items():
+        if obj.owner_id == user_id:
+            return jsonify(obj.to_dict())
+    return {}
+
 @app_views.route('/service-categories/<cat_id>/services', strict_slashes=False)
 def cat_services(cat_id):
     """This returns a list of all services in a category"""
@@ -29,6 +40,25 @@ def cat_services(cat_id):
         if obj.category_id == cat_id:
             cat_serv.append(obj.to_dict())
     return jsonify(cat_serv)
+
+@app_views.route('/service-search', strict_slashes=False, methods=['POST'])
+def search_services():
+    """This searces for services that meet some criteria"""
+    if not request.json:
+        abort(400, "Not a valid json")
+
+    searchList = []
+
+    search_dict = request.get_json()
+    location = search_dict['location']
+    category = search_dict['category_id']
+
+    for key, obj in storage.all(Service).items():
+        owner = storage.get('User', obj.owner_id)
+        if owner.com_res == location or location == 'all':
+            if obj.category_id == category:
+                searchList.append(obj.to_dict())
+    return jsonify(searchList)
 
 @app_views.route('/services', strict_slashes=False, methods=['POST'])
 def create_serv():

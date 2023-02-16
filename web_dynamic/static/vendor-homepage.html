@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Homepage</title>
+    <title>vendor Homepage</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/agent-homepage.css">
+    <link rel="stylesheet" href="styles/vendor-homepage.css">
 </head>
 <body>
     <!-- responsive top navigator bar -->
@@ -22,14 +22,14 @@
           <a href="login.html">Login</a>
           <a href="signup.html">sign up</a>
         </div>
-         <div class="dropdown" id="dropdown">
+        <div class="dropdown" id="dropdown">
           <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
           <div class="dropmenu-content" id="dropdown-cont">
-             <p class="drop-links" onclick="getUserType()">Profile</p>
-             <p href="" class="drop-links">Edit profile</p>
-             <p href="" class="drop-links">Help</p>
-             <p class="drop-links" onclick="logout()">logout</p>
-         </div>
+            <p href="" class="drop-links">Profile</p>
+            <p href="" class="drop-links">Edit profile</p>
+            <p href="" class="drop-links">Help</p>
+            <p class="drop-links" onclick="logout()">logout</p>
+          </div>
         </div>
 
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
@@ -44,56 +44,54 @@
     <div id="out-most-cont">
       <div id="inn-left-cont">
         <div id="profile-cont">
-          <div id="profile-pic-cont">
-            <!--<img src="images/photo5.png">-->
+          <!--<div id="profile-pic-cont">
+            <img src="images/pretty-black-female-business-headshot.jpg">
           </div>
           <div id="name-cont">
-            <!--<p class="name"><span id="fname">Igueben </span><span id="lname"> charles</span></p>
+            <p class="name"><span id="fname">Martha</span><span id="lname"> Agbore</span></p>
             <p class="edit-icon"><a href="Edit-profile.html"><icon class="fa fa-pencil"></icon></a></p>
-            <p class="services" id="service-select">Agent</span></p>
-            <p class="community2" id="community-select">Ekosodin</p>
-            <p class="rating">Average rating:<span id=""> 4</span><icon class="fa fa-star"></icon></span></p>
-            <p class="bio">I help students find affordable and suitable apartments of all types</p>-->
+            <p class="services" id="service-select">Phone Vendor</span></p>
+            <p class="community" id="community-select">EDPA</p>
+            <p class="rating">Average rating: <span id="">5</span><icon class="fa fa-star"></icon></span></p>
+            <p class="bio">I sell all kind of phones,Including Iphone, samsung, infinix, Redmi etc. I also sell phone accesories</p>
           </div>
           <div id="contact-cont">
-            <!--<div id="uploader-phone">
+            <div id="uploader-phone">
                 <p class="contact"><icon class="fa fa-phone"><a href="tel:+2347054598108" class="contact-links"> 07054598108</a></icon></p>
             </div>
             <div id="uploader-whatsapp">
                <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+2347045678389"
                 class="contact-links"> 07045678389</a></icon></p>
-            </div>-->
-          </div>
+            </div>
+          </div>-->
         </div>
         <!--contains reviews link , reviewer information profile pic and message-->
         <div id="review-cont">
           <p id="rev-headr">latest review</p>
           <div id="latest-review-cont">
             <!--<div id="rev-img-cont">
-
-              <img src="images/web-shot-1.jpg">
+              <img src="images/male-avatar.jpg">
             </div>
             <div id="rev-name-cont">
-              <p class="rev-name">Femi Adeyemi</p>
+              <p class="rev-name">David ibihe</p>
             </div>
             <div id="rev-message-cont">
-              <p id="review-message">I had an excellent experience with igueben charles, he is
-                professional, reliable and cordial. he answered all my questions truthfully
-                and charged me a fair sum for his service. I highly recommend him</p> 
-
-                 <p class="time-stamp"><span id="day">21st </span><span id="month">July</span><span id="year"> 2022</span></p>
+              <p id="review-message">My experience with martha was simply exceptional, and best of all? she does
+                home deliveries and on time as well. what more can i say if you want to buy a phone she's definitely
+                 your girl</p> 
+              <p class="time-stamp"><span id="day">21st </span><span id="month">July</span><span id="year"> 2022</span></p>
             </div>-->
           </div>
           <div id="other-reviews-cont">
             <a href="review-page.html">
-              <p id="view-review"></p>
+              <p id="view-review">More reviews</p>
             </a>
           </div>
         </div>
         <div id="new-upload-cont">
           <div id="new-upload-btn">
-            <a href="apartment-upload-page.html">
-              <p id="upload-btn-txt">Upload new apartment</p>
+            <a href="product-upload-page2.html">
+              <p id="upload-btn-txt">Upload new product</p>
             </a>
           </div>
 
@@ -106,21 +104,18 @@
           <h2>Your uploads</h2>
 
           <div id="first-apart">
-          <!--<div id="output-cont" class="output-containers">
-            <a href="apartment-info-page2.html" class ="value-links">
-              <div id="image-cont">
-                <img src="images/Photo2016,205120PM.jpg" id="img9" class="apartment-img">
+            <!--<div id="output-cont" class="output-containers">
+              <a href="product-info-page2.html">
+                <div id="image-cont">
+                  <img src="images/Infinix hot12i.jpg" id="img1" class="product-imgs">
               </div>
               <div id="text-cont">
-                <p class="address-results"><span class="type">One-bedroom flat</span> in <span class ="hostel" id="hostel9">whitegate hostel </span>for rent
-                <span class ="street" id="street9">Image street</span><span class ="community"  id="community9"> Osasoghie</span></p>
-                <p class="price-results"><span class ="price" id="price9">N200,000 </span>per year</p>
-                <div class ="icons-cont">
-                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                </div>
+                  <p class="product-results"><span class="product-name">Infinix Hot 12i </span></p>
+                  <p class="price-results"><span class="product-price" id="product-price-1">N89,000</span></p>
+                  <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
               </div>
-            </a>
-          </div>-->
+              </a>
+            </div>-->
           </div>
 
         </div>
@@ -131,57 +126,33 @@
 
         <!--view more container containing all hidden apartment output containers-->
         <div id="view-more-cont">
-          <!--<div id="output-cont" class="output-containers">
-            <a href="apartment-info-page2.html" class ="value-links">
-              <div id="image-cont">
-                <img src="images/campus_housing-220520-0109.jpg" id="img10" class="apartment-img">
+              <!--<div id="output-cont" class="output-containers">
+                <a href="product-info-page2.html">
+                  <div id="image-cont">
+                    <img src="images/infinix-hot-blue.jpg" id="img1" class="product-imgs">
+                </div>
+                <div id="text-cont">
+                    <p class="product-results"><span class="product-name">Infinix Hot 10 </span></p>
+                    <p class="price-results"><span class="product-price" id="product-price-1">N69,000</span></p>
+                    <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
+                </div>
+                </a>
               </div>
-              <div id="text-cont">
-                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel10">whitegate hostel </span>for rent
-                <span class ="street" id="street10">Image street</span><span class ="community"  id="community10"> Osasoghie</span></p>
-                <p class="price-results"><span class ="price" id="price10">N200,000 </span>per year</p>
-                <div class ="icons-cont">
-                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                  <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
+    
+              <div id="output-cont" class="output-containers">
+                <a href="product-info-page.html">
+                  <div id="image-cont">
+                    <img src="images/hot-12i-black.gif" id="img1" class="product-imgs">
                 </div>
-              </div>
-            </a>
-          </div>
-  
-  
-          <div id="output-cont" class="output-containers">
-            <a href="apartment-info-page2.html" class ="value-links">
-              <div id="image-cont">
-                <img src="images/Photo2016,205120PM.jpg" id="img11" class="apartment-img">
-            </div>
-            <div id="text-cont">
-                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel11">whitegate hostel </span>for rent
-                <span class ="street" id="street11">Image street</span><span class ="community"  id="community11"> Osasoghie</span></p>
-                <p class="price-results"><span class ="price" id="price11">N200,000 </span>per year</p>
-                <div class ="icons-cont">
-                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                  <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
+                <div id="text-cont">
+                    <p class="product-results"><span class="product-name">Infinix note 12 </span></p>
+                    <p class="price-results"><span class="product-price" id="product-price-1">N110,000</span></p>
+                    <p class="ven-location">Vendors location: <span class="community">Ekosodin</span></p>
                 </div>
+                </a>
+              </div>-->
             </div>
-            </a>
-          </div>
-          
-          <div id="output-cont" class="output-containers">
-            <a href="apartment-info-page2.html" class ="value-links">
-              <div id="image-cont">
-                <img src="images/student-dorm.jpg" id="img12" class="apartment-img">
-            </div>
-            <div id="text-cont">
-                <p class="address-results"><span class ="type">One-bedroom flat</span> in <span class ="hostel" id="hostel12">whitegate hostel </span>for rent
-                <span class ="street" id="street12">Image street</span><span class="community"  id="community12"> Osasoghie</span></p>
-                <p class="price-results"><span class ="price" id="price12">N200,000 </span>per year</p>
-                <div class ="icons-cont">
-                  <i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
-                  <icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
-                </div>
-            </div>
-            </a>
-          </div>-->
+    
       </div>
     </div>
 
@@ -239,7 +210,7 @@
       
     <script src = "scripts/main2.js"></script>
     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-    <script src="scripts/agent-homepage.js"></script>
+    <script src="scripts/vendor-homepage.js"></script>
     <script>
           //toggles see more button between visible and hidden
           //make view more container visible

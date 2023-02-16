@@ -149,6 +149,7 @@ $(function (){
         contentType: 'application/json',
         dataType: 'json',
         success: function (reviews){
+            console.log(owner)
             window.localStorage.setItem('revieweeId', owner);
             if (reviews.length === 0){
                 $("#latest-review-cont").html('<p id="review-message"> No reviews has been left for this vendor yet.</p>');

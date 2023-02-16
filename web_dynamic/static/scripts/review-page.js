@@ -2,6 +2,7 @@
 
 const reviewee = window.localStorage.getItem('revieweeId');
 const currentUser = window.localStorage.getItem('newId');
+console.log(reviewee)
 
 // Load user name
 $(function (){

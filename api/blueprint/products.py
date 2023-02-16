@@ -31,6 +31,21 @@ def categroy_prod(category_id):
     sorted_list = sorted(cat_prod, key=lambda d: d['name'])
     return jsonify(sorted_list)
 
+@app_views.route('/users/<user_id>/products', strict_slashes=False)
+def user_products(user_id):
+    """This returns a list of all the products under a vendor"""
+    obj = storage.get('User', user_id)
+    if obj == None:
+        abort(404, "No user with this id found")
+    if obj.user_type != 'vendor':
+        abort(400, "User not a vendor")
+
+    user_prod = []
+    for key, obj in storage.all(Product).items():
+        if obj.owner_id == user_id:
+            user_prod.append(obj.to_dict())
+    return jsonify(user_prod)
+
 @app_views.route('/products', strict_slashes=False, methods=['POST'])
 def create_prod():
     """This creates a new product in storage"""
