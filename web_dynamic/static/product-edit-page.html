@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit product</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/product-upload-page.css">
+</head>
+<body>
+     <!-- responsive top navigator bar -->
+     <div class="top-nav" id="my-Top-nav">
+        <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+        <a href="homepage.html">Home</a>
+        <a href="Apartment-page.html">Apartments</a>
+        <a href="product-page.html">products</a>
+        <a href="service-page.html">services</a>
+        <div id="login-cont">
+          <a href="login.html">Login</a>
+          <a href="signup.html">sign up</a>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p href="" class="drop-links">Profile</p>
+             <p href="" class="drop-links">Edit profile</p>
+             <p href="" class="drop-links">Help</p>
+             <p href="" class="drop-links">logout</p>
+         </div>
+       </div>
+        <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+            <div class="icon-cont" onclick="changeIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+         </a>
+    </div>
+
+    <div id="outer-most-container">
+
+      <!---Contains input fields, select boxes, image upload container, submit button and notice container-->
+      <div id="product-upload-form">
+        <div id="logo-container">
+          <img src="images/Black logo on white.png">
+        </div>
+
+        <h2 id="form-title">Edit product</h2>
+
+        <!--select box for product category-->
+        <label for="">product category</label>
+          <select name="product category" id="product-category" class="type" required>
+            <!--<option value="Beds and beddings">Beds and beddings</option>
+            <option value="Books and stationery">Books and stationery</option>
+            <option value="Cosmetics and care products">Cosmetics and care products</option>
+            <option value="Clothing and Accesories">Clothing and Accessories</option>
+            <option value="Drinks and Beverages">Drinks and Beverages</option>
+            <option value="Footwear">Footwear and bags</option>
+            <option value="Electronics and Accessories">Electronics and Accessories</option>
+            <option value="Food and Groceries">Food and groceries</option>
+            <option value="Home furniture">Furniture</option>
+            <option value="Kitchen utensils">Kitchen utensils</option>
+            <option value="Laptops and Accessories">Laptops and Accessories</option>
+            <option value="Jewellery">Jewellery</option>
+            <option value="Phones and Accessories">Phones and Accessories</option>
+            <option value="Stationery">Stationery</option>-->
+          </select><br>
+
+             <!--Input field for product name-->
+             <label for="productname">product name</label><br>
+             <input type="text" id="product-name" name="productname" class="products"><br>
+
+             <!--product price input field-->
+             <label for="product-price">Product price</label><br>
+             <input type="number" id="price" class="price" required><br>
+
+             <!--product features textarea field-->
+             <label for="product features">Product features</label><br>
+             <textarea id="product-features" name="product features"></textarea><br>
+
+             <label for="delivery status">Delivery</label><br>
+             <select name="delivery status" id ="delivery-status" class="deliveries">
+                <!--<option value="Available">Available</option>
+                <option value="Unavailable">Unavailable</option>-->
+             </select><br>
+
+             <label for="product status">product status</label><br>
+             <select name="product status" id="product-status" class="status">
+                <option value="in stock">In stock</option>
+                <option value="Out of stock">Out of stock</option>
+
+             </select>
+             <!-- contains product image upload input fields-->
+             <h3>Change product images</h3>
+             <div id="product-img-cont">
+                 <label for="product img" id="upload">upload image
+                     <input type="file" name="product img" id="product-image1" class="product-img"/>
+                     <p id ="file-name1" class="file-name"></p>
+                 </label>
+
+                 <label for="apartmemt img" id="upload">upload image
+                    <input type="file" name="product img" id="product-image2" class="product-img"/>
+                    <p id ="file-name2" class="file-name"></p>
+                </label>
+
+                <label for="product img" id="upload">upload image
+                    <input type="file" name="product img" id="product-image3" class="product-img"/>
+                    <p id ="file-name3" class="file-name"></p>
+                </label>
+             </div>
+
+             <!--contains submit button-->
+             <div id="Submit upload">
+                <button type="submit" id="Submit-product" class="submit-btn">Save changes</button>
+             </div>
+
+             <!--notice contains important upload conditions-->
+             <div id="notice">
+                <h4>Please Note:</h4>
+                <p> This form  is to be filled as factually as possible, using false information in this form is ill advised </p>
+                <p>Only currrently available products should be uploaded, and should be deleted when unavailable</p>
+
+             </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+       <!--here-->
+       <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
+          <p><a href="product-page.html" class="foot-links">products</a></p>
+          <p><a href="service-page.html"class="foot-links">services</a></p>
+          <p><a href="about-page.html"class="foot-links">about us</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <!--here-->
+          <p id="foot-para">For feedback and inquiries contact us on</p>
+          <!--to here-->
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+
+        <div id="footer-base-cont">
+          <div id="icon-cont">
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/facebook-logo.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/124021.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/2048px-Instagram_icon.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/official-linkedin-icon-png-16.jpg">
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+      
+    
+
+
+    
+    <script src = "scripts/main2.js"></script>
+    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+    <script src="scripts/product-edit.js"></script>
+    <script>
+        //displays name and size of uploaded image file
+        const file = document.getElementById("product-image1")
+        const file2 = document.getElementById("product-image2")
+        const file3 = document.getElementById("product-image3")
+        //for first image
+        file.addEventListener("change", (e) => {
+            const [file] = e.target.files;
+            const {name: fileName , size} = file;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name1').textContent = 
+            fileNameAndSize;
+        
+        })
+        //for second image
+        file2.addEventListener("change", (e) => {
+            const [file2] = e.target.files;
+            const {name: fileName , size} = file2;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name2').textContent = 
+            fileNameAndSize;
+        
+        })
+
+        //for third image
+        file3.addEventListener("change", (e) => {
+            const [file3] = e.target.files;
+            const {name: fileName , size} = file3;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name3').textContent = 
+            fileNameAndSize;
+        
+        })
+        //to here
+    </script>
+</body>
+</html>

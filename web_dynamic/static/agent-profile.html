@@ -17,7 +17,20 @@
         <a href="homepage.html"class="active">Home</a>
         <a href="Apartment-page.html">Apartments</a>
         <a href="product-page.html">products</a>
-        <a href="service-page.html">services</a>        
+        <a href="service-page.html">services</a>
+        <div id="login-cont">
+          <a href="login.html">Login</a>
+          <a href="signup.html">sign up</a>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p class="drop-links" onclick="getUserType()">Profile</p>
+             <p href="" class="drop-links">Edit profile</p>  
+             <p href="" class="drop-links">Help</p>
+             <p class="drop-links" onclick="logout()">logout</p>
+          </div>
+        </div>
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
             <div class="icon-cont" onclick="changeIcon(this)">
                 <div class="bar1"></div>
@@ -29,43 +42,17 @@
     <!-- main external container containing form its input fields and select boxes-->
     <div id="main-ext-cont">
 
-        <div id="profile-form-cont">
+        <form action="" id="profile-form-cont">
          <div id="logo-container">
             <img src="images/Black logo on white.png">
          </div>
 
-         <h3>Complete your profile</h3>
-         
-         <!--Select box for service providers-->
-         <label for="service">Service category</label>
-         <select id="service-select" name="select service">
-          <option value=""></option>
-            <!--<option value="Ac installer">Ac installer</option>
-            <option value="Carpenter">Carpenter</option>
-            <option value="Caterer">Caterer</option>
-            <option value="Clothes vendor">Clothes vendor</option>
-            <option value="Dstv installer">Dstv installer</option>
-            <option value="Electrician">Electrician</option>
-            <option value="Fashion designer">Fashion designer</option>
-            <option value="Food vendor">Food vendor</option>
-            <option value="Gadget vendor">Gadget vendor</option>
-            <option value="Gas vendor">Gas vendor</option>
-            <option value="Generator repairman">Generator repairman</option>
-            <option value="Hair stylist">Hair stylist</option>
-            <option value="jewelry vendor">jewelry vendor</option>
-            <option value="laundryman">laundryman</option>
-            <option value="Makeup artist">Makeup artist</option>
-            <option value="Painter">Painter</option>
-            <option value="Plumber">Plumber</option>
-            <option value="Refrigerator repairman">Refrigerator repairman</option>-->
-         </select>
-          
-          
+         <h3>Complete your profile</h3>          
          <!--Select id for community where agent/vendor/service can offer services-->
-         <label for="select state">Preferred service Community</label>
+         <label for="select state">Preferred service community</label>
          <select id="community-select" name="select community">
             <option value=""></option>
-            <!--<option value="Adolor">Adolor</option>
+            <option value="Adolor">Adolor</option>
             <option value="Ebvoumore">Ebvoumore</option>
             <option value="EDPA">EDPA</option>
             <option value="Ekosodin">Ekosodin</option>
@@ -74,30 +61,33 @@
             <option value="Isiohor">Isiohor</option>
             <option value="Osasoghie">Osasoghie</option>
             <option value="Oluku">Oluku</option>
-            <option value="Uselu">Uselu</option>-->            
+            <option value="Uselu">Uselu</option>
+            
          </select><br/>
-
+         <!--here-->
          <!--contains service provider description-->
          <label for="description">Description</label>
          <textarea id="descript-text" name="description" placeholder="Describe your services"></textarea>
+         <!--to here-->
           
          <!--contains image input field-->
          <div id="profile-pic-cont">
             <label for="profile_photo" id="upload">upload a profile photo
-              <input type="file" name="profile_photo" id="profile-photo" class="file"/>
-              <p id="file-name" class="img-name"></p>
-            </label>
+                <input type="file" name="profile_photo" id="profile-photo" class="file"/>
+            <p id="file-name" class="img-name"></p>
+         </label>
          </div>
 
+
          <div>
-            <button type="submit" id="submit">Submit</button>
+            <button type="submit">Finish</button>
           </div>
-        </div>
+        </form>
     </div>
 
      <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
-     <!--here-->
-     <div id="footer-cont">
+       <!--here-->
+       <div id="footer-cont">
         <div class="footer-sub-cont-a">
           <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
           <p><a href="product-page.html" class="foot-links">products</a></p>
@@ -113,6 +103,7 @@
           <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
           <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
         </div>
+
         <div id="footer-base-cont">
           <div id="icon-cont">
             <div class="icon-sub-cont">
@@ -139,7 +130,6 @@
         </div>
       </div>
       <!--to here-->
-
       
     <script>
          //displays name and size of uploaded image file
@@ -153,8 +143,6 @@
             fileNameAndSize;
         })
     </script>
-     <script src = "scripts/main3.js"></script>
-     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-      <script src="scripts/service-profile.js"></script>"
+     <script src = "scripts/main2.js"></script>
 </body>
 </html>
