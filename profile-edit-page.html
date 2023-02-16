@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get started</title>
+    <title>Edit your profile</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
@@ -36,44 +36,50 @@
     <div id="main-container">
         <div id="form-container">
             <form action ="" id="reg-form">
-              <div class="form-header">
-                <img src="images/Black logo on white.png" id="icon-mark"> 
-              </div>
-              <h2 class="form-headr"></h2>>Get started for free</h2> 
+              <h2 class="form-headr">Edit profile</h2> 
               <label for="firstname">First Name</label><br>
               <input type="text" name="firstname" required><br>
                 
               <label for="lastname">Last Name</label><br>
               <input type="text" name="lastname" required><br>
 
-              <label for="email">E-mail</label><br>
-              <input type="email" name="email" placeholder="Email Address" required><br>
-
               <label for="tel">Phone Number</label><br>
               <input type="tel" name="tel" placeholder="Enter phone Number" required><br>
 
+              <!--Select id for community where user lives-->
+              <label for="select community">Community of Residence</label>
+              <select id="community-select" name="select community">
+                 <option value=""></option>
+                 <option value="Adolor">Adolor</option>
+                 <option value="Ebvoumore">Ebvoumore</option>
+                 <option value="EDPA">EDPA</option>
+                 <option value="Ekosodin">Ekosodin</option>
+                 <option value="Evidence">Evidence</option>
+                 <option value="Osasoghie">Osasoghie</option>
+                 <option value="Isiohor">Isiohor</option>
+                 <option value="Osasoghie">Osasoghie</option>
+                 <option value="Oluku">Oluku</option>
+                 <option value="Uselu">Uselu</option>
+             </select><br/>
 
-              <label for="psw">Password</label><br>
-              <input type="password" name="psw" value="" placeholder="Enter Password" 
-              id="input-pass" onfocus="showToggle()" required></br>
-               
-              <!--eye icon toggles between visible password and hidden password-->
-              <icon class="fa fa-eye" onclick="showPassword()" id="eye-icon"></icon>
+            <!--contains service provider description-->
+            <label for="description">Description</label>
+            <textarea id="descript-text" name="description" placeholder="Describe your services"></textarea>
+          
+
+             <!--contains image input field-->
+            <div id="profile-pic-cont">
+                 <label for="profile_photo" id="upload">Change profile photo
+                     <input type="file" name="profile_photo" id="profile-photo" class="file"/>
+                     <p id="file-name" class="img-name"></p>
+                 </label>
+             </div>
+         
 
               <div>
-                <button type="submit" class="submit-btn">Create account</button>
+                <button type="submit" class="submit-btn">save changes</button>
               </div>
                 
-              <!--sign up with google div provides the sign up with google option-->
-                <div id="google">
-                  <a href="">
-                    <p><img  src="images/download.png" style="height: 20px;"> sign up with google</p> 
-                  </a> 
-                </div> 
-              <!--here-->
-              <p class ="other">Already have an account? Sign in <a href="login.html">here</a></p>
-              <p class="other">Are you an Agent or service provider sign up <a href="agent-service-signup.html">here</a></p>
-              <!--to here-->
  
             </form>
         </div>
@@ -129,34 +135,17 @@
       <!-- link to external javascript file main.js-->
       <script src = "main.js"></script>
       <script>
-        //toggles eye icon between visible and invisible
-        function showToggle () {
-        var icon = document.getElementById("eye-icon")
-        icon.style.display="block";
-        }
-
-        //toggles the eye icon between open and closed
-        let icon = document.getElementById("eye-icon");
-        icon.addEventListener("click", iconChange)
-
-         function iconChange () {
-         let x = document.getElementById("eye-icon");
-           if (icon.className == "fa fa-eye") {
-               icon.className = "fa fa-eye-slash";
-            } else {
-               icon.className = "fa fa-eye";
-            }
-         }
-
-         //toggles password between visible text and hidden text
-         function showPassword(){
-              var x = document.getElementById("input-pass");
-                if(x.type === "password") {
-                     x.type = "text";
-                } else {
-                   x.type = "password";
-                  }
-          }
+         //displays name and size of uploaded image file
+         const file = document.getElementById("profile-photo")
+        file.addEventListener("change", (e) => {
+            const [file] = e.target.files;
+            const {name: fileName , size} = file;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name').textContent = 
+            fileNameAndSize;
+        })
+       
       </script>
 
 

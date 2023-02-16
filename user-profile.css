@@ -58,13 +58,6 @@ label {
    outline: none;
    transition: 300ms;
  }
- 
-/*here*/
- .img-name{
-    font-weight: 700;
-    margin-left: 10%;
- }
- /* to here*/ 
 
  .file{
     opacity:0;
@@ -103,6 +96,12 @@ label {
     width: 100%;
     
  }
+ /*here*/
+ .img-name{
+   font-weight: 700;
+   margin-left: 10%;
+}
+/* to here*/ 
  
  button{
     padding: 15px;
