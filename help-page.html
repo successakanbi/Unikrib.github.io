@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help page</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="help-page.css">
+</head>
+<body>
+    
+    <!-- responsive top navigator bar -->
+    <div class="top-nav" id="my-Top-nav">
+        <!--here-->
+          <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+          <a href="homepage.html">Home</a>
+          <a href="Apartment-page.html">Apartments</a>
+          <a href="product-page.html">products</a>
+          <a href="service-page.html">services</a>
+          <!--to here-->
+          <div class="dropdown">
+            <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+            <div class="dropmenu-content" id="dropdown-cont">
+               <p href="" class="drop-links">Profile</p>
+               <p href="" class="drop-links">Notifications</p>
+               <p href="" class="drop-links">Edit profile</p>
+               <p href="" class="drop-links">Help</p>
+               <p href="" class="drop-links">logout</p>
+           </div>
+         </div>
+         
+          <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+              <div class="icon-cont" onclick="changeIcon(this)">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>
+           </a>
+      </div>
+
+      <div id="outer-cont">
+        <h1 class="header">Have a problem?</h1>
+          <p class="header-txt">check out our list of FAQs, or send us an email</p>
+        <div id="inner-cont">
+            <div id="faqs-header">
+                <h2>FAQs</h2>
+            </div>
+            <div id="faqs-cont"> 
+                <div id="faq-conts">
+                    <h4 onclick="toggleParagraph(this)">Why can't i upload more than 3 product images?<i class="fa fa-angle-down"></i></h4>
+                    <div class="response-cont">
+                      <p class="response">Vendors are only allowed to upload one to three images of a product
+                        so vendors are unable to upload more than three images of a single product
+                    </p>
+                    </div>
+
+                </div>
+                <div id="faq-conts">
+                    <h4 onclick="toggleParagraph(this)"> Why can't i upload more than 5 apartments?<i class="fa fa-angle-down"></i></h4>
+                    <div class ="response-cont">
+                      <p class="response">Agents apartment uploads are restricted to only five apartments at a time
+                        after five apartments have been uploaded, to upload a new upload the agent must first delete an 
+                        existing apartment first before a new one can be uploaded
+                    </p>
+                    </div>
+                </div>
+                <div id="faq-conts">
+                <h4 onclick="toggleParagraph(this)">I am a vendor as well as an agent how can i operate both account types at once?
+                  <i class="fa fa-angle-down"></i></h4>
+                  <div class="response-cont">
+                    <p class="response">Users are only allowed to operate one account type currently, only agents can upload
+                      apartments and only vendors can upload products as well, in other to operate both account types the user 
+                      must open different accounts with different emails
+                   </p>
+                  </div>
+                </div>
+                <div id="faq-conts">
+                    <h4 onclick="toggleParagraph(this)">I can't find my product/service category what do i do?<i class="fa fa-angle-down"></i></h4>
+                    <div class="response-cont">
+                       <p class="response">We tried to create broad service category for our users to choose from, but
+                           in an event where a vendor/service provider can't find his/her category he or she is advised to
+                           choose the category that closely relates with his or her category. In a case where
+                           no such category is available the user can give us feedback and we will create the category 
+                           asap
+                       </p>
+                    </div>
+                </div>
+                <div id="faq-conts">
+                    <h4 onclick="toggleParagraph(this)">How do i edit my profile info?<i class="fa fa-angle-down"></i></h4>
+                    <div class="response-cont">
+                      <p class="response">click on the user icon and select edit profile then provide your updated information
+                        and click save changes, your profile info will be updated automatically
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <div id="more-help-cont">
+          <h2>Still need help?</h2>
+          <p>let us know your complaint, send your complaint to <a href="" id="mail-link">mail@unikrib.com</a></p>
+      </div>
+
+
+
+
+
+
+      <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+       <!--here-->
+       <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
+          <p><a href="product-page.html" class="foot-links">products</a></p>
+          <p><a href="service-page.html"class="foot-links">services</a></p>
+          <p><a href="about-page.html"class="foot-links">about us</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <!--here-->
+          <p id="foot-para">For feedback and inquiries contact us on</p>
+          <!--to here-->
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+
+        <div id="footer-base-cont">
+          <div id="icon-cont">
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/facebook-logo.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/124021.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/2048px-Instagram_icon.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/official-linkedin-icon-png-16.jpg">
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!--to here-->
+    
+
+
+
+
+
+
+
+
+
+
+    <script src = "main.js"></script>
+    <script>
+
+      function toggleParagraph(h4, i) {
+        var container = h4.parentElement;
+        var div = container.querySelector(".response-cont")
+
+        if (div.style.display === "block") {
+          div.style.display = "none";
+        } else {
+          div.style.display = "block";
+        }
+      }
+    </script>
+</body>
+</html>
