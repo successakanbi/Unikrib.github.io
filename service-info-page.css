@@ -5,13 +5,14 @@
     display: inline-block;
     
 }
-/* to here*/
+
 #internal-left-cont{
     float: left;
-    width: 37%;
+    width: 42%;
     padding: 0 0 0 10%;
 
 }
+/* to here*/
 .slides img{
     vertical-align:middle;
     width:100%;
@@ -482,7 +483,7 @@ cursor{
     .slides img{
         vertical-align:middle;
         width:100%;
-        height: 60vw;
+        height: auto;
     }
     .prev, .next{
         font-size: 15vw;

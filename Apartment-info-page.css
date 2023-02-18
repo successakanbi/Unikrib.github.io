@@ -685,11 +685,12 @@
     .currentImage{
         display: none; 
     }
-
+    /*here*/
     .Apartment-slide-cont img{
         vertical-align: middle;
-        height: 60vw;
+        height: auto;
     }
+    /*to here*/
     .prev, .next{
         position: absolute;
         width:auto;
