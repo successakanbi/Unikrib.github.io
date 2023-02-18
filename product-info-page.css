@@ -4,11 +4,13 @@
     display: inline-block;
     padding: 80px 0 0 8%;
 }
+/*here*/
 #internal-left-container{
-    width: 45%;
+    width: 35%;
     float: left;
-    margin: 0 0 0 5vw;
+    margin: 0 0 0 5%;
 }
+/*to here*/
 .currentImage{
     display: none; 
 }
@@ -18,11 +20,12 @@
     position: relative;
     margin: 0 0 30px 0;
 
-}
+}/*here*/
 .product-slide-cont img{
     vertical-align: middle;
-    height: 33vw;
+    height: auto;
 }
+/*to here*/
 
 .prev, .next{
     position: absolute;
@@ -163,13 +166,14 @@
     font-weight: 400;
     margin-top: -1vw;
 }
-/* to here*/
+/*here*/
 #internal-right-container{
     float: left;
     width: 30%;
-    margin:2vw 0 0 3%;
+    margin:2vw 0 0 8%;
     padding: 0 0 0 1%;   
 }
+/*to here*/
 #profile-cont{
     width:100%;
     display:inline-block;
@@ -381,9 +385,13 @@
         width: 80%;
         margin: 0 0 0  5%;
     }
+    /*here*/
     .currentImage{
         display: none; 
+        width: 85%;
+        margin: 0 0 0 7.5%;
     }
+    /*here*/
     .product-slide-cont{
         display: block;
         width:100%;
@@ -391,10 +399,11 @@
         margin: 0 0 30px 0;
     
     }
+    /*here*/
     .product-slide-cont img{
         vertical-align: middle;
-        height: 58vw;
     }
+    /*to here*/
     .prev, .next{
         position: absolute;
         width:auto;
@@ -707,11 +716,11 @@
     .currentImage{
         display: none; 
     }
-
+    /*here*/
     .product-slide-cont img{
         vertical-align: middle;
-        height: 70vw;
     }
+    /*here*/
     .prev, .next{
         position: absolute;
         width:auto;

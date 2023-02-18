@@ -1,14 +1,14 @@
 /*here*/
 #external-main-cont{
     width:100%;
-    padding: 80px 0 0 0;
+    padding: 100px 0 0 0;
     display: inline-block;
     
 }
 /* to here*/
 #internal-left-cont{
     float: left;
-    width: 52%;
+    width: 37%;
     padding: 0 0 0 10%;
 
 }
@@ -64,7 +64,7 @@ cursor{
 #caption-cont{
     text-align: center;
     background-color:#c7c7c7;
-    padding: 1.5vw 0 1.5vw 0;
+    padding: 1vw 0 1vw 0;
     color: #474545;
     font-weight: 700;
     font-size: 4vw;
@@ -77,7 +77,7 @@ cursor{
 .column{
     float:left;
     width:20%;
-    height: 6.5vw;
+    height: 5vw;
 }
 .small-Imgs{
     opacity: 0.5;
@@ -87,24 +87,29 @@ cursor{
 .active,.small-Imgs:hover{
     opacity:1;
 }
+/*here*/
 #disclaimer-cont{
-    width:88%;
-    margin: 20px 0 20px 5%;
-    background-color: #f8ee98;
-    border-radius: 10px;
+    width:98%;
+    margin: 20px 0 20px 0;
+    color: #dd0404;
+    background-color: #f5e1dc;
     padding: 0.2vw 1% 0.2vw 1%;
 }
+#disclaimer-cont h4{
+    font-size: 1.1vw;
+    line-height: 0.1vw;
+}
 #dis-message{
-    font-size: 1vw;
-    color: #e20f0f;
+    font-size: 0.8vw;
     font-weight: 600;
 }
 #internal-right-cont{
     float: left;
     width: 30%;
-    margin:2vw 0 0 3%;
+    margin:2vw 0 0 8%;
     padding: 0 0 0 1%;   
 }
+/*to here*/
 #profile-cont{
     width:100%;
     display:inline-block;
@@ -141,7 +146,6 @@ cursor{
     line-height: 0.4vw;
 
 }
-/*here*/
 .rating{
     color: #c7c409;
     font-size: 1.1vw;
@@ -153,7 +157,6 @@ cursor{
     color: #0c5555;
     margin-top: -10px;
 }
-/* to here*/
 #contact-cont{
     padding: 1vw 0 1vw 3%;
 }
@@ -252,14 +255,12 @@ cursor{
  padding: 1.5vw 0 1.5vw 0;
  width:100% ;
 }
-/*here*/
 #report-cont a {
     color: #e9e6e6;
     text-decoration: none;
     font-size: 0.9vw;
     font-weight: 500;
 }
-/* to here*/
 #report-button{
     background-color: #e20f0f;
     width: 42%;
@@ -268,17 +269,17 @@ cursor{
     text-align: center;
 }
 @media screen and (max-width: 900px){
-    /*here*/
     #external-main-cont{
         padding: 80px 0 0 0;
     }
-    /*to here*/
-
+   
+    /*here*/
     #internal-left-cont{
-        width: 90%;
-        padding: 0 0 0 5%;
+        width: 85%;
+        padding: 0 0 0 7.5%;
     
     }
+     /*to here*/
     #numbertext{
         font-size: 2.5vw;
     }
@@ -287,11 +288,9 @@ cursor{
         width:100%;
         height: 55vw;
     }
-    /*here*/
     .prev, .next{
         font-size: 12vw;
     }
-    /* to here*/
     #caption-cont{   
         padding: 3vw 0 3vw 0;
     }
@@ -300,19 +299,15 @@ cursor{
         width:20%;
         height: 10vw;
     }
-    #disclaimer-cont{
-        width:88%;
-        margin: 20px 0 20px 5%;
-        background-color: #f8ee98;
-        border-radius: 10px;
-        padding: 0.2vw 1% 0.2vw 1%;
+    /*here*/
+    #disclaimer-cont h4{
+        font-size: 2vw;
     }
     #dis-message{
         font-size: 1.5vw;
-        color: #e20f0f;
         font-weight: 600;
     }
-
+     /*here*/
     #internal-right-cont{
         display: inline-block;
         width: 90%;
@@ -355,14 +350,12 @@ cursor{
         color: #686666;
         line-height: 1vw;
     }
-    /*here*/
     .rating{
         font-size: 1.8vw;
     }
     .bio{
         font-size: 1.5vw;
     }
-    /*to here*/
     #contact-cont{
         padding: 1vw 0 1vw 5%;
     }
@@ -489,13 +482,11 @@ cursor{
     .slides img{
         vertical-align:middle;
         width:100%;
-        height: 55vw;
+        height: 60vw;
     }
-    /*here*/
     .prev, .next{
         font-size: 15vw;
     }
-    /* to here*/
     #caption-cont{
         padding: 4.5vw 0 4.5vw 0;
     }
@@ -504,18 +495,15 @@ cursor{
         width:20%;
         height: 12vw;
     }
-    #disclaimer-cont{
-        width:98%;
-        margin: 20px 0 20px 1%;
-        background-color: #f8ee98;
-        border-radius: 10px;
-        padding: 0.2vw 1% 0.2vw 1%;
+    /*here*/
+    #disclaimer-cont h4{
+        font-size: 4.5vw;
     }
     #dis-message{
-        font-size: 2.7vw;
-        color: #e20f0f;
+        font-size: 3vw;
         font-weight: 600;
     }
+    /*to here*/
 
     #internal-right-cont{
         display: inline-block;
@@ -560,14 +548,12 @@ cursor{
         line-height: 1.5vw;
     
     }
-    /*here*/
     .rating{
         font-size: 3.8vw;
     }
     .bio{
         font-size: 3.2vw;
     }
-    /*to here*/
     #contact-cont{
         padding: 1vw 0 3vw 1%;
     }
