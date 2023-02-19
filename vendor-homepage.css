@@ -174,13 +174,13 @@
     font-size: 0.9vw;
 
 }
-#new-upload-btn a {   
-    color: #ffffff;
-}
+/*here*/
 #upload-btn-txt {
     font-size: 0.9vw;
+    color: #ffffff;
 
 }
+/*to here*/
 
 #new-upload-btn:hover{
     background-color: #5e0957;

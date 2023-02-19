@@ -214,6 +214,7 @@
 
 
         <script src = "main.js"></script>
+        <script src="confirm.js"></script>
         <script>
           //changes Apartment slide images when next or previous buttons are clicked
             let slideIndex = 1;
@@ -244,6 +245,21 @@
                 slides[slideIndex-1].style.display = "block";
                 dots[slideIndex-1].className += " active";
             }
+
+             /*calls the confirm window when the delete button is clicked*/
+            /*here*/
+            document.querySelector("#delete-product").addEventListener("click", () => {
+              Confirm.open({
+                title: "Confirm delete",
+                message: "Are you sure you want do delete this product?",
+                okText: "Delete",
+                cancelText: "Cancel",
+                onok: function() {},
+                oncancel: function() {}
+
+              })
+            });
+             /* to here*/
         </script>
 </body>
 </html>
