@@ -5,3 +5,6 @@ from .engine.database import Storage
 
 storage = Storage()
 storage.reload()
+
+fstorage = FileStorage()
+fstorage.reload()

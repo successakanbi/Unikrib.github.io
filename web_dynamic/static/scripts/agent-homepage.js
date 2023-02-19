@@ -17,7 +17,7 @@ $(function (){
 				dataType: 'json',
 				success: function(env){
 					$('#name-cont').html(`<p class="name">` + owner.first_name + ` ` + owner.last_name + `</p>
-						<p class="edit-icon"><a href="Edit-profile.html"><icon class="fa fa-pencil"></icon></a></p>
+						<p class="edit-icon"><a href="profile-edit-page.html"><icon class="fa fa-pencil"></icon></a></p>
 						<p class="services" id="service-select">Agent</span></p>
 						<p class="community2" id="community-select">` + env.name + `</p>
 						<p class="rating">Average rating:<span id=""> 4</span><icon class="fa fa-star"></icon></span></p>
@@ -46,7 +46,7 @@ $(function (){
 		success: function (reviews){
 			if (reviews.length === 0){
 				$('#latest-review-cont').html('<p id="review-message"> You have no reviews yet.</p>')
-				$('#other-review-cont').style.display = 'none';
+				$('#other-review-cont').addClass('disappear');
 			} else {
 				$('#view-review').html(`<p>View all>>></p>`)
 				window.localStorage.setItem('revieweeId', userId)

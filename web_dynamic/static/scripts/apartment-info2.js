@@ -162,7 +162,7 @@ $(function (){
 						<p class="services" id="service-select">Agent</span></p>
 						<p class="community2" id="community-select">Ekosodin</p>
 						<p class="rating">Average rating:<span id="">4</span><icon class="fa fa-star"></icon></span></p>
-						<p class="bio">I help students find affordable and suitable apartments of all types</p>
+						<p class="bio">` + user.note + `</p>
 					</div>
 					<div id="contact-cont">
 						<div id="uploader-phone">
@@ -231,5 +231,47 @@ $(function (){
 		error: function (){
 			alert("Could not load reviews now. please try again later");
 		}
+	})
+})
+
+// Deletes the apartment when the delete button is clicked
+$(function(){
+	$('#delete-apartment').on('click', function(){
+		$.ajax({
+			type: 'GET',
+			url: 'http://localhost:8000/unikrib/houses/' + houseId,
+			contentType: 'application/json',
+			dataType: 'json',
+			success: function(house){
+				var imgList = [house.image1, house.image2, house.image3]
+				$.ajax({
+					type: 'POST',
+					url: 'http://localhost:8003/unikrib/delete-file',
+					data: JSON.stringify(imgList),
+					contentType: 'application/json',
+					dataType: 'json',
+					success: function() {
+						alert("images deleted successfully")
+						window.location.href = 'agent-homepage.html'
+					},
+					error: function(){
+						alert("An error occurred and images could not be deleted")
+					}
+				})
+				$.ajax({
+					type: 'DELETE',
+					url: 'http://localhost:8000/unikrib/houses/' + houseId,
+					contentType: 'application/json',
+					dataType: 'json',
+					success: function(){
+						alert("Apartment deleted successfully")
+					},
+					error: function(){
+						alert("An error occured and apartment could not be deleted")
+					}
+				})
+			}
+		})
+		
 	})
 })

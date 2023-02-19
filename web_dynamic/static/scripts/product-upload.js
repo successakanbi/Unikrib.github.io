@@ -72,7 +72,8 @@ $(function (){
                                 contentType: false,
                                 success: function(body) {
                                     image1 = {
-                                        "image1": body.url
+                                        "image1": body.url,
+                                        "fileId1": body.fileId,
                                     }
                                     $.ajax({
                                         type: 'PUT',
@@ -126,7 +127,8 @@ $(function (){
                                 contentType: false,
                                 success: function(body) {
                                     image2 = {
-                                        "image2": body.url
+                                        "image2": body.url,
+                                        "fileId2": body.fileId,
                                     }
                                     $.ajax({
                                         type: 'PUT',
@@ -179,7 +181,8 @@ $(function (){
                                 contentType: false,
                                 success: function(body) {
                                     image3 = {
-                                        "image3": body.url
+                                        "image3": body.url,
+                                        "fileId3": body.fileId,
                                     }
                                     $.ajax({
                                         type: 'PUT',

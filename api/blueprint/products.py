@@ -73,9 +73,16 @@ def update_product(product_id):
     if obj == None:
         abort(404, "No product found")
     prod_dict = request.get_json()
-    for k, v in prod_dict.items():
-        setattr(obj, k, v)
-        obj.save()
+    for key, val in prod_dict.items():
+        if key == 'fileId1':
+            fstorage.new(prod_dict['image1'], val)
+        elif key == 'fileId2':
+            fstorage.new(prod_dict['image2'], val)
+        elif key == 'fileId3':
+            fstorage.new(prod_dict['image3'], val)
+        else:
+            setattr(obj, key, val)
+            obj.save()
     return jsonify(obj.to_dict())
 
 @app_views.route('/product-search', strict_slashes=False, methods=['POST'])

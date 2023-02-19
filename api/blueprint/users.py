@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from models import storage
+from models import storage, fstorage
 from api.blueprint import app_views
 from flask import abort, request, jsonify
 from models.user import User
@@ -116,7 +116,9 @@ def update_user(user_id):
     if obj is None:
         abort(404, "No user found")
     for key, val in new_dict.items():
-        if key not in ('id', 'created_at', 'updated_at'):
+        if key == 'fileId':
+            fstorage.new(new_dict['avatar'], val)
+        else:
             setattr(obj, key, val)
             obj.save()
     return jsonify(obj.to_dict(1))

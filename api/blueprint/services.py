@@ -2,7 +2,7 @@
 
 from api.blueprint import app_views
 from flask import jsonify, abort, request
-from models import storage
+from models import storage, fstorage
 from models.service import Service
 
 @app_views.route('/services', strict_slashes=False)
@@ -82,8 +82,15 @@ def update_service(service_id):
         abort(404, "No service instance found")
     request_dict = request.get_json()
     for key, val in request_dict.items():
-        setattr(obj, key, val)
-        obj.save()
+        if key == 'fileId1':
+            fstorage.new(request_dict['image1'], val)
+        elif key == 'fileId2':
+            fstorage.new(request_dict['image2'], val)
+        elif key == 'fileId3':
+            fstorage.new(request_dict['image3'], val)
+        else:
+            setattr(obj, key, val)
+            obj.save()
     return jsonify(obj.to_dict())
 
 @app_views.route('/services/<service_id>', strict_slashes=False, methods=['DELETE'])

@@ -41,17 +41,20 @@ $(function(){
                 $('#images').append(`<div class="slides">
                 <div id="numbertext"> ` + i + ` / 5  </div>
                 <img src="` + serviceImages[i-1] + `" class="sldimgs" id="descript-img-` + i + `"/>         
-            </div>`)
-            }
-            for (var i=1; i<=5; i++){
-                $('#rw').append(`<div class="column">
-                    <img class="small-Imgs" src="` + serviceImages[i-1] + `" 
-                    id="currentSlide` + i +`" alt=" " id="descript-img-` + i + `">
                 </div>`)
-                $('#currentSlide' + i).on('click', function() {
-                    showSlides(slideIndex = i);
+            }
+            
+            for (var i=1; i<=5; i++){
+                $('#rw').append(`<div class="column" id="current-"` + i + `>
+                    <img class="small-Imgs" src="` + serviceImages[i-1] + `" >
+                </div>`)
+                $(function() {
+                    $('#current-' + i).on('click', function(){
+                        showSlides(slideIndex = i)
+                    })
                 })
             }
+
             let slideIndex = 1;
             showSlides(slideIndex);
 
@@ -149,7 +152,6 @@ $(function (){
         contentType: 'application/json',
         dataType: 'json',
         success: function (reviews){
-            console.log(owner)
             window.localStorage.setItem('revieweeId', owner);
             if (reviews.length === 0){
                 $("#latest-review-cont").html('<p id="review-message"> No reviews has been left for this vendor yet.</p>');

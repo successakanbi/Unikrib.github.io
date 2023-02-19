@@ -3,7 +3,7 @@
 from api.blueprint import app_views
 from models.house import House
 from flask import abort, jsonify, request
-from models import storage
+from models import storage, fstorage
 
 @app_views.route('/houses', strict_slashes=False)
 def get_all_houses():
@@ -43,9 +43,10 @@ def create_house():
     """This creates a new house in storage"""
     if not request.json:
         abort(400, "Not a valid json")
-    if "owner_id" not in request.json:
+    house_dict = request.get_json()
+    if "owner_id" not in house_dict:
         abort(400, "House must have an owner_id")
-    if "street_id" not in request.json:
+    if "street_id" not in house_dict:
         abort(400, "Request must contain a street_id")
     house_dict = request.get_json()
     model = House(**house_dict)
@@ -63,21 +64,25 @@ def update_house(house_id):
     if obj is None:
         abort(404, "House not found")
     for key, val in house_dict.items():
-        setattr(obj, key, val)
-        obj.save()
+        if key == 'fileId1':
+            fstorage.new(house_dict['image1'], val)
+        elif key == 'fileId2':
+            fstorage.new(house_dict['image2'], val)
+        elif key == 'fileId3':
+            fstorage.new(house_dict['image3'], val)
+        else:
+            setattr(obj, key, val)
+            obj.save()
     return jsonify(obj.to_dict())
 
-@app_views.route('/houses/<house_dict>', strict_slashes=False, methods=['DELETE'])
+@app_views.route('/houses/<house_id>', strict_slashes=False, methods=['DELETE'])
 def delete_house(house_id):
     """This remove the house instance from storage"""
-    if not request.json:
-        abort(400, "Not a valid json")
-    search_key = 'House.' + house.id
-    if search_key not in storage.all(House):
-        abort(404, "House instance not found")
-    obj = storage.all(House)[search_key]
+    obj = storage.get('House', house_id)
+    if obj == None:
+        abort(404, "Apartment was not found")
     obj.delete()
-    return {}
+    return {}, 201
 
 @app_views.route('/houses/search', strict_slashes=False, methods=['POST'])
 def search_house():

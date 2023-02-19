@@ -42,7 +42,7 @@
     <!-- main external container containing form its input fields and select boxes-->
     <div id="main-ext-cont">
 
-        <form action="" id="profile-form-cont">
+        <div id="profile-form-cont">
          <div id="logo-container">
             <img src="images/Black logo on white.png">
          </div>
@@ -51,7 +51,7 @@
          <!--Select id for community where agent/vendor/service can offer services-->
          <label for="select state">Preferred service community</label>
          <select id="community-select" name="select community">
-            <option value=""></option>
+            <!--<option value=""></option>
             <option value="Adolor">Adolor</option>
             <option value="Ebvoumore">Ebvoumore</option>
             <option value="EDPA">EDPA</option>
@@ -61,7 +61,7 @@
             <option value="Isiohor">Isiohor</option>
             <option value="Osasoghie">Osasoghie</option>
             <option value="Oluku">Oluku</option>
-            <option value="Uselu">Uselu</option>
+            <option value="Uselu">Uselu</option>-->
             
          </select><br/>
          <!--here-->
@@ -80,9 +80,9 @@
 
 
          <div>
-            <button type="submit">Finish</button>
+            <button type="submit" id="submit">Finish</button>
           </div>
-        </form>
+        </div>
     </div>
 
      <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
@@ -144,5 +144,7 @@
         })
     </script>
      <script src = "scripts/main2.js"></script>
+     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+    <script src = "scripts/agent-profile.js"></script>
 </body>
 </html>

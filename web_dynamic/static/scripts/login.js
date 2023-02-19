@@ -18,7 +18,13 @@ $(function () {
             success: function(user_dict) {
                 alert("Welcome back " + user_dict.first_name);
                 window.localStorage.setItem('newId', user_dict.id);
-		        window.location.href = 'Apartment-page.html';
+                if (user_dict.user_type === 'vendor') {
+                    window.location.href = 'product-page.html';
+                } else if (user_dict.user_type === 'sp') {
+                    window.location.href = 'service-page.html'
+                } else {
+                    window.location.href = 'Apartment-page.html';
+                }
             },
             error: function(response) {
                 alert(JSON.stringify(response.responseJSON.message));

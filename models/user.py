@@ -16,6 +16,7 @@ class User(BaseModel, Base):
     user_type = Column(String(60), nullable=False)
     com_res = Column(String(60), nullable=True)
     avatar = Column(String(128), nullable=True, default='images/default-img.webp')
+    note = Column(String(1024), nullable=True, default='I provide the best products/services')
     rating = Column(Float, nullable=False, default=0)
 
     def __init__(self, *args, **kwargs):

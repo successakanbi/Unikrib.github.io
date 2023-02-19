@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 
-from models.product import Product
+from models import fstorage
 
-product_dict = {
-    "name": "Painter",
-    "owner_id": "07a5fec0-aa7f-4929-ab5a-37f10655fa92",
-    "category_id": "70ff042c-db94-485f-91e2-971afc70369f"
-}
-model = Product(**product_dict)
-model.save()
-print(model.to_dict())
+imgList = ['https://ik.imagekit.io/nzohesnyo/apartment-images/d5346022-478e-480a-863b-98e2c657b2e7_-yMf0WLKl.jpg', 'https://ik.imagekit.io/nzohesnyo/apartment-images/d5346022-478e-480a-863b-98e2c657b2e7_xj1DddGmR.jpg', 'https://ik.imagekit.io/nzohesnyo/apartment-images/d5346022-478e-480a-863b-98e2c657b2e7_G2xYluxpW.jpg']
+for item in imgList:
+    fileId = fstorage.get(item)
+    if fileId == None:
+        print("Not found")
+    else:
+        print(fileId)
+        response = fstorage.delete(item)
+        print(response)

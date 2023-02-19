@@ -29,6 +29,8 @@ $(function (){
 				window.localStorage.setItem('newId', new_dict.id);
 				if (user_type === 'sp'){
 					window.location.href = 'service-profile.html';
+				} else if (user_type === 'agent'){
+					window.location.href = 'agent-profile.html'
 				} else {
 					window.location.href = 'user-profile.html';
 				}

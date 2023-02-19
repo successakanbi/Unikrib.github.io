@@ -45,6 +45,7 @@ $(function (){
         }
         var spDict = {
             "com_res": $("#community-select :selected").val(),
+            "note": $('#descript-text').val(),
         };
 
         $.ajax({
