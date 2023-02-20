@@ -154,7 +154,7 @@ $(function(){
             dataType: 'json',
             success: function(){
                 alert('House updated successfully')
-                window.location.href = 'agent-homepage.html'
+                window.location.href = 'apartment-info-page2.html'
             }
         })
     })

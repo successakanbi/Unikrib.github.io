@@ -235,7 +235,7 @@ $(function (){
 })
 
 // Deletes the apartment when the delete button is clicked
-$(function(){
+/*$(function deleteApartment(){
 	$('#delete-apartment').on('click', function(){
 		$.ajax({
 			type: 'GET',
@@ -274,4 +274,4 @@ $(function(){
 		})
 		
 	})
-})
+})*/

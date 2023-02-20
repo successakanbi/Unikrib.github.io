@@ -5,9 +5,9 @@
     padding: 80px 0 0 8%;
 }
 #internal-left-container{
-    width: 45%;
+    width: 35%;
     float: left;
-    margin: 0 0 0 5vw;
+    margin: 0 0 0 5%;
 }
 .currentImage{
     display: none; 
@@ -21,7 +21,7 @@
 }
 .product-slide-cont img{
     vertical-align: middle;
-    height: 33vw;
+    height: auto;
 }
 
 .prev, .next{
@@ -167,7 +167,7 @@
 #internal-right-container{
     float: left;
     width: 30%;
-    margin:2vw 0 0 3%;
+    margin:2vw 0 0 8%;
     padding: 0 0 0 1%;   
 }
 #profile-cont{
@@ -382,7 +382,9 @@
         margin: 0 0 0  5%;
     }
     .currentImage{
-        display: none; 
+        display: none;
+        width: 85%;
+        margin: 0 0 0 7.5%;
     }
     .product-slide-cont{
         display: block;
@@ -393,7 +395,6 @@
     }
     .product-slide-cont img{
         vertical-align: middle;
-        height: 58vw;
     }
     .prev, .next{
         position: absolute;
@@ -710,7 +711,6 @@
 
     .product-slide-cont img{
         vertical-align: middle;
-        height: 70vw;
     }
     .prev, .next{
         position: absolute;
