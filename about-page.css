@@ -1,10 +1,12 @@
+/*here*/
 #about-ext-cont{
-    width: 70%;
-    margin-left: 15%;
+    width: 90%;
+    margin:0 0 0 5%;
     padding: 80px 0 0 0;
     display: block;
 
 }
+/*to here*/
 #about-int-cont{
     width: 80%;
     margin: 0 0 0 10%;
@@ -26,13 +28,15 @@
 
     
 }
+/*here*/
 #about-text-cont p{
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: 400;
     color: #03144e;
     margin: 0 1vw 0 0;
-    
+   
 }
+/*here*/
 #about-img-cont{
     display:inline-flex;
     margin: 1vw 0 3vw 0;
@@ -151,10 +155,12 @@
         font-size: 3vw;
     
     }
+    /*here*/
     #about-text-cont p{
-        font-size: 2.2vw;
+        font-size: 2vw;
         
     }
+    /*here*/
     #header-cont{
         padding: 0 2% 0 2%;
         width:26%;
@@ -212,10 +218,12 @@
         border-radius: 0.5vw;
         margin: 1.5vw 0 3.5vw 0;    
     }
+    /*here*/
     #about-text-cont p{
-        font-size: 4.5vw;
+        font-size: 4svw;
         
     }
+    /*here*/
     #about-img-cont{
         display:inline-block;
         margin: 1vw 0 3vw 0;
