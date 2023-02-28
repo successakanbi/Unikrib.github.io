@@ -1,0 +1,133 @@
+#outer-main-cont{
+    width:100%;
+    margin-left: 0%;
+    display: inline-block;
+    padding: 80px 0 0 0%;
+}
+#inner-main-cont{
+    width: 35%;
+    float: left;
+    margin: 0 0 5vw 32.5%;
+}
+#regForm {
+    background-color: #ffffff;
+    margin: 0px auto;
+    padding: 30px;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  h2 {
+    text-align: center;  
+  }
+
+  label{
+    color: #063766;
+    font-weight: 600;
+    line-height: 2.5em;
+    font-size: 0.8em;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #aaaaaa;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  textarea{
+    width: 100%;
+    margin: 5px 0 10px 0;
+    height:7em;
+    border: none;
+    background-color: #e9f6f7;
+    border-bottom: #607dda solid 3px;
+    resize: none; 
+  }
+  textarea:focus{
+    background-color: #d5e5e7;
+    outline: none;
+    height:9em;
+    transition: 0.5s ease-in-out;
+  }
+  
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+  #button-cont{
+    overflow:auto;
+    text-align: center;
+    padding: 1em 0 0 0;
+  }
+  
+  button {
+    background-color: #097405;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  #prevBtn {
+    background-color: #0e8088;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+
+  @media screen and (max-width: 900px) {
+    #inner-main-cont{
+      width: 70%;
+      float: left;
+      margin: 0 0 5vw 15%;
+    }
+    
+
+  }
+  @media screen and (max-width: 590px){
+    #inner-main-cont{
+      width: 98%;
+      float: left;
+      margin: 0 0 5vw 1%;
+    }
+    #regForm {
+      padding: 10px;
+      width: 85%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    label{
+      font-size: 0.73em;
+    }
+   
+
+  }
