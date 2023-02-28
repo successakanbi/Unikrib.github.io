@@ -82,15 +82,18 @@ def update_service(service_id):
         abort(404, "No service instance found")
     request_dict = request.get_json()
     for key, val in request_dict.items():
-        if key == 'fileId1':
-            fstorage.new(request_dict['image1'], val)
-        elif key == 'fileId2':
-            fstorage.new(request_dict['image2'], val)
-        elif key == 'fileId3':
-            fstorage.new(request_dict['image3'], val)
-        else:
-            setattr(obj, key, val)
-            obj.save()
+        if key == 'image1' and obj.image1:
+            fstorage.new(obj.image1)
+        elif key == 'image2' and obj.image2:
+            fstorage.new(obj.image2)
+        elif key == 'image3' and obj.image3:
+            fstorage.new(obj.image3)
+        elif key == "image4" and obj.image4:
+            fstorage.new(obj.image4)
+        elif key == "image5" and obj.image5:
+            fstorage.new(obj.image5)
+        setattr(obj, key, val)
+        obj.save()
     return jsonify(obj.to_dict())
 
 @app_views.route('/services/<service_id>', strict_slashes=False, methods=['DELETE'])
@@ -99,6 +102,9 @@ def delete_service(service_id):
     obj = storage.get('Service', service_id)
     if obj == None:
         abort(404, "No service found")
+    for image in (obj.image1, obj.image2, obj.image3, obj.image4, obj.image5):
+        if image:
+            fstorage.new(image)
     obj.delete()
     return '{}'
     

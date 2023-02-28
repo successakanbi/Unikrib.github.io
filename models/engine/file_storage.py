@@ -5,48 +5,43 @@ import json
 class FileStorage:
     """This defines the filestorage class"""
 
-    __objects = {}
+    __objects = []
     __filepath = 'unikrib.json'
 
     def all(self):
+        """This returns all the instances from storage"""
         return self.__objects
 
-    def get(self, url):
-        try:
-            return self.__objects[url[33:]]
-        except Exception:
-            return None
-
-    def new(self, url, fileId):
-        self.__objects[url[33:]] = fileId
+    def new(self, url):
+        """This create a new instance"""
+        self.__objects.append(url[33:])
         self.save()
 
     def save(self):
-        kv_dict = {}
-        for k, v in self.__objects.items():
-            kv_dict[k] = v
+        """This write all the instances into disk"""
+        kv_dict = []
+        for url in self.__objects:
+            kv_dict.append(url)
         
         with open(self.__filepath, 'w', encoding='utf-8') as f:
             json.dump(kv_dict, f)
 
     def reload(self):
+        """This reloads the objects for consistency"""
         try:
             with open(self.__filepath) as f:
                 all_kv = json.load(f)
         except Exception:
             pass
         else:
-            for url, fileId in all_kv.items():
-                self.__objects[url] = fileId
+            for url in all_kv:
+                self.__objects.append(url)
 
     def close(self):
         self.reload()
 
     def delete(self, url):
-        for key, val in self.__objects.items():
-            if key == url[33:]:
-                del self.__objects[key]
-                self.save()
-                return "success"
-        return "Not found"
+        if url in self.__objects:
+            self.__objects.remove(url)
+            self.save()
         

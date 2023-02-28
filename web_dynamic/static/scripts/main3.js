@@ -13,11 +13,19 @@ function dropMenu() {
     }    
 }
 
+var loader = document.getElementById('preloader');
+window.addEventListener("load", function(){
+    loader.style.display = "none";
+})
+
 function logout(){    
     window.localStorage.clear();
     window.location.href = 'homepage.html';
 }
-
+var loader = document.getElementById('preloader');
+window.addEventListener("load", function(){
+    loader.style.display = "none";
+})
 function changeIcon(x) {
     x.classList.toggle("change");
 }

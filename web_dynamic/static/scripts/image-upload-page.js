@@ -42,7 +42,6 @@ $(function (){
                         success: function(body) {
                             image1 = {
                                 "image1": body.url,
-                                "fileId1": body.fileId,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -52,6 +51,7 @@ $(function (){
                                 dataType: 'json',
                                 success: function(){
                                     alert("First image uploaded successfully");
+                                    window.location.href = 'service-page.html'
                                 },
                                 error: function(){
                                     alert("Error uploading the first image");
@@ -98,7 +98,6 @@ $(function (){
                         success: function(body) {
                             image2 = {
                                 "image2": body.url,
-                                "fileId2": body.fileId
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -154,7 +153,6 @@ $(function (){
                         success: function(body) {
                             image3 = {
                                 "image3": body.url,
-                                "fileId3": body.fileId,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -210,7 +208,6 @@ $(function (){
                         success: function(body) {
                             image4 = {
                                 "image4": body.url,
-                                "fileId4": body.fileId,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -266,7 +263,6 @@ $(function (){
                         success: function(body) {
                             image5 = {
                                 "image5": body.url,
-                                "fileId5": body.fileId,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -286,6 +282,5 @@ $(function (){
                 },
             });
         });
-        window.location.href = 'service-page.html'
     })
 })

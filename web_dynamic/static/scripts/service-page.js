@@ -84,7 +84,7 @@ $(function (){
                                            <p class ="name">` + owner.first_name + ` ` + owner.last_name + `</p>
                                            <p class="services" id="service-select"> ` + cat.name + `</p>
                                           <p class="community" id ="community-select">` + env.name + `</p>
-                                          <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">2 <icon class="fa fa-star"></icon></span></p>
+                                          <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">` + owner.rating.toFixed(1) + ` <icon class="fa fa-star"></icon></span></p>
                                          </div>   
                                          </div>
                                         </div>`)
@@ -163,7 +163,7 @@ $(function (){
                                                         <p class ="name">` + owner.first_name + ` ` + owner.last_name + `</p>
                                                         <p class="services" id="service-select"> ` + catName + `</p>
                                                         <p class="community" id ="community-select">` + env.name + `</p>
-                                                        <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">2 <icon class="fa fa-star"></icon></span></p>
+                                                        <p class="rating">Average star rating: <span class="ratings" id="rating-val-1">` + owner.rating + ` <icon class="fa fa-star"></icon></span></p>
                                                         </div>   
                                                         </div>
                                                 </div>`)

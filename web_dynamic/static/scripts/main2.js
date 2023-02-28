@@ -24,6 +24,8 @@ function getUserType(){
                 window.location.href = 'service-homepage.html';
             } else if (currentUser.user_type === 'regular'){
                 window.location.href = 'user-homepage.html';
+            } else {
+                alert("Could not determine user type")
             }
         },
         error: function (){
@@ -31,6 +33,15 @@ function getUserType(){
         }
     })
 }
+var help = document.getElementById('help')
+help.addEventListener("click", function() {
+    window.location.href = 'help-page.html'
+})
+
+var loader = document.getElementById('preloader');
+window.addEventListener("load", function(){
+    loader.style.display = "none";
+})
 
 function dropMenu() {
     var x = document.getElementById("my-Top-nav");

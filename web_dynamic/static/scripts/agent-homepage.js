@@ -20,7 +20,7 @@ $(function (){
 						<p class="edit-icon"><a href="profile-edit-page.html"><icon class="fa fa-pencil"></icon></a></p>
 						<p class="services" id="service-select">Agent</span></p>
 						<p class="community2" id="community-select">` + env.name + `</p>
-						<p class="rating">Average rating:<span id=""> 4</span><icon class="fa fa-star"></icon></span></p>
+						<p class="rating">Average rating:<span id=""> ` + owner.rating.toFixed(1) + `</span><icon class="fa fa-star"></icon></span></p>
 						<p class="bio">` + owner.note + `</p>`)
 
 					$("#contact-cont").html(`<div id="uploader-phone">

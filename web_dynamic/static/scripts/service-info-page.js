@@ -121,7 +121,7 @@ $(function (){
                                     <p class="name">` + owner.first_name + ` ` + owner.last_name + `</p>
                                     <p class="services" id="service-select">` + cat.name + `</span></p>
                                     <p class="community" id="community-select">` + env.name + `</p>
-                                    <p class="rating">Average rating: <span id="">3</span><icon class="fa fa-star"></icon></span></p>
+                                    <p class="rating">Average rating: <span id="">` + owner.rating.toFixed(1) + `</span><icon class="fa fa-star"></icon></span></p>
                                     <p class="bio">` + service.description + `</p>
                                   </div>
                                   <div id="contact-cont">
@@ -145,42 +145,61 @@ $(function (){
 
 // Load reviews
 $(function (){
-    const owner = window.localStorage.getItem('serviceOwner')
-    $.ajax({
+    //get service detail
+    $.ajax({ 
         type: 'GET',
-        url: 'http://localhost:8000/unikrib/users/' + owner + '/reviews',
+        url: 'http://localhost:8000/unikrib/services/' + serviceId,
         contentType: 'application/json',
         dataType: 'json',
-        success: function (reviews){
-            window.localStorage.setItem('revieweeId', owner);
-            if (reviews.length === 0){
-                $("#latest-review-cont").html('<p id="review-message"> No reviews has been left for this vendor yet.</p>');
-                $("#view-review").text('Be the first to leave a review');
-            } else {				
-                $.ajax({
-                    type: 'GET',
-                    url: 'http://localhost:8000/unikrib/users/' + reviews[0].reviewer,
-                    contentType: 'application/json',
-                    dataType: 'json',
-                    success: function (reviewer){
-                        $("#latest-review-cont").html(`<div id="rev-img-cont">
-                        <img src="` + reviewer.avatar + `">
-                        </div>
-                        <div id="rev-name-cont">
-                            <p class="rev-name">` + reviewer.first_name + ` ` + reviewer.last_name + `</p>
-                        </div>
-                        <div id="rev-message-cont">
-                            <p id="review-message">` + reviews[0].text + `</p> 
-                            <p class="time-stamp">` + reviews[0].updated_at.slice(0, 10) + `</p>
-                        </div>`)
-                        if (reviews.length === 1){
-                            $("#view-review").text('Add a new review');
-                        } else {
-                            $("#review-length").text(reviews.length - 1)															
+        success: function(service){
+            // load service owner detail
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:8000/unikrib/users/' + service.owner_id,
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (owner){
+                    window.localStorage.setItem('revieweeId', owner.id);
+                    // load reviews
+                    $.ajax({
+                        type: 'GET',
+                        url: 'http://localhost:8000/unikrib/users/' + owner.id + '/reviews',
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function (reviews){
+                            if (reviews.length === 0){
+                                $("#latest-review-cont").html('<p id="review-message"> No reviews has been left for this vendor yet.</p>');
+                                $("#view-review").text('Be the first to leave a review');
+                            } else {
+                                // load first reviewer details				
+                                $.ajax({
+                                    type: 'GET',
+                                    url: 'http://localhost:8000/unikrib/users/' + reviews[0].reviewer,
+                                    contentType: 'application/json',
+                                    dataType: 'json',
+                                    success: function (reviewer){
+                                        $("#latest-review-cont").html(`<div id="rev-img-cont">
+                                        <img src="` + reviewer.avatar + `">
+                                        </div>
+                                        <div id="rev-name-cont">
+                                            <p class="rev-name">` + reviewer.first_name + ` ` + reviewer.last_name + `</p>
+                                        </div>
+                                        <div id="rev-message-cont">
+                                            <p id="review-message">` + reviews[0].text + `</p> 
+                                            <p class="time-stamp">` + reviews[0].updated_at.slice(0, 10) + `</p>
+                                        </div>`)
+                                        if (reviews.length === 1){
+                                            $("#view-review").text('Add a new review');
+                                        } else {
+                                            $("#review-length").text(reviews.length - 1)															
+                                        }
+                                    }
+                                })
+                            }
                         }
-                    }
-                })
-            }
+                    })
+                }
+            })
         }
     })
 })

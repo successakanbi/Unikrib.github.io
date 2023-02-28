@@ -135,7 +135,6 @@ $(function(){
 
 // PUT the new data to the server
 $(function(){
-    
     $('#submit-apart').on('click', function(){
         var updateDict = {
             "apartment": $('#apartment :selected').val(),

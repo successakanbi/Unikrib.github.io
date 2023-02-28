@@ -143,7 +143,7 @@ $(function (){
                     error: function(){
                         alert('Could not load product owner');
                     }
-                }) 
+                })
                 
             })
             
@@ -199,7 +199,7 @@ $(function (){
                                 success: function(env){
                                     if (index < 9){
                                         $('#all-products').append(`<div id="output-cont" class="output-containers">
-                                                <div id="` + prod.id + `">
+                                            <div id="` + prod.id + `">
                                                 <div id="image-cont">
                                                     <img src="` + prod.image1 + `" id="img1" class="product-imgs">
                                                 </div>
@@ -245,8 +245,7 @@ $(function (){
                         error: function(){
                             alert('Could not load product owner');
                         }
-                    }) 
-                    
+                    })
                 })
             },
             error: function (){

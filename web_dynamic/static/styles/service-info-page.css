@@ -126,11 +126,12 @@ cursor{
     height: 4vw;
     border-radius: 50%;
 }
+
 .time-stamp{
     text-align: right;
+    font-size: 0.8vw;
     font-weight: 600;
     color: #686666da;
-    font-size: 1.3vw;
 }
 #name-cont{
     padding: 0 0 0 3%;

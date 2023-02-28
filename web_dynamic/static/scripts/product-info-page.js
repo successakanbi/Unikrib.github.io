@@ -71,8 +71,8 @@ $(function (){
                           $('#product-price').text('N' + product.price)
                           $('#community').text(env.name)
                           if (product.delivery === 'yes') {
-                            $('delivery').removeClass('Unavailable')
-                            $('delivery').addClass('Available')
+                            $('#delivery').removeClass('Unavailable')
+                            $('#delivery').addClass('Available')
                             $('#delivery').text('Available')
                           } else {
                             $('#delivery').removeClass('Available')
@@ -117,6 +117,7 @@ $(function (){
                             $('#uploader-phone').html('<p class="contact"><icon class="fa fa-phone"><a href="tel:' + owner.phone_no +'" class="contact-links"> ' + owner.phone_no + '</a></icon></p>')
                             $('#uploader-whatsapp').html(`<p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=` + owner.phone_no + `"
                             class="contact-links"> ` + owner.phone_no + `</a></icon></p>`)
+                            $("#rating").text(owner.rating.toFixed(1))
                         }
                     })
                     
@@ -150,7 +151,8 @@ $(function (){
                     if (reviews.length === 0){
                         $("#latest-review-cont").html('<p id="review-message"> No reviews has been left for this vendor yet.</p>');
 						$("#view-review").text('Be the first to leave a review');
-					} else {				
+					} else {	
+                        $('#view-review').text('View all reviews')
 						$.ajax({
 							type: 'GET',
 							url: 'http://localhost:8000/unikrib/users/' + reviews[0].reviewer,

@@ -18,7 +18,7 @@ $(function(){
 
 // Post new product
 $(function (){
-    $('#submit-btn').on('click', function(){
+    $('#submit-product').on('click', function(){
         productDict = {
             "name": $('#product-name').val(),
             "price": $('#price').val(),
@@ -26,6 +26,7 @@ $(function (){
             "delivery": $('#delivery-status :selected').val(),
             "category_id": $('#product-category :selected').val(),
             "owner_id": userId,
+            "available": $('#product-status :selected').val(),
         }
 
         var ins = $("#product-image1")[0].files.length;
@@ -47,6 +48,10 @@ $(function (){
                     var formData = new FormData();
                     
                     var file = $("#product-image1");
+                    var ins = $("#product-image1")[0].files.length;
+                    if(ins == 0) {
+                        return;
+                    }
     
                     formData.append("file", file[0].files[0]);
                     formData.append("fileName", product.id + '.jpg');
@@ -83,6 +88,10 @@ $(function (){
                                         dataType: 'json',
                                         success: function(){
                                             alert("First image uploaded successfully");
+                                            var ins = $("#product-image2")[0].files.length;
+                                            if(ins == 0) {
+                                                getUserType()
+                                            }
                                         },
                                         error: function(){
                                             alert("Error uploading the first image");
@@ -98,10 +107,11 @@ $(function (){
                     //upload second image
                     var formData = new FormData();
     
-                    var file = $("#product-image2")
-                    if (file.length === 0) {
+                    var ins = $("#product-image2")[0].files.length;
+                    if(ins == 0) {
                         return;
                     }
+                    var file = $("#product-image2")
     
                     formData.append("file", file[0].files[0]);
                     formData.append("fileName", product.id + '.jpg');
@@ -138,6 +148,10 @@ $(function (){
                                         dataType: 'json',
                                         success: function(){
                                             alert("Second image uploaded successfully");
+                                            var ins = $("#product-image3")[0].files.length;
+                                            if(ins == 0) {
+                                                getUserType()
+                                            }
                                         },
                                         error: function(){
                                             alert("Error uploading the second image");
@@ -151,11 +165,12 @@ $(function (){
                 $(function (){
                     //upload third image
                     var formData = new FormData();
-    
-                    var file = $("#product-image3")
-                    if (file === 0) {
+
+                    var ins = $("#product-image3")[0].files.length;
+                    if(ins == 0) {
                         return;
                     }
+                    var file = $("#product-image3")
     
                     formData.append("file", file[0].files[0]);
                     formData.append("fileName", product.id + '.jpg');
@@ -192,6 +207,7 @@ $(function (){
                                         dataType: 'json',
                                         success: function(){
                                             alert("Third image uploaded successfully");
+                                            getUserType()
                                         },
                                         error: function(){
                                             alert("Error uploading the third image");

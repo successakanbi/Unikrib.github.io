@@ -37,6 +37,14 @@ $(function (){
                     contentType: 'application/json',
                     dataType: 'json',
                     success: function(reviewer) {
+                        var star = parseInt(review.star)
+                        if (star >= 4) {
+                            var code = 'positive'
+                        } else if(star == 3) {
+                            var code = 'average'
+                        } else {
+                            var code = 'poor'
+                        }
                         $("#review-right-cont").append(`<div class="review-inbox">
                             <div class="reviewer-img-cont">
                                 <img src="` + reviewer.avatar + `">
@@ -47,7 +55,7 @@ $(function (){
                             <div class="review-message-cont">
                                 <p class="rev-message">` + review.text + `</p>
                                     <div class="star-cont">
-                                        <p><span id="stars">` + review.star + `</span><icon class="fa fa-star" id="positive"></icon></p>
+                                        <p><span id="stars">` + review.star + `</span><icon class="fa fa-star" id="` + code + `"></icon></p>
                                     </div>
                                     <div class="time-stamp-cont">
                                         <p class="time-stamp">` + review.updated_at.slice(0, 10) + `</p>
@@ -55,20 +63,6 @@ $(function (){
 
                             </div>
                         </div>`)
-                        const star = review.star;
-                        average = $('#average')
-                        console.log(star)
-
-                        if (star === 5 || star === 4) {
-                            average.addClass('green');
-                        } else if (star === 3) {
-                            average.addClass('yellow');
-                        } else if (star === 2) {
-                            average.addClass('red');
-                        } else {
-                            average.addClass('grey');
-                        }
-
                     }
                 })
 

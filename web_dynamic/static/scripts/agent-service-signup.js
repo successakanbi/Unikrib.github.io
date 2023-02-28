@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
+// Post the user details
 $(function (){
 	var $first_name = $("#first_name");
 	var $last_name = $("#last_name");

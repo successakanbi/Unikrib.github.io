@@ -116,11 +116,10 @@ def update_user(user_id):
     if obj is None:
         abort(404, "No user found")
     for key, val in new_dict.items():
-        if key == 'fileId':
-            fstorage.new(new_dict['avatar'], val)
-        else:
-            setattr(obj, key, val)
-            obj.save()
+        if key == "avatar" and obj.avatar:
+            fstorage.new(obj.avatar)
+        setattr(obj, key, val)
+        obj.save()
     return jsonify(obj.to_dict(1))
 
 

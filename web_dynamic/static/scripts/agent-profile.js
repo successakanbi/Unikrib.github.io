@@ -57,9 +57,9 @@ $(function(){
                                 processData: false,
                                 contentType: false,
                                 success: function(body) {
+                                    console.log(body)
                                     image1 = {
                                         "avatar": body.url,
-                                        "fileId": body.fileId,
                                     }
                                     $.ajax({
                                         type: 'PUT',
@@ -69,6 +69,7 @@ $(function(){
                                         dataType: 'json',
                                         success: function(){
                                             alert("Profile image uploaded successfully");
+                                            window.location.href = 'Apartment-page.html';
                                         },
                                         error: function(){
                                             alert("Error uploading the profile image");
@@ -80,7 +81,7 @@ $(function(){
                     });
                 });
                 alert("Details updated successfully")
-                window.location.href = 'Apartment-page.html';
+                
             }
         })
     })

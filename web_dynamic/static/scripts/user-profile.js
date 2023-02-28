@@ -91,13 +91,7 @@ $(function (){
 							dataType: 'json',
 							success: function (user){
 								alert("User image updated successfully");
-								/*if (user.user_type === 'vendor') {
-									window.location.href = 'product-page.html'
-								} else if (user.user_type === 'sp') {
-									window.location.href = 'service-page.html'
-								} else {
-									window.location.href = 'Apartment-page.html'
-								}*/
+								window.location.href = 'Apartment-page.html'
 							},
 							error: function(){
 								alert("Could not upload user image, please try again later");

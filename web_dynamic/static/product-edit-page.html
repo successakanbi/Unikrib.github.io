@@ -25,10 +25,10 @@
         <div class="dropdown" id="dropdown">
           <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
           <div class="dropmenu-content" id="dropdown-cont">
-             <p href="" class="drop-links">Profile</p>
+             <p class="drop-links" onclick="getUserType()">Profile</p>
              <p href="" class="drop-links">Edit profile</p>
-             <p href="" class="drop-links">Help</p>
-             <p href="" class="drop-links">logout</p>
+             <p id="help" class="drop-links">Help</p>
+             <p class="drop-links" onclick="logout()">logout</p>
          </div>
        </div>
         <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
@@ -40,6 +40,7 @@
          </a>
     </div>
 
+    <div id="preloader"></div>
     <div id="outer-most-container">
 
       <!---Contains input fields, select boxes, image upload container, submit button and notice container-->
@@ -89,10 +90,10 @@
 
              <label for="product status">product status</label><br>
              <select name="product status" id="product-status" class="status">
-                <option value="in stock">In stock</option>
-                <option value="Out of stock">Out of stock</option>
-
+                <!--<option value="yes">In stock</option>
+                <option value="no">Out of stock</option>-->
              </select>
+             
              <!-- contains product image upload input fields-->
              <h3>Change product images</h3>
              <div id="product-img-cont">
