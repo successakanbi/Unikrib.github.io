@@ -96,12 +96,12 @@ label {
     width: 100%;
     
  }
- /*here*/
+ 
  .img-name{
    font-weight: 700;
    margin-left: 10%;
 }
-/* to here*/ 
+/*here*/
 .image-select-cont {
    width:35%;
    margin: 1vw 0 1vw 32.5%;
@@ -110,7 +110,7 @@ label {
    width:100%;
    height:auto;
 }
- 
+ /* to here*/ 
  button{
     padding: 15px;
     width: 70%;margin-top: 20px;

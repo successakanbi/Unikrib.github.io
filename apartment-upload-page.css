@@ -98,7 +98,19 @@ h3{
     width: 100%;
     
  }
+
  /*here*/
+.image-select-cont {
+    width:35%;
+    margin: 0.5vw 0 0.5vw 39.5%;
+ }
+ .image-select-cont img{
+    width:100%;
+    height:auto;
+ }
+ /*to here*/
+ 
+ 
  .submit-btn{
     padding: 15px;
     width: 70%;
@@ -112,7 +124,7 @@ h3{
     border-radius: 5px;
     margin-bottom: 20px;
  }
- /*to here*/
+
  button:hover{
     background-color: #941077;
  }

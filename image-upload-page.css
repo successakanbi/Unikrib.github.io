@@ -70,6 +70,18 @@ h3{
     width: 100%;
     
  }
+
+ /*here*/
+.image-select-cont {
+    width:35%;
+    margin: 0.5vw 0 0.5vw 39.5%;
+ }
+ .image-select-cont img{
+    width:100%;
+    height:auto;
+ }
+ /*to here*/
+
  #imgs-submit{
     padding: 15px;
     width: 70%;
