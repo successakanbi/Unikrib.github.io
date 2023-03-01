@@ -22,7 +22,7 @@ $(function(){
                       </div>
                       <div id="name-cont">
                         <p class="name">` + owner.first_name + ` ` + owner.last_name + `</p>
-                        <p class="edit-icon"><a href="Edit-profile.html"><icon class="fa fa-pencil"></icon></a></p>
+                        <p class="edit-icon"><a href="profile-edit-page.html"><icon class="fa fa-pencil"></icon></a></p>
                         <p class="community" id="community-select">` + env.name + `</p>
                         <p class="email"> <icon class="fa fa-envelope"></icon> ` + owner.email + `</p>
                       </div>

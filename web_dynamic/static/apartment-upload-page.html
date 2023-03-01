@@ -27,7 +27,7 @@
           <div class="dropmenu-content" id="dropdown-cont">
              <p class="drop-links" onclick="getUserType()">Profile</p>
              <p href="" class="drop-links">Edit profile</p>
-             <p href="" class="drop-links">Help</p>
+             <p id="help" class="drop-links">Help</p>
              <p class="drop-links" onclick="logout()">logout</p>
           </div>
         </div>
@@ -40,6 +40,7 @@
          </a>
     </div>
 
+    <Div id="preloader"></Div>
     <div id="outer-most-container">
 
       <!---Contains input fields, select boxes, image upload container, submit button and notice container-->
@@ -102,9 +103,6 @@
 
              <label for="Electricity">Hours of daily power supply</label><br>
              <input type="number" name="Electricity" id="hours" max="24" min="0" class="features">
-
-             <label for="distance">How many mins walk from the school?</label>
-             <input type="number" name="distance" id="time"  class="features">
 
              <!-- contains apartment image upload input fields-->
              <h3>Upload three images of the apartment</h3>

@@ -34,11 +34,11 @@ $(function(){
                                         </div>
                                         <div id="name-cont">
                                         <p class="name" id="name">` + owner.first_name + ` ` + owner.last_name + `</p>
-                                        <p class="edit-icon"><a href="Edit-profile.html"><icon class="fa fa-pencil"></icon></a></p>
+                                        <p class="edit-icon"><a href="profile-edit-page.html"><icon class="fa fa-pencil"></icon></a></p>
                                         <p class="services" id="service-select">` + category.name + `</span></p>
                                         <p class="community" id="community-select">` + env.name + `</p>
-                                        <p class="rating">Average rating: <span id="">3</span><icon class="fa fa-star"></icon></span></p>
-                                        <p class="bio" id="bio">` + service.description + `</p>
+                                        <p class="rating">Average rating: <span id="">` + owner.rating + `</span><icon class="fa fa-star"></icon></span></p>
+                                        <p class="bio" id="bio">` + owner.note + `</p>
                                         </div>
                                         <div id="contact-cont">
                                         <div id="uploader-phone">
@@ -127,7 +127,7 @@ $(function (){
                 count += 1;
                 serviceImages.push(service.image5)
             }
-            var rem = 5 - serviceImages.length;
+            var rem = 5 - count;
             for (var i=0; i<rem; i++){
                 serviceImages.push("images/campus_housing-220520-0109.jpg")  // To be replaced with a blank image
             }

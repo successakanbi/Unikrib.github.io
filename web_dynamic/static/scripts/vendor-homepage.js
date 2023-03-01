@@ -21,11 +21,11 @@ $(function(){
                         </div>
                         <div id="name-cont">
                         <p class="name">` + owner.first_name + ` ` + owner.last_name + `</p>
-                        <p class="edit-icon"><a href="Edit-profile.html"><icon class="fa fa-pencil"></icon></a></p>
+                        <p class="edit-icon"><a href="profile-edit-page.html"><icon class="fa fa-pencil"></icon></a></p>
                         <p class="services" id="service-select">Vendor</span></p>
                         <p class="community" id="community-select">` + env.name + `</p>
-                        <p class="rating">Average rating: <span id="">5</span><icon class="fa fa-star"></icon></span></p>
-                        <p class="bio">I sell all kind of phones,Including Iphone, samsung, infinix, Redmi etc. I also sell phone accesories</p>
+                        <p class="rating">Average rating: <span id="">` + owner.rating + `</span><icon class="fa fa-star"></icon></span></p>
+                        <p class="bio">` + owner.note + `</p>
                         </div>
                         <div id="contact-cont">
                         <div id="uploader-phone">
@@ -53,7 +53,7 @@ $(function (){
 		success: function (reviews){
 			if (reviews.length === 0){
 				$('#latest-review-cont').html('<p id="review-message"> You have no reviews yet.</p>')
-				$('#other-review-cont').style.display = 'none';
+				$('#other-review-cont').addClass('disappear');
 			} else {
 				$('#view-review').html(`<p>View all>>></p>`)
 				window.localStorage.setItem('revieweeId', userId)
@@ -89,6 +89,9 @@ $(function(){
         contentType: 'application/json',
         dataType: 'json',
         success: function(products){
+            if (products.length < 2) {
+                $('#view-more-button').addClass('disappear');
+            }
             $.ajax({
                 type: 'GET',
                 url: 'http://localhost:8000/unikrib/users/' + userId,
@@ -101,13 +104,15 @@ $(function(){
                         contentType: 'application/json',
                         dataType: 'json',
                         success: function(env){
+                            $('#first-apart').html('')
+                            $('view-more-cont').html('')
                             $.each(products, function(index, product){
-                                if (index === 1){
+                                if (index === 0) {
                                     var pos = 'first-apart'
                                 } else {
                                     var pos = 'view-more-cont'
                                 }
-                                $('#' + pos).html(`<div id="output-cont" class="output-containers">
+                                $('#' + pos).append(`<div id="output-cont" class="output-containers">
                                     <div id="info-` + product.id + `">
                                     <div id="image-cont">
                                     <img src="` + product.image1 + `" id="img1" class="product-imgs">

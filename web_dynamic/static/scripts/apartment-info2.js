@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const houseId = window.localStorage.getItem('houseId');
-const userId = window.localStorage,getItem('newId');
+const userId = window.localStorage.getItem('newId');
 
 //Load apartment images
 $(function (){
@@ -137,41 +137,50 @@ $(function (){
 $(function (){
 	$.ajax({
 		type: 'GET',
-		url: 'http://localhost:8000/unikrib/users/' + house.owner_id,
+		url: 'http://localhost:8000/unikrib/houses/' + houseId,
 		data: {},
 		contentType: 'application/json',
 		dataType: 'json',
-		success: function(user) {
-			if (user.avatar === null){
-				var src1 = "images/photo5.png"
-			} else {
-				var src1 = user.avatar
-			}
-			$("#profile-cont").html(`<div id="profile-pic-cont">
-				<img src="` + src1 + `">
-			  </div>
-				<div id="name-cont">
-				<p class="name"><span id="fname">` + user.first_name + ` </span><span id="lname"> ` + user.last_name + `</span></p>
-				<p class="services" id="service-select">Agent</span></p>
-				<p class="community2" id="community-select">Ekosodin</p>
-        		<p class="rating">Average rating:<span id="">4</span><icon class="fa fa-star"></icon></span></p>
-        		<p class="bio">I help students find affordable and suitable apartments of all types</p>
-			  </div>
-			  <div id="contact-cont">
-				<div id="uploader-phone">
-				<p class="contact"><icon class="fa fa-phone"><a href="tel:+234` + user.phone_no + `" class="contact-links"> ` + user.phone_no + `</a></icon></p>
-				</div>
-				<div id="uploader-whatsapp">
-				   <p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+234` + user.phone_no + `"
-					class="contact-links"> ` + user.phone_no + `</a></icon></p>
-				</div>
-			</div>`);
+		success: function (house) {
+			$.ajax({
+				type: 'GET',
+				url: 'http://localhost:8000/unikrib/users/' + house.owner_id,
+				data: {},
+				contentType: 'application/json',
+				dataType: 'json',
+				success: function(user) {
+					if (user.avatar === null){
+						var src1 = "images/photo5.png"
+					} else {
+						var src1 = user.avatar
+					}
+					$("#profile-cont").html(`<div id="profile-pic-cont">
+						<img src="` + src1 + `">
+					</div>
+						<div id="name-cont">
+						<p class="name"><span id="fname">` + user.first_name + ` </span><span id="lname"> ` + user.last_name + `</span></p>
+						<p class="services" id="service-select">Agent</span></p>
+						<p class="community2" id="community-select">Ekosodin</p>
+						<p class="rating">Average rating:<span id="">4</span><icon class="fa fa-star"></icon></span></p>
+						<p class="bio">` + user.note + `</p>
+					</div>
+					<div id="contact-cont">
+						<div id="uploader-phone">
+						<p class="contact"><icon class="fa fa-phone"><a href="tel:+234` + user.phone_no + `" class="contact-links"> ` + user.phone_no + `</a></icon></p>
+						</div>
+						<div id="uploader-whatsapp">
+						<p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+234` + user.phone_no + `"
+							class="contact-links"> ` + user.phone_no + `</a></icon></p>
+						</div>
+					</div>`);
+				},
+			})
 		},
 		error: function(){
 			alert("Could not load owner details");
 		},
-	})
-});
+	})	
+})
 
 
 // Load reviewers details
@@ -224,3 +233,45 @@ $(function (){
 		}
 	})
 })
+
+// Deletes the apartment when the delete button is clicked
+/*$(function deleteApartment(){
+	$('#delete-apartment').on('click', function(){
+		$.ajax({
+			type: 'GET',
+			url: 'http://localhost:8000/unikrib/houses/' + houseId,
+			contentType: 'application/json',
+			dataType: 'json',
+			success: function(house){
+				var imgList = [house.image1, house.image2, house.image3]
+				$.ajax({
+					type: 'POST',
+					url: 'http://localhost:8003/unikrib/delete-file',
+					data: JSON.stringify(imgList),
+					contentType: 'application/json',
+					dataType: 'json',
+					success: function() {
+						alert("images deleted successfully")
+						window.location.href = 'agent-homepage.html'
+					},
+					error: function(){
+						alert("An error occurred and images could not be deleted")
+					}
+				})
+				$.ajax({
+					type: 'DELETE',
+					url: 'http://localhost:8000/unikrib/houses/' + houseId,
+					contentType: 'application/json',
+					dataType: 'json',
+					success: function(){
+						alert("Apartment deleted successfully")
+					},
+					error: function(){
+						alert("An error occured and apartment could not be deleted")
+					}
+				})
+			}
+		})
+		
+	})
+})*/

@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
+// Post the user details
 $(function (){
 	var $first_name = $("#first_name");
 	var $last_name = $("#last_name");
@@ -29,6 +30,8 @@ $(function (){
 				window.localStorage.setItem('newId', new_dict.id);
 				if (user_type === 'sp'){
 					window.location.href = 'service-profile.html';
+				} else if (user_type === 'agent'){
+					window.location.href = 'agent-profile.html'
 				} else {
 					window.location.href = 'user-profile.html';
 				}

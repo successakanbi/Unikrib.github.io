@@ -2,7 +2,7 @@
 
 from api.blueprint import app_views
 from flask import jsonify, abort, request
-from models import storage
+from models import storage, fstorage
 from models.product import Product
 
 @app_views.route('/products', strict_slashes=False)
@@ -73,8 +73,15 @@ def update_product(product_id):
     if obj == None:
         abort(404, "No product found")
     prod_dict = request.get_json()
-    for k, v in prod_dict.items():
-        setattr(obj, k, v)
+
+    for key, val in prod_dict.items():
+        if key == "image1" and obj.image1:
+            fstorage.new(obj.image1)
+        elif key == "image2" and obj.image2:
+            fstorage.new(obj.image2)
+        elif key == "image3" and obj.image3:
+            fstorage.new(obj.image3)
+        setattr(obj, key, val)
         obj.save()
     return jsonify(obj.to_dict())
 
@@ -117,6 +124,12 @@ def delete_product(product_id):
     obj = storage.get('Product', product_id)
     if obj == None:
         abort(404, "No product found")
+    if obj.image1:
+        fstorage.new(obj.image1)
+    if obj.image2:
+        fstorage.new(obj.image2)
+    if obj.image3:
+        fstorage.new(obj.image3)
     obj.delete()
     return '{}'
     

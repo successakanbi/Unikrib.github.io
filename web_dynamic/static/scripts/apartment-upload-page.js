@@ -68,12 +68,11 @@ $(function (){
             success: function(house){
                 alert('Apartment uploaded successfully');
 
-                $(function (){
+                $(function() {
                     //upload first image
                     var formData = new FormData();
                     
                     var file = $("#Apart-image1")
-
                     formData.append("file", file[0].files[0]);
                     formData.append("fileName", house.id + '.jpg');
                     formData.append("folder", "apartment-images");
@@ -98,7 +97,7 @@ $(function (){
                                 contentType: false,
                                 success: function(body) {
                                     image1 = {
-                                        "image1": body.url
+                                        "image1": body.url,
                                     }
                                     $.ajax({
                                         type: 'PUT',
@@ -117,12 +116,12 @@ $(function (){
                             });
                         },
                     });
-                });
+                })
 
-                $(function (){
+                $(function() {
                     //upload second image
                     var formData = new FormData();
-    
+
                     var file = $("#Apart-image2")
                     if (file.length === 0) {
                         return;
@@ -152,7 +151,7 @@ $(function (){
                                 contentType: false,
                                 success: function(body) {
                                     image2 = {
-                                        "image2": body.url
+                                        "image2": body.url,
                                     }
                                     $.ajax({
                                         type: 'PUT',
@@ -171,11 +170,12 @@ $(function (){
                             });
                         },
                     });
-                });
-                $(function (){
+                })
+
+                $(function() {
                     //upload third image
                     var formData = new FormData();
-    
+
                     var file = $("#Apart-image3")
                     if (file === 0) {
                         return;
@@ -205,7 +205,7 @@ $(function (){
                                 contentType: false,
                                 success: function(body) {
                                     image3 = {
-                                        "image3": body.url
+                                        "image3": body.url, 
                                     }
                                     $.ajax({
                                         type: 'PUT',
@@ -215,6 +215,7 @@ $(function (){
                                         dataType: 'json',
                                         success: function(){
                                             alert("Third image uploaded successfully");
+                                            window.location.href = 'agent-homepage.html';
                                         },
                                         error: function(){
                                             alert("Error uploading the third image");
@@ -224,11 +225,13 @@ $(function (){
                             });
                         },
                     });
-                });
+                })
+                
             },
             error: function(){
                 alert("Error uploading apartment");
             }
         })
+
     })
 });

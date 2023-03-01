@@ -41,7 +41,7 @@ $(function (){
                         contentType: false,
                         success: function(body) {
                             image1 = {
-                                "image1": body.url
+                                "image1": body.url,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -51,6 +51,7 @@ $(function (){
                                 dataType: 'json',
                                 success: function(){
                                     alert("First image uploaded successfully");
+                                    window.location.href = 'service-page.html'
                                 },
                                 error: function(){
                                     alert("Error uploading the first image");
@@ -96,7 +97,7 @@ $(function (){
                         contentType: false,
                         success: function(body) {
                             image2 = {
-                                "image2": body.url
+                                "image2": body.url,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -151,7 +152,7 @@ $(function (){
                         contentType: false,
                         success: function(body) {
                             image3 = {
-                                "image3": body.url
+                                "image3": body.url,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -206,7 +207,7 @@ $(function (){
                         contentType: false,
                         success: function(body) {
                             image4 = {
-                                "image4": body.url
+                                "image4": body.url,
                             }
                             $.ajax({
                                 type: 'PUT',
@@ -261,7 +262,7 @@ $(function (){
                         contentType: false,
                         success: function(body) {
                             image5 = {
-                                "image5": body.url
+                                "image5": body.url,
                             }
                             $.ajax({
                                 type: 'PUT',

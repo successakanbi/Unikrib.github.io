@@ -89,14 +89,14 @@ $(function (){
 							data: JSON.stringify(userDict),
 							contentType: 'application/json',
 							dataType: 'json',
-							success: function (){
+							success: function (user){
 								alert("User image updated successfully");
+								window.location.href = 'Apartment-page.html'
 							},
 							error: function(){
 								alert("Could not upload user image, please try again later");
 							}
 						})
-						window.location.href = 'Apartment-page.html';
 					},
 					error: function (jqxhr, text, error) {
 						console.log(error);

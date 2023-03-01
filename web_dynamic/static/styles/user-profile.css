@@ -34,12 +34,13 @@ label {
     width: 73%;
     margin: 5px 0 10px 15%;
     border:none;
-    border-bottom: #607dda solid 3px;    
+    border-bottom: #607dda solid 3px;
+  
  }
  select:focus{
     background-color: #f9f9fa;
     width: 77%;
-    outline:none;    
+    outline:none;
     transition: 400ms;
  }
  textarea {
@@ -56,10 +57,6 @@ label {
    background-color: #e9e5e5;
    outline: none;
    transition: 300ms;
- }
- .img-name{
-    font-weight: 700;
-    margin-left: 10%;
  }
 
  .file{
@@ -93,11 +90,18 @@ label {
     bottom: -20px;
     text-align: center;
     color: #f5f5f5;
+    font-size: 9px;
     background-color: #1843d1;
     text-decoration: underline;
     width: 100%;
     
  }
+ /*here*/
+ .img-name{
+   font-weight: 700;
+   margin-left: 10%;
+}
+/* to here*/ 
  
  button{
     padding: 15px;
@@ -123,11 +127,12 @@ label {
     }
     textarea {
       height:5vw;
-
+      
     }
     textarea:focus{
       height: 10vw;
     }
+     /*to here*/
 
  }
  @media screen and (max-width: 600px){
@@ -142,7 +147,7 @@ label {
     }
     textarea {
       height:10vw;
-
+      
     }
     textarea:focus{
       height: 20vw;

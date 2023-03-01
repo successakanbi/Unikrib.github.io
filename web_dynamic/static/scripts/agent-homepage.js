@@ -17,11 +17,11 @@ $(function (){
 				dataType: 'json',
 				success: function(env){
 					$('#name-cont').html(`<p class="name">` + owner.first_name + ` ` + owner.last_name + `</p>
-						<p class="edit-icon"><a href="Edit-profile.html"><icon class="fa fa-pencil"></icon></a></p>
+						<p class="edit-icon"><a href="profile-edit-page.html"><icon class="fa fa-pencil"></icon></a></p>
 						<p class="services" id="service-select">Agent</span></p>
 						<p class="community2" id="community-select">` + env.name + `</p>
-						<p class="rating">Average rating:<span id=""> 4</span><icon class="fa fa-star"></icon></span></p>
-						<p class="bio">I help students find affordable and suitable apartments of all types</p>`)
+						<p class="rating">Average rating:<span id=""> ` + owner.rating.toFixed(1) + `</span><icon class="fa fa-star"></icon></span></p>
+						<p class="bio">` + owner.note + `</p>`)
 
 					$("#contact-cont").html(`<div id="uploader-phone">
 						<p class="contact"><icon class="fa fa-phone"><a href="tel:+234` + owner.phone_no + `" class="contact-links"> ` + owner.phone_no + `</a></icon></p>
@@ -46,7 +46,7 @@ $(function (){
 		success: function (reviews){
 			if (reviews.length === 0){
 				$('#latest-review-cont').html('<p id="review-message"> You have no reviews yet.</p>')
-				$('#other-review-cont').style.display = 'none';
+				$('#other-review-cont').addClass('disappear');
 			} else {
 				$('#view-review').html(`<p>View all>>></p>`)
 				window.localStorage.setItem('revieweeId', userId)
@@ -83,6 +83,12 @@ $(function (){
 		contentType: 'application/json',
 		dataType: 'json',
 		success: function (houses){
+			if (houses.length === 0) {
+				$('#view-more-button').addClass('disappear')
+				return;
+			} else if (houses.length === 1) {
+				$('#view-more-button').addClass('disappear')
+			}
 			$.each(houses, function(index, house){
 				if (index === 0){
 					var cont = "first-apart";
@@ -111,7 +117,7 @@ $(function (){
 									<span class ="street" id="street10">` + street.name + ` street</span><span class ="community"  id="community10"> ` + env.name + `</span></p>
 									<p class="price-results"><span class ="price" id="price10">N` + house.price + ` </span>per year</p>
 									<div class ="icons-cont">
-									<i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">6h</span></i><i class="fa fa-trash"></i>
+									<i class="fa fa-tint"></i><i class="fa fa-bolt"><span id="hours">` + house.power_supply + `h</span></i><i class="fa fa-trash"></i>
 									<icon class="fa fa-clock-o"><span id="time">25mins</span></icon>
 									</div>
 									</div>

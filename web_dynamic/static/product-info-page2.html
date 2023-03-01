@@ -25,10 +25,10 @@
             <div class="dropdown" id="dropdown">
               <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
               <div class="dropmenu-content" id="dropdown-cont">
-                 <p href="" class="drop-links">Profile</p>
+                 <p class="drop-links" onclick="getUserType()">Profile</p>
                  <p href="" class="drop-links">Edit profile</p>
-                 <p href="" class="drop-links">Help</p>
-                 <p href="" class="drop-links">logout</p>
+                 <p id="help" class="drop-links">Help</p>
+                 <p class="drop-links" onclick="logout()">logout</p>
              </div>
            </div>
            <!--to here-->
@@ -41,6 +41,7 @@
              </a>
         </div>
 
+        <div id="preloader"></div>
         <div id="external-main-cont">
           <div id="internal-left-container">
             <div id="">
@@ -149,10 +150,12 @@
            <!--contains Edit and delete buttons-->
            <div id="edit-delete-cont">
             <div id="edit-delete-left">
-              <button id="edit-apartment"><icon class="fa fa-pencil"></icon> Edit</button>
+              <a href="product-edit-page.html">
+                <button id="edit-product"><icon class="fa fa-pencil"></icon> Edit</button>
+              </a>
             </div>
             <div id="edit-delete-right">
-              <button id="delete-apartment"><icon class="fa fa-trash"></icon> Delete</button>
+              <button id="delete-product"><icon class="fa fa-trash"></icon> Delete</button>
             </div>
           </div>
 
@@ -207,6 +210,43 @@
         <script src = "scripts/main2.js"></script>
         <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
         <script src="scripts/product-info2.js"></script>
+        <script src="scripts/confirm.js"></script>
+        <script>
+          document.querySelector("#delete-product").addEventListener("click", () => {
+              Confirm.open({
+                title: "Confirm delete",
+                message: "Are you sure you want to delete this product?",
+                okText: "Delete",
+                cancelText: "Cancel",
+                onok: function() {
+                  $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8000/unikrib/products/' + productId,
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function(product){
+                      var imgList = [product.image1, product.image2, product.image3]
+                      $.ajax({
+                        type: 'DELETE',
+                        url: 'http://localhost:8000/unikrib/products/' + productId,
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function(){
+                          alert("Product deleted successfully")
+                          window.location.href = 'vendor-homepage.html'
+                        },
+                        error: function(){
+                          alert("An error occured and product could not be deleted")
+                        }
+                      })
+                    }
+                  })
+                },
+                oncancel: function() {}
+
+              })
+            });
+        </script>
         <!--<script>
           //changes Apartment slide images when next or previous buttons are clicked
             let slideIndex = 1;

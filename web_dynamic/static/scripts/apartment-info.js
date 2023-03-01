@@ -161,8 +161,8 @@ $(function (){
 						<p class="name"><span id="fname">` + user.first_name + ` </span><span id="lname"> ` + user.last_name + `</span></p>
 						<p class="services" id="service-select">Agent</span></p>
 						<p class="community2" id="community-select">Ekosodin</p>
-            			<p class="rating">Average rating:<span id="">4</span><icon class="fa fa-star"></icon></span></p>
-            			<p class="bio">I help students find affordable and suitable apartments of all types</p>
+            			<p class="rating">Average rating:<span id=""> ` + user.rating.toFixed(1) + `</span><icon class="fa fa-star"></icon></span></p>
+            			<p class="bio">` + user.note + `</p>
 					  </div>
 					  <div id="contact-cont">
 						<div id="uploader-phone">

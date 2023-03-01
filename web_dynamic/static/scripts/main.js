@@ -29,6 +29,10 @@ function imageChange() {
     
     
 }
+var loader = document.getElementById('preloader');
+window.addEventListener("load", function(){
+    loader.style.display = "none";
+})
 function showPassword(){
     var x = document.getElementById("input-pass");
     if(x.type === "password") {

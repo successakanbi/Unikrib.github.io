@@ -25,9 +25,9 @@
         <div class="dropdown" id="dropdown">
           <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
           <div class="dropmenu-content" id="dropdown-cont">
-            <p href="" class="drop-links">Profile</p>
+            <p class="drop-links" onclick="getUserType()">Profile</p>
             <p href="" class="drop-links">Edit profile</p>
-            <p href="" class="drop-links">Help</p>
+            <p id="help" class="drop-links">Help</p>
             <p class="drop-links" onclick="logout()">logout</p>
           </div>
         </div>
@@ -41,6 +41,7 @@
          </a>
     </div>
 
+    <div id="preloader"></div>
     <div id="out-most-cont">
       <div id="inn-left-cont">
         <div id="profile-cont">
@@ -90,7 +91,7 @@
         </div>
         <div id="new-upload-cont">
           <div id="new-upload-btn">
-            <a href="product-upload-page2.html">
+            <a href="product-upload-page.html">
               <p id="upload-btn-txt">Upload new product</p>
             </a>
           </div>

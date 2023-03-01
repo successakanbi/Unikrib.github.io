@@ -93,7 +93,14 @@ $(function(){
             $('#product-details').html(`
                 <p class="product-results"><span class="product-name">` + product.name + ` </span></p>
                 <p class="price-results"><span class="product-price" id="product-price-1">N` + product.price + `</span></p>
-                <p class="delivery">Delivery: <span class="Available">` + status + `</span></p>`)
+                <p class="delivery">Delivery: <span class="Available" id="delivery">` + status + `</span></p>`)
+			if (product.delivery === 'yes'){
+				$('#delivery').removeClass('Unavailable')
+				$('#delivery').addClass('Available')
+			} else {
+				$('#delivery').addClass('Unavailable')
+				$('#delivery').removeClass('Available')
+			}
             $('#features').text(product.features)
        }
     })
@@ -121,8 +128,8 @@ $(function(){
                         <p class="name">`+ owner.first_name + ` ` + owner.last_name + `</p>
                         <p class="services" id="service-select">Vendor</span></p>
                         <p class="community" id="community-select">` + env.name + `</p>
-                        <p class="rating">Average rating: <span id="">5</span><icon class="fa fa-star"></icon></span></p>
-                        <p class="bio">I sell all kind of phones,Including Iphone, samsung, infinix, Redmi etc. I also sell phone accesories</p>
+                        <p class="rating">Average rating: <span id="">` + owner.rating.toFixed(1) + `</span><icon class="fa fa-star"></icon></span></p>
+                        <p class="bio">` + owner.note + `</p>
                     </div>
                     <div id="contact-cont">
                         <div id="uploader-phone">
@@ -178,3 +185,45 @@ $(function (){
 		},
 	});
 })
+
+//Deletes the product when the delete buttonis clicked
+/*$(function() {
+	$('#delete-product').on('click', function(){
+		$.ajax({
+			type: 'GET',
+			url: 'http://localhost:8000/unikrib/products/' + productId,
+			contentType: 'application/json',
+			dataType: 'json',
+			success: function(product){
+				var imgList = [product.image1, product.image2, product.image3]
+				$.ajax({
+					type: 'POST',
+					url: 'http://localhost:8003/unikrib/delete-file',
+					data: JSON.stringify(imgList),
+					contentType: 'application/json',
+					dataType: 'json',
+					success: function() {
+						alert("images deleted successfully")
+						window.location.href = 'agent-homepage.html'
+					},
+					error: function(){
+						alert("An error occurred and images could not be deleted")
+					}
+				})
+				$.ajax({
+					type: 'DELETE',
+					url: 'http://localhost:8000/unikrib/products/' + productId,
+					contentType: 'application/json',
+					dataType: 'json',
+					success: function(){
+						alert("Product deleted successfully")
+					},
+					error: function(){
+						alert("An error occured and product could not be deleted")
+					}
+				})
+			}
+		})
+		
+	})
+})*/

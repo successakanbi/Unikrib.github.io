@@ -21,7 +21,7 @@
 }
 .Apartment-slide-cont img{
     vertical-align: middle;
-    height: 27vw;
+    height: 30vw;
 }
 
 .prev, .next{
@@ -358,11 +358,10 @@
     border: none;
     font-size: 1vw;
    }
-   /*to here*/
-   button .fa{
+
+    button .fa{
      color: #ffffff;
     }
-   /*to here*/
 
 @media screen and (max-width: 900px) {
     #external-main-cont{

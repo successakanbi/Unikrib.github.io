@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete your profile</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/user-profile.css">
+</head>
+<body>
+    <!-- responsive top navigator bar -->
+    <div class="top-nav" id="my-Top-nav">
+        <a href="homepage.html"><img src="images/Multi colo logo on transparent_2.png"></a>
+        <a href="homepage.html"class="active">Home</a>
+        <a href="Apartment-page.html">Apartments</a>
+        <a href="product-page.html">products</a>
+        <a href="product-page.html">products</a>
+        <div id="login-cont">
+          <a href="login.html">Login</a>
+          <a href="signup.html">sign up</a>
+        </div>
+         <div class="dropdown" id="dropdown">
+          <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
+          <div class="dropmenu-content" id="dropdown-cont">
+             <p class="drop-links" onclick="getUserType()">Profile</p>
+             <p href="" class="drop-links">Edit profile</p>
+             <p id="help" class="drop-links">Help</p>
+             <p class="drop-links" onclick="logout()">logout</p>
+         </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="dropMenu()">
+            <div class="icon-cont" onclick="changeIcon(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+         </a>
+    </div>
+
+     <!--here-->
+     <div id="preloader"></div>
+     <!--to here-->
+     
+    <!-- main external container containing form its input fields and select boxes-->
+    <div id="main-ext-cont">
+
+        <form action="" id="profile-form-cont">
+         <div id="logo-container">
+            <img src="images/Black logo on white.png">
+         </div>
+
+         <h3>Complete your profile</h3>
+         
+         <!--Select box for vendors-->
+         <label for="product">Category</label>
+         <select id="product-select" name="select product">
+            <option value=""></option>
+            <option value="Clothes vendor">Clothes vendor</option>
+            <option value="Clothing accesories vendor">Clothing accesories vendor</option>
+            <option value="Cosmetics vendor">Cosmetics  vendor</option>
+            <option value="Drinks vendor">Drinks vendor</option>
+            <option value="Electronics vendor">Electronics vendor</option>
+            <option value="Food vendor">Food vendor</option>
+            <option value="furniture vendor">Furniture vendor</option>
+            <option value="Phone vendor">Gadget vendor</option>
+            <option value="Gas vendor">Gas vendor</option>
+            <option value="Grocery vendor">Grocery vendor</option>
+            <option value="Jewellery vendor">Jewellery vendor</option>
+            <option value="Stationery vendor">Stationery vendor</option>
+         </select>
+          
+          
+         <!--Select id for community where agent/vendor/product can offer products-->
+         <label for="select state">Preferred Community</label>
+         <select id="community-select" name="select community">
+            <option value=""></option>
+            <option value="Adolor">Adolor</option>
+            <option value="Ebvoumore">Ebvoumore</option>
+            <option value="EDPA">EDPA</option>
+            <option value="Ekosodin">Ekosodin</option>
+            <option value="Evidence">Evidence</option>
+            <option value="Osasoghie">Osasoghie</option>
+            <option value="Isiohor">Isiohor</option>
+            <option value="Osasoghie">Osasoghie</option>
+            <option value="Oluku">Oluku</option>
+            <option value="Uselu">Uselu</option>      
+         </select><br/>
+
+
+         <!--contains product provider description-->
+         <label for="description">Description</label>
+         <textarea id="descript-text" name="description" placeholder="Describe your products"></textarea>
+          
+         <!--contains image input field-->
+         <div id="profile-pic-cont">
+            <label for="profile_photo" id="upload">upload a profile photo
+                <input type="file" name="profile_photo" id="profile-photo" class="file"/>
+            <p id="file-name" class="img-name"></p>
+         </label>
+         </div>
+
+
+         <div>
+            <button type="submit">Finish</button>
+          </div>
+        </form>
+    </div>
+
+     <!--footer container and sub containers(sub, base and icon), containing  links, contact information and social media links-->
+       <!--here-->
+       <div id="footer-cont">
+        <div class="footer-sub-cont-a">
+          <p ><a href="Apartment-page.html" class="foot-links">apartments</a></p>
+          <p><a href="product-page.html" class="foot-links">products</a></p>
+          <p><a href="product-page.html"class="foot-links">products</a></p>
+          <p><a href="about-page.html"class="foot-links">about us</a></p>
+          <p><a href="agent-product-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+        </div>
+        <div class="footer-sub-cont-b">
+          <!--here-->
+          <p id="foot-para">For feedback and inquiries contact us on</p>
+          <!--to here-->
+          <p><a href="" class="foot-links"><i class="fa fa-phone" id="small1"></i>+2347054598108</a></p>
+          <p></i><a href="" class="foot-links"><i class="fa fa-whatsapp" id="small2"></i>+2347037270954</a</p>
+          <p><i class="fa fa-envelope" id="small3"></i> <a href="" class="foot-links">mail@unikrib.ng</a></p>
+        </div>
+
+        <div id="footer-base-cont">
+          <div id="icon-cont">
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/facebook-logo.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/124021.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/2048px-Instagram_icon.png">
+              </a>
+            </div>
+            <div class="icon-sub-cont">
+              <a href="">
+                <img src="images/official-linkedin-icon-png-16.jpg">
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!--to here-->
+      
+    <script>
+         //displays name and size of uploaded image file
+        const file = document.getElementById("profile-photo")
+        file.addEventListener("change", (e) => {
+            const [file] = e.target.files;
+            const {name: fileName , size} = file;
+            const fileSize = (size / 1000).toFixed(2);
+            const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+            document.querySelector('#file-name').textContent = 
+            fileNameAndSize;
+        })
+    </script>
+     <script src = "scripts/main2.js"></script>
+</body>
+</html>

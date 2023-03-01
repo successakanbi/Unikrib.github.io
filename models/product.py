@@ -16,8 +16,7 @@ class Product(BaseModel, Base):
     image1 = Column(String(128), nullable=True)
     image2 = Column(String(128), nullable=True)
     image3 = Column(String(128), nullable=True)
-    image4 = Column(String(128), nullable=True)
-    image5 = Column(String(128), nullable=True)
+    available = Column(String(5), nullable=False, default='yes')
     owner_id = Column(String(60), ForeignKey('users.id'), nullable=False)
     category_id = Column(String(60), ForeignKey('categories.id'), nullable=False)
 

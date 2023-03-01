@@ -26,6 +26,8 @@
             </div>
          </a>
     </div>
+
+    <div id="preloader"></div>
     <!-- main external container containing form its input fields and select boxes-->
     <div id="main-ext-cont">
 
@@ -36,7 +38,7 @@
 
          <h3>Complete your profile</h3>
          
-         <!--Select box for vendors or service providers-->
+         <!--Select box for service providers-->
          <label for="service">Service category</label>
          <select id="service-select" name="select service">
           <option value=""></option>
@@ -62,7 +64,7 @@
           
           
          <!--Select id for community where agent/vendor/service can offer services-->
-         <label for="select state">Preferred service Communities</label>
+         <label for="select state">Preferred service Community</label>
          <select id="community-select" name="select community">
             <option value=""></option>
             <!--<option value="Adolor">Adolor</option>
@@ -79,18 +81,18 @@
 
          <!--contains service provider description-->
          <label for="description">Description</label>
-         <textarea id="descript-text" name="description" ></textarea>
+         <textarea id="descript-text" name="description" placeholder="Describe your services"></textarea>
           
          <!--contains image input field-->
          <div id="profile-pic-cont">
             <label for="profile_photo" id="upload">upload a profile photo
-                <input type="file" name="profile_photo" id="profile-photo" class="file"/>
-            <p id="file-name"></p>
-         </label>
+              <input type="file" name="profile_photo" id="profile-photo" class="file"/>
+              <p id="file-name" class="img-name"></p>
+            </label>
          </div>
 
          <div>
-            <button type="submit" id="submit">Finish</button>
+            <button type="submit" id="submit">Submit</button>
           </div>
         </div>
     </div>
@@ -155,6 +157,6 @@
     </script>
      <script src = "scripts/main3.js"></script>
      <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
-      <script src="scripts/service-profile.js"></script>"
+      <script src="scripts/service-profile.js"></script>
 </body>
 </html>
