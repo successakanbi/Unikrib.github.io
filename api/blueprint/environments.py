@@ -20,7 +20,5 @@ def get_env(env_id):
     """This returns an environment based on id"""
     obj = storage.get('Environment', env_id)
     if obj is None:
-        resp = jsonify({"message": "Error, environment does not exists"})
-        resp.status_code = 404
-        return resp
+        return jsonify("Environment does not exists"), 404
     return jsonify(obj.to_dict())

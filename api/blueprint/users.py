@@ -23,7 +23,7 @@ def get_user(user_id):
     for key, obj in storage.all(User).items():
         if key == search_key:
             return jsonify(obj.to_dict(1))
-    abort(404, "No User Found")
+    return jsonify("No User Found"), 404
 
 @app_views.route('/stats/users', strict_slashes=False)
 def type_count():
@@ -43,33 +43,24 @@ def type_count():
 def create_user():
     """This creates a new user and stores it"""
     if not request.json:
-        abort(400, "Not a valid Json")
+        return jsonify("Not a valid Json"), 400
     if "email" not in request.json:
-        resp = jsonify({"message": "Request must include email"})
-        resp.status_code = 400;
-        return resp
+        return jsonify("Request must include email"), 400
     if "password" not in request.json:
-        resp = jsonify({"message": "Request must include password"})
-        resp.status_code = 400
-        return resp
+        return jsonify("Request must include password"), 400
     user_dict = request.get_json()
     if user_dict['email'][-4:] != '.com':
-        resp = jsonify({"message": "Please enter a valid email"})
-        resp.status_code = 400
-        return resp
-    if len(user_dict['password']) < 4:
-        resp = jsonify({"message": "Please include a password"})
-        resp.status_code = 400
-        return resp
+        return jsonify("Please enter a valid email"), 400
+    if len(user_dict['password']) < 2:
+        return jsonify("Please include a password"), 400
     if len(user_dict['email']) < 5:
-        resp = jsonify({"message": "Please include an email"})
-        resp.status_code = 400
-        return resp
+        return jsonify("Please include an email"), 400
     for key, obj in storage.all(User).items():
         if user_dict['email'].lower() == obj.email.lower():
-            resp = jsonify({"message": "Email already exists"})
-            resp.status_code = 400
-            return resp
+            return jsonify("Email already exist"), 400
+    
+    for key, val in user_dict.items():
+        user_dict[key] = val.strip()
     model = User(**user_dict)
     model.save()
     return jsonify(model.to_dict(1)), 200
@@ -78,43 +69,35 @@ def create_user():
 def user_login():
     """This return the user id based on their email and password"""
     if not request.json:
-        resp = jsonify({"message": "Not a valid json"})
-        resp.status_code = 400
-        return resp
+        return jsonify("Not a valid json"), 400
     if "email" not in request.json:
-        resp = jsonify({"message": "Include an email please"})
-        resp.status_code = 400
-        return resp
+        return jsonify("Include an email please"), 400
     if "password" not in request.json:
-        resp = jsonify({"message": "Include a password please"});
-        resp.status_code = 400
-        return resp
+        return jsonify("Include a password please"), 400
 
     user_dict = request.get_json()
     
+    if len(user_dict['email']) < 2:
+        return jsonify("Please include an email"), 400
     for key, obj in storage.all(User).items():
         if obj.email.lower() == user_dict['email'].lower():
             if obj.password == user_dict['password']:
                 return jsonify(obj.to_dict(1))
             else:
-                resp = jsonify({"message": "Incorrect password"})
-                resp.status_code = 400
-                return resp
+                return jsonify("Incorrect password"), 400
 
-    resp = jsonify({"message": "No user with this email found"})
-    resp.status_code = 404
-    return resp
+    return jsonify("No user with this email found"), 404
 
 @app_views.route('/users/<user_id>', strict_slashes=False, methods=['PUT'])
 def update_user(user_id):
     """This updates the attributes of a user"""
     if not request.json:
-        abort(400, "Not a valid Json")
+        return jsonify("Not a valid Json"), 400
     new_dict = request.get_json()
     search_key = 'User.' + user_id
     obj = storage.get('User', user_id)
     if obj is None:
-        abort(404, "No user found")
+        return jsonify("No user found"), 404
     for key, val in new_dict.items():
         if key == "avatar" and obj.avatar:
             fstorage.new(obj.avatar)
@@ -129,7 +112,7 @@ def delete_user(user_id):
     search_key = 'User.' + user_id
     obj = storage.all(User)[search_key]
     if obj is None:
-        abort(404, "User not found")
+        return jsonify("User not found"), 404
     obj.delete()
     storage.save()
     return {}

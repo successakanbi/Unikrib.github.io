@@ -20,9 +20,7 @@ def get_str(str_id):
     """This returns a street based on id"""
     obj = storage.get('Street', str_id)
     if obj is None:
-        resp = jsonify({"message": "Error, no street found"})
-        resp.status_code = 404
-        return resp
+        return jsonify("Error, no street found"), 404
     return jsonify(obj.to_dict())
 
 @app_views.route('/environments/<env_id>/streets', strict_slashes=False)

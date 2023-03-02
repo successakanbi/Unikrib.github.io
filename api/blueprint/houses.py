@@ -21,7 +21,7 @@ def get_house(house_id):
     for key, obj in storage.all(House).items():
         if key == search_key:
             return jsonify(obj.to_dict())
-    abort(404, "House not found")
+    return jsonify("House not found"), 404
 
 @app_views.route('/users/<user_id>/houses', strict_slashes=False)
 def get_agent_houses(user_id):
@@ -42,27 +42,27 @@ def get_stat():
 def create_house():
     """This creates a new house in storage"""
     if not request.json:
-        abort(400, "Not a valid json")
+        return jsonify("Not a valid json"), 400
     house_dict = request.get_json()
     if "owner_id" not in house_dict:
-        abort(400, "House must have an owner_id")
+        return jsonify("House must have an owner_id"), 400
     if "street_id" not in house_dict:
-        abort(400, "Request must contain a street_id")
+        return jsonify("Request must contain a street_id"), 400
     house_dict = request.get_json()
     model = House(**house_dict)
     storage.new(model)
     storage.save()
-    return jsonify(model.to_dict()), 200
+    return jsonify(model.to_dict()), 201
 
 @app_views.route('/houses/<house_id>', strict_slashes=False, methods=['PUT'])
 def update_house(house_id):
     """This updates the attributes of a house based on id"""
     if not request.json:
-        abort(400, "Not a valid json")
+        return jsonify("Not a valid json"), 400
     house_dict = request.get_json()
     obj = storage.get('House', house_id)
     if obj is None:
-        abort(404, "House not found")
+        return jsonify("House not found"), 404
     for key, val in house_dict.items():
         if key == 'fileId1':
             fstorage.new(house_dict['image1'], val)
@@ -73,14 +73,14 @@ def update_house(house_id):
         else:
             setattr(obj, key, val)
             obj.save()
-    return jsonify(obj.to_dict())
+    return jsonify(obj.to_dict()), 200
 
 @app_views.route('/houses/<house_id>', strict_slashes=False, methods=['DELETE'])
 def delete_house(house_id):
     """This remove the house instance from storage"""
     obj = storage.get('House', house_id)
     if obj == None:
-        abort(404, "Apartment was not found")
+        return jsonify("Apartment was not found"), 404
     obj.delete()
     return {}, 201
 
@@ -88,7 +88,7 @@ def delete_house(house_id):
 def search_house():
     """This receives a dict and returns houses that match the criteria"""
     if not request.json:
-        abort(400, "Not a valid json")
+        return jsonify("Not a valid json"), 400
     search_dict = request.get_json()
 
     streets = search_dict['streets']

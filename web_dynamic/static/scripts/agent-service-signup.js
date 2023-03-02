@@ -36,8 +36,8 @@ $(function (){
 					window.location.href = 'user-profile.html';
 				}
 			},
-			error: function (){
-				alert("An error has occured, please try again later");
+			error: function (res){
+				alert(res.responseJSON);
 			},
 		});
 	});

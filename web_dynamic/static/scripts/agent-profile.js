@@ -78,10 +78,16 @@ $(function(){
                                 },
                             });
                         },
+                        error: function(res) {
+                            alert(res.responseJSON)
+                        }
                     });
                 });
                 alert("Details updated successfully")
                 
+            },
+            error: function(res) {
+                alert(res.responseJSON)
             }
         })
     })

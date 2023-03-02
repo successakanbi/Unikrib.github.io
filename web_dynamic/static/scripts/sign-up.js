@@ -27,8 +27,8 @@ $(function() {
     		    window.localStorage.setItem('newId', new_user.id);
 	    	    window.location.href = "user-profile.html"
             },
-            error: function(response){
-		    alert(response.message);
+            error: function(err){
+                alert(err.responseJSON)
             },
         })
     })

@@ -104,6 +104,7 @@ $(function (){
         contentType: 'application/json',
         dataType: 'json',
         success: function(service) {
+            window.localStorage.setItem('serviceId', service.id)
             $('#bio').text(service.description)
             var count = 0;
             serviceImages = []

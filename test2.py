@@ -3,7 +3,9 @@ import sys
 from models import fstorage
 import json
 
-with open('unikrib.json') as f:
-    urls = json.load(f)
-for url in urls:
-    fstorage.delete(url)
+response = input("Are you sure you want to clear this file? (yes/no): ")
+if response == 'yes':
+    with open('unikrib.json') as f:
+        urls = json.load(f)
+    for url in urls:
+        fstorage.delete(url)

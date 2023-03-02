@@ -30,8 +30,14 @@ $(function (){
 				   		<p class="contact"><icon class="fa fa-whatsapp"><a href="https://api.whatsapp.com/send?phone=+234` + owner.phone_no + `"
 						class="contact-links"> ` + owner.phone_no + `</a></icon></p>
 						</div>`)
+				},
+				error: function(res) {
+					alert(res.responseJSON)
 				}
 			})
+		},
+		error: function(response) {
+			alert(response.responseJSON)
 		}
 	})
 })
@@ -67,10 +73,16 @@ $(function (){
 	
 							<p class="time-stamp">` + reviews[0].updated_at.slice(0, 10) + `</p>
 							</div>`)
+					},
+					error: function(res) {
+						alert(res.responseJSON)
 					}
 				})
 				
 			}
+		},
+		error: function(res) {
+			alert(res.responseJSON)
 		}
 	})
 })
@@ -129,12 +141,21 @@ $(function (){
 										window.location.href = 'apartment-info-page2.html';
 									})
 								})
+							},
+							error: function(res) {
+								alert(res.responseJSON)
 							}
 						})
+					},
+					error: function(res) {
+						alert(res.responseJSON)
 					}
 				})
 				
 			})
+		},
+		error: function(res) {
+			alert(res.responseJSON)
 		}
 	})
 })

@@ -19,5 +19,5 @@ def get_serv_cat(cat_id):
     """This returns a category by id"""
     obj = storage.get('ServiceCategory', cat_id)
     if obj == None:
-        abort(404, "No category found")
+        return jsonify("No category found"), 404
     return jsonify(obj.to_dict())

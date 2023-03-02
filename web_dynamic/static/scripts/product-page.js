@@ -66,7 +66,7 @@ $(function (){
 $(function (){
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:8000/unikrib/products',
+        url: 'http://localhost:8000/unikrib/products/' + '?available=yes',
         contentType: 'application/json',
         dataType: 'json',
         success: function (prods){

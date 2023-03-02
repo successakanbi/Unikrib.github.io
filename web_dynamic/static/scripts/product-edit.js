@@ -2,7 +2,7 @@
 const productId = window.localStorage.getItem('productId');
 
 
-// Load the product category
+// Load the product details
 $(function() {
     $.ajax({
         type: 'GET',
@@ -51,6 +51,19 @@ $(function() {
 
 // PUT the updated product to storage
 $(function (){
+    var image1 = false;
+    var image2 = false;
+    var image3 = false;
+    
+    $('#product-image1').on('change', function() {
+        image1 = true;
+    })
+    $('#product-image2').on('change', function() {
+        image2 = true;
+    })
+    $('#product-image3').on('change', function() {
+        image3 = true;
+    })
     $('#Submit-product').on('click', function(){
         productDict = {
             "category_id": $('#product-category :selected').val(),
@@ -69,6 +82,9 @@ $(function (){
             dataType: 'json',
             success: function(){
                 alert("Product updated successfully")
+                if (image1 === false && image2 === false && image3 === false){
+                    getUserType()
+                }
             }
         })
     })
@@ -90,179 +106,163 @@ $(function() {
         image3 = true;
     })
     $('#Submit-product').on('click', function(){
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8000/unikrib/products/' + productId,
-            contentType: 'application/json',
-            dataType: 'json',
-            success: function(product){
-                $(function() {
-                    if (image1 === true) {
-                        //update the new first image
-                        var formData = new FormData();
+        $(function() {
+            if (image1 === true) {
+                //update the new first image
+                var formData = new FormData();
 
-                        var ins = $("#product-image1")[0].files.length;
-                        if(ins == 0) {
-                            alert("First image cannot be empty");
-                            return;
-                        }
-                        var file = $("#product-image1");
-                        formData.append("file", file[0].files[0]);
-                        formData.append("fileName", product.id + '.jpg');
-                        formData.append("folder", "productImages");
-                        formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
+                var file = $("#product-image1");
+                formData.append("file", file[0].files[0]);
+                formData.append("fileName", productId + '.jpg');
+                formData.append("folder", "productImages");
+                formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
                         
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8003/unikrib/auth-url',
+                    dataType: 'json',
+                    success: function(body) {
+                        formData.append("signature", body.signature);
+                        formData.append("expire", body.expire);
+                        formData.append("token", body.token);
+                    
                         $.ajax({
-                            type: 'GET',
-                            url: 'http://localhost:8003/unikrib/auth-url',
+                            url: 'https://upload.imagekit.io/api/v1/files/upload',
+                            type: 'POST',
+                            mimeType: "multipart/form-data",
                             dataType: 'json',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
                             success: function(body) {
-                                formData.append("signature", body.signature);
-                                formData.append("expire", body.expire);
-                                formData.append("token", body.token);
-                        
+                                image1 = {
+                                    "image1": body.url,
+                                }
                                 $.ajax({
-                                    url: 'https://upload.imagekit.io/api/v1/files/upload',
-                                    type: 'POST',
-                                    mimeType: "multipart/form-data",
+                                    type: 'PUT',
+                                    url: 'http://localhost:8000/unikrib/products/' + product.id,
+                                    data: JSON.stringify(image1),
+                                    contentType: 'application/json',
                                     dataType: 'json',
-                                    data: formData,
-                                    processData: false,
-                                    contentType: false,
-                                    success: function(body) {
-                                        image1 = {
-                                            "image1": body.url,
+                                    success: function(){
+                                        alert("First image updated successfully");
+                                        if (image2 == false && image3 == false){
+                                            getUserType()
                                         }
-                                        $.ajax({
-                                            type: 'PUT',
-                                            url: 'http://localhost:8000/unikrib/products/' + product.id,
-                                            data: JSON.stringify(image1),
-                                            contentType: 'application/json',
-                                            dataType: 'json',
-                                            success: function(){
-                                                alert("First image updated successfully");
-                                                if (image2 == false && image3 == false){
-                                                    getUserType()
-                                                }
-                                            },
-                                            error: function(){
-                                                alert("Error uploading the first image");
-                                            }
-                                        })                                    
                                     },
-                                });
+                                    error: function(){
+                                        alert("Error uploading the first image");
+                                    }
+                                })                                    
                             },
                         });
-                    }
-                })
-                // Update second image if changed
-                $(function() {
-                    if (image2 === true) {
-                        var formData = new FormData();
+                    },
+                });
+            }
+        })
+        // Update second image if changed
+        $(function() {
+            if (image2 === true) {
+                var formData = new FormData();
     
-                        var file = $("#product-image2");
-                        formData.append("file", file[0].files[0]);
-                        formData.append("fileName", product.id + '.jpg');
-                        formData.append("folder", "productImages");
-                        formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
-                            
+                var file = $("#product-image2");
+                formData.append("file", file[0].files[0]);
+                formData.append("fileName", product.id + '.jpg');
+                formData.append("folder", "productImages");
+                formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
+                    
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8003/unikrib/auth-url',
+                    dataType: 'json',
+                    success: function(body) {
+                        formData.append("signature", body.signature);
+                        formData.append("expire", body.expire);
+                        formData.append("token", body.token);
                         $.ajax({
-                            type: 'GET',
-                            url: 'http://localhost:8003/unikrib/auth-url',
+                            url: 'https://upload.imagekit.io/api/v1/files/upload',
+                            type: 'POST',
+                            mimeType: "multipart/form-data",
                             dataType: 'json',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
                             success: function(body) {
-                                formData.append("signature", body.signature);
-                                formData.append("expire", body.expire);
-                                formData.append("token", body.token);
+                                image2 = {
+                                    "image2": body.url,
+                                }
                                 $.ajax({
-                                    url: 'https://upload.imagekit.io/api/v1/files/upload',
-                                    type: 'POST',
-                                    mimeType: "multipart/form-data",
+                                    type: 'PUT',
+                                    url: 'http://localhost:8000/unikrib/products/' + product.id,
+                                    data: JSON.stringify(image2),
+                                    contentType: 'application/json',
                                     dataType: 'json',
-                                    data: formData,
-                                    processData: false,
-                                    contentType: false,
-                                    success: function(body) {
-                                        image2 = {
-                                            "image2": body.url,
+                                    success: function(){
+                                        alert("second image updated successfully");
+                                        if (image3 === false) {
+                                            getUserType()
                                         }
-                                        $.ajax({
-                                            type: 'PUT',
-                                            url: 'http://localhost:8000/unikrib/products/' + product.id,
-                                            data: JSON.stringify(image2),
-                                            contentType: 'application/json',
-                                            dataType: 'json',
-                                            success: function(){
-                                                alert("second image updated successfully");
-                                                if (image3 === false) {
-                                                    getUserType()
-                                                }
-                                            },
-                                            error: function(){
-                                                alert("Error uploading the second image");
-                                            }
-                                        })                                    
                                     },
-                                });
+                                    error: function(){
+                                        alert("Error uploading the second image");
+                                    }
+                                })                                    
                             },
                         });
-                    }
-                })
-                $(function() {
-                    if (image3 === true) {
-                        //update the new Third image
-                        var formData = new FormData();
-                        var ins = $("#product-image3")[0].files.length;
-                        if(ins == 0) {
-                            return;
-                        }
-                        var file = $("#product-image3");
-                        formData.append("file", file[0].files[0]);
-                        formData.append("fileName", product.id + '.jpg');
-                        formData.append("folder", "productImages");
-                        formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
+                    },
+                });
+            }
+        })
+        //update the third image if changed
+        $(function() {
+            if (image3 === true) {
+                var formData = new FormData();
+
+                var file = $("#product-image3");
+                formData.append("file", file[0].files[0]);
+                formData.append("fileName", product.id + '.jpg');
+                formData.append("folder", "productImages");
+                formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
                             
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8003/unikrib/auth-url',
+                    dataType: 'json',
+                    success: function(body) {
+                        formData.append("signature", body.signature);
+                        formData.append("expire", body.expire);
+                        formData.append("token", body.token);
+                    
                         $.ajax({
-                            type: 'GET',
-                            url: 'http://localhost:8003/unikrib/auth-url',
+                            url: 'https://upload.imagekit.io/api/v1/files/upload',
+                            type: 'POST',
+                            mimeType: "multipart/form-data",
                             dataType: 'json',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
                             success: function(body) {
-                                formData.append("signature", body.signature);
-                                formData.append("expire", body.expire);
-                                formData.append("token", body.token);
-                            
+                                image3 = {
+                                    "image3": body.url,
+                                }
                                 $.ajax({
-                                    url: 'https://upload.imagekit.io/api/v1/files/upload',
-                                    type: 'POST',
-                                    mimeType: "multipart/form-data",
+                                    type: 'PUT',
+                                    url: 'http://localhost:8000/unikrib/products/' + product.id,
+                                    data: JSON.stringify(image3),
+                                    contentType: 'application/json',
                                     dataType: 'json',
-                                    data: formData,
-                                    processData: false,
-                                    contentType: false,
-                                    success: function(body) {
-                                        image3 = {
-                                            "image3": body.url,
-                                        }
-                                        $.ajax({
-                                            type: 'PUT',
-                                            url: 'http://localhost:8000/unikrib/products/' + product.id,
-                                            data: JSON.stringify(image3),
-                                            contentType: 'application/json',
-                                            dataType: 'json',
-                                            success: function(){
-                                                alert("Third image updated successfully");
-                                                getUserType()
-                                            },
-                                            error: function(){
-                                                alert("Error uploading the Third image");
-                                            }
-                                        })                                    
+                                    success: function(){
+                                        alert("Third image updated successfully");
+                                        getUserType()
                                     },
-                                });
+                                    error: function(){
+                                        alert("Error uploading the Third image");
+                                    }
+                                })                                    
                             },
                         });
-                    }
-                })
+                    },
+                });
             }
         })
     })

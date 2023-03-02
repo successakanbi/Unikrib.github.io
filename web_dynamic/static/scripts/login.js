@@ -27,7 +27,7 @@ $(function () {
                 }
             },
             error: function(response) {
-                alert(JSON.stringify(response.responseJSON.message));
+                alert(response.responseJSON);
             },
         })
     })
