@@ -21,8 +21,8 @@ h2{
     padding-top: 25px;
     display: inline-block;
     margin-bottom: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(114, 112, 112, 0.2), 
+    0 6px 20px 0 rgba(121, 119, 119, 0.19);
 }
 .filter-containers{
     width:26.65%;
@@ -110,8 +110,8 @@ select:focus {
      border-top: 5px solid #1b9110;
      border-radius: 5px;
      /*to here*/
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(151, 150, 150, 0.2), 
+    0 6px 20px 0 rgba(148, 147, 147, 0.19);
 }
 #image-cont{
     width: 95%;

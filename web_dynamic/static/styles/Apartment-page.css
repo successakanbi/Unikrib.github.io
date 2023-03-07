@@ -15,8 +15,8 @@ h2{
     padding-top: 15px;
     display: inline-block;
     margin-bottom: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(131, 129, 129, 0.2), 
+    0 6px 20px 0 rgba(141, 141, 141, 0.19);
 }
 .filter-containers{
     width:20%;
@@ -160,8 +160,8 @@ a {
     background-color: #dfd9d9;
     margin-left: 25%;
     display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(119, 118, 118, 0.2), 
+    0 6px 20px 0 rgba(116, 115, 115, 0.19);
     padding: 10px 10px 10px 10px;
 }
 #img-right-cont{

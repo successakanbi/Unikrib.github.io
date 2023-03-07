@@ -102,8 +102,8 @@ select:focus {
     border-top: 5px solid #1c9ad4;
     border-radius: 5px;
     /*to here*/
-    box-shadow: 0 4px 8px 0 rgba(68, 67, 67, 0.2), 
-    0 6px 20px 0 rgba(73, 72, 72, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(160, 158, 158, 0.2), 
+    0 6px 20px 0 rgba(153, 151, 151, 0.19);
 }
 .output-containers a{
     text-decoration: none;
@@ -189,8 +189,8 @@ select:focus {
     background-color: #f3ebeb;
     margin-left: 30%;
     display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(104, 102, 102, 0.2), 
+    0 6px 20px 0 rgba(134, 133, 133, 0.19);
     padding: 10px 10px 10px 10px;
 }
 #img-right-cont{
