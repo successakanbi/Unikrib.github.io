@@ -458,8 +458,9 @@ position: relative;
    }
    /*here*/
    #preloader{
-    background: #000 url(images/preloader2.gif) no-repeat center center;
-    background-size: 10%;
+    background: #fff url(images/Loading_icon.gif) no-repeat center center;
+    margin-top: 3.5vw;
+    background-size: 20%;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -608,9 +609,12 @@ position: relative;
         margin-left: 9%;
         float:left;
     }
+    /*here*/
     #preloader{
-        background-size: 20%;
+        margin-top: 7vw;
+        background-size: 35%;
        }
+       /*here*/
     
 }
 @media screen and (max-width: 590px) {
@@ -776,9 +780,12 @@ position: relative;
         margin-left: 6%;
         float:left;
     }
-
+    
+    /*here*/
     #preloader{
-        background-size: 40%;
+        margin-top:15vw;
+        background-size: 80%;
        }
+       /*here*/
     
 }

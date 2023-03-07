@@ -786,12 +786,14 @@
         padding-bottom: 2vw;
         margin: 0 1vw 3vw 0; 
     }
+    /*here*/
     #profile-pic-cont{
-        width:30%;
+        width:25%;
         float: left;
         margin: 0 0 5vw 0;
         padding: 3px 0 0 0;
     }
+    /*to here*/
     #profile-pic-cont img{
         width: 90%;
         margin-left: 10%;

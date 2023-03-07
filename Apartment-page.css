@@ -1,13 +1,15 @@
 #main-ext-cont{
     width:60%;
     margin-left: 20%;
-    padding: 50px 0 0 0;
+    padding: 60px 0 0 0;
 }
 h1{
     text-align: center;
+    font-size: 1.4em;
 }
 h2{
     margin-left: 5%;
+    font-size: 1.1em;
 }
 #Apartment-container{
     width: 100%;
@@ -29,7 +31,7 @@ h2{
 }
 label{
     font-weight: 700;
-    font-size: 1vw;
+    font-size: 0.9em;
     color: #161670;
 }
 select{
@@ -186,23 +188,10 @@ a {
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
-        padding: 50px 0 0 0;
-    }
-    h1{
-        text-align: center;
-        font-size: 22px;
-    }
-    h2{
-        font-size: 14px;
     }
     #Apartment-container{
         padding-top: 15px;
         margin-bottom: 10px;
-    }
-    label{
-        font-weight: 800;
-        font-size: 1.8vw;
-        color: #161670;
     }
     a {
         font-size: 2.5vw;
@@ -306,14 +295,6 @@ a {
         margin-left: 2.5%;
         padding: 60px 0 0 0;
     }
-    h1{
-        text-align: center;
-        font-size: 17px;
-        margin-top: 5px;
-    }
-    h2{
-        font-size: 14px;
-    }
     .filter-containers{
         width:50%;
         float:left;
@@ -330,11 +311,6 @@ a {
     }
     .search-btn {
         margin-top:5px;
-    }
-    label{
-        font-weight: 700;
-        font-size: 3.3vw;
-        color: #161670;
     }
     a {
         font-size:3.5vw;

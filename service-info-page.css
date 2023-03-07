@@ -322,12 +322,14 @@ cursor{
         margin-bottom: 1vw;
         margin: 0 1vw 1vw 0; 
     }
+    /*here*/
     #profile-pic-cont{
-        width:25%;
+        width:22%;
         float: left;
         margin: 0 0 5vw 0;
         padding: 3px 0 0 0;
     }
+     /*to here*/
     #profile-pic-cont img{
         width: 90%;
         margin-left: 10%;
@@ -519,12 +521,14 @@ cursor{
         margin-bottom: 1vw;
         margin: 0 1vw 3vw 0; 
     }
+    /*here*/
     #profile-pic-cont{
-        width:25%;
+        width:22%;
         float: left;
         margin: 0 0 5vw 0;
         padding: 3px 0 0 0;
     }
+     /*to here*/
     #profile-pic-cont img{
         width: 90%;
         margin-left: 10%;
