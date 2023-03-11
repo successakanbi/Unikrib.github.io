@@ -55,6 +55,18 @@
     line-height: 0.4vw;
 
 }
+.time-stamp-cont{
+    width: 89%;
+    float: left;
+    padding: 0.4vw 0 0.4vw 0;
+
+}
+.time-stamp{
+    font-size: 0.8vw;
+    text-align: right;
+    color: #494949c0;
+    font-weight: 500;
+}
 .rating{
     color: #c7c409;
     font-size: 1.1vw;
@@ -287,7 +299,18 @@ cursor{
         width: 90%;
         margin:2vw 0 0 5%;
         padding: 0 0 0 1%;  
-        
+    }
+    .time-stamp-cont{
+        width: 89%;
+        float: left;
+        padding: 0.4vw 0 0.4vw 0;
+    
+    }
+    .time-stamp{
+        font-size: 1.2vw;
+        text-align: right;
+        color: #494949c0;
+        font-weight: 500;
     }
     #profile-cont{
         width:50%;
@@ -440,6 +463,18 @@ cursor{
         width:100%;
         margin-bottom: 1vw;
         margin: 0 1vw 3vw 0; 
+    }
+    .time-stamp-cont{
+        width: 89%;
+        float: left;
+        padding: 0.4vw 0 0.4vw 0;
+    
+    }
+    .time-stamp{
+        font-size: 3vw;
+        text-align: right;
+        color: #494949c0;
+        font-weight: 500;
     }
     #profile-pic-cont{
         width:25%;

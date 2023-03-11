@@ -26,7 +26,7 @@
           <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
           <div class="dropmenu-content" id="dropdown-cont">
              <p class="drop-links" onclick="getUserType()">Profile</p>
-             <p href="" class="drop-links">Edit profile</p>  
+             <p id="edit-profile" class="drop-links">Edit profile</p>  
              <p id="help" class="drop-links">Help</p>
              <p class="drop-links" onclick="logout()">logout</p>
           </div>
@@ -74,12 +74,17 @@
          <!--contains image input field-->
          <div id="profile-pic-cont">
             <label for="profile_photo" id="upload">upload a profile photo
-                <input type="file" name="profile_photo" id="profile-photo" class="file"/>
+                <input type="file" onchange="readURL(this, 'prof-img');" name="profile_photo" id="profile-photo" class="file"/>
             <p id="file-name" class="img-name"></p>
          </label>
+         <div class="image-select-cont">
+          <img id="prof-img" src="">
+         </div></br></br>
          </div>
 
-
+        <div class="image-select-cont">
+          <img src="">
+        </div>
          <div>
             <button type="submit" id="submit">Finish</button>
           </div>
@@ -94,7 +99,7 @@
           <p><a href="product-page.html" class="foot-links">products</a></p>
           <p><a href="service-page.html"class="foot-links">services</a></p>
           <p><a href="about-page.html"class="foot-links">about us</a></p>
-          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent, vendor or service provider</a></p>
         </div>
         <div class="footer-sub-cont-b">
           <!--here-->

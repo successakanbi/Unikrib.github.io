@@ -26,8 +26,8 @@
             <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
             <div class="dropmenu-content" id="dropdown-cont">
                <p class="drop-links" onclick="getUserType()">Profile</p>
-               <p href="" class="drop-links">Edit profile</p>
-               <p href="help-page.html" class="drop-links">Help</p>
+               <p id="edit-profile" class="drop-links">Edit profile</p>
+               <p id="help" class="drop-links">Help</p>
                <p class="drop-links" onclick="logout()">logout</p>
            </div>
           </div>
@@ -40,9 +40,7 @@
          </a>
     </div>
 
-     <!--here-->
      <div id="preloader"></div>
-     <!--to here-->
 
     <div id="about-ext-cont">
         <div id="about-int-cont">
@@ -102,7 +100,8 @@
 
 
     <!--main javascript file link-->
-    <script src = "scripts/main2.js"></script>
+    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+    <script src="scripts/main2.js"></script>
 
 </body>
 </html>

@@ -102,7 +102,7 @@ def delete_service(service_id):
     obj = storage.get('Service', service_id)
     if obj == None:
         return jsonify("No service found"), 404
-    for image in (obj.image1, obj.image2, obj.image3, obj.image4, obj.image5):
+    for image in [obj.image1, obj.image2, obj.image3, obj.image4, obj.image5]:
         if image:
             fstorage.new(image)
     obj.delete()

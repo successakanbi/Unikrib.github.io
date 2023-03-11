@@ -171,7 +171,14 @@ input[type=text], input[type=email], input[type=password],
     font-weight: 600;
     text-align: center;
  }
- 
+ .image-select-cont {
+    width:35%;
+    margin: 0.5vw 0 0.5vw 39.5%;
+ }
+ .image-select-cont img{
+    width:100%;
+    height:auto;
+ }
  #google a {
     font-size: 17px;
     color: #05349b;

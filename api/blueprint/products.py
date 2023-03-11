@@ -137,5 +137,5 @@ def delete_product(product_id):
     if obj.image3:
         fstorage.new(obj.image3)
     obj.delete()
-    return '{}'
+    return '{}', 200
     

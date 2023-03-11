@@ -44,10 +44,14 @@ def create_house():
     if not request.json:
         return jsonify("Not a valid json"), 400
     house_dict = request.get_json()
-    if "owner_id" not in house_dict:
+    try:
+        int(house_dict['price'])
+    except TypeError:
+        return jsonify("Price must be a number"), 400
+    if "owner_id" not in house_dict or house_dict['owner_id'] == "":
         return jsonify("House must have an owner_id"), 400
-    if "street_id" not in house_dict:
-        return jsonify("Request must contain a street_id"), 400
+    if "street_id" not in house_dict or house_dict["street_id"] == "":
+        return jsonify("House must contain a street_id"), 400
     house_dict = request.get_json()
     model = House(**house_dict)
     storage.new(model)
@@ -64,12 +68,12 @@ def update_house(house_id):
     if obj is None:
         return jsonify("House not found"), 404
     for key, val in house_dict.items():
-        if key == 'fileId1':
-            fstorage.new(house_dict['image1'], val)
-        elif key == 'fileId2':
-            fstorage.new(house_dict['image2'], val)
-        elif key == 'fileId3':
-            fstorage.new(house_dict['image3'], val)
+        if key == "image1" and obj.image1:
+            fstorage.new(obj.image1)
+        elif key == "image2" and obj.image2:
+            fstorage.new(obj.image2)
+        elif key == "image3" and obj.image3:
+            fstorage.new(obj.image3)
         else:
             setattr(obj, key, val)
             obj.save()
@@ -81,6 +85,8 @@ def delete_house(house_id):
     obj = storage.get('House', house_id)
     if obj == None:
         return jsonify("Apartment was not found"), 404
+    for image in [obj.image1, obj.image2, obj.image3]:
+        fstorage.new(image)
     obj.delete()
     return {}, 201
 

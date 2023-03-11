@@ -9,3 +9,4 @@ if response == 'yes':
         urls = json.load(f)
     for url in urls:
         fstorage.delete(url)
+        fstorage.save()

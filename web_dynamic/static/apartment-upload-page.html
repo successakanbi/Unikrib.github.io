@@ -26,7 +26,7 @@
           <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
           <div class="dropmenu-content" id="dropdown-cont">
              <p class="drop-links" onclick="getUserType()">Profile</p>
-             <p href="" class="drop-links">Edit profile</p>
+             <p id="edit-profile" class="drop-links">Edit profile</p>
              <p id="help" class="drop-links">Help</p>
              <p class="drop-links" onclick="logout()">logout</p>
           </div>
@@ -108,19 +108,28 @@
              <h3>Upload three images of the apartment</h3>
              <div id="apartment-img-cont">
                  <label for="apartmemt img" id="upload">upload image
-                     <input type="file" name="apartment img" id="Apart-image1" class="apartmemt-img"/>
+                     <input type="file" onchange="readURL(this, 'image1');" name="apartment img" id="Apart-image1" class="apartmemt-img"/>
                      <p id ="file-name1" class="file-name"></p>
                  </label>
+                <div class="image-select-cont">
+                  <img id="image1" src="">
+                </div>
 
                  <label for="apartmemt img" id="upload">upload image
-                    <input type="file" name="apartment img" id="Apart-image2" class="apartmemt-img"/>
+                    <input type="file" onchange="readURL(this, 'image2');" name="apartment img" id="Apart-image2" class="apartmemt-img"/>
                     <p id ="file-name2" class="file-name"></p>
                 </label>
+                <div class="image-select-cont">
+                  <img id="image2" src="">
+                </div>
 
                 <label for="apartmemt img" id="upload">upload image
-                    <input type="file" name="apartment img" id="Apart-image3" class="apartmemt-img"/>
+                    <input type="file" onchange="readURL(this, 'image3');" name="apartment img" id="Apart-image3" class="apartmemt-img"/>
                     <p id ="file-name3" class="file-name"></p>
                 </label>
+                <div class="image-select-cont">
+                  <img id="image3" src="">
+                </div>
              </div>
 
              <!--contains submit button-->
@@ -155,7 +164,7 @@
           <p><a href="product-page.html" class="foot-links">products</a></p>
           <p><a href="service-page.html"class="foot-links">services</a></p>
           <p><a href="about-page.html"class="foot-links">about us</a></p>
-          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent, vendor or service provider</a></p>
       </div>
       <div class="footer-sub-cont-b">
         <!--here-->
@@ -196,48 +205,6 @@
     
     <script src = "scripts/main2.js"></script>
     <script>
-        //changes the content of the street select box based on the selection in the community box
-        function changeOptions(lst1, lst2) {
-            var lst1 = document.getElementById(lst1);
-            var lst2 = document.getElementById(lst2);
-
-            //street option values for various community selected
-            lst2.innerHTML = "";
-            if(lst1.value == "Adolor") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-
-            } else if(lst1.value == "Ebvoumore") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-
-            } else if(lst1.value == "EDPA") {
-                var optionArray = ["18th street|18th street", "19th street|19th street","20th street|20th street",
-                "21st street|21st street", "22nd street|22nd street","|","|"];
-
-            } else if(lst1.value == "Ekosodin") {
-                var optionArray = ["Boundary|Boundary", "edo street|edo street","JB|JB","newton street|newton street", "|","|","|"];
-
-            } else if(lst1.value == "Evidence") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Isiohor") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Osasoghie") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            } else if(lst1.value == "Oluku") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            }else if(lst1.value == "Uselu") {
-                var optionArray = ["|","|", "|", "|","|","|","|"];
-            }
-            
-            for (var option in optionArray) {
-                var pair = optionArray[option].split("|");
-                var newOption = document.createElement("option");
-                newOption.value = pair[0];
-                newOption.innerHTML = pair[1];
-                lst2.options.add(newOption);
-
-            }
-        }
-
         //displays name and size of uploaded image file
         const file = document.getElementById("Apart-image1")
         const file2 = document.getElementById("Apart-image2")
@@ -248,9 +215,7 @@
             const {name: fileName , size} = file;
             const fileSize = (size / 1000).toFixed(2);
             const fileNameAndSize = `${fileName} - ${fileSize}KB`;
-            document.querySelector('#file-name1').textContent = 
-            fileNameAndSize;
-        
+            document.querySelector('#file-name1').textContent = fileNameAndSize;
         })
         //for second image
         file2.addEventListener("change", (e) => {

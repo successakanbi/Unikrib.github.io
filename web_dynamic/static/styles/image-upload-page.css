@@ -68,7 +68,14 @@ h3{
     background-color: #1843d1;
     text-decoration: underline;
     width: 100%;
-    
+ }
+ .image-select-cont {
+    width:35%;
+    margin: 0.5vw 0 0.5vw 39.5%;
+ }
+ .image-select-cont img{
+    width:100%;
+    height: auto;
  }
  #imgs-submit{
     padding: 15px;

@@ -6,7 +6,7 @@ class FileStorage:
     """This defines the filestorage class"""
 
     __objects = []
-    __filepath = 'unikrib.json'
+    __filepath = 'settings/unikrib.json'
 
     def all(self):
         """This returns all the instances from storage"""
@@ -14,8 +14,11 @@ class FileStorage:
 
     def new(self, url):
         """This create a new instance"""
-        self.__objects.append(url[33:])
-        self.save()
+        if len(url) > 33:
+            self.__objects.append(url[33:])
+            self.save()
+        else:
+            pass
 
     def save(self):
         """This write all the instances into disk"""
@@ -44,4 +47,5 @@ class FileStorage:
         if url in self.__objects:
             self.__objects.remove(url)
             self.save()
+            return
         

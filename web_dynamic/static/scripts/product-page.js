@@ -28,229 +28,149 @@ function changeColor() {
 
 // Load all the available environments
 $(function (){
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8000/unikrib/environments',
-        contentType: 'application/json',
-        dataType: 'json',
-        success: function(environments){
-            $.each(environments, function(index, env){
-                $('#location-search').append('<option value="' + env.id + '">' + env.name + '</option>')
-            })
-        },
-        error: function (){
-            alert("Could not load available environments");
-        }
+    get('/environments')
+    .then((environments) => {
+        $.each(environments, function(index, env){
+            $('#location-search').append('<option value="' + env.id + '">' + env.name + '</option>')
+        })
+    }).catch((err) => {
+        errorHandler(err, "Could not load environments");
     })
 })
 
 // Load all the available categories
 $(function (){
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8000/unikrib/categories',
-        contentType: 'application/json',
-        dataType: 'json',
-        success: function(cats){
-            $.each(cats, function(index, cat){
-                $('#product-category').append('<option value="' + cat.id + '">' + cat.name + '</option>')
-            })
-        },
-        error: function (){
-            alert("Could not load available product categories")
-        }
+    get('/categories')
+    .then((cats) => {
+        $.each(cats, function(index, cat){
+            $('#product-category').append('<option value="' + cat.id + '">' + cat.name + '</option>');
+        })
+    }).catch((err) => {
+        errorHandler(err, "could not load available categories")
     })
 })
 
 //Load all the available products
 $(function (){
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8000/unikrib/products/' + '?available=yes',
-        contentType: 'application/json',
-        dataType: 'json',
-        success: function (prods){
-            if (prods.length === 0){
-                $('#num-results').text('0 - 0');
-                $('#view-more-button').addClass('disappear')
-            } else if (prods.length < 10){
-                $('#num-results').text('1 - ' + prods.length);
-                $('#view-more-button').addClass('disappear')
-            } else {
-                $('#num-results').text('1 - 9');
-            }
-            $('#total-length').text(prods.length);
-            $('#view-more-cont').html('')
-
-            $.each(prods, function(index, prod){
-                $.ajax({
-                    type: 'GET',
-                    url: 'http://localhost:8000/unikrib/users/' + prod.owner_id,
-                    contentType: 'application/json',
-                    dataType: 'json',
-                    success: function (owner){
-                        $.ajax({
-                            type: 'GET',
-                            url: 'http://localhost:8000/unikrib/environments/' + owner.com_res,
-                            contentType: 'application/json',
-                            dataType: 'json',
-                            success: function(env){
-                                if (index < 9){
-                                    $('#all-products').append(`<div id="output-cont" class="output-containers">
-                                            <div id="` + prod.id + `">
-                                            <div id="image-cont">
-                                                <img src="` + prod.image1 + `" id="img1" class="product-imgs">
-                                            </div>
-                                            <div id="text-cont">
-                                                <p class="product-results"><span class="product-name">` + prod.name + ` </span></p>
-                                                <p class="price-results"><span class="product-price" id="product-price-1">N` + prod.price + `</span></p>
-                                                <p class="ven-location">Vendors location: <span class="community">` + env.name + `</span></p>
-                                            </div>
-                                            </div>
-                                        </div>`)                                    
-                                } else {                                    
-                                    $('#view-more-cont').append(`<div id="output-cont" class="output-containers">
-                                    <div id="` + prod.id + `">
-                                    <div id="image-cont">
-                                        <img src="` + prod.image1 + `" id="img1" class="product-imgs">
-                                    </div>
-                                    <div id="text-cont">
-                                        <p class="product-results"><span class="product-name">` + prod.name + ` </span></p>
-                                        <p class="price-results"><span class="product-price" id="product-price-1">N` + prod.price + `</span></p>
-                                        <p class="ven-location">Vendors location: <span class="community">` + env.name + `</span></p>
-                                    </div>
-                                    </div>
-                                    </div>`)
-                                }                                
-                                $(function (){
-                                    $("#" + prod.id).on('click', function(){										                                        
-                                        var user = window.localStorage.getItem('newId');
-                                        if (user === null) {
-                                            alert("Please log in or create an account first")
-                                            window.location.href = 'login.html';
-                                        } else {
-                                            window.localStorage.setItem('productId', prod.id);											
-                                            window.location.href = 'product-info-page.html';
-                                        }
-                                    });
-                                });
-                            },
-                            error: function (){
-                                alert('Could not load owner environment')
-                            }
-                        })
-                    },
-                    error: function(){
-                        alert('Could not load product owner');
-                    }
-                })
-                
-            })
-            
-        },
-        error: function (){
-            alert('could not load available products now.');
+    get('/products/' + '?available=yes')
+    .then((prods) => {
+        if (prods.length === 0){
+            $('#num-results').text('0 - 0');
+            $('#view-more-button').addClass('disappear')
+        } else if (prods.length < 10){
+            $('#num-results').text('1 - ' + prods.length);
+            $('#view-more-button').addClass('disappear')
+        } else {
+            $('#num-results').text('1 - 9');
         }
+        $('#total-length').text(prods.length);
+        $('#view-more-cont').html('')
+        $.each(prods, function(index, prod){
+            get('/users/' + prod.owner_id)
+            .then((owner) => {
+                get('/environments/' + owner.com_res)
+                .then((env) => {
+                    if (index < 9){
+                        var cont = 'all-products'
+                    } else {
+                        var cont = 'view-more-cont'
+                    }
+                    $('#' + cont).append(`<div id="output-cont" class="output-containers">
+                        <div id="` + prod.id + `">
+                        <div id="image-cont">
+                            <img src="` + prod.image1 + `" id="img1" class="product-imgs">
+                        </div>
+                        <div id="text-cont">
+                            <p class="product-results"><span class="product-name">` + prod.name + ` </span></p>
+                            <p class="price-results"><span class="product-price" id="product-price-1">N` + prod.price + `</span></p>
+                            <p class="ven-location">Vendors location: <span class="community">` + env.name + `</span></p>
+                        </div>
+                        </div>
+                    </div>`)
+                    $(function (){
+                        $("#" + prod.id).on('click', function(){										                                        
+                            var user = window.localStorage.getItem('newId');
+                            if (user === null) {
+                                alert("Please log in or create an account first")
+                                window.location.href = 'login.html';
+                            } else {
+                                window.localStorage.setItem('productId', prod.id);											
+                                window.location.href = 'product-info-page.html';
+                            }
+                        });
+                    });
+                })
+            })
+        })
+    }).catch((err) => {
+        errorHandler(err, "Could not load available products");
     })
 })
 
 //Load search results
 $(function (){
     $('#product-search').on('click', function(){
-        var searchDict = {
+        var payload = JSON.stringify({
             "location": $('#location-search :selected').val(),
             "category": $('#product-category :selected').val(),
             "query": $('#product-search-box').val(),
-        };
-        $.ajax({
-            type: 'POST',
-            url: 'http://localhost:8000/unikrib/product-search',
-            data: JSON.stringify(searchDict),
-            contentType: 'application/json',
-            dataType: 'json',
-            success: function (products){
-                alert('Search returned ' + products.length + ' results.')
-                $('#all-products').html('')
+        });
+        post('/product-search', payload)
+        .then((products) => {
+            alert('Search returned ' + products.length + ' results.')
+            $('#all-products').html('')
 
-                if (products.length === 0){
-                    $('#num-results').text('0 - 0');
-                    $('#view-more-button').addClass('disappear')
-                } else if (products.length < 10){
-                    $('#num-results').text('1 - ' + products.length);
-                    $('#view-more-button').addClass('disappear')
-                } else {
-                    $('#num-results').text('1 - 9');
-                }
-                $('#total-length').text(products.length);
-                $('#view-more-cont').html('')
+            if (products.length === 0){
+                $('#num-results').text('0 - 0');
+                $('#view-more-button').addClass('disappear')
+            } else if (products.length < 10){
+                $('#num-results').text('1 - ' + products.length);
+                $('#view-more-button').addClass('disappear')
+            } else {
+                $('#num-results').text('1 - 9');
+            }
+            $('#total-length').text(products.length);
+            $('#view-more-cont').html('')
 
-                $.each(products, function(index, prod){
-                    $.ajax({
-                        type: 'GET',
-                        url: 'http://localhost:8000/unikrib/users/' + prod.owner_id,
-                        contentType: 'application/json',
-                        dataType: 'json',
-                        success: function (owner){
-                            $.ajax({
-                                type: 'GET',
-                                url: 'http://localhost:8000/unikrib/environments/' + owner.com_res,
-                                contentType: 'application/json',
-                                dataType: 'json',
-                                success: function(env){
-                                    if (index < 9){
-                                        $('#all-products').append(`<div id="output-cont" class="output-containers">
-                                            <div id="` + prod.id + `">
-                                                <div id="image-cont">
-                                                    <img src="` + prod.image1 + `" id="img1" class="product-imgs">
-                                                </div>
-                                                <div id="text-cont">
-                                                    <p class="product-results"><span class="product-name">` + prod.name + ` </span></p>
-                                                    <p class="price-results"><span class="product-price" id="product-price-1">N` + prod.price + `</span></p>
-                                                    <p class="ven-location">Vendors location: <span class="community">` + env.name + `</span></p>
-                                                </div>
-                                                </div>
-                                            </div>`)                                    
-                                    } else {                                    
-                                        $('#view-more-cont').append(`<div id="output-cont" class="output-containers">
-                                        <div id="` + prod.id + `">
-                                        <div id="image-cont">
-                                            <img src="` + prod.image1 + `" id="img1" class="product-imgs">
-                                        </div>
-                                        <div id="text-cont">
-                                            <p class="product-results"><span class="product-name">` + prod.name + ` </span></p>
-                                            <p class="price-results"><span class="product-price" id="product-price-1">N` + prod.price + `</span></p>
-                                            <p class="ven-location">Vendors location: <span class="community">` + env.name + `</span></p>
-                                        </div>
-                                        </div>
-                                        </div>`)
-                                    }                                
-                                    $(function (){
-                                        $("#" + prod.id).on('click', function(){										                                        
-                                            var user = window.localStorage.getItem('newId');
-                                            if (user === null) {
-                                                alert("Please log in or create an account first")
-                                                window.location.href = 'login.html';
-                                            } else {
-                                                window.localStorage.setItem('productId', prod.id);											
-                                                window.location.href = 'product-info-page.html';
-                                            }
-                                        });
-                                    });
-                                },
-                                error: function (){
-                                    alert('Could not load owner environment')
-                                }
-                            })
-                        },
-                        error: function(){
-                            alert('Could not load product owner');
+            $.each(products, function(index, prod){
+                get('/users/' + prod.owner_id)
+                .then((owner) => {
+                    get('/environments/' + owner.com_res)
+                    .then((env) => {
+                        if (index < 9){
+                            var cont = 'all-products'
+                        } else {
+                            var cont = 'view-more-cont'
                         }
+                        $('#' + cont).append(`<div id="output-cont" class="output-containers">
+                            <div id="` + prod.id + `">
+                            <div id="image-cont">
+                                <img src="` + prod.image1 + `" id="img1" class="product-imgs">
+                            </div>
+                            <div id="text-cont">
+                                <p class="product-results"><span class="product-name">` + prod.name + ` </span></p>
+                                <p class="price-results"><span class="product-price" id="product-price-1">N` + prod.price + `</span></p>
+                                <p class="ven-location">Vendors location: <span class="community">` + env.name + `</span></p>
+                            </div>
+                            </div>
+                        </div>`)
+                        $(function (){
+                            $("#" + prod.id).on('click', function(){										                                        
+                                var user = window.localStorage.getItem('newId');
+                                if (user === null) {
+                                    alert("Please log in or create an account first")
+                                    window.location.href = 'login.html';
+                                } else {
+                                    window.localStorage.setItem('productId', prod.id);											
+                                    window.location.href = 'product-info-page.html';
+                                }
+                            });
+                        });
                     })
                 })
-            },
-            error: function (){
-                alert("Failed to load search results")
-            }
+            })
+        }).catch((err) => {
+            errorHandler(err, "Could not load search results");
         })
     })
 })
