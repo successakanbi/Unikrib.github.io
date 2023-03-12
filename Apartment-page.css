@@ -5,19 +5,18 @@
 }
 h1{
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 h2{
     margin-left: 5%;
-    font-size: 1.1em;
 }
 #Apartment-container{
     width: 100%;
-    padding-top: 15px;
+    padding-top: 1em;
     display: inline-block;
     margin-bottom: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(114, 112, 112, 0.2), 
+    0 6px 20px 0 rgba(121, 119, 119, 0.19);
 }
 .filter-containers{
     width:20%;
@@ -36,10 +35,10 @@ label{
 }
 select{
     width: 100%;
-    height: 50px;
+    height: 4em;
     text-align: center;
     color: #504f4f;
-    font-size: 15px;
+    font-size: 0.9em;
     font-weight: 700;
     border: none;
     border-top:#607dda solid 4px;
@@ -54,50 +53,51 @@ select:focus {
     border: 1px solid rgb(29, 112, 4);
     background-color: rgb(29, 112, 4);
     color: #ffff;
-    font-size: 15px;
-    height: 50px;
+    font-size: 0.9em;
+    height: 4em;
 }
 #figures{
     background-color: #504f4f;
-    width: 99%;
+    width: 97%;
     display: block;
-    padding: 1px 0 1px 15px;
+    padding: 0.1em 0 0.1em 2%;
     color: #f8f7f7;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 #show {
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
 }
 #output-ext-cont{
     width: 100%;
     margin-left: 0%;
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
 }
 .output-containers{
-    width:21%;
-    margin:1.5vw 0 70px 8%;
+    width:15%;
+    margin:0 0 5em 6%;
     display: inline-block;
-    padding: 0.2vw 1% 0px 1%;
-     border-top: 5px solid #106291;
+    padding: 0 1% 0 1%;
+     border-top: 0.2em solid #0a8797;
      border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(145, 143, 143, 0.2), 
-    0 6px 20px 0 rgba(175, 173, 173, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(129, 127, 127, 0.2), 
+    0 6px 20px 0 rgba(121, 120, 120, 0.19);
 }
 
 #image-cont{
     width: 95%;
-    height: auto;
+    height: 10em;
     margin-left: 2.5%;
-    padding-top: 1vw;
+    padding-top: 0.5em;
 }
 #image-cont img{
     width:100%;
-    height: 13vw;
+    height: auto;
+    object-fit: contain;
 }
 #text-cont{
-    width: 100%;
-    padding: 5px;
+    width: 98%;
+    padding: 2em 1% 0.5em 1%;
     height: auto;
 }
 
@@ -107,23 +107,25 @@ a {
 
 }
 .address-results{
-    font-size: 1.1vw;
+    font-size: 1em;
     font-weight: 500;
 }
 .price-results{
     color:#161670;
-    font-size: 1.2vw;
+    font-size: 1.1em;
     font-weight: 600;
+    line-height: 1em;
+    
 }
 .type, .hostel, .street, .community{
-    color: #161616;
-    font-size:1vw;
+    font-size:1em;
     font-weight: 500;
     color: #152b8f;
+    line-height: 1em;
 }
 .price{
     color: #16850b;
-    font-size: 1.3vw;
+    font-size: 1.3em;
     font-weight: 700;
 }
 .icons-cont .fa{
@@ -131,16 +133,16 @@ a {
     color: #5f5f61;
 }
 #view-more-button{
-    background-color: #152b8f;
+    background-color: #0c4972;
     text-align: center;
-    padding: 5px;
-    width: 30%;
-    margin-left:35%;
+    padding: 0.1em 1% 0.1em 1%;
+    width: 20%;
+    margin-left:38%;
     color: #f5f2f2;
-    margin-bottom: 30px;
+    margin-bottom: 3em;
 }
 #button-text{
-    font-size: 18px;
+    font-size: 1.2em;
     font-weight: 600;
 }
 #view-more-cont {
@@ -152,15 +154,14 @@ a {
     background-color: #353536;
 }
 #service-link-cont{
-    margin-top:50px;
-    margin-bottom: 50px;
-    width: 50%;
-    background-color: #dfd9d9;
+    margin:4em 0 4em 25%;
+    width: 48%;
+    background-color: #9bc3cff8;
     margin-left: 25%;
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(119, 118, 118, 0.2), 
     0 6px 20px 0 rgba(116, 115, 115, 0.19);
-    padding: 10px 10px 10px 10px;
+    padding: 1em 1% 1em 1%;
 }
 #img-right-cont{
     width:50%;
@@ -170,44 +171,29 @@ a {
     width: 100%;
 }
 #text-left-cont{
-    width: 45%;
+    width: 43%;
     float:left;
-    padding: 2%;  
+    padding: 1%;   
 }
 #redir{
-    font-weight: 400;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #fff;
     
 }
 #redirect-link{
     font-weight: 700;
     color: #086161;
-    font-size:1.4vw;
+    font-size:1.2em;
 }
 @media screen and (max-width: 900px) {
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
+        padding: 6em 0 0 0;
     }
-    #Apartment-container{
-        padding-top: 15px;
-        margin-bottom: 10px;
-    }
-    a {
-        font-size: 2.5vw;
+
     
-    }
-    select{
-        width: 100%;
-        height: 50px;
-        text-align: center;
-        color: #504f4f;
-        font-weight: 700;
-    }
-    .search-btn {
-        width: 100%;
-        margin-top:22.2px;
-        height: 50px;
-    }
     #figures{
         width: 98%;
     }
@@ -217,105 +203,69 @@ a {
         margin-bottom: 50px;
     }
     .output-containers{
-        width:50%;
-        margin: 0 0 70px 25%;
-        padding: 1vw 5px 0px 5px;
+        width:25%;
+        margin: 0 0 70px 5%;
+        padding: 0 0.5 0 0.5%;
        
     }
     #image-cont{
-        width: 90%;
-        height: auto;
-        margin-left: 5%;
+        width: 98%;
+        height: 7.5em;
+        margin-left: 1%;
     }
-    #image-cont img{
-        width:100%;
-        height: auto;
-    }
+    
     #text-cont{
         width: 100%;
-        height: auto;
-    }
-    #view-more-button{
-        background-color: #152b8f;
-        text-align: center;
-        padding: 2px;
-        width: 40%;
-        margin-left:30%;
-        color: #f5f2f2;
-        margin-bottom: 30px;
-    }
-    #button-text{
-        font-size: 16px;
-        font-weight: 600;
+        padding: 1em 2% 0.5em 2%;
     }
     .address-results{
-        font-size: 2vw;
+        font-size: 0.9em;
     }
     .price-results{
-        font-size: 2vw;
+        font-size: 0.9em;
     }
     .type, .hostel, .street, .community{
-        font-size:2.3vw;
+        font-size:0.9em;
     }
     .price{
-        font-size: 2.5vw;
+        font-size: 1.2em;
     }
+    
+    #button-text{
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+    
     #service-link-cont{
-        width: 75%;
+        width: 73%;
         margin-left: 12.5%;
     }
-    #img-right-cont{
-        width:50%;
-        float:left;
-    }
-    #img-right-cont img{
-        padding: 5%;
-        width: 90%;
-    }
-    #text-left-cont{
-        width: 45%;
-        float:left;
-        padding: 1%;   
-    }
-    #redir{
-        font-weight: 400;
-    }
-    #redirect-link{
-        font-size:2.4vw;
-    }
-
+  
 }
 @media screen and (max-width: 590px){
 
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
-        padding: 60px 0 0 0;
+        padding:5em 0 0 0;
     }
     .filter-containers{
         width:50%;
-        float:left;
-        text-align: center;
+      
     }
     #button-cont{
         width:100%;
-        float:left;
-        text-align: center;
+       
     }
     select{ 
-        height: 30px;
-        font-size: 4vw;
+        height: 3em;
+       
     }
     .search-btn {
-        margin-top:5px;
+        margin-top:0.5em;
     }
-    a {
-        font-size:3.5vw;
-    }
-    #figures{
-        width: 95%;
-        padding: 0px 0 0px 19px;
-    }
+    
+  
     #output-ext-cont{
         width: 100%;
         margin-left: 0%;
@@ -323,74 +273,41 @@ a {
     }
     
     .output-containers{
-        width:80%;
-        margin: 0 0 50px 10%;
-        padding: 1vw 5px 0px 5px;
+        width:43%;
+        margin: 1.5em 0 1.5em 3.5%;
+        padding: 0 0 0 0;
     }
      
     #image-cont{
         width: 90%;
-        height: 60vw;
-        height: auto;
+        height: 6em;
         margin-left: 5%;
-        padding-top: 2vw;
     }
-    #image-cont img{
-        width:100%;
-        height: auto;
-    }
-
+  
     #text-cont{
-        width: 100%;
-        height: auto;
+        width: 97%;
+        padding: 1.5em 1.5% 0 1.5%;
+        
     }
     #view-more-button{
-        text-align: center;
-        padding: 2px;
-        width: 60%;
-        margin-left:20%;
-        color: #f5f2f2;
-        margin-bottom: 30px;
+        width: 50%;
+        margin-left:25%;
+        padding: 0.1em 1% 0.1em 1%;
     }
-    .address-results{
-        font-size: 2.9vw;
-        font-weight: 500;
-    }
-    .price-results{
-        font-size: 3vw;
-        font-weight: 600;
-    }
-    .type, .hostel, .street, .community{
-        font-size:3.5vw;
-    }
-    .price{
-        font-size: 4vw;
-    }
+
     #service-link-cont{
         width: 80%;
         margin-left: 10%;
+        padding: 0.3em 1% 1em 1%;
     }
     #img-right-cont{
         width:100%;
-        float:left;
     }
-    #img-right-cont img{
-        padding: 0%;
-        width: 100%;
-    }
+    
     #text-left-cont{
         width: 100%;
-        float:left;
         padding: 2%;  
     }
-    #redir{
-        font-weight: 400;
-        font-size: 21px;
-    }
-    #redirect-link{
-        font-weight: 700;
-        color: #086161;
-        font-size:4.5vw;
-    }
+    
    
 }

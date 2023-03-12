@@ -179,8 +179,8 @@ a {
     width: 48%;
     background-color: #9bc3cff8;
     display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(119,118, 118, 0.2), 
+    0 6px 20px 0 rgba(116, 115, 115, 0.19);
     padding: 1em 1% 1em 1%;
 }
 #img-right-cont{
@@ -198,6 +198,7 @@ a {
 #redir{
     font-size: 1.1em;
     font-weight: 600;
+    color: #fff;
     
 }
 #redirect-link{
@@ -212,10 +213,6 @@ a {
         padding: 6em 0 0 0;
     }
    
-    #output-ext-cont{
-        width: 100%;
-        margin-left: 0%;
-    }
     .output-containers{
         width:25%;
         margin-left: 6%;
@@ -223,8 +220,8 @@ a {
        
     }
     #image-cont{
-        width: 100%;
-        margin-left: 0%;
+        width: 98%;
+        margin-left: 1%;
         height: 7.5em;
        
     }
