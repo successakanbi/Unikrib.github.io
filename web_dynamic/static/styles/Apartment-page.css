@@ -1,22 +1,25 @@
 #main-ext-cont{
     width:60%;
     margin-left: 20%;
-    padding: 50px 0 0 0;
+    padding: 60px 0 0 0;
 }
 
 h1{
     text-align: center;
+    font-size: 1.4em;
 }
 h2{
     margin-left: 5%;
+    font-size: 1.1em;
+    
 }
 #Apartment-container{
     width: 100%;
     padding-top: 15px;
     display: inline-block;
     margin-bottom: 5px;
-    box-shadow: 0 4px 8px 0 rgba(131, 129, 129, 0.2), 
-    0 6px 20px 0 rgba(141, 141, 141, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .filter-containers{
     width:20%;
@@ -30,7 +33,7 @@ h2{
 }
 label{
     font-weight: 700;
-    font-size: 1vw;
+    font-size: 0.9em;
     color: #161670;
 }
 select{
@@ -84,8 +87,8 @@ select:focus {
     padding: 0.2vw 1% 0px 1%;
     border-top: 5px solid #1b9110;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(145, 143, 143, 0.2), 
+    0 6px 20px 0 rgba(175, 173, 173, 0.19);
 }
 #image-cont{
     width: 95%;
@@ -189,23 +192,10 @@ a {
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
-        padding: 50px 0 0 0;
-    }
-    h1{
-        text-align: center;
-        font-size: 22px;
-    }
-    h2{
-        font-size: 14px;
     }
     #Apartment-container{
         padding-top: 15px;
         margin-bottom: 10px;
-    }
-    label{
-        font-weight: 800;
-        font-size: 1.8vw;
-        color: #161670;
     }
     a {
         font-size: 2.5vw;
@@ -233,7 +223,7 @@ a {
     }
     .output-containers{
         width:50%;
-        margin-left: 25%;
+        margin: 0 0 70px 25%;
         padding: 1vw 5px 0px 5px;
        
     }
@@ -307,14 +297,6 @@ a {
         margin-left: 2.5%;
         padding: 60px 0 0 0;
     }
-    h1{
-        text-align: center;
-        font-size: 17px;
-        margin-top: 5px;
-    }
-    h2{
-        font-size: 14px;
-    }
     .filter-containers{
         width:50%;
         float:left;
@@ -332,19 +314,12 @@ a {
     .search-btn {
         margin-top:5px;
     }
-
-    label{
-        font-weight: 700;
-        font-size: 3.3vw;
-        color: #161670;
-    }
     a {
         font-size:3.5vw;
-    
     }
     #figures{
         width: 95%;
-        padding: 0px 0 0px 19px;;
+        padding: 0px 0 0px 19px;
     }
 
     #output-ext-cont{
@@ -354,8 +329,7 @@ a {
     }
     .output-containers{
         width:80%;
-        margin-left: 10%;
-        margin-bottom: 30px;
+        margin: 0 0 50px 10%;
         padding: 1vw 5px 0px 5px;
     }
     #image-cont{
@@ -374,7 +348,6 @@ a {
         height: auto;
     }
     #view-more-button{
-        background-color: #152b8f;
         text-align: center;
         padding: 2px;
         width: 60%;
@@ -387,7 +360,6 @@ a {
         font-weight: 500;
     }
     .price-results{
-        color:#161670;
         font-size: 3vw;
         font-weight: 600;
     }

@@ -1,18 +1,18 @@
 #outer-cont{
-    width:55%;
-    margin-left: 22.5%;
+    width:45%;
+    margin-left: 27.5%;
     padding: 100px 0 0 0;
 }
 .header{
     text-align: center;
-    font-size: 1.8vw;
-    line-height: 0.2vw;
+    font-size: 1.7em;
+    line-height: 0.2em;
     color: #33990b;
 
 }
 .header-txt{
     text-align: center;
-    font-size: 1vw;
+    font-size: 1em;
     font-weight: 500;
     
 }
@@ -29,11 +29,11 @@
 }
 #faqs-header h2{
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 1.5em;
     color: #fff;
 }
 #faqs-cont{
-    margin: 2vw 0 4vw 0;
+    margin: 2em 0 4em 0;
 }
 #faq-conts{
     width:88%;
@@ -42,21 +42,21 @@
     padding: 0.5vw 1% 1vw 1%;
 }
 #faq-conts h4{
-    font-size: 1vw;
+    font-size: 0.9em;
     color: #3f3f3e;
     cursor: pointer;
 }
 #faq-conts i{
     float: right;
-    font-size: 1.3vw;
+    font-size: 1.3em;
 }
 .response-cont{
     display: none;
-    transition: 1s ease-in-out;
+    animation: slidedown 0.5s ease-in;
 
 }
 .response-cont p {
-    font-size: 0.9vw;
+    font-size: 0.8em;
     color: #3f4041;
     font-weight: 500;
   
@@ -67,17 +67,25 @@
     color: #fff;
     text-align: center;
     margin: 0 0 2vw 0;
-    padding: 0.5vw 0 0.5vw 0;
+    padding: 0.5em 0 0.5em 0;
 }
 #more-help-cont h2{
-    font-size: 1.7vw;
-    line-height: 0.2vw;
+    font-size: 1.3em;
+    line-height: 0.2em;
 }
 #more-help-cont p{
-    font-size: 1vw;
+    font-size: 0.8em;
 }
 #mail-link{
     color: #fff;
+}
+@keyframes slidedown {
+    0%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -85,100 +93,34 @@
         width:80%;
         margin-left: 10%;
     }
-    .header{
-        font-size: 3.5vw;
-    
-    }
-    .header-txt{
-        font-size:1.8vw;
-    }
+
     #inner-cont{
         width: 100%;
         margin: 4vw 0 8vw 0%;
         padding: 0 0 2vw 0;   
     }
-    #faqs-header h2{
-        font-size: 2.5vw;
-    }
+
     #faqs-cont{
         margin: 2vw 0 4vw 0;
     }
     #faq-conts{
         padding: 1vw 1% 2vw 1%;
     }
-    #faq-conts h4{
-        font-size: 1.8vw;
-    }
-    #faq-conts i{
-        font-size: 2.3vw;
-    }
-    .response-cont{
-        display: none;
-    }
-    .response-cont p {
-        font-size: 1.6vw;
-        color: #3f4041;
-        font-weight: 500;
-      
-    }
-    #more-help-cont{
-        margin: 0 0 10vw 0;
-        padding: 3vw 0 3vw 0;
-    }
-    #more-help-cont h2{
-        font-size: 2.6vw;
-        line-height: 0.2vw;
-    }
-    #more-help-cont p{
-        font-size: 1.8vw;
-    }
-
+   
 }
 @media screen and (max-width: 590px) {
     #outer-cont{
         width:90%;
         margin-left:5%;
     }
-    .header{
-        font-size: 6vw;
-    }
-    .header-txt{
-        font-size:3.5vw;
-    }
     #inner-cont{
         width: 100%;
         margin: 5vw 0 10vw 0%;
         padding: 0 0 2vw 0;  
     }
-    #faqs-header h2{
-        font-size: 5vw;
-    }
+   
     #faqs-cont{
         margin: 4vw 0 8vw 0;
     }
-    
-    #faq-conts h4{
-        font-size: 4vw;
-    }
-    #faq-conts i{
-        font-size: 4.5vw;
-    }
-    .response-cont{
-        display: none;
-    }
-    .response-cont p {
-        font-size: 3.5vw;
-      
-    }
-    #more-help-cont{
-        margin: 0 0 10vw 0;
-        padding: 3vw 0 3vw 0;
-    }
-    #more-help-cont h2{
-        font-size: 5vw;
-        line-height: 0.2vw;
-    }
-    #more-help-cont p{
-        font-size: 3.1vw;
-    }
+   
 }

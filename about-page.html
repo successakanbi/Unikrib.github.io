@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="about-page.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
      <!-- responsive top navigator bar containing organisation logo, drop down menu icon and links-->
@@ -37,9 +38,9 @@
 
     <div id="about-ext-cont">
         <div id="about-int-cont">
-            <h2 class="main-headr">About unikrib</h2>
+            <h2 class="main-headr" data-aos="fade-left">About unikrib</h2>
             <div id="about-text-cont">
-                <p id="about-text">Unikrib is a student founded and focused platform, 
+                <p id="about-text" data-aos="fade-right">Unikrib is a student founded and focused platform, 
                     one that seeks to profer solutions to some of the challenges experienced by students
                     while searching for apartments off campus, buying products and accessing services. We
                     aim to solve this problems by providing location based connectivity between students and 
@@ -47,19 +48,19 @@
                 </p>
             </div>
             <div id="about-img-cont">
-                <div class="imag-cont">
+                <div class="imag-cont" data-aos="fade-up-right">
                     <img src="images/discussing-students.jpg";>
                 </div>
-                <div class="imag-cont">
+                <div class="imag-cont" data-aos="fade-up-left">
                     <img src="images/Group of friends hanging out.jpg";>
                 </div>
             </div>
 
-            <div id="vision-cont">
+            <div id="vision-cont" data-aos="fade-down-right">
                 <div id="header-cont">
                     <h3>Our vision</h3>
                 </div>
-                <div id="vision-txt-cont">
+                <div id="vision-txt-cont" >
                     <p>To render quality service to students in tertiary institutions in Nigeria and to become a leader in the student
                         focused proptech space
                     </p>                   
@@ -69,7 +70,7 @@
     </div>
 
     <div id="team-cont">
-        <div class="individual-cont">
+        <div class="individual-cont" data-aos="zoom-in-up">
             <div class="member-img-cont">
                 <img src="images/Screenshot_20200209-161053.png">
 
@@ -79,7 +80,7 @@
                 <p class="title">Cofounder and team lead</p>
             </div>
         </div>
-        <div class="individual-cont">
+        <div class="individual-cont" data-aos="zoom-in-up">
             <div class="member-img-cont">
                 <img src="images/Screenshot_20230129-082016.jpg">
 
@@ -105,6 +106,12 @@
 
     <!--main javascript file link-->
     <script src = "main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500
+        });
+      </script>
 
 </body>
 </html>

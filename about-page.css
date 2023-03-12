@@ -1,4 +1,3 @@
-/*here*/
 #about-ext-cont{
     width: 90%;
     margin:0 0 0 5%;
@@ -6,7 +5,6 @@
     display: block;
 
 }
-/*to here*/
 #about-int-cont{
     width: 80%;
     margin: 0 0 0 10%;
@@ -14,29 +12,24 @@
  .main-headr{
     text-align: center;
     color: #0f6479;
-    font-size: 1.8vw;
-    animation: slideup 1.2s ease;
+    font-size: 1.8em;
 
 }
 #about-text-cont{
     display: flex;
-    background-color: #9cbef1;
     padding: 1% 1vw 0.5% 1vw;
-    animation: slideinright 2.1s ease;
     border-radius: 0.5vw;
     margin: 1.5vw 0 1.5vw 0;
 
     
 }
-/*here*/
 #about-text-cont p{
-    font-size: 1vw;
-    font-weight: 400;
-    color: #03144e;
+    font-size: 1em;
+    font-weight: 500;
+    color: #02113f;
     margin: 0 1vw 0 0;
    
 }
-/*here*/
 #about-img-cont{
     display:inline-flex;
     margin: 1vw 0 3vw 0;
@@ -51,15 +44,13 @@
 }
 .imag-cont img {
     width: 100%;
-    animation: slideinleft 2.1s ease;
 
 }
 #vision-cont{
     width: 100%;
     display: inline-flex;
-    background-color: #615e5ea4;
+    background-color: #052e55a4;
     margin: 2vw 0 3vw 0;
-    animation: slideinright 2.1s ease;
     color: #fff;
     
 }
@@ -68,26 +59,26 @@
     width:16%;
 }
 #header-cont h3{
-    font-size: 1.2vw
+    font-size: 1.2em
 }
 #vision-txt-cont{
     width: 79%;
     padding: 0 0 0 1%;
 }
 #vision-txt-cont p{
-    font-size: 1vw;
+    font-size: 1em;
 }
 #team-cont {
     width: 100%;
     display: inline-flex;
     margin: 3vw 0 0 0;
     padding: 3vw 0 3vw 0;
-    background-color: #373738e8;
+    background-color: #232324e8;
 }
 .individual-cont {
     width: 12%;
     margin: 0 0 0 24%;
-    animation: slideup 2.1s ease;
+
     
 }
 .member-img-cont{
@@ -98,7 +89,7 @@
 .member-img-cont img{
     width: 100%;
     border-radius: 50%;
-    height: 12vw;
+    height: 12em;
 
 }
 .name-title-cont{
@@ -106,38 +97,13 @@
     color: #f7f6f6;
 }
 .name{
-    font-size: 0.9vw;
+    font-size: 1em;
     font-weight: 500;
 }
 .title{
-    font-size: 1vw;
+    font-size: 1.1em;
     margin-top: -1vw;
-    font-weight: 700;
-}
-
-@keyframes slideup {
-    0%{
-        transform: translateY(30px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-@keyframes slideinright {
-    0%{
-        transform: translateX(250px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes slideinleft {
-    0%{
-        transform: translateX(-250px);
-    }
-    100%{
-        transform: translateX(0);
-    }
+    font-weight: 600;
 }
 
 @media screen and (max-width: 900px){
@@ -151,46 +117,27 @@
         width: 100%;
         margin: 0 0 0 0;
     }
-    .main-headr{
-        font-size: 3vw;
-    
-    }
-    /*here*/
-    #about-text-cont p{
-        font-size: 2vw;
-        
-    }
-    /*here*/
+
     #header-cont{
         padding: 0 2% 0 2%;
         width:26%;
     }
-    #header-cont h3{
-        font-size: 2.7vw
-    }
+  
     #vision-txt-cont{
         width: 69%;
         padding: 0 0 0 1%;
     }
-    #vision-txt-cont p{
-        font-size: 2vw;
-    }
+   
     .individual-cont {
         width: 22%;
-        margin: 0 0 0 19.5%;
-        animation: slideup 2.1s ease;    
+        margin: 0 0 0 19.5%; 
     }
     .member-img-cont img{
         width: 100%;
         height: 21vw;   
     }
-    .name{
-        font-size: 1.8vw;
-    }
-    .title{
-        font-size: 2vw;
-        margin-top: -1.5vw;
-    }
+   
+  
     
     
 }
@@ -210,20 +157,12 @@
         font-size: 6vw;
     
     }
-    #about-text-cont{
-        display: flex;
-        background-color: #9cebf1;
-        padding: 1% 1vw 0.5% 1vw;
-        animation: slideinright 2.1s ease;
-        border-radius: 0.5vw;
-        margin: 1.5vw 0 3.5vw 0;    
-    }
-    /*here*/
+
     #about-text-cont p{
-        font-size: 4svw;
+        font-size: 0.9em;
         
     }
-    /*here*/
+
     #about-img-cont{
         display:inline-block;
         margin: 1vw 0 3vw 0;
@@ -235,7 +174,6 @@
     }
     .imag-cont img {
         width: 100%;
-        animation: slideinleft 2.1s ease;
     }
     #vision-cont{
         display: inline-block;
@@ -245,41 +183,22 @@
         text-align: center;
         width:100%;
     }
-    #header-cont h3{
-        font-size: 5vw
-    }
+   
     #vision-txt-cont{
         width: 100%;
         padding: 0 0 0 1%;
     }
-    #vision-txt-cont p{
-        font-size: 3.3vw;
-    }
+  
     #team-cont {
         display: inline-block;
     }
     .individual-cont {
-        width: 35%;
-        margin: 0 0 10vw 32.5%;   
+        width: 55%;
+        margin: 0 0 10vw 22.5%;   
     }
     .member-img-cont img{
         width: 100%;
-        height: 35vw;   
-    }
-    .name{
-        font-size: 3.2vw;
-    }
-    .title{
-        font-size: 3.5vw;
-        margin-top: -3vw;
-    }
-    @keyframes slideup {
-        0%{
-            transform: translateY(15px);
-        }
-        100%{
-            transform: translateY(0);
-        }
+        height: 12em;   
     }
     
     

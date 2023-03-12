@@ -32,8 +32,7 @@
     font-weight: 900;
     top:10%;
     transition: 0.6s ease;
-    font-size: 8vw;
-    font-weight: 900;
+    font-size: 8em;
     color: #f3f3f5;
     user-select: none;
 }
@@ -48,7 +47,7 @@
 
 .numb-text {
     color: #ffffff;
-    font-size: 1.4vw;
+    font-size: 1.2em;
     font-weight: 700;
     padding: 5% 5%;
     position: absolute;
@@ -58,13 +57,13 @@
     width: 30%;
     display: block;
     margin-left: 40%;
-    padding: 1.5vw 0 1.5vw 0;
+    padding: 1.5em 0 1.5em 0;
     
 }
 .dot {
     cursor: pointer;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     background-color: #e0dbdb;
     border-radius: 50%;
     display: inline-block;
@@ -89,24 +88,24 @@
     width: 100%;
 }
 #apartment-details{
-    background-color: #d1d1cc79;
+    background-color: #fff;
     padding: 10px 0 2px 10px;
 }
 .address-results{
-    font-size: 1.3vw;
+    font-size: 1.1em;
     font-weight: 500;
 }
 .price-results{
-    font-size: 1.3vw;
+    font-size: 1.1em;
     font-weight: 600;
 }
 .type, .hostel, .street, .community{
-    font-size:1.5vw;
+    font-size:1.1em;
     font-weight: 600;
     color: #172074;
 }
 .price{
-    font-size: 1.5vw;
+    font-size: 1.2em;
     font-weight: 700;
     color:#326805;
 }
@@ -129,7 +128,7 @@
 .tip{
     font-size: 1.1vw;
 }
-/*here*/
+
 #disclaimer{
     padding: 10px 2px 2px 10px;
     color: #cc2b0e;
@@ -137,15 +136,15 @@
     margin-bottom: 50px;
 }
 #disclaimer h4{
-    font-size: 1.1vw;
-    line-height: 0.2vw;
+    font-size: 1.em;
+    line-height: 0.2em;
 }
 #message{
     margin-top: -1vw;
-    font-size: 0.9vw;
-    font-weight: 400;
+    font-size: 0.8em;
+    font-weight: 500;
 }
-/*here*/
+
 #internal-right-container{
     float: left;
     width: 30%;
@@ -176,20 +175,20 @@
     float: left;
     margin: 0 0 1vw 0;
 }
-/*here*/
+
 .name{
-    font-size: 1.1vw;
+    font-size: 1.1em;
     font-weight: 600;
     line-height: 0.2vw;
 }
 .services{
-    font-size: 0.9vw;
+    font-size: 0.9em;
     font-weight: 600;
     color: #686666;
     line-height: 0.2vw;
 }
 .community2{
-    font-size:1vw;
+    font-size:1em;
     font-weight: 600;
     color: #172074;
     margin-top: -10px;
@@ -200,12 +199,12 @@
     margin-top: -15px;
 }
 .bio{
-    font-size: 0.8vw;
+    font-size: 0.8em;
     font-weight: 500;
     color: #0c5555;
     margin-top: -10px;
 }
-/*to here*/
+
 #contact-cont{
     padding: 1vw 0 1vw 3%;
 }
@@ -229,23 +228,23 @@
     color: #ffffff;
 }
 .contact{
-    font-size: 0.9vw;
+    font-size: 0.8em;
 }
 .contact .fa {
     color: #ffffff;
 }
 #review-cont{
     width: 95%;
-    background-color: #e9e6e6;
+    background-color: #fff;
     padding: 1vw 2.5% 1vw 2.5%;
     margin: 0 0 1vw 0;
 }
 #rev-headr{
-    font-size: 1.4vw;
+    font-size: 1.3em;
     font-weight: 700;
 }
 #latest-review-cont{
-    background-color: #ffffff;
+    background-color: #bfe9f3;
     border-radius: 5px;
     padding: 0 0 0 1vw;
     display: inline-block;
@@ -266,7 +265,7 @@
     padding:0 0 0 2.5%;
 }
 .rev-name{
-    font-size: 1.2vw;
+    font-size: 1.1em;
     font-weight: 600;
 }
 #rev-message-cont {
@@ -275,17 +274,17 @@
     padding: 0 1% 0 1%;
 }
 #review-message {
-    font-size: 0.9vw;
+    font-size: 0.8em;
     font-weight: 500;
 }
 .time-stamp{
     text-align: right;
-    font-size: 0.8vw;
+    font-size: 0.7em;
     font-weight: 600;
     color: #686666da;
 }
 #other-reviews-cont p {
-    font-size: 1vw;
+    font-size: 1em;
     text-align: center;
     font-weight: 500;
     color: #092980;
@@ -297,12 +296,12 @@
     margin: 0 0 1vw 0;
 }
 #security-tip-cont h4{
-    font-size: 1.3vw;
+    font-size: 1.2em;
     color: #ffffff;
     line-height: 0.2vw;
 }
 .tips {
-    font-size: 0.9vw;
+    font-size: 0.8em;
     color: #ffffff;
     font-weight: 600;
 }
@@ -314,7 +313,7 @@
    #report-cont a {
        color: #e9e6e6;
        text-decoration: none;
-       font-size: 1.2vw;
+       font-size: 0.8em;
        font-weight: 500;
    }
    #report-button{
@@ -324,7 +323,7 @@
        padding: 1.5vw 1.5% 1.5vw 1.5%;
        text-align: center;
    }
-   /*here*/
+   
    #edit-delete-cont{
     width: 99%;
     background-color: #dbd8d8;
@@ -343,11 +342,11 @@
    #edit-apartment{
     width:70%;
     margin-left: 15%;
-    padding: 1.5vw 0 1.5vw 0;
+    padding: 1.3em 0 1.3em 0;
     background-color: #0b880b;
     color: #ffffff;
     border: none;
-    font-size: 1vw;
+    font-size: 1em;
    }
    #delete-apartment{
     width:70%;
@@ -356,7 +355,7 @@
     background-color: #eb0c0c;
     color: #ffffff;
     border: none;
-    font-size: 1vw;
+    font-size: 1em;
    }
 
     button .fa{
@@ -389,31 +388,7 @@
         height: 45vw;
     }
     .prev, .next{
-        position: absolute;
-        width:auto;
-        padding: 1vw;
-        color: #181818;
-        font-weight: 900;
-        top:10%;
-        transition: 0.6s ease;
-        font-size: 16vw;
-        font-weight: 900;
-        color: #f3f3f5;
-        user-select: none;
-    }
-    
-    
-    .numb-text {
-        font-size: 2.4vw;
-        font-weight: 700;
-    
-    }
-    #dot-container{
-        width: 30%;
-        display: block;
-        margin-left: 40%;
-        padding: 3.5vw 0 3.5vw 0;
-        
+        top:8%;
     }
     
     #Text-info-container{
@@ -421,72 +396,28 @@
         width: 100%;
         float: left;
     }
-    #apartment-details{
-        background-color: #d1d1cc79;
-        padding: 10px 0 2px 10px;
-    }
-    .address-results{
-        font-size: 2.3vw;
-        font-weight: 500;
-    }
-    .price-results{
-        font-size: 2.3vw;
-        font-weight: 600;
-    }
-    .type, .hostel, .street, .community{
-        font-size:2.5vw;
-        font-weight: 600;
-        color: #172074;
-    }
-    .price{
-        font-size: 2.5vw;
-        font-weight: 700;
-        color:#326805;
-    }
-    #feature-cont{
-        padding: 10px 0 2px 10px;
-        margin: 1vw 0 2vw 0;
-        color: #ffffff;
-        background-color: #0e9215a4;
-    }
-    .feature{
-        font-size: 2vw;
-        font-weight: 500;
-    }
+
     #disclaimer{
         padding: 10px 0 2px 10px;
-        color: #cc2b0e;
-        background-color: #f8debb;
         margin-bottom: 30px;
     }
-    /*here*/
-    #disclaimer h4{
-        font-size: 1.8vw;
-    }
-    /*to here*/
-    #message{
-        font-size: 1.6vw;
-        font-weight: 500;
-    }
+    
     #internal-right-container{
         float: left;
-        width: 80%;
-        margin:2vw 0 0 4%;
-        padding: 0 0 0 1%;   
+        width: 90%;
+        margin:2vw 0 0 0%;
+        padding: 0 0 0 2%;   
     }
-    /*to here*/
+
     #profile-cont{
         width:49%;
         display:inline-block;
         margin-bottom: 1vw;
         margin: 0 1vw 1vw 0; 
     }
-    /*here*/
+
     #profile-pic-cont{
-        width:25%;
-        float: left;
-        margin: 0 0 5vw 0;
-        padding: 3px 0 0 0;
+        width:22%;  
     }
     #profile-pic-cont img{
         width: 90%;
@@ -500,38 +431,8 @@
         float: left;
         margin: 0 0 5vw 0;
     }
-    /*to here*/
-    .name{
-        font-size: 2.2vw;
-        font-weight: 600;
-        line-height: 0.5vw;
-    }
-    .services{
-        font-size: 1.9vw;
-        font-weight: 600;
-        color: #686666;
-        line-height: 0.5vw;
     
-    }
-    /*here*/
-    .community2{
-        font-size:2vw;
-        font-weight: 600;
-        color: #172074;
-        margin-top: -10px;
-    }
-    .rating{
-        color: #c7c409;
-        font-size: 1.8vw;
-        margin-top: -15px;
-    }
-    .bio{
-        font-size: 1.5vw;
-        font-weight: 500;
-        color: #0c5555;
-        margin-top: -10px;
-    }
-    /*to here*/
+    
     #contact-cont{
         padding: 1vw 0 1vw 5%;
     }
@@ -542,39 +443,17 @@
         
     }
     #uploader-whatsapp{
-        display: inline-block;
-        background-color: #0b880b;
         padding: 0px 2.5vw 0 2.5vw;
     }
-    #uploader-phone a, #uploader-whatsapp a {
-        text-decoration: none;
-        color: #ffffff;
-    } 
-    #uploader-phone .fa #uploader-whatsapp .fa{
-        color: #ffffff;
-    }
-    .contact{
-        font-size: 1.5vw;
-    }
-    .contact .fa {
-        color: #ffffff;
-    }
+
     #review-cont{
         width: 42.5%;
         float: right;
         background-color: #e9e6e6;
-        padding: 1vw 2.5% 1vw 2.5%;
+        padding: 0.5vw 2.5% 0.5vw 2.5%;
         margin: 0 0 1vw 0;
     }
-    #rev-headr{
-        font-size: 2vw;
-        font-weight: 700;
-    }
-    #latest-review-cont{
-        background-color: #ffffff;
-        border-radius: 5px;
-    }
-    /*here*/
+  
     #rev-img-cont{
         float: left;
         width: 17%;
@@ -582,93 +461,43 @@
     }
     #rev-img-cont img{
         width: 100%;
-        height: 4.5vw;
+        height: 5vw;
     }
     #rev-name-cont{
         float: left;
         width:80%;
         padding:0 0 0 2%;
     }
-    .rev-name{
-        font-size: 1.8vw;
-        font-weight: 700;
-    }
+
     #rev-message-cont {
         width: 98%;
         margin-top: 4.5vw;
         padding: 0 1% 0 1%;
     }
-    #review-message {
-        font-size: 1.5vw;
-        font-weight: 500;
-    }
-    /*to here*/
-    .time-stamp{
-        font-size: 1.3vw;
-    }
-    #other-reviews-cont p {
-        font-size: 1.6vw;
-        text-align: center;
-        font-weight: 500;
-        color: #092980;
-    }
-    /*here*/
+
     #security-tip-cont{
         width: 48%;
         float: left;
-        background-color: #1aa1a1;
-        padding: 2vw 0 2vw 1%;
-        margin: 0 0 5vw 0;
+      
     }
-    /* to here*/
-    #security-tip-cont h4{
-        font-size: 1.9vw;
-        color: #ffffff;
-        line-height: 0.2vw;
-    }
-    .tips {
-        font-size: 1.4vw;
-        color: #ffffff;
-        font-weight: 600;
-    }
+
     #report-cont{
-     background-color: #e6e1e1;
-     padding: 1.5vw 0 1.5vw 0;
-     float: right;
-     width:48%;
-     margin: 0 0 5vw 0;
+     padding: 2.5vw 0 2.5vw 0;
+     float: left;
+     width:43%;
+     margin: 0 0 0 5vw;
     }
-    #report-cont a {
-        color: #e9e6e6;
-        text-decoration: none;
-        font-size: 1.7vw;
-        font-weight: 500;
-    }
-    /*here*/
+
     #report-button{
-        background-color: #e20f0f;
         width: 62%;
         margin-left: 19%;
         padding: 3.5vw 2% 3.5vw 2%;
-        text-align: center;
     }
     #edit-delete-cont{
         width: 48%;
         padding: 2vw 0 2vw 1%;
    }
-   #edit-apartment{
-        width:80%;
-        margin-left: 10%;
-        padding: 2vw 0 2vw 0;
-        font-size: 1.7vw;
-   }
-   #delete-apartment{
-    width:80%;
-    margin-left: 10%;
-    padding: 2vw 0 2vw 0;
-    font-size: 1.7vw;
-   }
-   /*to here*/
+   
 }
 @media screen and (max-width: 590px){
     #external-main-cont{
@@ -687,34 +516,11 @@
 
     .Apartment-slide-cont img{
         vertical-align: middle;
-        height: 60vw;
+        height: auto;
     }
-    .prev, .next{
-        position: absolute;
-        width:auto;
-        padding: 1vw;
-        color: #181818;
-        font-weight: 900;
-        top:10%;
-        transition: 0.6s ease;
-        font-size: 16vw;
-        font-weight: 900;
-        color: #f3f3f5;
-        user-select: none;
-    }
-    
-    
-    .numb-text {
-        font-size: 3.4vw;
-        font-weight: 700;
-    
-    }
-    #dot-container{
-        width: 30%;
-        display: block;
-        margin-left: 40%;
-        padding: 3.5vw 0 3.5vw 0;
-        
+    .prev, .next{ 
+        top:8%;
+        font-size: 5em;
     }
     
     #Text-info-container{
@@ -722,56 +528,12 @@
         width: 100%;
         float: left;
     }
-    #apartment-details{
-        background-color: #d1d1cc79;
-        padding: 10px 0 2px 10px;
-    }
-    /*here*/
-    .address-results{
-        font-size: 4vw;
-    }
-    .price-results{
-        font-size: 4vw;
-        font-weight: 600;
-    }
-    .type, .hostel, .street, .community{
-        font-size:4.5vw;
-        font-weight: 600;
-        color: #172074;
-    }
-    .price{
-        font-size: 4.5vw;
-        font-weight: 700;
-        color:#326805;
-    }
-    /*to here*/
-    #feature-cont{
-        padding: 10px 0 2px 10px;
-        margin: 1vw 0 2vw 0;
-        color: #ffffff;
-        background-color: #0e9215a4;
-    }
-    /*here*/
-    .feature{
-        font-size: 3.5vw;
-        font-weight: 500;
-    }
-    /*to here*/
+    
     #disclaimer{
         padding: 10px 0 2px 10px;
-        color: #cc2b0e;
-        background-color: #f8debb;
         margin-bottom: 20px;
     }
-    /*here*/
-    #disclaimer h4{
-        font-size: 3.6vw;
-    }
-    /*to here*/
-    #message{
-        font-size: 3.2vw;
-        font-weight: 500;
-    }
+    
     #internal-right-container{
         float: left;
         width: 92%;
@@ -785,7 +547,7 @@
         margin: 0 1vw 3vw 0; 
     }
     #profile-pic-cont{
-        width:30%;
+        width:25%;
         float: left;
         margin: 0 0 5vw 0;
         padding: 3px 0 0 0;
@@ -802,80 +564,27 @@
         float: left;
         margin: 0 0 5vw 0;
     }
-    .name{
-        font-size: 4.5vw;
-        font-weight: 600;
-        line-height: 2vw;
-    }
-    .services{
-        font-size: 4.2vw;
-        font-weight: 600;
-        color: #686666;
-        line-height: 1vw;
-    
-    }
-    /*here*/
-    .community2{
-        font-size:4vw;
-        font-weight: 600;
-        color: #172074;
-        margin-top: -10px;
-    }
-    .rating{
-        color: #c7c409;
-        font-size: 4vw;
-        margin-top: -15px;
-    }
-    .bio{
-        font-size: 3.5vw;
-        font-weight: 500;
-        color: #0c5555;
-        margin-top: -10px;
-    }
+   
     #contact-cont{
         padding: 1vw 0 1vw 5%;
     }
     #uploader-phone{
-        display: inline-block;
-        background-color: #092980;
         padding: 0px 7.5vw 0 7.5vw;
         margin-right: 2%;
         
     }
     #uploader-whatsapp{
         display: inline-block;
-        background-color: #0b880b;
         padding: 0px 7.5vw 0 7.5vw;
     }
-    #uploader-phone a, #uploader-whatsapp a {
-        text-decoration: none;
-        color: #ffffff;
-    } 
-    #uploader-phone .fa #uploader-whatsapp .fa{
-        color: #ffffff;
-    }
-    .contact{
-        font-size: 3.3vw;
-    }
-    .contact .fa {
-        color: #ffffff;
-    }
+
     #review-cont{
         width: 94%;
         float: none;
-        background-color: #e9e6e6;
         padding: 1vw 2.5% 1vw 2.5%;
         margin: 0 0 3vw 0;
     }
-    #rev-headr{
-        font-size: 4.5vw;
-        font-weight: 700;
-    }
-    #latest-review-cont{
-        background-color: #ffffff;
-        border-radius: 5px;
-    }
-    /*here*/
+   
     #rev-img-cont{
         float: left;
         width: 17%;
@@ -890,10 +599,6 @@
         width:79.5%;
         padding:0 0 0 2.5%;
     }
-    .rev-name{
-        font-size: 4.5vw;
-        font-weight: 700;
-    }
     #rev-message-cont {
         width: 98%;
         margin-top: 4.5vw;
@@ -903,33 +608,14 @@
         font-size: 3.5vw;
         font-weight: 500;
     }
-    /*to here*/
-    .time-stamp{
-        font-size: 3vw;
-    }
-    #other-reviews-cont p {
-        font-size: 3.6vw;
-    }
-    /*here*/
+
     #security-tip-cont{
         float: none;
         width: 98%;
-        background-color: #1aa1a1;
         padding: 2vw 0 2vw 1%;
         margin: 0 0 6vw 0;
     }
-    /*to here*/
-    #security-tip-cont h4{
-        font-size: 3.9vw;
-        color: #ffffff;
-        line-height: 0.2vw;
-    }
-    .tips {
-        font-size: 3.4vw;
-        color: #ffffff;
-        font-weight: 600;
-    }
-    /*here*/
+
     #report-cont{
      background-color: #e6e1e1;
      padding: 3vw 0 3vw 0;
@@ -937,7 +623,7 @@
      width:98%;
      margin: 0 0 5vw 0;
     }
-    /*here*/
+    
     #report-cont a {
         color: #e9e6e6;
         text-decoration: none;
@@ -945,14 +631,11 @@
         font-weight: 500;
     }
     #report-button{
-        background-color: #e20f0f;
         width: 42%;
         margin-left: 29%;
         padding: 5.5vw 2% 5.5vw 2%;
-        text-align: center;
     }
     
-     /*here*/
      #edit-delete-cont{
        width: 98%;
        padding: 4vw 0 4vw 1%;
@@ -961,15 +644,12 @@
        width:80%;
        margin-left: 10%;
        padding: 4vw 0 4vw 0;
-       font-size:3.5vw;
     }
      #delete-apartment{
        width:80%;
        margin-left: 10%;
        padding: 4vw 0 4vw 0;
-       font-size:3.5vw;
     }
-   /*to here*/
     
 
    
