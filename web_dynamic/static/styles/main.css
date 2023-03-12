@@ -139,11 +139,11 @@ h1{
     transition: 0.5s;
 }
 .change .bar1 {
-    transform: translate(0, 13px) rotate(-45deg);
+    transform: translate(0, 11px) rotate(-45deg);
 }
 .change .bar2 {opacity: 0;}
 .change .bar3 {
-    transform: translate(0, -13px) rotate(45deg);
+    transform: translate(0, -11px) rotate(45deg);
 }
 
 
@@ -558,7 +558,12 @@ position: relative;
         display:block;
         margin-bottom: 25px;
         text-align: left;
+        font-size: 0.8em;
           
+    }
+    .top-nav a:hover:not(:first-child) {
+        font-size:0.9em;
+       
     }
     .dropdown{
         margin-left:63vw;
