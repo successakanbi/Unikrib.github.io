@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src = "scripts/home.js"></script>
 </head>
 <body>
@@ -68,7 +69,7 @@
       </div>
 
       <div id = "about-cont">
-        <div id = "about-sub-cont-a">
+        <div id = "about-sub-cont-a" data-aos="fade-right">
           <div id="about-text-contain">
               <h1 class="text-header"> About us</h1>
               <p class="text-descript">Unikrib is a student founded and focused platform, one that
@@ -79,17 +80,15 @@
               <p><a href="about-page.html" class="redmre">Readmore</a></p>  
              </div>
         </div>
-        <div id="about-sub-cont-b">
+        <div id="about-sub-cont-b" data-aos="fade-left">
           <img src="images/senior-6292000_960_720.jpg" id="about-img">
         </div>
       </div>
 
       <div id="service-cont">
-        <h1>Our services</h1>
-        <a href="Apartment-page.html">
         <h2 class="text-header">Our services</h2>
         <a href="Apartment-page.html">
-          <div class="service-sub-cont">
+          <div class="service-sub-cont" data-aos="zoom-in-up">
             <i class="fa fa-home" id="large1"></i>
             <p class="text-descript">Through this platform we enable students search for vacant
               student apartments close to their campuses online and connect
@@ -98,7 +97,7 @@
           </div>
         </a>
         <a href="service-page.html">
-          <div class="service-sub-cont">
+          <div class="service-sub-cont" data-aos="zoom-in-up">
             <i class="fa fa-cog" id="large2"></i>
             <p class="text-descript">Unikrib connects students to service providers, like 
               carpenters,electricians, plumbers, cleaners etc. and 
@@ -107,7 +106,7 @@
           </div>
         </a>
         <a href="product-page.html">
-          <div class="service-sub-cont">
+          <div class="service-sub-cont " data-aos="zoom-in-up">
             <i class="fa fa-shopping-cart" id="large3"></i>
             <p class="text-descript">We connect students to various vendors in and around 
               their campuses and provide them more buying options 
@@ -120,7 +119,7 @@
       </div>
 
       <div id="vendor-cont">
-        <div id="text-sub-cont">
+        <div id="text-sub-cont"  data-aos="zoom-in-up">
           <div id="txt-inner-cont">
              <h1 class="text-header">Become a unikrib vendor or agent</h1>
              <p class="text-descript"> Are you an agent, a service provider or a vendor? 
@@ -133,7 +132,7 @@
           </div>
         </div>
         <div id="img-sub-cont">
-          <img src="images/lady-working.jpg">
+          <img src="images/lady-working.jpg" data-aos="zoom-in-down">
         </div>
       </div>
 
@@ -223,5 +222,11 @@
     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
     <script src="scripts/homepage.js"></script>
     <script src="scripts/main2.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500
+      });
+    </script>
 </body>
 </html>

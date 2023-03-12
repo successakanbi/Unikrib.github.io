@@ -23,7 +23,7 @@ h1{
 
 .top-nav a img {
     height: 1.8em;
-    width: 9em;
+    width: 9vw;
     margin: 0 45.5vw 0 0;
 }
 
@@ -81,7 +81,7 @@ h1{
     cursor: pointer;
     border: none;
     font-size: 0.9em;
-    padding:1.6em 1.2em;
+    padding:1.2vw 1.2vw 1.4vw;
     outline: none;
     color: #ffff;
     background-color: #070707;
@@ -100,7 +100,7 @@ h1{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     animation: rotateMenu 1.5s ease-in-out forwards;
-    transform-origin: top center;;
+    transform-origin: top center;
 }
 .dropmenu-content p{
     float: none;
@@ -132,7 +132,7 @@ h1{
 }
 
 .bar1, .bar2, .bar3 {
-    width: 3.1rem;
+    width: 6.5vw;
     height: 0.55rem;
     background-color: #ffffff;
     margin: 0.3rem 0;
@@ -216,7 +216,7 @@ position: relative;
     color: #042d69;
 }
 .text-descript{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 .redmre{
@@ -224,7 +224,7 @@ position: relative;
     font-weight: 700;
     color:#ffff ;
     line-height: 1em;
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 0.6em 1em 0.6em 1em;
     background-color:#087e18 ;
     margin: 20px 0 0 0;
@@ -241,14 +241,21 @@ position: relative;
 
 }
 #about-sub-cont-b img {
-    width: 95%;
+    width: 90%;
     border-radius: 5%;
+}
+
+#about-sub-cont-b img:hover{
+    opacity: 0.7;
+    width:87%;
+    transition: 0.5s;
 }
 
 #service-cont {
     background-color: #a8dcf5;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 3em;
+    padding: 0 0 3em 0;
+    margin-bottom: 6em;
     display:inline-block;
     text-align: center;
 }
@@ -358,6 +365,7 @@ position: relative;
 #foot-para{
     font-size: 1em;
     font-weight: 500;
+    line-height: 3em;
 }
 
 #small1, #small2, #small3{
@@ -516,6 +524,7 @@ position: relative;
 
 @media screen and (max-width: 900px) {
     .top-nav a img {
+        width: 16vw;
         margin: 0.5em 0px 0 0;
     }
 
@@ -532,7 +541,7 @@ position: relative;
     .top-nav.responsive{
         position: fixed; 
         z-index: 1; 
-        animation: rotateMenu 1.5s ease-in-out forwards;
+        animation: rotateMenu 2s ease-in-out forwards;
         transform-origin: top center;
     }
     .top-nav.responsive .dropbtn {
@@ -551,9 +560,13 @@ position: relative;
           
     }
     .dropdown{
-        margin-left:31em;
+        margin-left:60vw;
         overflow: hidden;
         color: #ffff;
+    }
+    .dropbtn{
+        padding:2.6vw 2.6vw 3.4vw;
+       
     }
     .dropmenu-content{
         margin: 2vw 0 0 -10vw ;
@@ -613,6 +626,7 @@ position: relative;
 }
 @media screen and (max-width: 590px) {
     .top-nav a img {
+        width: 28vw;
         margin: 0.7em 0 0 0;
     }
   
@@ -625,7 +639,12 @@ position: relative;
         text-align: left;     
     }
     .dropdown{
-        margin-left:30vw;
+        margin-left:44vw;
+    }
+
+    .dropbtn{
+        padding:4.3vw 5.2vw 4vw;
+       
     }
     
     .dropmenu-content{
@@ -634,7 +653,7 @@ position: relative;
       
     }
     .bar1, .bar2, .bar3 {
-        width: 2.3rem;
+        width: 9.5vw;
         height: 0.4rem;
         margin: 0.3rem 0;
     }
@@ -729,7 +748,7 @@ position: relative;
         float:none;
         width:96%;
         height:200px;
-        padding: 5px;
+        padding: 5px  0 0 0;
         text-align:center;
         margin-bottom: 15px;
     }
@@ -745,8 +764,7 @@ position: relative;
     }
     
     #preloader{
-        margin-top:15vw;
-        background-size: 80%;
+        background-size: 60%;
        }
 
 }

@@ -19,7 +19,7 @@ h1{
 }
 .top-nav a img {
     height: 1.8em;
-    width: 9em;
+    width: 9vw;
     margin: 0 45.5vw 0 0;
 }
 
@@ -76,7 +76,7 @@ h1{
     cursor: pointer;
     border: none;
     font-size: 0.9em;
-    padding:1.6em 1.2em;
+    padding:1.6vw 1.2vw;
     outline: none;
     color: #ffff;
     background-color: #070707;
@@ -128,7 +128,7 @@ h1{
 }
 
 .bar1, .bar2, .bar3 {
-    width: 3.1rem;
+    width: 6.5vw;
     height: 0.55rem;
     background-color: #ffffff;
     margin: 0.3rem 0;
@@ -247,7 +247,6 @@ position: relative;
     transition: 0.5s;
 }
 
-
 #service-cont {
     background-color: #a8dcf5;
     margin-top: 3em;
@@ -349,7 +348,7 @@ position: relative;
     width:40%;
     height:240px;
     padding: 5px;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 .footer-sub-cont-b{
     float: left;
@@ -524,6 +523,7 @@ position: relative;
 
 @media screen and (max-width: 900px) {
     .top-nav a img {
+        width: 16vw;
         margin: 0.5em 0px 0 0;
     }
      
@@ -559,9 +559,13 @@ position: relative;
     }
     
     .dropdown{
-        margin-left:31em;
+        margin-left:60vw;
         overflow: hidden;
         color: #ffff;
+    }
+    .dropbtn{
+        padding:2.6vw 2.6vw 3.4vw;
+       
     }
    
     .dropmenu-content{
@@ -624,6 +628,7 @@ position: relative;
 }
 @media screen and (max-width: 590px) {
     .top-nav a img {  
+        width: 30vw;
         margin: 0.7em 0 0 0;
     }
 
@@ -637,7 +642,12 @@ position: relative;
     }
 
     .dropdown{
-        margin-left:30vw;
+        margin-left:39vw;
+    }
+
+    .dropbtn{
+        padding:4.3vw 5.2vw 4vw;
+       
     }
   
     .dropmenu-content{
@@ -646,7 +656,7 @@ position: relative;
        
     }
     .bar1, .bar2, .bar3 {
-        width: 2.3rem;
+        width: 9.5vw;
         height: 0.4rem;
         margin: 0.3rem 0;
     }
