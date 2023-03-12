@@ -19,9 +19,8 @@ def get_review(review_id):
     """This returns a review based on id"""
     obj = storage.get('Review', review_id)
     if obj == None:
-        abort(404, "No review found")
-    else:
-        return jsonify(obj.to_dict())
+        return jsonify("No review found"), 404
+    return jsonify(obj.to_dict())
 
 @app_views.route('/users/<user_id>/reviews', strict_slashes=False)
 def get_user_review(user_id):
@@ -35,20 +34,21 @@ def get_user_review(user_id):
 
 @app_views.route('/reviews', strict_slashes=False, methods=['POST'])
 def create_review():
+    """This creates a new review instance"""
     if not request.json:
-        abort(400, "Not a valid json")
+        return jsonify("Not a valid json"), 400
     review_dict = request.get_json()
     if "text" not in review_dict:
-        abort(400, "Please include review text")
+        return jsonify("Please include review text"), 400
     if "reviewer" not in review_dict:
-        abort('400, Please include a reviewer')
+        return jsonify('Please include a reviewer'), 400
     if "reviewee" not in review_dict:
-        abort(400, "Please include a reviewee")
+        return jsonify("Please include a reviewee"), 400
     if "star" not in review_dict:
-        abort(400, "Please include a star rating")
+        return jsonify("Please include a star rating"), 400
 
     if len(review_dict['text']) < 2:
-        abort(400, "Please include a text")
+        return jsonify("Please include a text"), 400
 
     model = Review(**review_dict)
     model.save()
@@ -58,11 +58,11 @@ def create_review():
 def update_review(review_id):
     """This updates the attributes of a review"""
     if not request.json:
-        abort(400, "Not a valid json")
+        return jsonify("Not a valid json"), 400
     review_dict = request.get_json()
     obj = storage.get('Review', review_id)
     if obj is None:
-        abort(404, "No review found")
+        return jsonify("No review found"), 404
     for key, val in review_dict.items():
         setattr(obj, key, val)
         obj.save()
@@ -73,6 +73,6 @@ def delete_review(review_id):
     """This destroy a review frm storage based on id"""
     obj = storage.get('Review', review_id)
     if obj is None:
-        abort(400, "No review found")
+        return jsonify("No review found"), 404
     obj.delete()
     return "{}"

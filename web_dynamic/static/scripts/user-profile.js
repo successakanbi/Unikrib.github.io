@@ -2,43 +2,30 @@
 
 // load the communities
 $(function (){
-	$.ajax({
-		type: 'GET',
-		url: 'http://localhost:8000/unikrib/environments',
-		data: {},
-		contentType: 'application/json',
-		dataType: 'json',
-		success: function (envs){
-			$.each(envs, function(index, env){
-				$("#community-select").append('<option value="' + env.id + '">' + env.name + '</option>')
-			});
-		},
-		error: function (){
-			alert("Could not load environments now, please try later");
-		},
-	});
+	get('/environments')
+	.then((envs) => {
+		$.each(envs, function(index, env){
+			$("#community-select").append('<option value="' + env.id + '">' + env.name + '</option>')
+		});
+	}).catch((err) => {
+		errorHandler(err, "Could not load environments now, please try later");
+	})
 });
 
 // upload user community
 $(function (){
 	userId = window.localStorage.getItem('newId');
 	$("#submit").on('click', function() {
-		userDict = {
+		payload = JSON.stringify({
 			"com_res": $("#community-select :selected").val(),
-		};
-		$.ajax({
-			type: 'PUT',
-			url: 'http://localhost:8000/unikrib/users/' + userId,
-			data: JSON.stringify(userDict),
-			contentType: 'application/json',
-			dataType: 'json',
-			success: function (response) {
-				alert("Community updated successfully");
-			},
-			error: function () {
-				alert("Community of residence was unable to update, please try again later");
-			},
 		});
+		endpoint = '/users/' + userId;
+		put(endpoint, payload)
+		.then(() => {
+			alert("Community updated successfully");
+		}).catch((err) => {
+			errorHandler(err, "Community of residence was unable to update, please try again later");
+		})
 	});
 });
 
@@ -61,51 +48,33 @@ $(function (){
 		formData.append("folder", "user_avatar");
 		formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
 
-		$.ajax({
-			type: 'GET',
-			url: 'http://localhost:8003/unikrib/auth-url',
-			dataType: 'json',
-			success: function(body) {
-				formData.append("signature", body.signature);
-				formData.append("expire", body.expire);
-				formData.append("token", body.token);
-
-				$.ajax({
-					url: 'https://upload.imagekit.io/api/v1/files/upload',
-					type: 'POST',
-					mimeType: "multipart/form-data",
-					dataType: 'json',
-					data: formData,
-					processData: false,
-					contentType: false,
-					success: function(body) {
-						console.log(body);
-						userDict = {
-							"avatar": body.url,
-						}
-						$.ajax({
-							type: 'PUT',
-							url: 'http://localhost:8000/unikrib/users/' + userId,
-							data: JSON.stringify(userDict),
-							contentType: 'application/json',
-							dataType: 'json',
-							success: function (user){
-								alert("User image updated successfully");
-								window.location.href = 'Apartment-page.html'
-							},
-							error: function(){
-								alert("Could not upload user image, please try again later");
-							}
-						})
-					},
-					error: function (jqxhr, text, error) {
-						console.log(error);
-					}
-				});
-			},
-			error: function(response) {
-				alert(response.message);
-			},
-		});
+		getAuth()
+		.then((body) => {
+			formData.append("signature", body.signature);
+			formData.append("expire", body.expire);
+			formData.append("token", body.token);
+			$.ajax({
+				url: 'https://upload.imagekit.io/api/v1/files/upload',
+				type: 'POST',
+				mimeType: "multipart/form-data",
+				dataType: 'json',
+				data: formData,
+				processData: false,
+				contentType: false,
+				success: function(body) {
+					payload = JSON.stringify({
+						"avatar": body.url,
+					})
+					var endpoint = '/users/' + userId;
+					put(endpoint, payload)
+					.then(() => {
+						alert("User image updated successfully");
+						window.location.href = 'Apartment-page.html'
+					})
+				}
+			})
+		}).catch((err) => {
+			errorHandler(err, "Could not upload profile image");
+		})
 	});
 });

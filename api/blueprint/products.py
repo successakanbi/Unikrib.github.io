@@ -8,9 +8,15 @@ from models.product import Product
 @app_views.route('/products', strict_slashes=False)
 def all_products():
     """This returns a list of all products in storage"""
+    avail = request.args.get('available', '')
+    
     all_prod = []
     for key, obj in storage.all(Product).items():
-        all_prod.append(obj.to_dict())    
+        if avail and avail == 'yes':
+            if obj.available == 'yes':
+                all_prod.append(obj.to_dict())
+        else:
+            all_prod.append(obj.to_dict())    
     return jsonify(all_prod)
 
 @app_views.route('/products/<product_id>', strict_slashes=False)
@@ -18,7 +24,7 @@ def get_product(product_id):
     """This returns a product based on id"""
     obj = storage.get('Product', product_id)
     if obj == None:
-        abort(404, "Product not found")
+        return jsonify("Product not found"), 404
     return jsonify(obj.to_dict())
 
 @app_views.route('/categories/<category_id>/products', strict_slashes=False)
@@ -36,9 +42,9 @@ def user_products(user_id):
     """This returns a list of all the products under a vendor"""
     obj = storage.get('User', user_id)
     if obj == None:
-        abort(404, "No user with this id found")
+        return jsonify("No user with this id found"), 404
     if obj.user_type != 'vendor':
-        abort(400, "User not a vendor")
+        return jsonify("User not a vendor"), 400
 
     user_prod = []
     for key, obj in storage.all(Product).items():
@@ -50,16 +56,16 @@ def user_products(user_id):
 def create_prod():
     """This creates a new product in storage"""
     if not request.json:
-        abort(400, "Not a valid JSON")
+        return jsonify("Not a valid JSON"), 400
     request_dict = request.get_json()
     if "name" not in request_dict:
-        abort(400, "Please include a product name")
+        return jsonify("Please include a product name"), 400
     if "owner_id" not in request_dict:
-        abort(400, "Please include an owner_id")
+        return jsonify("Please include an owner_id"), 400
     if "category_id" not in request_dict:
-        abort(400, "Please include a category_id")    
+        return jsonify("Please include a category_id"), 400
     if "price" not in request_dict:
-        abort(400, "Please include the product price")
+        return jsonify("Please include the product price"), 400
     model = Product(**request_dict)
     model.save()
     return jsonify(model.to_dict())
@@ -68,10 +74,10 @@ def create_prod():
 def update_product(product_id):
     """This updates a product instance"""
     if not request.json:
-        abort(400, "Not a valid json")
+        return jsonify("Not a valid json"), 400
     obj = storage.get('Product', product_id)
     if obj == None:
-        abort(404, "No product found")
+        return jsonify("No product found"), 404
     prod_dict = request.get_json()
 
     for key, val in prod_dict.items():
@@ -89,7 +95,7 @@ def update_product(product_id):
 def search_product():
     """This searches all the products in storage against some criteria"""
     if not request.json:
-        abort(400, "Not a valid JSON")
+        return jsonify("Not a valid JSON"), 400
 
     return_list = []
     result_dict = {}
@@ -123,7 +129,7 @@ def delete_product(product_id):
     """This removes a product instance from storage"""
     obj = storage.get('Product', product_id)
     if obj == None:
-        abort(404, "No product found")
+        return jsonify("No product found"), 404
     if obj.image1:
         fstorage.new(obj.image1)
     if obj.image2:
@@ -131,5 +137,5 @@ def delete_product(product_id):
     if obj.image3:
         fstorage.new(obj.image3)
     obj.delete()
-    return '{}'
+    return '{}', 200
     

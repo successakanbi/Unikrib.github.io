@@ -26,7 +26,7 @@
           <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
           <div class="dropmenu-content" id="dropdown-cont">
              <p class="drop-links" onclick="getUserType()">Profile</p>
-             <p href="" class="drop-links">Edit profile</p>
+             <p id="edit-profile" class="drop-links">Edit profile</p>
              <p id="help" class="drop-links">Help</p>
              <p class="drop-links" onclick="logout()">logout</p>
          </div>
@@ -97,20 +97,29 @@
              <!-- contains product image upload input fields-->
              <h3>Change product images</h3>
              <div id="product-img-cont">
-                 <label for="product img" id="upload">upload image
-                     <input type="file" name="product img" id="product-image1" class="product-img"/>
+                 <label for="product img" id="upload1">upload image
+                     <input type="file" onchange="readURL(this, 'image1');" name="product img" id="product-image1" class="product-img"/>
                      <p id ="file-name1" class="file-name"></p>
                  </label>
+                 <div id="Image1" class="image-select-cont">
+                  <img id="image1" src="">
+                </div>
 
-                 <label for="apartmemt img" id="upload">upload image
-                    <input type="file" name="product img" id="product-image2" class="product-img"/>
+                 <label for="apartmemt img" id="upload2">upload image
+                    <input type="file" onchange="readURL(this, 'image2');" name="product img" id="product-image2" class="product-img"/>
                     <p id ="file-name2" class="file-name"></p>
                 </label>
+                <div id="Image2" class="image-select-cont">
+                  <img id="image2" src="">
+                </div>
 
-                <label for="product img" id="upload">upload image
-                    <input type="file" name="product img" id="product-image3" class="product-img"/>
+                <label for="product img" id="upload3">upload image
+                    <input type="file" name="product img" onchange="readURL(this, 'image3');" id="product-image3" class="product-img"/>
                     <p id ="file-name3" class="file-name"></p>
                 </label>
+                <div id="Image3" class="image-select-cont">
+                  <img id="image3" src="">
+                </div>
              </div>
 
              <!--contains submit button-->
@@ -146,7 +155,7 @@
           <p><a href="product-page.html" class="foot-links">products</a></p>
           <p><a href="service-page.html"class="foot-links">services</a></p>
           <p><a href="about-page.html"class="foot-links">about us</a></p>
-          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent, vendor or service provider</a></p>
         </div>
         <div class="footer-sub-cont-b">
           <!--here-->

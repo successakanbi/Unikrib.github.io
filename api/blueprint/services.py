@@ -18,7 +18,7 @@ def get_service(service_id):
     """This returns a service based on id"""
     obj = storage.get('Service', service_id)
     if obj == None:
-        abort(404, "service not found")
+        return jsonify("service not found"), 404
     return jsonify(obj.to_dict())
 
 @app_views.route('/users/<user_id>/services', strict_slashes=False)
@@ -26,7 +26,7 @@ def user_service(user_id):
     """This return the service associated with a user"""
     obj = storage.get('User', user_id)
     if obj == None:
-        abort(404, "No user found")
+        return jsonify("No user found"), 404
     for key, obj in storage.all(Service).items():
         if obj.owner_id == user_id:
             return jsonify(obj.to_dict())
@@ -45,7 +45,7 @@ def cat_services(cat_id):
 def search_services():
     """This searces for services that meet some criteria"""
     if not request.json:
-        abort(400, "Not a valid json")
+        return jsonify("Not a valid json"), 400
 
     searchList = []
 
@@ -64,12 +64,12 @@ def search_services():
 def create_serv():
     """This creates a new service in storage"""
     if not request.json:
-        abort(400, "Not a valid JSON")
+        return jsonify("Not a valid JSON"), 400
     request_dict = request.get_json()
     if "category_id" not in request_dict:
-        abort(400, "Please include a category_id")
+        return jsonify("Please include a category_id"), 400
     if "owner_id" not in request_dict:
-        abort(400, "Please include an owner_id")
+        return jsonify("Please include an owner_id"), 400
     model = Service(**request_dict)
     model.save()
     return jsonify(model.to_dict())
@@ -79,7 +79,7 @@ def update_service(service_id):
     """This updates an instance of a service in storage"""
     obj = storage.get('Service', service_id)
     if obj == None:
-        abort(404, "No service instance found")
+        return jsonify("No service instance found"), 404
     request_dict = request.get_json()
     for key, val in request_dict.items():
         if key == 'image1' and obj.image1:
@@ -101,8 +101,8 @@ def delete_service(service_id):
     """This removes a service instance from storage"""
     obj = storage.get('Service', service_id)
     if obj == None:
-        abort(404, "No service found")
-    for image in (obj.image1, obj.image2, obj.image3, obj.image4, obj.image5):
+        return jsonify("No service found"), 404
+    for image in [obj.image1, obj.image2, obj.image3, obj.image4, obj.image5]:
         if image:
             fstorage.new(image)
     obj.delete()

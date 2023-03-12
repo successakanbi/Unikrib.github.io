@@ -28,7 +28,7 @@
           <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
           <div class="dropmenu-content" id="dropdown-cont">
              <p class="drop-links" onclick="getUserType()">Profile</p>
-             <p href="" class="drop-links">Edit profile</p>
+             <p id="edit-profile" class="drop-links">Edit profile</p>
              <p id="help" class="drop-links">Help</p>
              <p class="drop-links" onclick="logout()">logout</p>
          </div>
@@ -49,7 +49,7 @@
     <div id="outer-most-container">
 
       <!---Contains image upload container, submit button and notice container-->
-        <form action="" id="service-images-form">
+        <div id="service-images-form">
             <div id="logo-container">
                 <img src="images/Black logo on white.png">
              </div>
@@ -60,29 +60,44 @@
              <h3>Upload up to five images of your services</h3>
              <div id="service-img-cont">
                  <label for="service img" id="upload">upload new image
-                     <input type="file" name="service img" id="service-image1" class="service-imgs" required/>
+                     <input type="file" onchange="readURL(this, 'image1');" name="service img" id="service-image1" class="service-imgs" required/>
                      <p id ="file-name1" class="file-name"></p>
                  </label>
+                 <div id="Image1" class="image-select-cont">
+                  <img id="image1" src="">
+                </div>
 
                  <label for="service img" id="upload">upload new image
-                    <input type="file" name=" service img" id="service-image2" class="service-imgs"/>
+                    <input type="file" onchange="readURL(this, 'image2');" name=" service img" id="service-image2" class="service-imgs"/>
                     <p id ="file-name2" class="file-name"></p>
                 </label>
+                <div id="Image2" class="image-select-cont">
+                  <img id="image2" src="">
+                </div>
 
                 <label for="service img" id="upload">upload new image
-                    <input type="file" name="service img" id="service-image3" class="service-imgs"/>
+                    <input type="file" onchange="readURL(this, 'image3');" name="service img" id="service-image3" class="service-imgs"/>
                     <p id ="file-name3" class="file-name"></p>
                 </label>
+                <div id="Image3" class="image-select-cont">
+                  <img id="image3" src="">
+                </div>
 
                 <label for="service img" id="upload">upload new image
-                    <input type="file" name="service img" id="service-image4" class="service-imgs"/>
+                    <input type="file" onchange="readURL(this, 'image4');" name="service img" id="service-image4" class="service-imgs"/>
                     <p id ="file-name4" class="file-name"></p>
                 </label>
+                <div id="Image4" class="image-select-cont">
+                  <img id="image4" src="">
+                </div>
 
                 <label for="service img" id="upload">upload new image
-                    <input type="file" name="service img" id="service-image5" class="service-imgs"/>
+                    <input type="file" onchange="readURL(this, 'image5');" name="service img" id="service-image5" class="service-imgs"/>
                     <p id ="file-name5" class="file-name"></p>
                 </label>
+                <div id="Image5" class="image-select-cont">
+                  <img id="image5" src="">
+                </div>
              </div>
 
              <!--contains submit button-->
@@ -97,7 +112,7 @@
                 <p>pls try to upload original pictures of you ,your workshop or you working</p>
 
              </div>
-        </form>
+            </div>
     </div>
 
 
@@ -119,7 +134,7 @@
         <p><a href="" class="foot-links">products and services</a></p>
         <p><a href=""class="foot-links">about us</a></p>
         <p><a href=""class="foot-links">contact</a></p>
-        <p><a href=""class="foot-links">Become a unikrib agent or vendor</a></p>
+        <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent, vendor or service provider</a></p>
       </div>
       <div class="footer-sub-cont-b">
         <!--here-->
@@ -162,6 +177,8 @@
 
     
     <script src = "scripts/main2.js"></script>
+    <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+    <script src="scripts/service-image-edit.js"></script>
     <script>
       //here
         //displays name and size of uploaded image file

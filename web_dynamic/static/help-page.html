@@ -28,7 +28,7 @@
             <button class="dropbtn" onclick="dropDown()"><icon class="fa fa-user"></icon> <icon class="fa fa-caret-down"></icon></buttons>
             <div class="dropmenu-content" id="dropdown-cont">
                <p class="drop-links" onclick="getUserType()">Profile</p>
-               <p href="" class="drop-links">Edit profile</p>
+               <p id="edit-profile" class="drop-links">Edit profile</p>
                <p id="help" class="drop-links">Help</p>
                <p class="drop-links" onclick="logout()">logout</p>
            </div>
@@ -56,7 +56,7 @@
             </div>
             <div id="faqs-cont"> 
                 <div id="faq-conts">
-                    <h4 onclick="toggleParagraph(this)">Why can't i upload more than 3 product images?<i class="fa fa-angle-down"></i></h4>
+                    <h4 onclick="toggleParagraph(this)">Why can't I upload more than 3 product images?<i class="fa fa-angle-down"></i></h4>
                     <div class="response-cont">
                       <p class="response">Vendors are only allowed to upload one to three images of a product
                         so vendors are unable to upload more than three images of a single product
@@ -65,7 +65,7 @@
 
                 </div>
                 <div id="faq-conts">
-                    <h4 onclick="toggleParagraph(this)"> Why can't i upload more than 5 apartments?<i class="fa fa-angle-down"></i></h4>
+                    <h4 onclick="toggleParagraph(this)"> Why can't I upload more than 5 apartments?<i class="fa fa-angle-down"></i></h4>
                     <div class ="response-cont">
                       <p class="response">Agents apartment uploads are restricted to only five apartments at a time
                         after five apartments have been uploaded, to upload a new upload the agent must first delete an 
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div id="faq-conts">
-                <h4 onclick="toggleParagraph(this)">I am a vendor as well as an agent how can i operate both account types at once?
+                <h4 onclick="toggleParagraph(this)">I am a vendor as well as an agent how can I operate both account types at once?
                   <i class="fa fa-angle-down"></i></h4>
                   <div class="response-cont">
                     <p class="response">Users are only allowed to operate one account type currently, only agents can upload
@@ -84,7 +84,7 @@
                   </div>
                 </div>
                 <div id="faq-conts">
-                    <h4 onclick="toggleParagraph(this)">I can't find my product/service category what do i do?<i class="fa fa-angle-down"></i></h4>
+                    <h4 onclick="toggleParagraph(this)">I can't find my product/service category what do I do?<i class="fa fa-angle-down"></i></h4>
                     <div class="response-cont">
                        <p class="response">We tried to create broad service category for our users to choose from, but
                            in an event where a vendor/service provider can't find his/her category he or she is advised to
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div id="faq-conts">
-                    <h4 onclick="toggleParagraph(this)">How do i edit my profile info?<i class="fa fa-angle-down"></i></h4>
+                    <h4 onclick="toggleParagraph(this)">How do I edit my profile info?<i class="fa fa-angle-down"></i></h4>
                     <div class="response-cont">
                       <p class="response">click on the user icon and select edit profile then provide your updated information
                         and click save changes, your profile info will be updated automatically
@@ -124,7 +124,7 @@
           <p><a href="product-page.html" class="foot-links">products</a></p>
           <p><a href="service-page.html"class="foot-links">services</a></p>
           <p><a href="about-page.html"class="foot-links">about us</a></p>
-          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent or vendor</a></p>
+          <p><a href="agent-service-signup.html"class="foot-links">Become a unikrib agent, vendor or service provider</a></p>
         </div>
         <div class="footer-sub-cont-b">
           <!--here-->
@@ -171,7 +171,7 @@
 
 
 
-
+      <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
     <script src = "scripts/main2.js"></script>
     <script>
 

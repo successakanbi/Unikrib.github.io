@@ -4,33 +4,25 @@ const userId = window.localStorage.getItem('newId')
 
 // Populate the page with the existing user info
 $(function() {
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8000/unikrib/users/' + userId,
-        contentType: 'application/json',
-        dataType: 'json',
-        success: function(user) {
-            $('#fname').val(user.first_name);
-            $('#lname').val(user.last_name);
-            $('#phone').val(user.phone_no);
-            $('#descript-text').val(user.note)
-            $.ajax({
-                type: 'GET',
-                url: 'http://localhost:8000/unikrib/environments',
-                contentType: 'application/json',
-                dataType: 'json',
-                success: function(envs) {
-                    $.each(envs, function(index, env){
-                        if (user.com_res === env.id){
-                            $('#community-select').append('<option value="' + env.id + '" selected>' + env.name + '</option>')
-                        } else {
-                            $('#community-select').append('<option value="' + env.id + '">' + env.name + '</option>')
-                        }
-                        
-                    })
+    get('/users/' + userId)
+    .then((user) => {
+        $('#fname').val(user.first_name);
+        $('#lname').val(user.last_name);
+        $('#phone').val(user.phone_no);
+        $('#descript-text').val(user.note)
+        $("#prof-img").html("<img id='avatar' src='" + user.avatar + "'>")
+        get('/environments')
+        .then((envs) => {
+            $.each(envs, function(index, env){
+                if (user.com_res === env.id){
+                    $('#community-select').append('<option value="' + env.id + '" selected>' + env.name + '</option>')
+                } else {
+                    $('#community-select').append('<option value="' + env.id + '">' + env.name + '</option>')
                 }
             })
-        }
+        })
+    }).catch((err) => {
+        errorHandler(err, "Could not load user info")
     })
 })
 
@@ -41,27 +33,21 @@ $(function() {
         avatar = true
     })
     $('#submit').on('click', function(){
-        userDict = {
+        var payload = JSON.stringify({
             first_name: $('#fname').val(),
             last_name: $('#lname').val(),
             phone_no: $('#phone').val(),
             com_res: $('#community-select :selected').val(),
             note: $('#descript-text').val(),
-        }
+        })
+        var endpoint = '/users/' + userId;
         if (avatar === false) {
-            $.ajax({
-                type: 'PUT',
-                url: 'http://localhost:8000/unikrib/users/' + userId,
-                data: JSON.stringify(userDict),
-                contentType: 'application/json',
-                dataType: 'json',
-                success: function(user) {
-                    alert("Details updated successfully")
-                    getUserType()
-                },
-                error: function() {
-                    alert("An error occured, please try again")
-                }
+            put(endpoint, payload)
+            .then(() => {
+                alert("Details updated successfully")
+                getUserType()
+            }).catch((err) => {
+                errorHandler(err, "Could not update details, please try again")
             })
         } else {
             var formData = new FormData();
@@ -74,46 +60,33 @@ $(function() {
             formData.append("fileName", userId + '.jpg');
             formData.append("folder", "user_avatar");
             formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
-                
-            $.ajax({
-                type: 'GET',
-                url: 'http://localhost:8003/unikrib/auth-url',
-                dataType: 'json',
-                success: function(body) {
-                    formData.append("signature", body.signature);
-                    formData.append("expire", body.expire);
-                    formData.append("token", body.token);
-                
-                    $.ajax({
-                        url: 'https://upload.imagekit.io/api/v1/files/upload',
-                        type: 'POST',
-                        mimeType: "multipart/form-data",
-                        dataType: 'json',
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success: function(body) {
-                            userDict["avatar"] = body.url
-                            $.ajax({
-                                type: 'PUT',
-                                url: 'http://localhost:8000/unikrib/users/' + userId,
-                                data: JSON.stringify(userDict),
-                                contentType: 'application/json',
-                                dataType: 'json',
-                                success: function(user) {
-                                    alert("Profile image updated successfully")
-                                    getUserType()
-                                },
-                                error: function() {
-                                    alert("An error occured, please try again")
-                                }
-                            })
-                        }
-                    })
-                },
-                error: function() {
-                    alert("Error, could not get authentication parameter")
-                }
+
+            getAuth()
+            .then((body) => {
+                formData.append("signature", body.signature);
+                formData.append("expire", body.expire);
+                formData.append("token", body.token);
+                $.ajax({
+                    url: 'https://upload.imagekit.io/api/v1/files/upload',
+                    type: 'POST',
+                    mimeType: "multipart/form-data",
+                    dataType: 'json',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(body) {
+                        payload["avatar"] = body.url
+                        put(endpoint, payload)
+                        .then(() => {
+                            alert("Profile image updated successfully")
+                            getUserType()
+                        }).catch((err) => {
+                            errorHandler(err, "Could not upload the profile image, please try again");
+                        })
+                    }
+                })
+            }).catch(() => {
+                alert("Could not obtain authentication parameters");
             })
         }
     })

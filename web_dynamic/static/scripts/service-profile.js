@@ -3,33 +3,26 @@ const userId = window.localStorage.getItem('newId');
 
 //Load the available environments
 $(function (){
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8000/unikrib/environments',
-        data: {},
-        contentType: 'application/json',
-        dataType: 'json',
-        success: function (envs){
-            $("#community-select").html('')
-            $.each(envs, function (index, env){
-                $("#community-select").append('<option value="' + env.id + '">' + env.name + '</option>')
-            })
-        }
+    get('/environments')
+    .then((envs) => {
+        $("#community-select").html('')
+        $.each(envs, function (index, env){
+            $("#community-select").append('<option value="' + env.id + '">' + env.name + '</option>')
+        })
+    }).catch((err) => {
+        errorHandler(err, "Could not load available environments");
     })
 })
 
 //Load all the available service categories
 $(function (){
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8000/unikrib/service-categories',
-        contentType: 'application/json',
-        dataType: 'json',
-        success: function (cats){
-            $.each(cats, function (index, cat){
-                $("#service-select").append('<option value="' + cat.id + '">' + cat.name + '</option>')
-            })
-        }
+    get('/service-categories')
+    .then((cats) => {
+        $.each(cats, function (index, cat){
+            $("#service-select").append('<option value="' + cat.id + '">' + cat.name + '</option>')
+        })
+    }).catch((err) => {
+        errorHandler(err, "Error loading service categories");
     })
 })
 
@@ -51,70 +44,51 @@ $(function (){
         formData.append("folder", "user_avatar");
         formData.append('publicKey', 'public_YHk4EswEnK3KjAlQgpJBaxbP/FY=');
 
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8003/unikrib/auth-url',
-            dataType: 'json',
-            success: function(body) {
-                formData.append("signature", body.signature);
-                formData.append("expire", body.expire);
-                formData.append("token", body.token);
+        getAuth()
+        .then((body) => {
+            formData.append("signature", body.signature);
+            formData.append("expire", body.expire);
+            formData.append("token", body.token);
 
-                $.ajax({
-                    url: 'https://upload.imagekit.io/api/v1/files/upload',
-                    type: 'POST',
-                    mimeType: "multipart/form-data",
-                    dataType: 'json',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function(body) {
-                        console.log(body);
-                        userDict = {
-                            "avatar": body.url,
-                            "com_res": $("#community-select :selected").val(),
-                            "note": $('#descript-text').val(),
-                        }
-                        $.ajax({
-                            type: 'PUT',
-                            url: 'http://localhost:8000/unikrib/users/' + userId,
-                            data: JSON.stringify(userDict),
-                            contentType: 'application/json',
-                            dataType: 'json',
-                            success: function (){
-                                alert("User image successfully uploaded");
-                                window.location.href = "image-upload-page.html";
-                            },
-                            error: function (){
-                                alert("Error encountered while updating profile image");
-                            }
-                        })
-                        //window.location.href = 'Apartment-page.html';
-                    },
-                    error: function (jqxhr, text, error) {
-                        console.log(error);
-                    }
-                })
-            },
-        });
-        serviceDict = {
+            $.ajax({
+                url: 'https://upload.imagekit.io/api/v1/files/upload',
+                type: 'POST',
+                mimeType: "multipart/form-data",
+                dataType: 'json',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(body) {
+                    console.log(body);
+                    var payload = JSON.stringify({
+                        "avatar": body.url,
+                        "com_res": $("#community-select :selected").val(),
+                        "note": $('#descript-text').val(),
+                    })
+                    var endpoint = '/users/' + userId
+                    put(endpoint, payload)
+                    .then(() => {
+                        alert("User image successfully uploaded");
+                        window.location.href = "image-upload-page.html";
+                    }).catch(() => {
+                        alert("Error encountered while updating profile image");
+                    })
+                }
+            })
+        }).catch((err) => {
+            errorHandler(err, "Error encountered while uploading user avatar");
+        })
+        var payload = JSON.stringify({
             "category_id": $("#service-select :selected").val(),
             "description": $("#descript-text").val(),
             "owner_id": userId,
-        }
-        $.ajax({
-            type: 'POST',
-            url: 'http://localhost:8000/unikrib/services',
-            data: JSON.stringify(serviceDict),
-            contentType: 'application/json',
-            dataType: 'json',
-            success: function (service){
-                alert("Details updated successfully");
-                window.localStorage.setItem('serviceId', service.id)
-            },
-            error: function() {
-                alert("An error has occurred");
-            }
+        })
+        post('/services', payload)
+        .then((service) => {
+            window.localStorage.setItem('serviceId', service.id);
+            alert("Details updated successfully");
+        }).catch((err) => {
+            errorHandler(err, "An error occurred while uploading the service");
         })
     })
 })

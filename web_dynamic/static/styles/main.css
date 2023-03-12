@@ -653,6 +653,9 @@ position: relative;
     .mySlides img {
         height: 35vh;
     }
+    .slideshow-container {
+        padding:52px 0 0 0;
+    }
     #headtext{
         font-size: 35px;
     }

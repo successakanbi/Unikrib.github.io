@@ -18,19 +18,12 @@ function viewMore() {
     more.style.display = "block";
     self.style.display = "none";
 
-	$.ajax({
-		type: 'GET',
-		url: 'http://localhost:8000/unikrib/houses/stats',
-		data: {},
-		contentType: 'application/json',
-		dataType: 'json',
-		success: function(count) {
-			$("#num-results").text('1 - ' + count);
-		},
-		error: function() {
-			alert("The stats cannot be gotten at this time")
-		},
-	});
+    get('/houses/stats')
+    .then((count) => {
+        $("#num-results").text('1 - ' + count);
+    }).catch(() => {
+        alert("The apartment stats cannot be gotten at this time");
+    })
 }
 
 // changes the search button colour from green to purple
