@@ -100,8 +100,8 @@ select:focus {
     margin-bottom: 1.5em;
 }
 .output-containers{
-    width:15%;
-    margin: 0 0 5em 6%;
+    width:18%;
+    margin: 0 0 5em 4%;
     display: inline-block;
     padding: 0 1% 0 1%;
      border-top: 0.2em solid #0a8797;
@@ -110,10 +110,9 @@ select:focus {
     0 6px 20px 0 rgba(121, 120, 120, 0.19);
 }
 #image-cont{
-    width: 95%;
-    height: 10em;
-    margin-left: 2.5%;
-    padding-top: 1em;
+    width: 97%;
+    height: 11em;
+    padding: 0.5em 1.5% 0 1.5%;
 }
 #image-cont img{
     width:100%;
@@ -122,7 +121,7 @@ select:focus {
 }
 #text-cont{
     width: 98%;
-    padding: 2em 1% 0.5em 1%;
+    padding: 1em 1% 0.5em 1%;
     height: auto;
 }
 
@@ -131,9 +130,9 @@ a {
     color: #161616;
 
 }
-.product-results, .community{
+.product-results{
     font-size: 1em;
-    color:#161670;
+    color:#094764;
     font-weight: 600;
     line-height: 1em;
     margin-top: -0.7em;
@@ -143,7 +142,7 @@ a {
     font-size: 1.3em;
     font-weight: 700;
     line-height: 1em;
-    margin-top: -0.7em;
+    margin-top: -0.5em;
 }
 .ven-location {
     font-size:1em;
@@ -210,7 +209,7 @@ a {
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
-        padding: 6em 0 0 0;
+        padding: 4em 0 0 0;
     }
    
     .output-containers{
@@ -220,17 +219,16 @@ a {
        
     }
     #image-cont{
-        width: 98%;
-        margin-left: 1%;
+        width: 97%;
         height: 7.5em;
        
     }
     #text-cont{
-        width: 96%;
-        padding: 2em 2% 0.5em 2%;
+        width: 98%;
+        padding: 2em 1% 0.5em 1%;
     }
-    .product-results, .ven-location, .community{
-        font-size: 0.9em;
+    .product-results, .ven-location{
+        font-size: 0.75em;
     }
    
     #button-text{
@@ -249,7 +247,7 @@ a {
     #main-ext-cont{
         width:95%;
         margin-left: 2.5%;
-        padding: 5em 0 0 0;
+        padding: 4em 0 0 0;
     }
     h1{
         font-size: 1.3em;
@@ -278,7 +276,6 @@ a {
    
    
     #output-ext-cont{
-        width: 100%;
         margin: 0 0 4em 0;
     }
     .output-containers{
@@ -288,15 +285,15 @@ a {
     }
 
     #image-cont{
-        width: 98%;
-        margin-left: 1%;
+        width: 90%;
+        margin-left: 4%;
         height: 6em;
       
     }
 
     #text-cont{
         width: 97%;
-        padding: 1.5em 1.5% 0 1.5%;
+        padding: 1em 1.5% 0 1.5%;
     }
 
     #view-more-button{
@@ -307,9 +304,9 @@ a {
     }
    
     #service-link-cont{
-        width: 80%;
+        width: 78%;
         margin-left: 10%;
-        padding: 0.3em 1% 1em 1%;
+        padding: 0.1em 1% 1em 1%;
     }
     #img-right-cont{
         width:100%;
